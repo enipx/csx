@@ -1,0 +1,198 @@
+---
+title: Justify Self
+description: Used to set how a flex or grid item is aligned on their axis.
+---
+
+<DocsTable
+  name="justify-self"
+  head={[
+    'Name',
+    'Properties',
+    'Description'
+  ]}
+  content={{
+    auto: 'Used to set the item value to the value of the <code>justify-items</code> property.',
+    start: 'Used to push flex or gird item toward the beginning of their axis.',
+    center: 'Used to push flex or gird item toward the center of their axis.',
+    end: 'Used to push flex or gird item toward the end of their axis.',
+    stretch: 'Used to stretch flex or gird item along their axis.',
+  }}
+  hideDataClass
+/>
+
+## Usage
+
+```html rose
+<template preview>
+  <div class="ta-center fz-sm mb-4">
+    <p class="fw-600 op-70 c-pink-700">
+      .js-auto
+    </p>
+    <p class="c-secondary-500 fw-500 px-5">
+      Used to set the item value to the value of the `justify-items` property.
+    </p>
+  </div>
+
+  <div class="d-grid gtc-3 bd-brand bdw-3 p-2 c-secondary-700">
+    <div class="m-2 fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200">
+      1
+    </div>
+
+    <div class="js-auto m-2 fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200 bdw-3">
+      2
+    </div>
+
+    <div class="m-2 fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200">
+      3
+    </div>
+  </div>
+</template>
+
+<div class="d-grid ...">
+  <div class="js-start ...">1</div>
+  <div class="js-auto ...">2</div>
+  <div class="js-start ...">3</div>
+</div>
+```
+
+```html rose
+<template preview>
+  <div class="ta-center fz-sm mb-4">
+    <p class="fw-600 op-70 c-pink-700">
+      .js-start
+    </p>
+    <p class="c-secondary-500 fw-500 px-5">
+      Used to push flex or gird item toward the beginning of their axis.
+    </p>
+  </div>
+
+  <div class="d-grid gtc-3 bd-brand bdw-3 p-2 c-secondary-700">
+    <div class="m-2 fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200">
+      1
+    </div>
+
+    <div class="js-start m-2 fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200 bdw-3">
+      2
+    </div>
+
+    <div class="m-2 fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200">
+      3
+    </div>
+  </div>
+</template>
+
+<div class="d-grid ...">
+  <div class="js-start ...">1</div>
+  <div class="js-start ...">2</div>
+  <div class="js-start ...">3</div>
+</div>
+```
+
+```html rose
+<template preview>
+  <div class="ta-center fz-sm mb-4">
+    <p class="fw-600 op-70 c-pink-700">
+      .js-center
+    </p>
+    <p class="c-secondary-500 fw-500 px-5">
+      Used to pushed toward the center of their axis.
+    </p>
+  </div>
+
+  <div class="d-grid gtc-3 bd-brand bdw-3 p-2 c-secondary-700">
+    <div class="m-2 fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200">
+      1
+    </div>
+
+    <div class="js-center m-2 fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200 bdw-3">
+      2
+    </div>
+
+    <div class="m-2 fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200">
+      3
+    </div>
+  </div>
+</template>
+
+<div class="d-grid ...">
+  <div class="js-start ...">1</div>
+  <div class="js-center ...">2</div>
+  <div class="js-start ...">3</div>
+</div>
+```
+
+```html rose
+<template preview>
+  <div class="ta-center fz-sm mb-4">
+    <p class="fw-600 op-70 c-pink-700">
+      .js-end
+    </p>
+    <p class="c-secondary-500 fw-500 px-5">
+      Used to pushed toward the end of their axis.
+    </p>
+  </div>
+
+  <div class="d-grid gtc-3 bd-brand bdw-3 p-2 c-secondary-700">
+    <div class="m-2 fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200">
+      1
+    </div>
+
+    <div class="js-end m-2 fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200 bdw-3">
+      2
+    </div>
+
+    <div class="m-2 fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200">
+      3
+    </div>
+  </div>
+</template>
+
+<div class="d-grid ...">
+  <div class="js-start ...">1</div>
+  <div class="js-end ...">2</div>
+  <div class="js-start ...">3</div>
+</div>
+```
+
+```html rose
+<template preview>
+  <div class="ta-center fz-sm mb-4">
+    <p class="fw-600 op-70 c-pink-700">
+      .js-stretch
+    </p>
+    <p class="c-secondary-500 fw-500 px-5">
+      Used to stretch flex or gird item along their axis.
+    </p>
+  </div>
+
+  <div class="d-grid gtc-3 bd-brand bdw-3 p-2 c-secondary-700">
+    <div class="m-2 fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200">
+      1
+    </div>
+
+    <div class="js-stretch m-2 fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200 bdw-3">
+      2
+    </div>
+
+    <div class="m-2 fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200">
+      3
+    </div>
+  </div>
+</template>
+
+<div class="d-grid ...">
+  <div class="js-start ...">1</div>
+  <div class="js-stretch ...">2</div>
+  <div class="js-start ...">3</div>
+</div>
+```
+
+## Props
+
+<DocsTable
+  name="justify-self"
+  type="props"
+/>
+```
+
+

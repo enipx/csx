@@ -1,0 +1,130 @@
+---
+title: "Textarea"
+description: "Used to add multi-line text inputs"
+---
+
+## Usage
+
+```html
+<template preview>
+  <div>
+    <textarea class="textarea" placeholder="Enter message to send"></textarea>
+  </div>
+</template>
+
+<div>
+  <textarea class="textarea" placeholder="Enter message to send"></textarea>
+</div>
+```
+
+## Sizings
+Set textarea size using the `.textarea-[size]` utility class or `data-size="[size]"` attribute. Options available are `sm`, `md`, `lg`. Usage example is `textarea-lg` or `data-size="lg"`.
+
+```html
+<template preview>
+  <div class="mb-2">
+    <textarea class="textarea textarea-sm" placeholder="Enter message to send"></textarea>
+  </div>
+
+  <div class="mb-2">
+    <textarea class="textarea textarea-md" placeholder="Enter message to send"></textarea>
+  </div>
+
+  <div class="mb-2">
+    <textarea class="textarea textarea-lg" placeholder="Enter message to send"></textarea>
+  </div>
+</template>
+
+<div>
+  <textarea class="textarea textarea-sm" placeholder="Enter message to send"></textarea>
+  <textarea class="textarea textarea-md" placeholder="Enter message to send"></textarea>
+  <textarea class="textarea textarea-lg" placeholder="Enter message to send"></textarea>
+</div>
+```
+
+## Resizing
+Set textarea resize behaviour using the `.textarea-[direction]` utility class or `data-resize="[direction]"` attribute. Options available are `vertical` and `horizontal`. Usage example is `textarea-vertical` or `data-resize="vertical"`.
+
+PS: The resize property is set to ```none``` by default.
+
+```html
+<template preview>
+  <div class="mb-2">
+    <textarea class="textarea" placeholder="Enter message to send" data-resize="vertical"></textarea>
+  </div>
+
+  <div class="mb-2">
+    <textarea class="textarea" placeholder="Enter message to send" data-resize="horizontal"></textarea>
+  </div>
+</template>
+
+<div>
+  <textarea class="textarea" placeholder="Enter message to send" data-resize="vertical"></textarea>
+  <textarea class="textarea" placeholder="Enter message to send" data-resize="horizontal"></textarea>
+</div>
+```
+
+## States
+Update textarea state by using 
+ - `.textarea-valid` class or `data-valid`/`aria-invalid="false"` attribute to indicate a valid state,
+ - `.textarea-invalid` class or `data-invalid`/`aria-invalid="true"` attribute to indicate an invalid state, 
+ - `disabled` attribute to indicate a disabled state,
+ - `readonly`, attribute to indicate a readonly state.
+
+```html transparent
+<template preview>
+  <div class="mb-2">
+    <textarea class="textarea" placeholder="Enter message to send" data-valid></textarea>
+  </div>
+
+  <div class="mb-2">
+    <textarea class="textarea" placeholder="Enter message to send" data-invalid></textarea>
+  </div>
+
+  <div class="mb-2">
+    <textarea class="textarea" placeholder="Enter message to send" disabled></textarea>
+  </div>
+
+  <div class="mb-2">
+    <textarea class="textarea" placeholder="Enter message to send" readonly></textarea>
+  </div>
+</template>
+
+<div>
+  <textarea class="textarea" placeholder="Enter message to send" data-valid></textarea>
+  <textarea class="textarea" placeholder="Enter message to send" data-invalid></textarea>
+  <textarea class="textarea" placeholder="Enter message to send" disabled></textarea>
+  <textarea class="textarea" placeholder="Enter message to send" readonly></textarea>
+</div>
+```
+
+## Props
+
+<PropsTable 
+  data={[
+    {
+      head: 'size',
+      types: ['sm', 'md', 'lg'],
+      default: "md",
+      usage: ['textarea-sm', 'data-size="sm"']
+    },
+    {
+      head: 'resize',
+      types: ['vertical', 'horizontal', 'none'],
+      default: "none",
+      usage: ['textarea-vertical', 'data-size="vertical"']
+    },
+    {
+      head: 'style',
+      types: ['brick', 'flushed', 'unstyled'],
+      default: "",
+      usage: ['textarea-brick', 'data-size="brick"']
+    },
+    {
+      head: 'state',
+      types: ['invalid', 'valid', 'disabled', 'readonly'],
+      default: "",
+      usage: ['textarea-invalid', 'data-invalid="true"']
+    },
+  ]}
+/>

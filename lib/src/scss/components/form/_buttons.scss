@@ -1,0 +1,152 @@
+// ----- Button
+@each $key, $value in $buttons {
+  $cls: '';
+  @if $key == 'default' {
+    $cls: '';
+  } @else {
+    $cls: -#{$key};
+  }
+
+  @include mode('.btn#{$cls}') {
+    background-color: get-map-val($buttons, $key, dmBg);
+    border: 1px solid get-map-val($buttons, $key, dmBorderColor);
+    color: get-map-val($buttons, $key, dmColor);
+
+    @if $key != 'default' {
+      &:focus {
+        box-shadow: 0 0 0 rem(0.125) get-map-val($buttons, $key, dmFocus);
+      }
+
+      &:hover,
+      &:active {
+        background-color: get-map-val($buttons, $key, dmHoverBg);
+        border-color: get-map-val($buttons, $key, dmHoverBg);
+      }
+    }
+
+    &:focus {
+      background-color: get-map-val($buttons, $key, dmHoverBg);
+    }
+  }
+
+  .btn#{$cls} {
+    @include fx-align-content-center;
+    @include base-transition;
+    @include border-radius(md);
+    appearance: none;
+    background-color: get-map-val($buttons, $key, bg);
+    border: 1px solid get-map-val($buttons, $key, borderColor);
+    color: get-map-val($buttons, $key, color);
+    cursor: pointer;
+    font-size: $fz-sm;
+    font-weight: $fw-500;
+    height: sizing(10);
+    outline: 0;
+    padding-inline-end: sizing(4);
+    padding-inline-start: sizing(4);
+    white-space: nowrap;
+    width: auto;
+
+    .btn_icon {
+      @include fx-align-content-center;
+      height: 100%;
+      line-height: 0;
+      margin-right: sizing();
+      width: sizing(4);
+    }
+
+    @if $key != 'default' {
+      &:hover,
+      &:active {
+        background-color: get-map-val($buttons, $key, hoverBg);
+        border-color: get-map-val($buttons, $key, hoverBg);
+      }
+
+      &:focus {
+        background-color: get-map-val($buttons, $key, hoverBg);
+        box-shadow: 0 0 0 rem(0.125) get-map-val($buttons, $key, focus);
+      }
+    }
+    
+    &[data-size='xs'],
+    .btn-xs {
+      font-size: $fz-xs;
+      height: sizing(6);
+
+      .btn_icon {
+        width: rem(0.875);
+      }
+    }
+
+    &[data-size='sm'] {
+      font-size: $fz-xs;
+      height: sizing(8);
+
+      .btn_icon {
+        width: rem(0.875);
+      }
+    }
+
+    &[data-size='md'],
+    .btn-md {
+      height: sizing(10);
+    }
+
+    &[data-size='lg'],
+    .btn-lg {
+      font-size: $fz-base;
+      height: sizing(12);
+      padding-inline-end: sizing(6);
+      padding-inline-start: sizing(6);
+
+      .btn_icon {
+        width: rem(1.125);
+      }
+    }
+
+    &[data-size='xl'],
+    .btn-xl {
+      font-size: $fz-base;
+      height: sizing(14);
+      padding-inline-end: sizing(6);
+      padding-inline-start: sizing(6);
+
+      .btn_icon {
+        width: sizing(5);
+      }
+    }
+
+    &[data-icon='left'],
+    .btn-icon-left {
+      .btn_icon {
+        margin-left: 0;
+        margin-right: sizing(2);
+      }
+    }
+
+    &[data-icon='right'],
+    .btn-icon-right {
+      .btn_icon {
+        margin-left: sizing(2);
+        margin-right: 0;
+        order: 1;
+      }
+    }
+    
+  }
+}
+
+// ----- Btn Outline: Border fixed
+.btn-outline {
+  &:hover {
+    border-color: get-map-val($buttons, outline, borderColor);
+  }
+}
+
+// Dark mode
+@include mode('.btn-outline') {
+  &:hover {
+    border-color: var(#{$var-prefix}secondary-600);
+  }
+}
+

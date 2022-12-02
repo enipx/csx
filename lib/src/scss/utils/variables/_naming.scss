@@ -1,0 +1,235 @@
+// ------ Utility properties
+$util-properties: (
+  // Breakpoints
+  breakpoints: $breakpoints,
+
+  // Sizing
+  sizings: $sizings,
+
+  // Align
+  align: $align,
+
+  // Colors
+  colors: $colors,
+
+  // Gradients
+  gradients: $gradients,
+
+  // Box sizing 
+  box-sizing: $box-sizing,
+
+  // Heading
+  heading: $heading,
+
+  // Text Dsiplay
+  text-display: $text-display,
+
+  // Font size
+  font-size: $font-size,
+
+  // Font weight
+  font-weight: $font-weight,
+
+  // Font family
+  font-family: $font-family,
+
+  // Font style
+  font-style: $font-style,
+
+  // Letter spacing
+  letter-spacing: $letter-spacing,
+
+  // Line heights
+  line-height: $line-height,
+
+  // Text decoration
+  text-decoration: $text-decoration,
+
+  // Text transform
+  text-transform: $text-transform,
+
+  // Text Overflow
+  text-overflow: $text-overflow,
+
+  // Text align
+  text-align: $text-align,
+
+  // Vertical align:\
+  vertical-align: $vertical-align,
+
+  // Display
+  display: $display,
+
+  // Float
+  float: $float,
+
+  // Clear
+  clear: $clear,
+
+  // Flex 
+  flex: $flex,
+
+  // Flex direction
+  flex-direction: $flex-direction,
+
+  // Flex wrap
+  flex-wrap: $flex-wrap,
+
+  // Flex grow
+  flex-grow: $flex-grow,
+
+  // Flex shrink
+  flex-shrink: $flex-shrink,
+
+  // Order
+  order: $order,
+
+  // Align item
+  align-items: $align-items,
+
+  // Align content
+  align-content:$align-content,
+
+  // Align self
+  align-self: $align-self,
+
+  // Justify item
+  justify-items: $justify-items,
+
+  // Justify content
+  justify-content: $justify-content,
+
+  // Justify self
+  justify-self: $justify-self,
+
+  // Position
+  position: $position,
+
+  // Opacity
+  opacity: $opacity,
+
+  // List style
+  list-style: $list-style,
+
+  // White space
+  white-space: $white-space,
+
+  // Word break
+  word-break: $word-break,
+
+  // Object Fits
+  object-fits: $object-fit,
+
+  // Object Position
+  object-positions: $object-position,
+
+  // Overflows
+  overflows: $overflow,
+
+  // Aspect ratios
+  aspect-ratios: $aspect-ratios,
+
+  // Z-index components
+  z-index: (
+    base: 10,
+    dropdown-arrow: 990,
+    dropdown: 1000,
+    sticky: 1010,
+    fixed: 1020,
+    backdrop: 1030,
+    canvas: 1040,
+    modal: 1050,
+    popover: 1060,
+    tooltip: 1070,
+  ),
+
+  // Z-index
+  z-indexes: $z-index,
+
+  // Widths
+  widths: $width,
+
+  // Heights
+  heights: $height,
+
+  // Border radius
+  border-radius: $border-radius,
+
+  // Border styles
+  border-styles: $border-style,
+
+  // Border width
+  border-width: $border-width,
+
+  // Visibility
+  visibility: $visibility,
+
+  // Pointer events
+  pointer-events: $pointer-events,
+
+  // Cursor
+  cursor: $cursor,
+
+  // User select
+  user-select: $user-select,
+
+  // Appearance
+  appearance: $appearance,
+
+  // Outline
+  outline: $outline,
+
+  // Background
+  background-attachment: $background-attachment,
+  
+  background-position: $background-position,
+
+  background-repeat: $background-repeat,
+
+  background-size: $background-size,
+
+  // Transform
+  scale: $scale,
+
+  rotate: $rotate,
+
+  skew: $skew,
+
+  transform-origin: $transform-origin,
+
+  // Transition
+  transition: $transition,
+
+  // Transition
+  transition-duration: $transition-duration,
+
+  timing-function: $timing-function,
+
+  // Filter
+  filter: $filter,
+
+  // Svg
+  fill: $fill,
+
+  stroke: $stroke,
+
+  stroke-width: $stroke-width,
+
+  // Box shadows
+  box-shadows: $box-shadows,
+
+  // Grid
+  grid-columns: $grid-columns,
+
+  grid-auto-flow: $grid-auto-flow,
+
+  grid-gaps: $grid-gap,
+
+  grid-span: $grid-span,
+
+  // Top, Right, Bottom, Left
+  trbl: $trbl,
+) !default;
+
+// ------ Utility keys
+$util-keys: $keys !default;

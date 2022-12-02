@@ -1,0 +1,123 @@
+// ----- Alert
+@each $key, $value in $alert {
+  $cls: '';
+  @if $key == 'default' {
+    $cls: '';
+  } @else {
+    $cls: -#{$key};
+  }
+
+  .alert#{$cls} {
+    //  ----- Animations
+    @include add-animation(fade);
+    @include base-transition;
+    background-color: color($value, #{$value}-50);
+    border-radius: get-map-val($util-properties, border-radius, base);
+    color: color($value, #{$value}-700);
+    display: flex;
+    padding: sizing(3) sizing(4);
+
+
+    .alert_icon,
+    .alert_dismissal {
+      align-items: center;
+      display: flex;
+      height: sizing(5);
+      justify-content: center;
+      padding: rem(0.125);
+      width: sizing(5);
+    }
+    
+    .alert_icon {
+      margin-right: sizing(3);
+
+      svg {
+        fill: currentColor;
+      }
+    }
+
+    .alert_dismiss {
+      cursor: pointer;
+      margin-left: sizing(2);
+    }
+
+    .alert_content {
+      flex: 1;
+      font-size: $fz-sm;
+      font-weight: $fw-500;
+
+      .alert_content_description {
+        color: var(#{$var-prefix}secondary);
+        font-weight: 400;
+        margin-top: sizing(1);
+      }
+    }
+
+    &[data-solid='true'],
+    &[data-solid] {
+      background-color: color(system, #{$value});
+      color: color(system, white);
+
+      .alert_content_description {
+        color: color(secondary, secondary-50);
+      }
+    }
+
+    &[data-hide='true'],
+    &[data-hide] {
+      display: none;
+      opacity: 0;
+    }
+
+    &[data-toast] {
+      @include box-shadow(lg);
+      max-width: var(#{$var-prefix}alert-toast-width);
+    }
+  }
+}
+
+.toast-alert-container {
+  display: flex;
+  justify-content: center;
+  left: 0;
+  padding: sizing(4);
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  &[data-pos='top-left'] {
+    bottom: auto;
+    justify-content: flex-start;
+    top: 0;
+  }
+
+  &[data-pos='top-right'] {
+    bottom: auto;
+    justify-content: flex-end;
+    top: 0;
+  }
+
+  &[data-pos='top'] {
+    bottom: auto;
+    justify-content: center;
+    top: 0;
+  }
+
+  &[data-pos='bottom-left'] {
+    bottom: 0;
+    justify-content: flex-start;
+    top: auto;
+  }
+
+  &[data-pos='bottom-right'] {
+    bottom: 0;
+    justify-content: flex-end;
+    top: auto;
+  }
+
+  &[data-pos='bottom'] {
+    bottom: 0;
+    justify-content: center;
+    top: auto;
+  }
+}

@@ -1,0 +1,85 @@
+.accordion {
+  &_item {
+    margin-bottom: sizing(2);
+    width: 100%;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &.active {
+      .accordion_header {
+        &::after {
+          transform: translateY(-50%) rotate(180deg);
+        }
+      }
+
+      .accordion_content {
+        display: block;
+      }
+    }
+  }
+
+  &_header {
+    @include base-transition;
+    @include border-radius(md);
+    background-color: var(#{$var-prefix}light);
+    border: 0;
+    border: 1px solid var(#{$var-prefix}secondary-100);
+    color: var(#{$var-prefix}base-color);
+    cursor: pointer;
+    display: flex;
+    font-size: $fz-base;
+    outline: 0;
+    padding: rem(0.675) sizing(4);
+    position: relative;
+    width: 100%;
+
+    &:focus {
+      box-shadow: 0 0 0 rem(0.125) get-map-val($buttons, secondary, lightBg);
+    }
+
+    &:hover {
+      background-color: var(#{$var-prefix}secondary-50);
+    }
+
+    &::after {
+      @include border-radius;
+      @include transition(all, 400ms);
+      background-color: transparent;
+      background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%228%22%20height%3D%225%22%20fill%3D%22none%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M8%20.5c0-.28-.22-.5-.5-.5h-7C.404-.001.309.026.227.078S.082.205.042.293-.01.479.006.575.065.759.13.83l3.5%204A.5.5%200%200%200%204%205a.5.5%200%200%200%20.37-.17l3.5-4C7.95.74%208%20.63%208%20.5z%22%20fill%3D%22%236e8191%22%2F%3E%3C%2Fsvg%3E');
+      background-position: center;
+      background-repeat: no-repeat;
+      content: '';
+      height: sizing(4);
+      position: absolute;
+      right: sizing(4);
+      top: 50%;
+      transform: translateY(-50%);
+      transform-origin: center;
+      width: sizing(4);
+    }
+  }
+
+  &_content {
+    @include add-animation(fade, 300ms, 300ms);
+    @include transition(all, 300ms);
+    color: var(#{$var-prefix}base-color);
+    display: none;
+    overflow: hidden;
+    padding: rem(0.675) sizing(4);
+    padding-bottom: sizing(6);
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
+// Dark mode
+@include mode('.accordion') {
+  .accordion_header {
+    #{$var-prefix}secondary-50: var(#{$var-prefix}secondary-800);
+    #{$var-prefix}secondary-100: var(#{$var-prefix}secondary-800);
+  }
+}

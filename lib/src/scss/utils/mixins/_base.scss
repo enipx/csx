@@ -1,0 +1,108 @@
+// Mode
+@mixin mode($attr, $name: dark) {
+  $split-arr: str-split($attr, ', ');
+
+  @each $item in $split-arr {
+    [data-mode='#{$name}'] #{unquote($item)} {
+      @content;
+    }
+  }
+}
+
+// Flex: center content both horizontally and vertically
+@mixin fx-align-content-center($type: flex) {
+  align-items: center;
+  display: $type;
+  justify-content: center;
+}
+
+// Position: center content both horizontally and vertically
+@mixin pos-center {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Position: center content vertically
+@mixin pos-center-y {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// Position: center content both horizontally
+@mixin pos-center-x {
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+// Transition: base element transition
+@mixin transition($blocks: all, $dur: 200ms, $anim: ease-in-out) {
+  transition: $blocks $dur $anim;
+}
+
+// Transition: base element transition
+@mixin base-transition($blocks: all) {
+  @include transition($blocks);
+}
+
+// Border radius
+@mixin border-radius($size: base, $custom: false) {
+  @if $custom {
+    border-radius: $size;
+  } @else {
+    border-radius: get-map-val($util-properties, border-radius, $size);
+  }
+}
+
+// Box shadow
+@mixin box-shadow($type: base, $variation: light) {
+  box-shadow: unquote(#{get-map-val(get-map($util-properties, box-shadows), $variation, $type)});
+}
+
+// zindex
+@mixin z-index($type: base) {
+  z-index: map-get(get-map($util-properties, z-index), $type);
+}
+
+// Padding
+@mixin py($size: 0) {
+  padding-bottom: $size;
+  padding-top: $size;
+}
+
+@mixin px($size: 0) {
+  padding-left: $size;
+  padding-right: $size;
+}
+
+// Margin
+@mixin my($size: 0) {
+  margin-bottom: $size;
+  margin-top: $size;
+}
+
+@mixin mx($size: 0) {
+  margin-left: $size;
+  margin-right: $size;
+}
+
+// Animations
+@mixin add-animation($name: fadeTop, $duration: 500ms, $durationOut: 300ms) {
+  &.#{$name} {
+    animation: $name $duration;
+  }
+
+  &.#{$name}Out {
+    animation: #{$name}Out $durationOut;
+  }
+}
+
+// Keyframes
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}

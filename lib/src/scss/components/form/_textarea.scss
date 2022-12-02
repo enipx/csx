@@ -1,0 +1,28 @@
+// ----- Select
+.textarea {
+  height: sizing(20);
+  padding-bottom: sizing(2);
+  padding-top: sizing(2);
+  resize: none;
+
+  &-vertical,
+  &[data-resize='vertical'] {
+    resize: vertical;
+  }
+
+  &-horizontal,
+  &[data-resize='horizontal'] {
+    resize: horizontal;
+  }
+
+  &-sm,
+  &[data-size='sm'] {
+    height: sizing(10);
+  }
+  
+  &-lg,
+  &[data-size='lg'] {
+    font-size: $fz-base;
+    height: sizing(40);
+  }
+}

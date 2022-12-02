@@ -1,0 +1,154 @@
+// ----- Badge
+$badge: (
+  default: secondary,
+  success: success,
+  danger: danger,
+  primary: primary,
+  warning: warning,
+  info: purple,
+  attention: orange
+) !default;
+
+// ----- Alert
+$alert: (
+  default: secondary,
+  primary: primary,
+  success: success,
+  danger: danger,
+  warning: warning,
+) !default;
+
+// ----- Button
+$buttons: (
+  // default: (
+  //   color: var(#{$var-prefix}base-color),
+  //   bg: var(#{$var-prefix}secondary-100),
+  //   dmColor: var(#{$var-prefix}white),
+  //   dmBg: var(#{$var-prefix}secondary-800),
+  //   borderColor: var(#{$var-prefix}secondary-200),
+  //   dmBorderColor: var(#{$var-prefix}secondary-700),
+  //   hoverBg: var(#{$var-prefix}secondary-200),
+  //   dmHoverBg: var(#{$var-prefix}secondary-700),
+  //   focus: var(#{$var-prefix}secondary-200),
+  //   dmFocus: var(#{$var-prefix}secondary-700)
+  // ),
+  default: (
+    color: var(#{$var-prefix}base-color),
+    bg: transparent,
+    dmColor: var(#{$var-prefix}secondary-50),
+    dmBg: transparent,
+    borderColor: var(#{$var-prefix}secondary-600),
+    dmBorderColor: var(#{$var-prefix}secondary-600),
+    hoverBg: transparent,
+    dmHoverBg: transparent,
+    focus: var(#{$var-prefix}secondary-200),
+    dmFocus: var(#{$var-prefix}secondary-600)
+  ),
+  primary: (
+    color: var(#{$var-prefix}white),
+    bg: var(#{$var-prefix}primary),
+    dmColor: var(#{$var-prefix}white),
+    dmBg: var(#{$var-prefix}primary),
+    borderColor: var(#{$var-prefix}primary),
+    dmBorderColor: var(#{$var-prefix}primary),
+    hoverBg: var(#{$var-prefix}primary-600),
+    dmHoverBg: var(#{$var-prefix}primary-600),
+    focus: var(#{$var-prefix}primary-300),
+    dmFocus: var(#{$var-prefix}primary-400)
+  ),
+  secondary: (
+    color: var(#{$var-prefix}white),
+    bg: var(#{$var-prefix}secondary),
+    dmColor: var(#{$var-prefix}white),
+    dmBg: var(#{$var-prefix}secondary),
+    borderColor: var(#{$var-prefix}secondary),
+    dmBorderColor: var(#{$var-prefix}secondary),
+    hoverBg: var(#{$var-prefix}secondary-600),
+    dmHoverBg: var(#{$var-prefix}secondary-600),
+    focus: var(#{$var-prefix}secondary-300),
+    dmFocus: var(#{$var-prefix}secondary-400)
+  ),
+  success: (
+    color: var(#{$var-prefix}white),
+    bg: var(#{$var-prefix}success),
+    dmColor: var(#{$var-prefix}white),
+    dmBg: var(#{$var-prefix}success),
+    borderColor: var(#{$var-prefix}success),
+    dmBorderColor: var(#{$var-prefix}success),
+    hoverBg: var(#{$var-prefix}success-700),
+    dmHoverBg: var(#{$var-prefix}success-700),
+    focus: var(#{$var-prefix}success-300),
+    dmFocus: var(#{$var-prefix}success-400)
+  ),
+  danger: (
+    color: var(#{$var-prefix}white),
+    bg: var(#{$var-prefix}danger),
+    dmColor: var(#{$var-prefix}white),
+    dmBg: var(#{$var-prefix}danger),
+    borderColor: var(#{$var-prefix}danger),
+    dmBorderColor: var(#{$var-prefix}danger),
+    hoverBg: var(#{$var-prefix}danger-600),
+    dmHoverBg: var(#{$var-prefix}danger-600),
+    focus: var(#{$var-prefix}danger-300),
+    dmFocus: var(#{$var-prefix}danger-400)
+  ),
+  outline: (
+    color: var(#{$var-prefix}base-color),
+    bg: transparent,
+    dmColor: var(#{$var-prefix}secondary-50),
+    dmBg: transparent,
+    borderColor: var(#{$var-prefix}secondary-600),
+    dmBorderColor: var(#{$var-prefix}secondary-600),
+    hoverBg: var(#{$var-prefix}secondary-100),
+    dmHoverBg: var(#{$var-prefix}secondary-800),
+    focus: var(#{$var-prefix}secondary-200),
+    dmFocus: var(#{$var-prefix}secondary-600)
+  ),
+  ghost: (
+    color: var(#{$var-prefix}base-color),
+    bg: transparent,
+    dmColor: var(#{$var-prefix}secondary-50),
+    dmBg: transparent,
+    borderColor: transparent,
+    dmBorderColor: transparent,
+    hoverBg: var(#{$var-prefix}secondary-100),
+    dmHoverBg: var(#{$var-prefix}secondary-800),
+    focus: transparent,
+    dmFocus: transparent
+  ),
+) !default;
+
+// ----- Drawer sizes
+$drawer-sizes: base, md, lg, full, !default;
+
+// ----- Breadcrumb
+$breadcrumb: (
+  separator: "'/'",
+  spacer: rem(0.5)
+) !default;
+
+// ----- Hamburger
+$hamburger: (
+  bg: (
+    lm: color(secondary, secondary-800),
+    dm: color(secondary, secondary-200)
+  ),
+  spacer: rem(0.25),
+  width: rem(2)
+) !default;
+
+// ----- Slideshow
+$slideshow: (
+  indicator: (
+    size: rem(0.55),
+    spacing: rem(0.5),
+    pos: rem(1),
+    offset-pos: rem(-1),
+    bar-width: rem(1.5),
+    bar-height: rem(0.25),
+  ),
+  control: (
+    icon-size: rem(1.4)
+  )
+) !default;
+

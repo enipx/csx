@@ -1,0 +1,98 @@
+---
+title: Position
+description: Used to set how an element is positioned.
+---
+
+<DocsTable
+  name="position"
+  head={[
+    'Name',
+    'Properties',
+    'Description',
+  ]}
+  description="set how an element needs to be position in the DOM"
+  content={{
+    static: "This is the default behavious for all HTML element and it's used to position element to its normal position.",
+    relative: 'Used to position element to its normal position but enable you to change element position.',
+    absolute: 'Used to position element outside its normal position and positioned based on the position of its closest positioned ancestor.',
+    fixed: 'Used to position element outside its normal position and positioned based on the browser window.',
+    sticky: 'Used to position element as fixed or sticky when neccessary depending on it on it position while scrolling.',
+    'top-left': 'Used to position element to top left using position <code>absolute</code>',
+    top: 'Used to position element to top center using position <code>absolute</code>',
+    'top-right': 'Used to position element to top right using position <code>absolute</code>',
+    'bottom-left': 'Used to position element to bottom left using position <code>absolute</code>',
+    bottom: 'Used to position element to bottom center using position <code>absolute</code>',
+    'bottom-right': 'Used to position element to bottom right using position <code>absolute</code>',
+    middle: 'Used to position element to middle using position <code>absolute</code>',
+    'middle-left': 'Used to position element to middle left using position <code>absolute</code>',
+    'middle-right': 'Used to position element to middle right using position <code>absolute</code>',
+  }}
+  hideDataClass
+/>
+
+## Usage
+
+```html rose
+<template preview>
+  <p class="fz-sm ta-center c-pink-700 fw-600 op-70 tt-uppercase mb-4">.pos-[value]</p>
+
+  <div class="pos-relative bd-brand bdw-5 h-80 ovx-auto mx-auto" style="width: 500px">
+    <div class="ta-center fz-sm fw-500 pos-top-left w-32 h-20 fx-center bg-purple-100 bd-purple-200">
+      top-left
+    </div>
+
+    <div class="ta-center fz-sm fw-500 pos-top w-32 h-20 fx-center bg-purple-100 bd-purple-200">
+      top
+    </div>
+
+    <div class="ta-center fz-sm fw-500 pos-top-right w-32 h-20 fx-center bg-purple-100 bd-purple-200">
+      top-right
+    </div>
+
+    <div class="ta-center fz-sm fw-500 pos-middle-left w-32 h-20 fx-center bg-purple-100 bd-purple-200">
+      middle-left
+    </div>
+
+    <div class="ta-center fz-sm fw-500 pos-middle w-32 h-20 fx-center bg-purple-100 bd-purple-200">
+      middle
+    </div>
+
+    <div class="ta-center fz-sm fw-500 pos-middle-right w-32 h-20 fx-center bg-purple-100 bd-purple-200">
+      middle-right
+    </div>
+
+    <div class="ta-center fz-sm fw-500 pos-bottom-left w-32 h-20 fx-center bg-purple-100 bd-purple-200">
+      bottom-left
+    </div>
+
+    <div class="ta-center fz-sm fw-500 pos-bottom w-32 h-20 fx-center bg-purple-100 bd-purple-200">
+      bottom
+    </div>
+
+    <div class="ta-center fz-sm fw-500 pos-bottom-right w-32 h-20 fx-center bg-purple-100 bd-purple-200">
+      bottom-right
+    </div>
+  </div>
+</template>
+
+<div class="pos-relative ...">
+  <div class="pos-top-left ..."></div>
+  <div class="pos-top ..."></div>
+  <div class="pos-top-right ..."></div>
+  <div class="pos-middle-left ..."></div>
+  <div class="pos-middle ..."></div>
+  <div class="pos-middle-right ..."></div>
+  <div class="pos-bottom-left ..."></div>
+  <div class="pos-bottom ..."></div>
+  <div class="pos-bottom-right ..."></div>
+</div>
+```
+
+## Props
+
+<DocsTable
+  name="position"
+  type="props"
+/>
+
+

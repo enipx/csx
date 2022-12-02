@@ -1,0 +1,30 @@
+{
+  "name": "csx",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 1010",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@mdx-js/loader": "^1.6.22",
+    "@next/mdx": "^11.0.1",
+    "clsx": "^1.1.1",
+    "gray-matter": "^4.0.3",
+    "html-react-parser": "^1.4.0",
+    "next": "11.0.1",
+    "next-mdx-remote": "^3.0.5",
+    "nprogress": "^0.2.0",
+    "prism-react-renderer": "^1.2.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-feather": "^2.0.9",
+    "sass": "^1.37.5"
+  },
+  "devDependencies": {
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.0.1"
+  }
+}

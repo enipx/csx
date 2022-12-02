@@ -1,0 +1,309 @@
+.modal {
+  @include z-index(backdrop);
+  @include base-transition;
+  background-color: var(#{$var-prefix}modal-backdrop-bg);
+  display: none;
+  height: 100%;
+  left: 0;
+  outline: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  &.transparent {
+    #{$var-prefix}modal-backdrop-bg: rgba(0, 0, 0, 0.1);
+  }
+
+  &.show {
+    display: block;
+  }
+
+  // ----- Drawer
+  &[data-type='drawer'] {
+    .modal_container {
+      padding: 0;
+
+      .modal_content {
+        @include transition(all, 500ms);
+        @include border-radius(none);
+        height: 100%;
+        left: -100%;
+        max-width: var(#{$var-prefix}drawer-x-width-base);
+        padding: sizing();
+        position: absolute;
+
+        .modal_header,
+        .modal_footer {
+          padding: sizing(4);
+        }
+
+        .modal_body {
+          flex-grow: 1;
+          overflow: hidden;
+          overflow-y: auto;
+          padding: sizing() sizing(4);
+        }
+      }
+
+      &.show {
+        .modal_content {
+          left: 0;
+        }
+      }
+
+      // Postion
+      &[data-pos='right'] {
+        .modal_content {
+          left: auto; // Set initiail left property back to auto
+          right: -100%;
+        }
+
+        &.show {
+          .modal_content {
+            right: 0;
+          }
+        }
+      }
+
+      &[data-pos='top'] {
+        .modal_content {
+          bottom: auto;
+          height: var(#{$var-prefix}drawer-y-height-base);
+          left: auto; // Set initiail left property back to auto
+          max-width: 100%;
+          top: -100%;
+        }
+
+        &.show {
+          .modal_content {
+            top: 0%;
+          }
+        }
+
+        // Sizes
+        @each $size in $drawer-sizes {
+          &[data-size='#{$size}'] {
+            .modal_content {
+              height: var(#{$var-prefix}drawer-y-height-#{$size});
+              max-width: 100%;
+            }
+          }
+        }
+      }
+
+      &[data-pos='bottom'] {
+        .modal_content {
+          bottom: -100%;
+          height: var(#{$var-prefix}drawer-y-height-base);
+          left: auto; // Set initiail left property back to auto
+          max-width: 100%;
+          top: auto;
+        }
+
+        &.show {
+          .modal_content {
+            bottom: 0;
+          }
+        }
+
+        // Sizes
+        @each $size in $drawer-sizes {
+          &[data-size='#{$size}'] {
+            .modal_content {
+              height: var(#{$var-prefix}drawer-y-height-#{$size});
+              max-width: 100%;
+            }
+          }
+        }
+      }
+
+      // Sizes
+      @each $size in $drawer-sizes {
+        &[data-size='#{$size}'] {
+          .modal_content {
+            max-width: var(#{$var-prefix}drawer-x-width-#{$size});
+          }
+        }
+      }
+      
+
+      // Overflow
+      &[data-overflow='inside'] {
+        overflow: hidden;
+    
+        .modal_content {
+          .modal_body {
+            margin-bottom: sizing();
+            margin-top: sizing();
+            max-height: none;
+            overflow-y: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal_container {
+  // ----- Animations
+  @include add-animation;
+  @include add-animation(fadeLeft);
+  @include add-animation(fadeRight);
+  @include add-animation(fadeBottom);
+
+  @include z-index(modal);
+  align-items: flex-start;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  overflow-y: auto;
+  padding: sizing(12) sizing(4);
+  position: fixed;
+  top: 0;
+  width: 100vw;
+
+  @include media-md {
+    padding: sizing(12);
+  }
+
+  &[data-pos='top-left'] {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  &[data-pos='top-right'] {
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+
+  &[data-pos='bottom-left'] {
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+
+  &[data-pos='bottom-right'] {
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  &[data-pos='center'] {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &[data-overflow='inside'] {
+    overflow: hidden;
+
+    .modal_content {
+      .modal_body {
+        margin-bottom: sizing(4);
+        margin-top: sizing(2);
+        max-height: rem(28);
+        overflow-y: auto;
+      }
+    }
+  }
+
+  .modal_content {
+    @include border-radius(md);
+    @include box-shadow(lg);
+    background: var(#{$var-prefix}base-bg);
+    color: var(#{$var-prefix}base-color);
+    display: flex;
+    flex-direction: column;
+    max-width: rem(28);
+    padding: sizing(4);
+    position: relative;
+    width: 100%;
+
+    @include media-md {
+      padding: sizing(4) sizing(6);
+    }
+
+    .modal_header {
+      align-items: center;
+      display: flex;
+      font-size: $fz-lg;
+      font-weight: $fw-600;
+      justify-self: start;
+
+      .modal_close {
+        color: var(#{$var-prefix}secondary);
+        margin-left: auto;
+
+        svg {
+          fill: currentColor;
+          height: auto;
+          width: sizing(3);
+        }
+      }
+    }
+
+    .modal_body {
+      color: var(#{$var-prefix}secondary);
+      padding: sizing(4) 0;
+      padding-bottom: sizing(8);
+    }
+
+    .modal_footer {
+      align-items: center;
+      display: flex;
+      justify-content: flex-end;
+
+      .btn:first-child {
+        margin-right: sizing(3);
+      }
+
+      &[data-alt] {
+        flex-direction: column;
+
+        >* {
+          margin-bottom: sizing(1);
+          width: 100%;
+        }
+
+        .btn:first-child {
+          margin-bottom: 0;
+          margin-right: 0;
+          order: 1;
+        }
+      }
+
+      &[data-alt='false'] {
+        flex-direction: row;
+
+        >* {
+          margin-bottom: 0;
+          width: auto;
+        }
+
+        .btn:first-child {
+          margin: 0;
+          margin-right: sizing(3);
+          order: -1;
+        }
+      }
+    }
+  }
+}
+
+// Dark mode
+@include mode('.modal') {
+  .modal_content {
+    #{$var-prefix}base-bg: var(#{$var-prefix}secondary-800);
+    @include box-shadow(xl);
+
+    .modal_body {
+      #{$var-prefix}secondary: var(#{$var-prefix}secondary-300);
+    }
+
+    .modal_close {
+      &:hover {
+        background-color: var(#{$var-prefix}secondary-900);
+      }
+    }
+  }
+}

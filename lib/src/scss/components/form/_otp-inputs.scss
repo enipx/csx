@@ -1,0 +1,52 @@
+// ----- Default
+.custom-otp {
+  display: flex;
+  width: 100%;
+
+  &-input {
+    font-size: $fz-lg;
+    height: sizing(10);
+    line-height: sizing(10);
+    margin-right: sizing(2);
+    padding: 0;
+    text-align: center;
+    width: sizing(10);
+
+    &:last-child {
+      margin-right: sizing();
+    }
+  }
+  
+  &[data-size='xs'] {
+    .custom-otp-input {
+      font-size: $fz-xs;
+      height: sizing(6);
+      width: sizing(6);
+    }
+  }
+  
+  &[data-size='sm'] {
+    .custom-otp-input {
+      height: sizing(8);
+      width: sizing(8);
+    }
+  }
+  
+  &[data-size='lg'] {
+    .custom-otp-input {
+      height: sizing(12);
+      width: sizing(12);
+    }
+  }
+  
+  &[data-size='xl'] {
+    .custom-otp-input {
+      font-size: $fz-xl;
+      height: sizing(16);
+      width: sizing(16);
+    }
+  }
+}
+
+
+

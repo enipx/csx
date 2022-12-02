@@ -1,0 +1,209 @@
+---
+title: "Accordion"
+description: "Used to switch between hiding and viewing a more info about a content."
+---
+
+## Usage
+
+```html transparent
+<template preview>
+  <div class="accordion my-2">
+    <div class="accordion_item">
+      <button class="accordion_header" data-toggle="accordion" data-target="#accordion1">
+        Accordion Item 1
+      </button>
+      <div id="accordion1" class="accordion_content">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt quidem, suscipit a dicta architecto culpa officia in cupiditate accusantium, maxime expedita illum hic doloremque, vitae sunt saepe perspiciatis non dolorum!
+      </div>
+    </div>
+
+    <div class="accordion_item">
+      <button class="accordion_header" data-toggle="accordion" data-target="#accordion2">
+        Accordion Item 2
+      </button>
+      <div id="accordion2" class="accordion_content">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt quidem, suscipit a dicta architecto culpa officia in cupiditate accusantium, maxime expedita illum hic doloremque, vitae sunt saepe perspiciatis non dolorum!
+      </div>
+    </div>
+
+    <div class="accordion_item">
+      <button class="accordion_header" data-toggle="accordion" data-target="#accordion3">
+        Accordion Item 3
+      </button>
+      <div id="accordion3" class="accordion_content">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt quidem, suscipit a dicta architecto culpa officia in cupiditate accusantium, maxime expedita illum hic doloremque, vitae sunt saepe perspiciatis non dolorum!
+      </div>
+    </div>
+  </div>
+</template>
+
+<div>
+  <div class="accordion">
+    <div class="accordion_item">
+      <button class="accordion_header" data-toggle="accordion" data-target="#accordion1">
+        Accordion Item 1
+      </button>
+      <div id="accordion1" class="accordion_content">
+        . . .
+      </div>
+    </div>
+
+    <div class="accordion_item">
+      <button class="accordion_header" data-toggle="accordion" data-target="#accordion2">
+        Accordion Item 2
+      </button>
+      <div id="accordion2" class="accordion_content">
+        . . .
+      </div>
+    </div>
+
+    <div class="accordion_item">
+      <button class="accordion_header" data-toggle="accordion" data-target="#accordion3">
+        Accordion Item 3
+      </button>
+      <div id="accordion3" class="accordion_content">
+        . . .
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+
+## Allow multiple
+To allow expansion of multiple items at once, use the `data-allow-multiple` attribute.
+
+```html transparent
+<template preview>
+  <div class="accordion my-2" data-allow-multiple>
+    <div class="accordion_item">
+      <button class="accordion_header" data-toggle="accordion" data-target="#accordion4">
+        Accordion Item 1
+      </button>
+      <div id="accordion4" class="accordion_content">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt quidem, suscipit a dicta architecto culpa officia in cupiditate accusantium, maxime expedita illum hic doloremque, vitae sunt saepe perspiciatis non dolorum!
+      </div>
+    </div>
+
+    <div class="accordion_item">
+      <button class="accordion_header" data-toggle="accordion" data-target="#accordion5">
+        Accordion Item 2
+      </button>
+      <div id="accordion5" class="accordion_content">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt quidem, suscipit a dicta architecto culpa officia in cupiditate accusantium, maxime expedita illum hic doloremque, vitae sunt saepe perspiciatis non dolorum!
+      </div>
+    </div>
+
+    <div class="accordion_item">
+      <button class="accordion_header" data-toggle="accordion" data-target="#accordion6">
+        Accordion Item 3
+      </button>
+      <div id="accordion6" class="accordion_content">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt quidem, suscipit a dicta architecto culpa officia in cupiditate accusantium, maxime expedita illum hic doloremque, vitae sunt saepe perspiciatis non dolorum!
+      </div>
+    </div>
+  </div>
+</template>
+
+<div>
+  <div class="accordion" data-allow-multiple>
+    <div class="accordion_item">
+      <button class="accordion_header" data-toggle="accordion" data-target="#accordion4">
+        Accordion Item 1
+      </button>
+      <div id="accordion4" class="accordion_content">
+        . . .
+      </div>
+    </div>
+
+    <div class="accordion_item">
+      <button class="accordion_header" data-toggle="accordion" data-target="#accordion5">
+        Accordion Item 2
+      </button>
+      <div id="accordion5" class="accordion_content">
+        . . .
+      </div>
+    </div>
+
+    <div class="accordion_item">
+      <button class="accordion_header" data-toggle="accordion" data-target="#accordion6">
+        Accordion Item 3
+      </button>
+      <div id="accordion6" class="accordion_content">
+        . . .
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+## Activating an item
+Use the active class to open an item by default
+
+```html transparent
+<template preview>
+  <div class="accordion my-2" data-allow-multiple>
+    <div class="accordion_item">
+      <button class="accordion_header" data-toggle="accordion" data-target="#accordion7">
+        Accordion Item 1
+      </button>
+      <div id="accordion7" class="accordion_content">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt quidem, suscipit a dicta architecto culpa officia in cupiditate accusantium, maxime expedita illum hic doloremque, vitae sunt saepe perspiciatis non dolorum!
+      </div>
+    </div>
+
+    <div class="accordion_item active">
+      <button class="accordion_header" data-toggle="accordion" data-target="#accordion8">
+        Accordion Item 2
+      </button>
+      <div id="accordion8" class="accordion_content">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt quidem, suscipit a dicta architecto culpa officia in cupiditate accusantium, maxime expedita illum hic doloremque, vitae sunt saepe perspiciatis non dolorum!
+      </div>
+    </div>
+
+    <div class="accordion_item">
+      <button class="accordion_header" data-toggle="accordion" data-target="#accordion9">
+        Accordion Item 3
+      </button>
+      <div id="accordion9" class="accordion_content">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt quidem, suscipit a dicta architecto culpa officia in cupiditate accusantium, maxime expedita illum hic doloremque, vitae sunt saepe perspiciatis non dolorum!
+      </div>
+    </div>
+  </div>
+</template>
+
+<div>
+  <div class="accordion" data-allow-multiple>
+    <div class="accordion_item">
+      <button class="accordion_header" data-toggle="accordion" data-target="#accordion7">
+        Accordion Item 1
+      </button>
+      <div id="accordion7" class="accordion_content">
+        . . .
+      </div>
+    </div>
+
+    <div class="accordion_item active">
+      <button class="accordion_header" data-toggle="accordion" data-target="#accordion8">
+        Accordion Item 2
+      </button>
+      <div id="accordion8" class="accordion_content">
+        . . .
+      </div>
+    </div>
+
+    <div class="accordion_item">
+      <button class="accordion_header" data-toggle="accordion" data-target="#accordion9">
+        Accordion Item 3
+      </button>
+      <div id="accordion9" class="accordion_content">
+        . . .
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+
+## Accessibility
+Pressing `space` or `enter` when focus is on the accordion panel header will toggle (expand or collapse) the accordion.

@@ -1,0 +1,46 @@
+// ----- Select
+.select {
+  background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%228%22%20height%3D%225%22%20fill%3D%22none%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M8%20.5c0-.28-.22-.5-.5-.5h-7C.404-.001.309.026.227.078S.082.205.042.293-.01.479.006.575.065.759.13.83l3.5%204A.5.5%200%200%200%204%205a.5.5%200%200%200%20.37-.17l3.5-4C7.95.74%208%20.63%208%20.5z%22%20fill%3D%22%236e8191%22%2F%3E%3C%2Fsvg%3E');
+  background-position: calc(100% - #{sizing(4)}) center;
+  background-repeat: no-repeat;
+  background-size: sizing(2);
+  cursor: pointer;
+
+  &[multiple] {
+    background-image: none;
+    height: auto;
+    padding: sizing(2) sizing(4);
+
+    &[data-size='sm'] {
+      height: sizing(10);
+    }
+  
+    &[data-size='lg'] {
+      font-size: $fz-base;
+      height: sizing(40);
+    }
+  }
+
+  // Focus
+  &:focus {
+    border-width: 1px;
+  }
+
+  &-brick,
+  &[data-style='brick'] {
+    &:focus {
+      border-width: 1px;
+    }
+  }
+
+  &-flushed,
+  &[data-style='flushed'] {
+    border-width: 0;
+    border-bottom-width: 1px;
+
+    &:focus {
+      border-bottom-width: 1px;
+    }
+  }
+  
+}

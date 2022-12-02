@@ -1,0 +1,74 @@
+// ----- Badge
+@each $key, $value in $badge {
+  $cls: '';
+  @if $key == 'default' {
+    $cls: '';
+  } @else {
+    $cls: -#{$key};
+  }
+
+  @include mode('.badge#{$cls}') {
+    &.badge-tone,
+    &[data-variant='tone'] {
+      border: 1px solid color($value, #{$value}-200);
+    }
+
+    &.badge-outline,
+    &[data-variant='outline'] {
+      border: 1px solid color($value, #{$value}-100);
+      color: color($value, #{$value}-100);
+    }
+  }
+
+  .badge#{$cls} {
+    background-color: color($value, #{$value}-50);
+    border-radius: get-map-val($util-properties, border-radius, base);
+    color: color($value, #{$value}-800);
+    cursor: pointer;
+    display: inline-block;
+    font-size: $fz-xs;
+    font-weight: $fw-500;
+    line-height: 1;
+    padding: sizing(1) sizing(3);
+    white-space: nowrap;
+
+    &.badge-solid,
+    &[data-variant='solid'] {
+      background-color: color($value, #{$value}-600);
+      color: color(system, white);
+    }
+
+    &.badge-tone,
+    &[data-variant='tone'] {
+      background-color: color($value, #{$value}-50);
+      border: 1px solid color($value, #{$value}-800);
+      color: color($value, #{$value}-800);
+    }
+
+    &.badge-outline,
+    &[data-variant='outline'] {
+      background-color: transparent;
+      border: 1px solid color($value, #{$value}-800);
+      color: color($value, #{$value}-800);
+    }
+  }
+}
+
+.badge {
+  &-sm,
+  &[data-size='sm'] {
+    padding: rem(0.125) sizing(2);
+  }
+
+  &-lg,
+  &[data-size='lg'] {
+    padding: sizing(2) sizing(4);
+  }
+}
+
+// Dark mode
+@include mode('.btn-group') {
+  >.btn {
+    #{$var-prefix}secondary-200: var(#{$var-prefix}secondary-700);
+  }
+}

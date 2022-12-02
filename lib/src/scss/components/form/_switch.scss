@@ -1,0 +1,37 @@
+// ----- Switch
+.switch {
+  border-radius: var(#{$var-prefix}feedback-input-switch-radius);
+  width: var(#{$var-prefix}feedback-input-switch);
+
+  &::after {
+    @include pos-center-y;
+    background: var(#{$var-prefix}white);
+    border-radius: 50%;
+    height: calc(100% - 2px);
+    left: 2px;
+    transform: translateY(-50%) translateX(var(--switch-transform, 0));
+    width: calc(100% / 2 - 3px);
+  }
+
+  &:checked {
+    --switch-transform: calc(var(#{$var-prefix}feedback-input-switch) - var(#{$var-prefix}feedback-input-size) - 1px);
+  }
+
+  &:disabled {
+    &:not(:checked) {
+      opacity: 0.6;
+    }
+  }
+
+  // lg
+  &-lg,
+  &[data-size='lg'] {
+    #{$var-prefix}feedback-input-switch: var(#{$var-prefix}feedback-input-switch-lg);
+  }
+
+  // sm
+  &-sm,
+  &[data-size='sm'] {
+    #{$var-prefix}feedback-input-switch: var(#{$var-prefix}feedback-input-switch-sm);
+  }
+}

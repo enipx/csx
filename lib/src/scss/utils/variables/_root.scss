@@ -1,0 +1,299 @@
+// ---- Root
+:root {
+  // Breakpoint
+  #{$var-prefix}bpt-xs: $breakpoint-xs;
+  #{$var-prefix}bpt-sm: $breakpoint-sm;
+  #{$var-prefix}bpt-md: $breakpoint-md;
+  #{$var-prefix}bpt-lg: $breakpoint-lg;
+  #{$var-prefix}bpt-xl: $breakpoint-xl;
+  #{$var-prefix}bpt-xxl: $breakpoint-xxl;
+
+  // Base
+  #{$var-prefix}base-bg: #{color(system, white)};
+  #{$var-prefix}base-link-color: #{color(system, primary)};
+  #{$var-prefix}base-link-hover-color: #{color(primary, primary-600)};
+  
+  // Most used
+  #{$var-prefix}base-color: #{color(secondary, secondary-800)};
+  #{$var-prefix}secondary-50: #{color(secondary, secondary-50)};
+
+  // Color
+  #{$var-prefix}brand: #{color(system, brand)};
+  #{$var-prefix}black: #{color(system, black)};
+  #{$var-prefix}white: #{color(system, white)};
+  #{$var-prefix}dark: #{color(system, dark)};
+  #{$var-prefix}light: #{color(system, light)};
+
+  #{$var-prefix}primary: #{color(system, primary)};
+  #{$var-prefix}secondary: #{color(system, secondary)};
+  #{$var-prefix}success: #{color(system, success)};
+  #{$var-prefix}danger: #{color(system, danger)};
+  #{$var-prefix}warning: #{color(system, warning)};
+  #{$var-prefix}info: #{color(system, info)};
+  #{$var-prefix}cyan: #{color(system, cyan)};
+  #{$var-prefix}magenta: #{color(system, magenta)};
+  #{$var-prefix}orange: #{color(system, orange)};
+  #{$var-prefix}purple: #{color(system, purple)};
+  #{$var-prefix}pink: #{color(system, pink)};
+
+  // Black
+  #{$var-prefix}black-50: #{color(black, black-50)};
+  #{$var-prefix}black-100: #{color(black, black-100)};
+  #{$var-prefix}black-200: #{color(black, black-200)};
+  #{$var-prefix}black-300: #{color(black, black-300)};
+  #{$var-prefix}black-400: #{color(black, black-400)};
+  #{$var-prefix}black-500: #{color(black, black-500)};
+  #{$var-prefix}black-600: #{color(black, black-600)};
+  #{$var-prefix}black-700: #{color(black, black-700)};
+  #{$var-prefix}black-800: #{color(black, black-800)};
+  #{$var-prefix}black-900: #{color(black, black-900)};
+
+  // White
+  #{$var-prefix}white-50: #{color(white, white-50)};
+  #{$var-prefix}white-100: #{color(white, white-100)};
+  #{$var-prefix}white-200: #{color(white, white-200)};
+  #{$var-prefix}white-300: #{color(white, white-300)};
+  #{$var-prefix}white-400: #{color(white, white-400)};
+  #{$var-prefix}white-500: #{color(white, white-500)};
+  #{$var-prefix}white-600: #{color(white, white-600)};
+  #{$var-prefix}white-700: #{color(white, white-700)};
+  #{$var-prefix}white-800: #{color(white, white-800)};
+  #{$var-prefix}white-900: #{color(white, white-900)};
+
+  // Primary
+  #{$var-prefix}primary-50: #{color(primary, primary-50)};
+  #{$var-prefix}primary-100: #{color(primary, primary-100)};
+  #{$var-prefix}primary-200: #{color(primary, primary-200)};
+  #{$var-prefix}primary-300: #{color(primary, primary-300)};
+  #{$var-prefix}primary-400: #{color(primary, primary-400)};
+  #{$var-prefix}primary-500: #{color(primary, primary-500)};
+  #{$var-prefix}primary-600: #{color(primary, primary-600)};
+  #{$var-prefix}primary-700: #{color(primary, primary-700)};
+  #{$var-prefix}primary-800: #{color(primary, primary-800)};
+  #{$var-prefix}primary-900: #{color(primary, primary-900)};
+
+  // Secondary
+  #{$var-prefix}secondary-50: #{color(secondary, secondary-50)};
+  #{$var-prefix}secondary-100: #{color(secondary, secondary-100)};
+  #{$var-prefix}secondary-200: #{color(secondary, secondary-200)};
+  #{$var-prefix}secondary-300: #{color(secondary, secondary-300)};
+  #{$var-prefix}secondary-400: #{color(secondary, secondary-400)};
+  #{$var-prefix}secondary-500: #{color(secondary, secondary-500)};
+  #{$var-prefix}secondary-600: #{color(secondary, secondary-600)};
+  #{$var-prefix}secondary-700: #{color(secondary, secondary-700)};
+  #{$var-prefix}secondary-800: #{color(secondary, secondary-800)};
+  #{$var-prefix}secondary-900: #{color(secondary, secondary-900)};
+
+  // Success
+  #{$var-prefix}success-50: #{color(success, success-50)};
+  #{$var-prefix}success-100: #{color(success, success-100)};
+  #{$var-prefix}success-200: #{color(success, success-200)};
+  #{$var-prefix}success-300: #{color(success, success-300)};
+  #{$var-prefix}success-400: #{color(success, success-400)};
+  #{$var-prefix}success-500: #{color(success, success-500)};
+  #{$var-prefix}success-600: #{color(success, success-600)};
+  #{$var-prefix}success-700: #{color(success, success-700)};
+  #{$var-prefix}success-800: #{color(success, success-800)};
+  #{$var-prefix}success-900: #{color(success, success-900)};
+
+  // Danger
+  #{$var-prefix}danger-50: #{color(danger, danger-50)};
+  #{$var-prefix}danger-100: #{color(danger, danger-100)};
+  #{$var-prefix}danger-200: #{color(danger, danger-200)};
+  #{$var-prefix}danger-300: #{color(danger, danger-300)};
+  #{$var-prefix}danger-400: #{color(danger, danger-400)};
+  #{$var-prefix}danger-500: #{color(danger, danger-500)};
+  #{$var-prefix}danger-600: #{color(danger, danger-600)};
+  #{$var-prefix}danger-700: #{color(danger, danger-700)};
+  #{$var-prefix}danger-800: #{color(danger, danger-800)};
+  #{$var-prefix}danger-900: #{color(danger, danger-900)};
+
+  // Warning
+  #{$var-prefix}warning-50: #{color(warning, warning-50)};
+  #{$var-prefix}warning-100: #{color(warning, warning-100)};
+  #{$var-prefix}warning-200: #{color(warning, warning-200)};
+  #{$var-prefix}warning-300: #{color(warning, warning-300)};
+  #{$var-prefix}warning-400: #{color(warning, warning-400)};
+  #{$var-prefix}warning-500: #{color(warning, warning-500)};
+  #{$var-prefix}warning-600: #{color(warning, warning-600)};
+  #{$var-prefix}warning-700: #{color(warning, warning-700)};
+  #{$var-prefix}warning-800: #{color(warning, warning-800)};
+  #{$var-prefix}warning-900: #{color(warning, warning-900)};
+
+  // Info
+  #{$var-prefix}info-50: #{color(info, info-50)};
+  #{$var-prefix}info-100: #{color(info, info-100)};
+  #{$var-prefix}info-200: #{color(info, info-200)};
+  #{$var-prefix}info-300: #{color(info, info-300)};
+  #{$var-prefix}info-400: #{color(info, info-400)};
+  #{$var-prefix}info-500: #{color(info, info-500)};
+  #{$var-prefix}info-600: #{color(info, info-600)};
+  #{$var-prefix}info-700: #{color(info, info-700)};
+  #{$var-prefix}info-800: #{color(info, info-800)};
+  #{$var-prefix}info-900: #{color(info, info-900)};
+
+  // Cyan
+  #{$var-prefix}cyan-50: #{color(cyan, cyan-50)};
+  #{$var-prefix}cyan-100: #{color(cyan, cyan-100)};
+  #{$var-prefix}cyan-200: #{color(cyan, cyan-200)};
+  #{$var-prefix}cyan-300: #{color(cyan, cyan-300)};
+  #{$var-prefix}cyan-400: #{color(cyan, cyan-400)};
+  #{$var-prefix}cyan-500: #{color(cyan, cyan-500)};
+  #{$var-prefix}cyan-600: #{color(cyan, cyan-600)};
+  #{$var-prefix}cyan-700: #{color(cyan, cyan-700)};
+  #{$var-prefix}cyan-800: #{color(cyan, cyan-800)};
+  #{$var-prefix}cyan-900: #{color(cyan, cyan-900)};
+
+  // Magenta
+  #{$var-prefix}magenta-50: #{color(magenta, magenta-50)};
+  #{$var-prefix}magenta-100: #{color(magenta, magenta-100)};
+  #{$var-prefix}magenta-200: #{color(magenta, magenta-200)};
+  #{$var-prefix}magenta-300: #{color(magenta, magenta-300)};
+  #{$var-prefix}magenta-400: #{color(magenta, magenta-400)};
+  #{$var-prefix}magenta-500: #{color(magenta, magenta-500)};
+  #{$var-prefix}magenta-600: #{color(magenta, magenta-600)};
+  #{$var-prefix}magenta-700: #{color(magenta, magenta-700)};
+  #{$var-prefix}magenta-800: #{color(magenta, magenta-800)};
+  #{$var-prefix}magenta-900: #{color(magenta, magenta-900)};
+
+  // Orange
+  #{$var-prefix}orange-50: #{color(orange, orange-50)};
+  #{$var-prefix}orange-100: #{color(orange, orange-100)};
+  #{$var-prefix}orange-200: #{color(orange, orange-200)};
+  #{$var-prefix}orange-300: #{color(orange, orange-300)};
+  #{$var-prefix}orange-400: #{color(orange, orange-400)};
+  #{$var-prefix}orange-500: #{color(orange, orange-500)};
+  #{$var-prefix}orange-600: #{color(orange, orange-600)};
+  #{$var-prefix}orange-700: #{color(orange, orange-700)};
+  #{$var-prefix}orange-800: #{color(orange, orange-800)};
+  #{$var-prefix}orange-900: #{color(orange, orange-900)};
+
+  // Purple
+  #{$var-prefix}purple-50: #{color(purple, purple-50)};
+  #{$var-prefix}purple-100: #{color(purple, purple-100)};
+  #{$var-prefix}purple-200: #{color(purple, purple-200)};
+  #{$var-prefix}purple-300: #{color(purple, purple-300)};
+  #{$var-prefix}purple-400: #{color(purple, purple-400)};
+  #{$var-prefix}purple-500: #{color(purple, purple-500)};
+  #{$var-prefix}purple-600: #{color(purple, purple-600)};
+  #{$var-prefix}purple-700: #{color(purple, purple-700)};
+  #{$var-prefix}purple-800: #{color(purple, purple-800)};
+  #{$var-prefix}purple-900: #{color(purple, purple-900)};
+
+  // Pink
+  #{$var-prefix}pink-50: #{color(pink, pink-50)};
+  #{$var-prefix}pink-100: #{color(pink, pink-100)};
+  #{$var-prefix}pink-200: #{color(pink, pink-200)};
+  #{$var-prefix}pink-300: #{color(pink, pink-300)};
+  #{$var-prefix}pink-400: #{color(pink, pink-400)};
+  #{$var-prefix}pink-500: #{color(pink, pink-500)};
+  #{$var-prefix}pink-600: #{color(pink, pink-600)};
+  #{$var-prefix}pink-700: #{color(pink, pink-700)};
+  #{$var-prefix}pink-800: #{color(pink, pink-800)};
+  #{$var-prefix}pink-900: #{color(pink, pink-900)};
+  
+  // Brands
+  #{$var-prefix}facebook: #{color(brands, facebook)};
+  #{$var-prefix}twitter: #{color(brands, twitter)};
+  #{$var-prefix}instagram: #{color(brands, instagram)};
+  #{$var-prefix}linkedin: #{color(brands, linkedin)};
+  #{$var-prefix}pinterest: #{color(brands, pinterest)};
+  #{$var-prefix}youtube: #{color(brands, youtube)};
+  #{$var-prefix}dribbble: #{color(brands, dribbble)};
+  #{$var-prefix}behance: #{color(brands, behance)};
+  #{$var-prefix}github: #{color(brands, github)};
+  #{$var-prefix}reddit: #{color(brands, reddit)};
+  #{$var-prefix}paypal: #{color(brands, paypal)};
+  #{$var-prefix}dropbox: #{color(brands, dropbox)};
+  #{$var-prefix}slack: #{color(brands, slack)};
+  #{$var-prefix}mailchimp: #{color(brands, mailchimp)};
+  #{$var-prefix}saleforce: #{color(brands, saleforce)};
+
+  // Components
+  #{$var-prefix}input-focus-bxsh: 0 0 0 2px rgba(0, 0, 0, 0.1);
+  #{$var-prefix}input-focus-dm-bxsh: 0 0 0 2px rgba(255, 255, 255, 0.1);
+
+
+
+  #{$var-prefix}feedback-input-size: 1rem;
+  #{$var-prefix}feedback-input-size-sm: 0.75rem;
+  #{$var-prefix}feedback-input-size-lg: 1.25rem;
+
+  #{$var-prefix}feedback-input-transition-timing: 0.375rem;
+
+  #{$var-prefix}feedback-input-radius: 0.3rem;
+  #{$var-prefix}feedback-input-radius-sm: 0.25rem;
+  #{$var-prefix}feedback-input-radius-lg: 0.4rem;
+
+  #{$var-prefix}feedback-input-switch: 2rem;
+  #{$var-prefix}feedback-input-switch-sm: 1.5rem;
+  #{$var-prefix}feedback-input-switch-lg: 2.5rem;
+
+  #{$var-prefix}feedback-input-switch-track: calc(var(#{$var-prefix}feedback-input-switch) - var(#{$var-prefix}feedback-input-size));
+  #{$var-prefix}feedback-input-switch-radius: 15rem;
+
+  #{$var-prefix}status-hinter-size-sm: #{rem(0.375)};
+  #{$var-prefix}status-hinter-size: #{sizing(2)};
+  #{$var-prefix}status-hinter-size-lg: #{sizing(3)};
+
+  #{$var-prefix}avatar-size: #{sizing(12)};
+  #{$var-prefix}avatar-size-sm: #{sizing(8)};
+  #{$var-prefix}avatar-size-lg: #{sizing(16)};
+
+  #{$var-prefix}avatar-notification-size: #{sizing(4)};
+  #{$var-prefix}avatar-notification-size-sm: #{sizing(3)};
+  #{$var-prefix}avatar-notification-size-lg: #{sizing(6)};
+
+  #{$var-prefix}modal-backdrop-bg: rgba(0, 0, 0, 0.4);
+
+  #{$var-prefix}drawer-x-width-base: rem(20);
+  #{$var-prefix}drawer-x-width-md: 50vw;
+  #{$var-prefix}drawer-x-width-lg: 70vw;
+  #{$var-prefix}drawer-x-width-full: 100vw;
+  
+  #{$var-prefix}drawer-y-height-base: 35vh;
+  #{$var-prefix}drawer-y-height-md: 50vh;
+  #{$var-prefix}drawer-y-height-lg: 70vh;
+  #{$var-prefix}drawer-y-height-full: 100vh;
+
+  #{$var-prefix}dropdown-arrow-width: rem(0.4);
+  #{$var-prefix}dropdown-arrow-width-half: rem(0.2);
+  #{$var-prefix}dropdown-arrow-width-half-inv: rem(-0.2);
+
+  #{$var-prefix}breadcrumb-spacer: #{get-map($breadcrumb, spacer)};
+  #{$var-prefix}breadcrumb-separator: #{get-map($breadcrumb, separator)};
+
+  #{$var-prefix}hamburger-bg: #{get-map-val($hamburger, bg, lm)};
+  #{$var-prefix}hamburger-dm-bg: #{get-map-val($hamburger, bg, dm)};
+  #{$var-prefix}hamburger-spacer: #{get-map($hamburger, spacer)};
+  #{$var-prefix}hamburger-width: #{get-map($hamburger, width)};
+
+  #{$var-prefix}tab-item-round-bg: #{color(secondary, secondary-50)};
+  #{$var-prefix}tab-item-round-outline: #{color(secondary, secondary-100)};
+
+  #{$var-prefix}slideshow-indicator-size: #{get-map-val($slideshow, indicator, size)};
+  #{$var-prefix}slideshow-indicator-spacing: #{get-map-val($slideshow, indicator, spacing)};
+  #{$var-prefix}slideshow-indicator-pos: #{get-map-val($slideshow, indicator, pos)};
+  #{$var-prefix}slideshow-indicator-offset-pos: #{get-map-val($slideshow, indicator, offset-pos)};
+  #{$var-prefix}slideshow-indicator-bar-width: #{get-map-val($slideshow, indicator, bar-width)};
+  #{$var-prefix}slideshow-indicator-bar-height: #{get-map-val($slideshow, indicator, bar-height)};
+
+  #{$var-prefix}slideshow-control-icon-size: #{get-map-val($slideshow, control, icon-size)};
+
+  #{$var-prefix}alert-toast-width: rem(25);
+}
+
+[data-mode='dark'] {
+  // Base
+  #{$var-prefix}base-bg: #{color(secondary, secondary-900)};
+  #{$var-prefix}base-link-color: #{color(primary, primary-300)};
+  #{$var-prefix}base-link-hover-color: #{color(primary, primary-400)};
+  
+  // Most used
+  #{$var-prefix}base-color: #{color(secondary, secondary-100)};
+  #{$var-prefix}secondary-50: #{color(secondary, secondary-50)};
+
+  // Color
+  #{$var-prefix}dark: #{color(system, light)};
+  #{$var-prefix}light: #{color(system, dark)};
+}

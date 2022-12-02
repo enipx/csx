@@ -1,0 +1,96 @@
+---
+title: "Tooltip"
+description: "Used as a short and informative message which appears when a user interacts with an item."
+---
+
+## Usage
+
+```html
+<template preview>
+  <div class="dropdown mt-4">
+    <button class="btn" data-toggle="dropdown" id="tooltip-toggle">
+      Tooltip
+    </button>
+    <div class="dropdown_menu" data-type="tooltip" data-dir="">
+      <p class="content">Lorem ipsum dolor sit</p>
+    </div>
+  </div>
+
+</template>
+
+<div>
+  <div class="dropdown mt-4">
+    <button class="btn" data-toggle="dropdown" id="tooltip-toggle">
+      Tooltip
+    </button>
+    <div class="dropdown_menu" data-type="tooltip" data-dir="">
+      <p class="content">Lorem ipsum dolor sit</p>
+    </div>
+  </div>
+</div>
+```
+
+## Direction
+Set tooltip direction using the `data-dir="[direction]"` attribute. Options available are `top`, `right`, `bottom`, `left`. Usage example is `data-dir="top"`.
+
+```html
+<template preview>
+
+  <div class="dropdown mt-4">
+    <button class="btn" data-toggle="dropdown" id="tooltip-toggle1">
+      Tooltip Top
+    </button>
+    <div class="dropdown_menu" data-type="tooltip" data-arrow data-dir="top">
+      <p class="content">Lorem ipsum dolor sit</p>
+    </div>
+  </div>
+
+  <div class="dropdown mt-4">
+    <button class="btn" data-toggle="dropdown" id="tooltip-toggle2">
+      Tooltip Right
+    </button>
+    <div class="dropdown_menu" data-type="tooltip" data-arrow data-dir="right">
+      <p class="content">Lorem ipsum dolor sit</p>
+    </div>
+  </div>
+
+  <div class="dropdown mt-4">
+    <button class="btn" data-toggle="dropdown" id="tooltip-toggle3">
+      Tooltip Left
+    </button>
+    <div class="dropdown_menu" data-type="tooltip" data-arrow data-dir="left">
+      <p class="content">Lorem ipsum dolor sit</p>
+    </div>
+  </div>
+
+</template>
+
+<div>
+  <div class="dropdown">
+    <button class="btn" data-toggle="dropdown" id="tooltip-toggle1">
+      Tooltip Top
+    </button>
+    <div class="dropdown_menu" data-type="tooltip" data-arrow data-dir="top">
+      <p class="content">Lorem ipsum dolor sit</p>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="btn" data-toggle="dropdown" id="tooltip-toggle2">
+      Tooltip Right
+    </button>
+    <div class="dropdown_menu" data-type="tooltip" data-arrow data-dir="right">
+      <p class="content">Lorem ipsum dolor sit</p>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="btn" data-toggle="dropdown" id="tooltip-toggle3">
+      Tooltip Left
+    </button>
+    <div class="dropdown_menu" data-type="tooltip" data-arrow data-dir="left">
+      <p class="content">Lorem ipsum dolor sit</p>
+    </div>
+  </div>
+</div>
+```

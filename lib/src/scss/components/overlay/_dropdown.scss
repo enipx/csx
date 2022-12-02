@@ -1,0 +1,242 @@
+.dropdown {
+  display: inline-block;
+  position: relative;
+
+  &_divider {
+    background-color: var(#{$var-prefix}secondary-100);
+    height: sizing(px);
+    margin: sizing(1) sizing(0);
+  }
+
+  &_menu {
+    @include border-radius(lg);
+    @include box-shadow(lg);
+    @include transition(opacity, 200ms);
+    @include z-index(dropdown);
+    background-color: var(#{$var-prefix}base-bg);
+    background-image: none;
+    border: 1px solid var(#{$var-prefix}secondary-100);
+    color: var(#{$var-prefix}base-color);
+    display: block;
+    min-width: sizing(48);
+    opacity: $op-0;
+    padding: sizing(2);
+    pointer-events: none;
+    position: absolute;
+    text-align: $align-left;
+    transform: translateY(sizing(1));
+
+    &.active {
+      opacity: $op-100;
+      pointer-events: all;
+
+      &[data-arrow] {
+        &::after,
+        &::before {
+          opacity: $op-100;
+        }
+      }
+      
+    }
+
+    &_item,
+    &_header {
+      @include base-transition;
+      color: var(#{$var-prefix}base-color);
+      cursor: pointer;
+      display: block;
+      padding: sizing(2) sizing(3);
+
+      &:hover {
+        @include border-radius(md);
+        background-color: var(#{$var-prefix}secondary-50);
+        color: var(#{$var-prefix}base-color);
+      }
+    }
+
+    &_header {
+      border-bottom: 1px solid var(#{$var-prefix}secondary-100);
+      cursor: text;
+      font-size: $fz-sm;
+      font-weight: $fw-500;
+      margin-bottom: sizing(1);
+      opacity: $op-70;
+      
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    &_content {
+      padding: sizing(2) sizing(3);
+    }
+
+    &::after,
+    &::before {
+      @include transition(opacity, 200ms);
+      background-color: transparent;
+      background-image: none;
+      border-bottom: var(#{$var-prefix}dropdown-arrow-width) solid var(#{$var-prefix}secondary-100);
+      border-left: var(#{$var-prefix}dropdown-arrow-width) solid transparent;
+      border-right: var(#{$var-prefix}dropdown-arrow-width) solid transparent;
+      content: '';
+      opacity: $op-0;
+      position: absolute;
+      top: calc(var(#{$var-prefix}dropdown-arrow-width) * -1);
+    }
+
+    &[data-arrow] {
+      transform: translateY(var(#{$var-prefix}dropdown-arrow-width));
+    }
+
+    // Alignment : for dropdown
+    &[data-align='center'] {
+      left: 50%;
+      transform: translateX(-50%) translateY(sizing(1));
+
+      &::after,
+      &::before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &[data-arrow] {
+        transform: translateX(-50%) translateY(var(#{$var-prefix}dropdown-arrow-width));
+      }
+    }
+
+    &[data-align='right'] {
+      left: 100%;
+      transform: translateX(-100%) translateY(sizing(1));
+
+      &::after,
+      &::before {
+        left: calc(100% - var(#{$var-prefix}dropdown-arrow-width));
+        transform: translateX(-100%);
+      }
+
+      &[data-arrow] {
+        transform: translateX(-100%) translateY(var(#{$var-prefix}dropdown-arrow-width));
+      }
+    }
+
+
+
+    // Popover & tooltip
+    &[data-type='popover'],
+    &[data-type='tooltip'] {
+      left: 50%;
+      min-width: sizing(64);
+      padding: sizing(1);
+      transform: translateX(-50%) translateY(sizing(1));
+
+      @include media-md {
+        min-width: sizing(80);
+      }
+
+      .dropdown_content,
+      .dropdown_item,
+      .dropdown_header {
+        padding: sizing(1) sizing(2);
+      }
+
+      &::after,
+      &::before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &[data-arrow] {
+        transform: translateX(-50%) translateY(var(#{$var-prefix}dropdown-arrow-width));
+      }
+
+      // Director: for popover
+      // Left
+      &[data-dir='left'] {
+        left: 0%;
+        top: 50%;
+        transform: translateX(calc(-100% - var(#{$var-prefix}dropdown-arrow-width-half))) translateY(-50%);
+  
+        &[data-arrow] {
+          transform: translateX(calc(-100% - var(#{$var-prefix}dropdown-arrow-width))) translateY(-50%);
+          
+          &::after,
+          &::before {
+            left: 100%;
+            top: 50%;
+            transform: rotate(90deg) translateY(var(#{$var-prefix}dropdown-arrow-width-half));
+          }
+        }
+      }
+
+      // Right
+      &[data-dir='right'] {
+        left: 100%;
+        top: 50%;
+        transform: translateX(calc(0% + var(#{$var-prefix}dropdown-arrow-width-half))) translateY(-50%);
+  
+        &[data-arrow] {
+          transform: translateX(calc(0% + var(#{$var-prefix}dropdown-arrow-width))) translateY(-50%);
+          
+          &::after,
+          &::before {
+            left: 0%;
+            top: 50%;
+            transform: rotate(-90deg) translateY(calc(-100% + var(#{$var-prefix}dropdown-arrow-width-half-inv)));
+          }
+        }
+      }
+
+      // Right
+      &[data-dir='top'] {
+        top: 0%;
+        transform: translateX(-50%) translateY(calc(-100% - var(#{$var-prefix}dropdown-arrow-width-half)));
+
+        &[data-arrow] {
+          transform: translateX(-50%) translateY(calc(-100% - var(#{$var-prefix}dropdown-arrow-width)));
+
+          &::after,
+          &::before {
+            left: 50%;
+            top: 100%;
+            transform: rotate(180deg) translateX(50%) translateY(0);
+          }
+        }
+      }
+    }
+
+    &[data-type='tooltip'] {
+      @include border-radius(base);
+      background-color: var(#{$var-prefix}secondary-700);
+      border-color: var(#{$var-prefix}secondary-700);
+      color: var(#{$var-prefix}white);
+      font-size: $fz-xs;
+      min-width: sizing(48);
+      padding: sizing(1) rem(0.375);
+
+      .content {
+        display: inline-block;
+      }
+
+      &::after,
+      &::before {
+        border-bottom-color: var(#{$var-prefix}secondary-700);
+      }
+    }
+
+  }
+  
+}
+
+// Dark mode
+@include mode('.dropdown') {
+  .dropdown_menu {
+    @include box-shadow(xl);
+    #{$var-prefix}secondary-100: var(#{$var-prefix}secondary-800);
+
+    &[data-type='tooltip'] {
+      #{$var-prefix}secondary-700: var(#{$var-prefix}secondary-600);
+    }
+  }
+}
+

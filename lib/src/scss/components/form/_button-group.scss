@@ -1,0 +1,71 @@
+// ----- Button Group
+.btn-group {
+  align-items: center;
+  display: inline-flex;
+  position: relative;
+
+  @each $key, $value in $buttons {
+    @if $key != 'default' {
+      >.btn-#{$key} {
+        border: 1px solid var(#{$var-prefix}secondary-200); // $buttons: same as button default bordercolor
+      }
+    }
+  }
+
+  >.btn {
+    @include border-radius(none);
+    border-right-color: transparent;
+    flex: 1 1 auto;
+    margin-left: -1px;
+    position: relative;
+
+    &:hover {
+      border: 1px solid var(#{$var-prefix}secondary-200); // $buttons: same as button default bordercolor
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+    
+    &:first-child {
+      border-bottom-left-radius: sizing(1);
+      border-top-left-radius: sizing(1);
+    }
+    
+    &:last-child {
+      border-bottom-right-radius: sizing(1);
+      border-right-color: var(#{$var-prefix}secondary-200);
+      border-top-right-radius: sizing(1);
+    }
+  }
+
+  &[data-vertical] {
+    align-items: flex-start;
+    flex-direction: column;
+
+    .btn {
+      @include border-radius(none);
+      border-bottom-color: transparent;
+      border-right-color: var(#{$var-prefix}secondary-200); // $buttons: same as button default bordercolor
+      width: 100%;
+    
+      &:first-child {
+        border-top-left-radius: sizing(1);
+        border-top-right-radius: sizing(1);
+      }
+      
+      &:last-child {
+        border-bottom-color: var(#{$var-prefix}secondary-200);
+        border-bottom-left-radius: sizing(1);
+        border-bottom-right-radius: sizing(1);
+      }
+    }
+  }
+}
+
+// Dark mode
+@include mode('.btn-group') {
+  >.btn {
+    #{$var-prefix}secondary-200: var(#{$var-prefix}secondary-700);
+  }
+}

@@ -1,0 +1,50 @@
+// ----- Base
+$base-bg: color(system, white) !default;
+$base-color: color(secondary, secondary-800) !default;
+$base-padding: 0 !default;
+$base-margin: 0 !default;
+$base-font-size: 16px !default;
+$base-line-height: 1.5 !default;
+
+// ----- Align 
+$align-none: get-map-val($util-properties, align, none) !default;
+$align-auto: get-map-val($util-properties, align, auto) !default;
+$align-left: get-map-val($util-properties, align, left) !default;
+$align-right: get-map-val($util-properties, align, right) !default;
+$align-top: get-map-val($util-properties, align, top) !default;
+$align-bottom: get-map-val($util-properties, align, bottom) !default;
+$align-center: get-map-val($util-properties, align, center) !default;
+$align-both: get-map-val($util-properties, align, both) !default;
+$align-contain: get-map-val($util-properties, align, contain) !default;
+$align-cover: get-map-val($util-properties, align, cover) !default;
+$align-fill: get-map-val($util-properties, align, fill) !default;
+$align-scale-down: get-map-val($util-properties, align, scale-down) !default;
+$align-hidden: get-map-val($util-properties, align, hidden) !default;
+$align-visible: get-map-val($util-properties, align, visible) !default;
+$align-scroll: get-map-val($util-properties, align, scroll) !default;
+
+// ----- Position
+$pos-relative: get-map-val($util-properties, position, relative) !default;
+$pos-absolute: get-map-val($util-properties, position, absolute) !default;
+$pos-fixed: get-map-val($util-properties, position, fixed) !default;
+$pos-sticky: get-map-val($util-properties, position, sticky) !default;
+$pos-static: get-map-val($util-properties, position, static) !default;
+
+// ----- Opacity 
+$op-0: get-map-val($util-properties, opacity, 0) !default;
+$op-5: get-map-val($util-properties, opacity, 5) !default;
+$op-10: get-map-val($util-properties, opacity, 10) !default;
+$op-20: get-map-val($util-properties, opacity, 20) !default;
+$op-30: get-map-val($util-properties, opacity, 30) !default;
+$op-40: get-map-val($util-properties, opacity, 40) !default;
+$op-50: get-map-val($util-properties, opacity, 50) !default;
+$op-60: get-map-val($util-properties, opacity, 60) !default;
+$op-70: get-map-val($util-properties, opacity, 70) !default;
+$op-80: get-map-val($util-properties, opacity, 80) !default;
+$op-90: get-map-val($util-properties, opacity, 90) !default;
+$op-95: get-map-val($util-properties, opacity, 95) !default;
+$op-100: get-map-val($util-properties, opacity, 100) !default;
+
+// ----- Pointer events 
+$ptev-auto: get-map-val($util-properties, align, auto) !default;
+$ptev-none: get-map-val($util-properties, align, none) !default;

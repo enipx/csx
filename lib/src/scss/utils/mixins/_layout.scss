@@ -1,0 +1,480 @@
+@use 'sass:math';
+
+// ----- Container
+@mixin setup-container {
+  %#{util-keys(container)} {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+  }
+
+  %#{util-keys(fluid)} {
+    margin: 0 auto;
+    padding: 0 sizing(6);
+    width: 100%;
+
+    @include media-md {
+      padding: 0 sizing(8);
+    }
+  }
+
+  .#{util-keys(container)} {
+    @extend %container;
+  }
+
+  .#{util-keys(fluid)} {
+    @extend %fluid;
+  }
+
+  @each $key, $value in util-props(breakpoints) {
+    .#{util-keys(fluid)}-#{$key} {
+      @extend %fluid;
+      max-width: $value;
+    }
+
+    .#{util-keys(container)}-#{$key} {
+      @extend %container;
+      max-width: $value;
+    }
+  }
+}
+
+// ----- Row
+@mixin setup-row {
+  .#{util-keys(row)} {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// ----- Columns
+@mixin setup-cols {
+  @for $i from 1 through 12 {
+    @include brpt-auto-gen(#{util-keys(column)}-#{$i}) {
+      flex: 0 0 math.div(100%, 12) * $i;
+      max-width: math.div(100%, 12) * $i;
+    }
+  }
+}
+
+// ----- Grid Columns
+@mixin setup-grid-cols {
+  @each $key, $value in util-props(grid-columns) {
+    @include brpt-auto-gen(#{util-keys(grid-template-columns)}-#{$key}) {
+      grid-template-columns: $value;
+    }
+
+    @include brpt-auto-gen(#{util-keys(grid-template-rows)}-#{$key}) {
+      grid-template-rows: $value;
+    }
+  }
+
+  @each $key, $value in util-props(grid-auto-flow) {
+    @include brpt-auto-gen(#{util-keys(grid-auto-flow)}-#{$key}) {
+      grid-auto-flow: $value;
+    }
+  }
+}
+
+// ----- Grid Columns Span
+@mixin setup-grid-cols-span {
+  @each $key, $value in util-props(grid-span) {
+    @include brpt-auto-gen(#{util-keys(grid-column)}-span-#{$key}) {
+      grid-column: unquote($value);
+    }
+  }
+}
+
+// ----- Grid Rows Span
+@mixin setup-grid-rows-span {
+  @each $key, $value in util-props(grid-span) {
+    @include brpt-auto-gen(#{util-keys(grid-row)}-span-#{$key}) {
+      grid-row: unquote($value);
+    }
+  }
+}
+
+// ----- Grid gap
+@mixin setup-grid-gaps {
+  @each $key, $value in util-props(grid-gaps) {
+    @include brpt-auto-gen(#{util-keys(grid-gap)}-#{$key}) {
+      grid-gap: $value;
+    }
+
+    @include brpt-auto-gen(#{util-keys(column-gap)}-#{$key}) {
+      column-gap: $value;
+    }
+
+    @include brpt-auto-gen(#{util-keys(row-gap)}-#{$key}) {
+      row-gap: $value;
+    }
+  }
+}
+
+// ----- Order
+@mixin setup-orders {
+  @each $key, $value in util-props(order) {
+    @include brpt-auto-gen(#{util-keys(order)}-#{$key}) {
+      order: $value;
+    }
+  }
+}
+
+
+// ----- Setup Width & Max Width
+@mixin setup-widths {
+  @each $key, $value in util-props(sizings) {
+    @include brpt-auto-gen(#{util-keys(width)}-#{$key}) {
+      width: $value;
+    }
+
+    @include brpt-auto-gen(#{util-keys(max-width)}-#{$key}) {
+      max-width: $value;
+    }
+
+    @include brpt-auto-gen(#{util-keys(min-width)}-#{$key}) {
+      min-width: $value;
+    }
+  } 
+
+  @each $key, $value in util-props(breakpoints) {
+    @include brpt-auto-gen(#{util-keys(width)}-#{$key}) {
+      width: $value;
+    }
+
+    @include brpt-auto-gen(#{util-keys(max-width)}-#{$key}) {
+      max-width: $value;
+    }
+
+    @include brpt-auto-gen(#{util-keys(min-width)}-#{$key}) {
+      min-width: $value;
+    }
+  }
+
+  @each $key, $value in util-props(widths) {
+    @include brpt-auto-gen(#{util-keys(width)}-#{$key}) {
+      width: $value;
+    }
+
+    @include brpt-auto-gen(#{util-keys(max-width)}-#{$key}) {
+      max-width: $value;
+    }
+
+    @include brpt-auto-gen(#{util-keys(min-width)}-#{$key}) {
+      min-width: $value;
+    }
+  }
+}
+
+
+// ----- Setup Height & Max Height
+@mixin setup-heights {
+  @each $key, $value in util-props(sizings) {
+    @include brpt-auto-gen(#{util-keys(height)}-#{$key}) {
+      height: $value;
+    }
+
+    @include brpt-auto-gen(#{util-keys(max-height)}-#{$key}) {
+      max-height: $value;
+    }
+
+    @include brpt-auto-gen(#{util-keys(min-height)}-#{$key}) {
+      min-height: $value;
+    }
+  } 
+
+  @each $key, $value in util-props(breakpoints) {
+    @include brpt-auto-gen(#{util-keys(height)}-#{$key}) {
+      height: $value;
+    }
+
+    @include brpt-auto-gen(#{util-keys(max-height)}-#{$key}) {
+      max-height: $value;
+    }
+
+    @include brpt-auto-gen(#{util-keys(min-height)}-#{$key}) {
+      min-height: $value;
+    }
+  }
+
+  @each $key, $value in util-props(heights) {
+    @include brpt-auto-gen(#{util-keys(height)}-#{$key}) {
+      height: $value;
+    }
+
+    @include brpt-auto-gen(#{util-keys(max-height)}-#{$key}) {
+      max-height: $value;
+    }
+
+    @include brpt-auto-gen(#{util-keys(min-height)}-#{$key}) {
+      min-height: $value;
+    }
+  }
+}
+
+
+// ----- Box sizing
+@mixin setup-box-sizing {
+  @each $key, $value in util-props(box-sizing) {
+    @include brpt-auto-gen(#{util-keys(box-sizing)}-#{$key}) {
+      box-sizing: $value;
+    } 
+  }
+}
+
+
+// ----- Display
+@mixin setup-display {
+  @each $key, $value in util-props(display) {
+    @include brpt-auto-gen(#{util-keys(display)}-#{$key}) {
+      display: $value;
+    } 
+  }
+}
+
+
+// ----- Float
+@mixin setup-float {
+  @each $key, $value in util-props(float) {
+    @include brpt-auto-gen(#{util-keys(float)}-#{$key}) {
+      float: $value;
+    } 
+  }
+}
+
+
+// ----- Clear
+@mixin setup-clear {
+  @each $key, $value in util-props(clear) {
+    @if $key == fix {
+      @include brpt-auto-gen(#{util-keys(clear)}-fix) {
+        &::after {
+          clear: $align-both;
+          content: '';
+          display: table;
+        }
+      }
+    } @else {
+      @include brpt-auto-gen(#{util-keys(clear)}-#{$key}) {
+        clear: $value;
+      } 
+    }
+  }
+}
+
+// ----- Flex
+@mixin setup-flex {
+  @each $key, $value in util-props(flex) {
+    @include brpt-auto-gen(#{util-keys(flex)}-#{$key}) {
+      flex: $value;
+    } 
+  }
+
+  @each $key, $value in util-props(flex-direction) {
+    @include brpt-auto-gen(#{util-keys(flex-direction)}-#{$key}) {
+      flex-direction: $value;
+    } 
+  }
+
+  @each $key, $value in util-props(flex-wrap) {
+    @include brpt-auto-gen(#{util-keys(flex-wrap)}-#{$key}) {
+      flex-wrap: $value;
+    } 
+  }
+
+  @each $key, $value in util-props(flex-grow) {
+    @include brpt-auto-gen(#{util-keys(flex-grow)}-#{$key}) {
+      flex-grow: $value;
+    } 
+  }
+
+  @each $key, $value in util-props(flex-shrink) {
+    @include brpt-auto-gen(#{util-keys(flex-shrink)}-#{$key}) {
+      flex-shrink: $value;
+    } 
+  }
+
+  @each $key, $value in util-props(align-items) {
+    @include brpt-auto-gen(#{util-keys(align-items)}-#{$key}) {
+      align-items: $value;
+    } 
+  }
+
+  @each $key, $value in util-props(align-content) {
+    @include brpt-auto-gen(#{util-keys(align-content)}-#{$key}) {
+      align-content: $value;
+    } 
+  }
+
+  @each $key, $value in util-props(align-self) {
+    @include brpt-auto-gen(#{util-keys(align-self)}-#{$key}) {
+      align-self: $value;
+    } 
+  }
+
+  @each $key, $value in util-props(justify-items) {
+    @include brpt-auto-gen(#{util-keys(justify-items)}-#{$key}) {
+      justify-items: $value;
+    } 
+  }
+
+  @each $key, $value in util-props(justify-content) {
+    @include brpt-auto-gen(#{util-keys(justify-content)}-#{$key}) {
+      justify-content: $value;
+    } 
+  }
+
+  @each $key, $value in util-props(justify-self) {
+    @include brpt-auto-gen(#{util-keys(justify-self)}-#{$key}) {
+      justify-self: $value;
+    } 
+  }
+
+  @include brpt-auto-gen(#{util-keys(flex)}-center) {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  @include brpt-auto-gen(#{util-keys(flex)}-center-y) {
+    align-items: center;
+    display: flex;
+  }
+
+  @include brpt-auto-gen(#{util-keys(flex)}-center-x) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+// ----- Object Fits
+@mixin setup-object-fits {
+  @each $key, $value in util-props(object-fits) {
+    @include brpt-auto-gen(#{util-keys(object-fit)}-#{$key}) {
+      object-fit: $value;
+    } 
+  }
+}
+
+
+// ----- Object Positions
+@mixin setup-object-position {
+  @each $key, $value in util-props(object-positions) {
+    @include brpt-auto-gen(#{util-keys(object-position)}-#{$key}) {
+      object-position: $value;
+    } 
+  }
+}
+
+
+// ----- Overflows
+@mixin setup-overflows {
+  @each $key, $value in util-props(overflows) {
+    @include brpt-auto-gen(#{util-keys(overflow)}-#{$key}) {
+      overflow: $value;
+    }
+
+    @include brpt-auto-gen(#{util-keys(overflow-x)}-#{$key}) {
+      overflow-x: $value;
+    }
+
+    @include brpt-auto-gen(#{util-keys(overflow-y)}-#{$key}) {
+      overflow-y: $value;
+    }
+  }
+}
+
+
+// ----- Positions
+@mixin setup-positions {
+  @include brpt-auto-gen(#{util-keys(position)}-top) {
+    bottom: auto;
+    left: 50%;
+    position: absolute;
+    right: auto;
+    top: 0;
+    transform: translateX(-50%);
+  }
+
+  @include brpt-auto-gen(#{util-keys(position)}-top-left) {
+    bottom: auto;
+    left: 0;
+    position: absolute;
+    right: auto;
+    top: 0;
+  }
+
+  @include brpt-auto-gen(#{util-keys(position)}-top-right) {
+    bottom: auto;
+    left: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  // bottom
+  @include brpt-auto-gen(#{util-keys(position)}-bottom) {
+    bottom: 0;
+    left: 50%;
+    position: absolute;
+    right: auto;
+    top: auto;
+    transform: translateX(-50%);
+  }
+
+  @include brpt-auto-gen(#{util-keys(position)}-bottom-left) {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: auto;
+    top: auto;
+  }
+
+  @include brpt-auto-gen(#{util-keys(position)}-bottom-right) {
+    bottom: 0;
+    left: auto;
+    position: absolute;
+    right: 0;
+    top: auto;
+  }
+
+  // middle
+  @include brpt-auto-gen(#{util-keys(position)}-middle) {
+    bottom: auto;
+    left: 50%;
+    position: absolute;
+    right: auto;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @include brpt-auto-gen(#{util-keys(position)}-middle-left) {
+    bottom: auto;
+    left: 0;
+    position: absolute;
+    right: auto;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @include brpt-auto-gen(#{util-keys(position)}-middle-right) {
+    bottom: 0;
+    left: auto;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @each $key, $value in util-props(position) {
+    @if ($key != 'skip') {
+      @include brpt-auto-gen(#{util-keys(position)}-#{$key}) {
+        position: $value;
+      }
+    }
+  }
+}
+
+

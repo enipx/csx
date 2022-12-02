@@ -1,0 +1,267 @@
+---
+title: Display
+description: Used to set the layout of an element.
+---
+
+<DocsTable
+  name="display"
+  description="allows us to define how an element is displayed as a block or inline element. The default display value for the majority of elements is block or inline."
+/>
+
+## Usage
+
+```html rose
+<template preview>
+  <!-- **---------** Block **--------** -->
+  <div class="">
+    <div class="bd-brand bg-pink-50 bdw-5 fw-500 p-2 fz-sm c-secondary-700">
+      <div class="d-block bd-purple-200 bg-purple-100 h-12 fx-center  mb-2">
+        display: block
+      </div>
+      <div class="d-block bd-purple-200 bg-purple-100 h-12 fx-center  mb-2">
+        display: block
+      </div>
+      <div class="d-block bd-purple-200 bg-purple-100 h-12 fx-center">
+        display: block
+      </div>
+    </div>
+  </div>
+</template>
+
+<div class="bd-brand bdw-5 ...">
+  <div class="d-block ...">block</div>
+  <div class="d-block ...">block</div>
+  <div class="d-block ...">block</div>
+</div>
+```
+
+```html rose
+<template preview>
+  <!-- **---------** Inline **--------** -->
+  <div class="">
+    <div class="bd-brand bg-pink-50 bdw-5 fw-500 p-2 fz-sm c-secondary-700">
+      <div class="d-inline bd-purple-200 bg-purple-100 p-1 mr-1">
+        display: inline
+      </div>
+      <div class="d-inline bd-purple-200 bg-purple-100 p-1 mr-1">
+        display: inline
+      </div>
+      <div class="d-inline bd-purple-200 bg-purple-100 p-1">
+        display: inline
+      </div>
+    </div>
+  </div>
+</template>
+
+<div class="bd-brand bdw-5 ...">
+  <div class="d-inline ...">inline</div>
+  <div class="d-inline ...">inline</div>
+  <div class="d-inline ...">inline</div>
+</div>
+```
+
+```html rose
+<template preview>
+  <!-- **---------** Inline Block **--------** -->
+  <div class="">
+    <div class="bd-brand bg-pink-50 bdw-5 fw-500 p-2 fz-sm c-secondary-700">
+      <div class="d-inline-block p-3 bd-purple-200 bg-purple-100 h-20" style="width: calc(33.33% - 0.5rem)">
+        display: inline-block
+      </div>
+      <div class="d-inline-block p-3 bd-purple-200 bg-purple-100 h-20 mx-2" style="width: calc(33.33% - 0.5rem)">
+        display: inline-block
+      </div>
+      <div class="d-inline-block p-3 bd-purple-200 bg-purple-100 h-20" style="width: calc(33.33% - 0.5rem)">
+        display: inline-block
+      </div>
+    </div>
+  </div>
+</template>
+
+<div class="bd-brand bdw-5 ...">
+  <div class="d-inline-block ...">inline-block</div>
+  <div class="d-inline-block ...">inline-block</div>
+  <div class="d-inline-block ...">inline-block</div>
+</div>
+```
+
+```html rose
+<template preview>
+  <!-- **---------** Flex **--------** -->
+  <p class="fz-sm ta-center fw-600 op-70 tt-uppercase mb-4 c-pink-700">Display: Flex </p>
+  <div class="d-flex c-secondary-700">
+    <div class="w-20 h-20 bd-brand bdw-2 fx-center">
+      Image
+    </div>
+    <div class="bd-purple-200 bg-purple-100 fx-1 ml-2 p-2 fz-sm ">
+      <p class="fw-600">Name</p>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+      </p>
+    </div>
+  </div>
+</template>
+
+<div class="d-flex">
+  <div class="w-20 h-20 fx-center...">
+    Image
+  </div>
+  <div class="bg-purple-100 bd-purple-200 ...">
+    ...
+  </div>
+</div>
+```
+
+```html rose
+<template preview>
+  <!-- **---------** Inline Flex **--------** -->
+  <p class="fz-sm ta-center fw-600 op-70 tt-uppercase mb-4 c-pink-700">Display: Inline flex </p>
+  <div class="ta-center c-secondary-700">
+    Lorem Ipsum is simply dummy 
+    <div class="d-inline-flex">
+      <div class="w-10 h-10 fx-center bd-brand bdw-2 mr-1 bdrs-full">
+        <span class="fz-sm fw-600">img<span>
+      </div>
+      <p class="bg-purple-100 p-2 fz-sm fw-600 bdrs-md">Name</p>
+    </div>
+    and typesetting industry. 
+  </div>
+</template>
+
+<div>
+  Lorem Ipsum is simply dummy 
+  <div class="d-inline-flex">
+    <div class="w-5 h-5 fx-center...">img</div>
+    <p class="bg-purple-100 p-2 fw-600 fz-sm">Name</p>
+  </div>
+  and typesetting industry. 
+</div>
+```
+
+```html rose
+<template preview>
+  <!-- **---------** Inline Flex **--------** -->
+  <p class="fz-sm ta-center fw-600 op-70 tt-uppercase mb-4 c-pink-700">Display: Inline flex </p>
+  <div class="ta-center c-secondary-700">
+    Lorem Ipsum is simply dummy 
+    <div class="d-inline-flex">
+      <div class="w-10 h-10 fx-center bd-brand bdw-2 mr-1 bdrs-full">
+        <span class="fz-sm fw-600">img<span>
+      </div>
+      <p class="bg-purple-100 p-2 fz-sm fw-600 bdrs-md">Name</p>
+    </div>
+    and typesetting industry. 
+  </div>
+</template>
+
+<div>
+  Lorem Ipsum is simply dummy 
+  <div class="d-inline-flex">
+    <div class="w-5 h-5 fx-center...">img</div>
+    <p class="bg-purple-100 p-2 fw-600 fz-sm">Name</p>
+  </div>
+  and typesetting industry. 
+</div>
+```
+
+```html rose
+<template preview>
+  <!-- **---------** Inline Flex **--------** -->
+  <p class="fz-sm ta-center fw-600 op-70 tt-uppercase mb-4 c-pink-700">Display: Grid </p>
+  <div class="d-grid gtc-3 gap-2 c-secondary-700">
+    <div class="bd-purple-200 bg-purple-100 h-14 fx-center c-dark">01</div>
+    <div class="bd-purple-200 bg-purple-100 h-14 fx-center c-dark">02</div>
+    <div class="bd-purple-200 bg-purple-100 h-14 fx-center c-dark">03</div>
+    <div class="bd-purple-200 bg-purple-100 h-14 fx-center c-dark">04</div>
+    <div class="bd-purple-200 bg-purple-100 h-14 fx-center c-dark">05</div>
+    <div class="bd-purple-200 bg-purple-100 h-14 fx-center c-dark">06</div>
+  </div>
+</template>
+
+<div class="d-grid gtc-3 gap-2">
+  ...
+</div>
+```
+
+```html rose
+<template preview>
+  <!-- **---------** Inline Flex **--------** -->
+  <div>
+     <p class="fz-sm ta-center fw-600 op-70 tt-uppercase mb-4 c-pink-700">Display: Inline-Grid </p>
+    <div class="ta-center c-secondary-700">
+      Place grid
+      <div class="d-inline-grid gtc-3 gap-2">
+        <div class="bd-purple-200 bg-purple-100 p-2 fx-center c-dark">01</div>
+        <div class="bd-purple-200 bg-purple-100 p-2 fx-center c-dark">02</div>
+        <div class="bd-purple-200 bg-purple-100 p-2 fx-center c-dark">03</div>
+        <div class="bd-purple-200 bg-purple-100 p-2 fx-center c-dark">04</div>
+        <div class="bd-purple-200 bg-purple-100 p-2 fx-center c-dark">05</div>
+        <div class="bd-purple-200 bg-purple-100 p-2 fx-center c-dark">06</div>
+      </div>
+      inline with text
+    </div>
+  </div>
+</template>
+
+<div class="d-inline-grid gtc-3 gap-2">
+  ...
+</div>
+```
+
+```html rose
+<template preview>
+  <!-- **---------** Inline Flex **--------** -->
+  <div>
+    <p class="fz-sm ta-center fw-600 op-70 tt-uppercase mb-4 c-pink-700">Table </p>
+    <div class="d-table w-full c-secondary-700">
+      <div class="d-table-row">
+        <div class="d-table-cell p-2 c-dark bdb-pink-100">No.</div>
+        <div class="d-table-cell p-2 c-dark bdb-pink-100">Name</div>
+        <div class="d-table-cell p-2 c-dark bdb-pink-100">Score</div>
+      </div>
+
+      <div class="d-table-row">
+        <div class="d-table-cell p-2 c-dark">1</div>
+        <div class="d-table-cell p-2 c-dark">Andrew James</div>
+        <div class="d-table-cell p-2 c-dark">30</div>
+      </div>
+
+      <div class="d-table-row">
+        <div class="d-table-cell p-2 c-dark">2</div>
+        <div class="d-table-cell p-2 c-dark">Barry Simon</div>
+        <div class="d-table-cell p-2 c-dark">40</div>
+      </div>
+
+      <div class="d-table-row">
+        <div class="d-table-cell p-2 c-dark">3</div>
+        <div class="d-table-cell p-2 c-dark">Alan Walker</div>
+        <div class="d-table-cell p-2 c-dark">56</div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<div class="d-table w-full">
+  <div class="d-table-row">
+    <div class="d-table-cell ...">No.</div>
+    <div class="d-table-cell ...">Name</div>
+    <div class="d-table-cell ...">Score</div>
+  </div>
+
+  <div class="d-table-row">
+    <div class="d-table-cell ...">1</div>
+    <div class="d-table-cell ...">Andrew James</div>
+    <div class="d-table-cell ...">30</div>
+  </div>
+  . . .
+</div>
+```
+
+## Props
+
+<DocsTable
+  name="display"
+  type="props"
+/>
+
+

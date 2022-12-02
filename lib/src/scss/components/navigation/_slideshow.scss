@@ -1,0 +1,158 @@
+.slideshow {
+  position: relative;
+
+  &_content {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    .slideshow_item {
+      display: none;
+
+      &.active,
+      &[data-selected='true'] {
+        @include add-animation(fade, 600ms, 400ms);
+        @include add-animation(slide);
+        display: block;
+      }
+    }
+  }
+
+  &_prev,
+  &_next {
+    @include base-transition;
+    @include z-index(base);
+    align-items: center;
+    appearance: none;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    font-size: $fz-base;
+    font-weight: $fw-500;
+    left: 0;
+    opacity: $op-30;
+    outline: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &_icon {
+      background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M1%201L4.5%204.5L1%208%22%20stroke%3D%22%232c343a%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 50%;
+      display: inline-block;
+      height: var(#{$var-prefix}slideshow-control-icon-size);
+      pointer-events: none;
+      transform: rotate(180deg);
+      width: var(#{$var-prefix}slideshow-control-icon-size);
+    }
+
+    &:hover {
+      opacity: $op-100;
+    }
+  }
+
+  &_next {
+    left: auto;
+    right: 0;
+
+    &_icon {
+      transform: rotate(0);
+    }
+  }
+
+  &_indicators {
+    @include z-index(base);
+    align-items: center;
+    bottom: var(#{$var-prefix}slideshow-indicator-pos);
+    display: flex;
+    justify-content: center;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 100%;
+
+    span {
+      @include base-transition;
+      @include border-radius(full);
+      background-color: var(#{$var-prefix}secondary-500);
+      cursor: pointer;
+      display: inline-block;
+      height: var(#{$var-prefix}slideshow-indicator-size);
+      margin-right: var(#{$var-prefix}slideshow-indicator-spacing);
+      opacity: $op-40;
+      width: var(#{$var-prefix}slideshow-indicator-size);
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      &:hover,
+      &.active {
+        opacity: $op-100;
+      }
+      
+    }
+
+    // Indicator properties
+    &[data-pos='offset'] {
+      bottom: var(#{$var-prefix}slideshow-indicator-offset-pos);
+    }
+
+    &[data-pos='bottom-left'] {
+      bottom: var(#{$var-prefix}slideshow-indicator-pos);
+      justify-content: flex-start;
+      top: auto;
+    }
+
+    &[data-pos='bottom-right'] {
+      bottom: var(#{$var-prefix}slideshow-indicator-pos);
+      justify-content: flex-end;
+      top: auto;
+    }
+
+    &[data-pos='top'] {
+      bottom: auto;
+      top: var(#{$var-prefix}slideshow-indicator-pos);
+    }
+
+    &[data-pos='top-left'] {
+      bottom: auto;
+      justify-content: flex-start;
+      top: var(#{$var-prefix}slideshow-indicator-pos);
+    }
+
+    &[data-pos='top-right'] {
+      bottom: auto;
+      justify-content: flex-end;
+      top: var(#{$var-prefix}slideshow-indicator-pos);
+    }
+
+    &[data-variant='bar'] {
+      span {
+        @include border-radius(1px, true);
+        height: var(#{$var-prefix}slideshow-indicator-bar-height);
+        width: var(#{$var-prefix}slideshow-indicator-bar-width);
+      }
+    }
+    
+  }
+}
+
+// Dark mode
+@include mode('.slideshow') {
+  .slideshow_prev,
+  .slideshow_next {
+    &_icon {
+      background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%226%22%20height%3D%229%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M1%201L4.5%204.5L1%208%22%20stroke%3D%22%23C5CDD3%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E');
+    }
+  }
+
+  .slideshow_indicators {
+    span {
+      #{$var-prefix}secondary-500: var(#{$var-prefix}secondary-300);
+    }
+  }
+}

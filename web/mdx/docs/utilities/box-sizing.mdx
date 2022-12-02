@@ -1,0 +1,77 @@
+---
+title: Box Sizing
+description: Used to set how an element total width and height is calculated.
+---
+
+<DocsTable
+  name="box-sizing"
+  description={
+    `
+      set the behaviour on how an element total width and height is calculated by allowing to include the padding and border while doing the calculation. <br/> <br/>By default, the width and height you specify to an element is applied only to the element's content box, so if any border or padding is specified then this is added to the width and height of that element.<br/><br/><ul>
+      <li class="my-2"><code>width</code> + <code>padding</code> + <code>border</code> = TOTAL WIDTH </li>
+      <li class="my-2"><code>height</code> + <code>padding</code> + <code>border</code> = TOTAL HEIGHT</li>
+    </ul>
+    `
+  }
+  content={{
+    border: `This tell the browser to include the padding and border when calculating the element width so an element with <span class="kbd">50px</span> width and padding of <span class="kbd">10px</span> and border of <span class="kbd">5px</span>, total width will be <span class="kbd">50px</span>`,
+    content: `This is the same as the default behaviour, the browser set the specified width to the element content box, so if you set an element width to <span class="kbd">50px</span> with padding of <span class="kbd">10px</span> and border of <span class="kbd">5px</span>, the total width will be 50px + 10px + 5px = <span class="kbd">65px</span>`,
+  }}
+/>
+
+## Usage
+
+```html rose
+<template preview>
+  <div>
+    <p className="fz-sm ta-center fw-600 op-70 tt-uppercase c-pink-700">Content Box</p>
+    <div className="fx-center pb-16 my-4">
+      <div className="bd-brand bg-pink-50 bdw-5 w-60 h-20 fw-600">
+        <p className="ta-center">Parent</p>
+        <div className="bdw-5 bd-purple-400 bg-purple-50 p-4 bxz-content w-full h-full fx-center">
+          Child
+        </div>
+      </div>
+    </div>
+    <p className="fz-sm ta-center fw-500 op-70">The Child element has a padding of 1rem (16px) and border width of 5px</p>
+  </div>
+</template>
+
+<div class="w-60 h-20 ...">
+  <div class="w-full h-full bxz-content bdw-5 p-4">
+    ...
+  </div>
+</div>
+```
+
+```html rose
+<template preview>
+  <div>
+    <p className="fz-sm ta-center fw-600 op-70 tt-uppercase c-pink-700">Border Box</p>
+    <div className="fx-center pb-6 my-4">
+      <div className="bd-brand bg-pink-50 bdw-5 w-60 h-20 fw-600">
+        <p className="ta-center">Parent</p>
+        <div className="bdw-5 bd-purple-400 bg-purple-50 p-4 bxz-border w-full h-full fx-center">
+          Child
+        </div>
+      </div>
+    </div>
+    <p className="fz-sm ta-center fw-500 op-70">The Child element has a padding of 1rem (16px) and border width of 5px</p>
+  </div>
+</template>
+
+<div class="w-60 h-20 ...">
+  <div class="w-full h-full bxz-border bdw-5 p-4">
+    ...
+  </div>
+</div>
+```
+
+## Props
+
+<DocsTable
+  name="box-sizing"
+  type="props"
+/>
+
+

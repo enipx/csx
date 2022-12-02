@@ -1,0 +1,1036 @@
+// ----- Margin
+@mixin setup-margins {
+  @each $key, $value in util-props(sizings) {
+    @include brpt-auto-gen(#{util-keys(margin)}-#{$key}) {
+      margin: $value;
+    }
+
+    @include brpt-auto-gen(#{util-keys(margin-top)}-#{$key}) {
+      margin-top: $value;
+    }
+
+    @include brpt-auto-gen(#{util-keys(margin-right)}-#{$key}) {
+      margin-right: $value;
+    }
+
+    @include brpt-auto-gen(#{util-keys(margin-bottom)}-#{$key}) {
+      margin-bottom: $value;
+    }
+
+    @include brpt-auto-gen(#{util-keys(margin-left)}-#{$key}) {
+      margin-left: $value;
+    }
+
+    @include brpt-auto-gen(#{util-keys(margin-horizontal)}-#{$key}) {
+      margin-left: $value;
+      margin-right: $value;
+    }
+
+    @include brpt-auto-gen(#{util-keys(margin-vertical)}-#{$key}) {
+      margin-bottom: $value;
+      margin-top: $value;
+    }
+  } 
+
+  @include brpt-auto-gen(#{util-keys(margin-top)}-auto) {
+    margin-top: auto;
+  }
+
+  @include brpt-auto-gen(#{util-keys(margin-right)}-auto) {
+    margin-right: auto;
+  }
+
+  @include brpt-auto-gen(#{util-keys(margin-bottom)}-auto) {
+    margin-bottom: auto;
+  }
+
+  @include brpt-auto-gen(#{util-keys(margin-left)}-auto) {
+    margin-left: auto;
+  }
+
+  @include brpt-auto-gen(#{util-keys(margin-horizontal)}-auto) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include brpt-auto-gen(#{util-keys(margin-vertical)}-auto) {
+    margin-bottom: auto;
+    margin-top: auto;
+  }
+}
+
+// ----- Padding
+@mixin setup-paddings {
+  @each $key, $value in util-props(sizings) {
+    @include brpt-auto-gen(#{util-keys(padding)}-#{$key}) {
+      padding: $value;
+    }
+
+    @include brpt-auto-gen(#{util-keys(padding-top)}-#{$key}) {
+      padding-top: $value;
+    }
+
+    @include brpt-auto-gen(#{util-keys(padding-right)}-#{$key}) {
+      padding-right: $value;
+    }
+
+    @include brpt-auto-gen(#{util-keys(padding-bottom)}-#{$key}) {
+      padding-bottom: $value;
+    }
+
+    @include brpt-auto-gen(#{util-keys(padding-left)}-#{$key}) {
+      padding-left: $value;
+    }
+
+    @include brpt-auto-gen(#{util-keys(padding-horizontal)}-#{$key}) {
+      padding-left: $value;
+      padding-right: $value;
+    }
+
+    @include brpt-auto-gen(#{util-keys(padding-vertical)}-#{$key}) {
+      padding-bottom: $value;
+      padding-top: $value;
+    }
+  }
+  
+  @include brpt-auto-gen(#{util-keys(padding-top)}-auto) {
+    padding-top: auto;
+  }
+
+  @include brpt-auto-gen(#{util-keys(padding-right)}-auto) {
+    padding-right: auto;
+  }
+
+  @include brpt-auto-gen(#{util-keys(padding-bottom)}-auto) {
+    padding-bottom: auto;
+  }
+
+  @include brpt-auto-gen(#{util-keys(padding-left)}-auto) {
+    padding-left: auto;
+  }
+
+  @include brpt-auto-gen(#{util-keys(padding-horizontal)}-auto) {
+    padding-left: auto;
+    padding-right: auto;
+  }
+
+  @include brpt-auto-gen(#{util-keys(padding-vertical)}-auto) {
+    padding-bottom: auto;
+    padding-top: auto;
+  }
+}
+
+// ----- Border
+@mixin setup-borders {
+  @each $key, $values in util-props(colors) {
+    @each $property, $value in $values {
+      @include brpt-auto-gen(#{util-keys(border)}-#{$property}) {
+        border: 1px solid $value;
+      }
+
+      @include brpt-auto-gen(#{util-keys(border-top)}-#{$property}) {
+        border-top: 1px solid $value;
+      }
+
+      @include brpt-auto-gen(#{util-keys(border-right)}-#{$property}) {
+        border-right: 1px solid $value;
+      }
+
+      @include brpt-auto-gen(#{util-keys(border-bottom)}-#{$property}) {
+        border-bottom: 1px solid $value;
+      }
+
+      @include brpt-auto-gen(#{util-keys(border-left)}-#{$property}) {
+        border-left: 1px solid $value;
+      }
+
+      @include brpt-auto-gen(#{util-keys(border-horizontal)}-#{$property}) {
+        border-left: 1px solid $value;
+        border-right: 1px solid $value;
+      }
+
+      @include brpt-auto-gen(#{util-keys(border-vertical)}-#{$property}) {
+        border-bottom: 1px solid $value;
+        border-top: 1px solid $value;
+      }
+
+      // Dark mode
+      @include mode('.dm-#{util-keys(border)}-#{$property}') {
+        border: 1px solid $value;
+      }
+
+      @include mode('.dm-#{util-keys(border-top)}-#{$property}') {
+        border-top: 1px solid $value;
+      }
+
+      @include mode('.dm-#{util-keys(border-right)}-#{$property}') {
+        border-right: 1px solid $value;
+      }
+
+      @include mode('.dm-#{util-keys(border-bottom)}-#{$property}') {
+        border-bottom: 1px solid $value;
+      }
+
+      @include mode('.dm-#{util-keys(border-left)}-#{$property}') {
+        border-left: 1px solid $value;
+      }
+
+      @include mode('.dm-#{util-keys(border-horizontal)}-#{$property}') {
+        border-left: 1px solid $value;
+        border-right: 1px solid $value;
+      }
+
+      @include mode('.dm-#{util-keys(border-vertical)}-#{$property}') {
+        border-bottom: 1px solid $value;
+        border-top: 1px solid $value;
+      }
+
+      // Hover
+      @include brpt-auto-gen(hover-#{util-keys(border)}-#{$property}) {
+        &:hover {
+          border: 1px solid $value;
+        }
+      }
+
+      @include brpt-auto-gen(hover-#{util-keys(border-top)}-#{$property}) {
+        &:hover {
+          border-top: 1px solid $value;
+        }
+      }
+
+      @include brpt-auto-gen(hover-#{util-keys(border-right)}-#{$property}) {
+        &:hover {
+          border-right: 1px solid $value;
+        }
+      }
+
+      @include brpt-auto-gen(hover-#{util-keys(border-bottom)}-#{$property}) {
+        &:hover {
+          border-bottom: 1px solid $value;
+        }
+      }
+
+      @include brpt-auto-gen(hover-#{util-keys(border-left)}-#{$property}) {
+        &:hover {
+          border-left: 1px solid $value;
+        }
+      }
+
+      @include brpt-auto-gen(hover-#{util-keys(border-horizontal)}-#{$property}) {
+        &:hover {
+          border-left: 1px solid $value;
+          border-right: 1px solid $value;
+        }
+      }
+
+      @include brpt-auto-gen(hover-#{util-keys(border-vertical)}-#{$property}) {
+        &:hover {
+          border-bottom: 1px solid $value;
+          border-top: 1px solid $value;
+        }
+      }
+
+      // Dark mode
+      @include mode('.dm-hover-#{util-keys(border)}-#{$property}') {
+        &:hover {
+          border: 1px solid $value;
+        }
+      }
+
+      @include mode('.dm-hover-#{util-keys(border-top)}-#{$property}') {
+        &:hover {
+          border-top: 1px solid $value;
+        }
+      }
+
+      @include mode('.dm-hover-#{util-keys(border-right)}-#{$property}') {
+        &:hover {
+          border-right: 1px solid $value;
+        }
+      }
+
+      @include mode('.dm-hover-#{util-keys(border-bottom)}-#{$property}') {
+        &:hover {
+          border-bottom: 1px solid $value;
+        }
+      }
+
+      @include mode('.dm-hover-#{util-keys(border-left)}-#{$property}') {
+        &:hover {
+          border-left: 1px solid $value;
+        }
+      }
+
+      @include mode('.dm-hover-#{util-keys(border-horizontal)}-#{$property}') {
+        &:hover {
+          border-left: 1px solid $value;
+          border-right: 1px solid $value;
+        }
+      }
+
+      @include mode('.dm-hover-#{util-keys(border-vertical)}-#{$property}') {
+        &:hover {
+          border-bottom: 1px solid $value;
+          border-top: 1px solid $value;
+        }
+      }
+      
+      // Focus
+      @include brpt-auto-gen(focus-#{util-keys(border)}-#{$property}) {
+        &:focus {
+          border: 1px solid $value;
+        }
+      }
+
+      @include brpt-auto-gen(focus-#{util-keys(border-top)}-#{$property}) {
+        &:focus {
+          border-top: 1px solid $value;
+        }
+      }
+
+      @include brpt-auto-gen(focus-#{util-keys(border-right)}-#{$property}) {
+        &:focus {
+          border-right: 1px solid $value;
+        }
+      }
+
+      @include brpt-auto-gen(focus-#{util-keys(border-bottom)}-#{$property}) {
+        &:focus {
+          border-bottom: 1px solid $value;
+        }
+      }
+
+      @include brpt-auto-gen(focus-#{util-keys(border-left)}-#{$property}) {
+        &:focus {
+          border-left: 1px solid $value;
+        }
+      }
+
+      @include brpt-auto-gen(focus-#{util-keys(border-horizontal)}-#{$property}) {
+        &:focus {
+          border-left: 1px solid $value;
+          border-right: 1px solid $value;
+        }
+      }
+
+      @include brpt-auto-gen(focus-#{util-keys(border-vertical)}-#{$property}) {
+        &:focus {
+          border-bottom: 1px solid $value;
+          border-top: 1px solid $value;
+        }
+      }
+
+      // Dark mode
+      @include mode('.dm-focus-#{util-keys(border)}-#{$property}') {
+        &:focus {
+          border: 1px solid $value;
+        }
+      }
+
+      @include mode('.dm-focus-#{util-keys(border-top)}-#{$property}') {
+        &:focus {
+          border-top: 1px solid $value;
+        }
+      }
+
+      @include mode('.dm-focus-#{util-keys(border-right)}-#{$property}') {
+        &:focus {
+          border-right: 1px solid $value;
+        }
+      }
+
+      @include mode('.dm-focus-#{util-keys(border-bottom)}-#{$property}') {
+        &:focus {
+          border-bottom: 1px solid $value;
+        }
+      }
+
+      @include mode('.dm-focus-#{util-keys(border-left)}-#{$property}') {
+        &:focus {
+          border-left: 1px solid $value;
+        }
+      }
+
+      @include mode('.dm-focus-#{util-keys(border-horizontal)}-#{$property}') {
+        &:focus {
+          border-left: 1px solid $value;
+          border-right: 1px solid $value;
+        }
+      }
+
+      @include mode('.dm-focus-#{util-keys(border-vertical)}-#{$property}') {
+        &:focus {
+          border-bottom: 1px solid $value;
+          border-top: 1px solid $value;
+        }
+      }
+    }
+  }
+
+  @include brpt-auto-gen(#{util-keys(border)}-none) {
+    border-color: transparent;
+  }
+
+  @include brpt-auto-gen(hover-#{util-keys(border)}-none) {
+    &:hover {
+      border-color: transparent;
+    }
+  }
+
+  @include brpt-auto-gen(focus-#{util-keys(border)}-none) {
+    &:focus {
+      border-color: transparent;
+    }
+  }
+
+  // Dark mode
+  @include mode('.dm-#{util-keys(border)}-none') {
+    border-color: transparent;
+  }
+
+  @include mode('.dm-hover-#{util-keys(border)}-none') {
+    &:hover {
+      border-color: transparent;
+    }
+  }
+
+  @include mode('.dm-focus-#{util-keys(border)}-none') {
+    &:focus {
+      border-color: transparent;
+    }
+  }
+
+  @include brpt-auto-gen(#{util-keys(border)}-none-all) {
+    border-color: transparent;
+
+    &:hover {
+      border-color: transparent;
+    }
+
+    &:focus {
+      border-color: transparent;
+    }
+  }
+
+  @include mode('.dm-#{util-keys(border)}-none-all') {
+    border-color: transparent;
+
+    &:hover {
+      border-color: transparent;
+    }
+
+    &:focus {
+      border-color: transparent;
+    }
+  }
+}
+
+// widths
+@mixin setup-border-widths {
+  @each $property, $value in util-props(border-width) {
+    @include brpt-auto-gen(#{util-keys(border-width)}-#{$property}) {
+      border-width: $value;
+    }
+  }
+
+  @include brpt-auto-gen(#{util-keys(border-width)}-0-all, dm) {
+    border-width: 0;
+  }
+
+}
+
+// style
+@mixin setup-border-styles {
+  @each $property, $value in util-props(border-styles) {
+    @include brpt-auto-gen(#{util-keys(border-style)}-#{$property}) {
+      border-style: $value;
+    }
+  }
+}
+
+// Colors
+@mixin setup-text-colors {
+  @each $key, $values in util-props(colors) {
+    @each $property, $value in $values {
+      @include brpt-auto-gen(#{util-keys(border-color)}-#{$property}) {
+        border-color: var(#{$var-prefix}#{$property});
+      }
+
+      @include brpt-auto-gen(#{util-keys(color)}-#{$property}) {
+        color: var(#{$var-prefix}#{$property});
+      }
+
+      @include brpt-auto-gen(hover-#{util-keys(color)}-#{$property}) {
+        &:hover {
+          color: var(#{$var-prefix}#{$property});
+        }
+      }
+
+      @include brpt-auto-gen(focus-#{util-keys(color)}-#{$property}) {
+        &:focus {
+          color: var(#{$var-prefix}#{$property});
+        }
+      }
+
+      // Dark mode
+      @include mode('.dm-#{util-keys(border-color)}-#{$property}') {
+        border-color: var(#{$var-prefix}#{$property});
+      }
+
+      @include mode('.dm-#{util-keys(color)}-#{$property}') {
+        color: var(#{$var-prefix}#{$property});
+      }
+
+      @include mode('.dm-hover-#{util-keys(color)}-#{$property}') {
+        &:hover {
+          color: var(#{$var-prefix}#{$property});
+        }
+      }
+
+      @include mode('.dm-focus-#{util-keys(color)}-#{$property}') {
+        &:focus {
+          color: var(#{$var-prefix}#{$property});
+        }
+      }
+    }
+  }
+
+  @include brpt-auto-gen(#{util-keys(color)}-base) {
+    color: var(#{$var-prefix}base-color);
+  }
+
+  @include brpt-auto-gen(hover-#{util-keys(color)}-base) {
+    &:hover {
+      color: var(#{$var-prefix}base-color);
+    }
+  }
+
+  @include brpt-auto-gen(focus-#{util-keys(color)}-base) {
+    &:focus {
+      color: var(#{$var-prefix}base-color);
+    }
+  }
+}
+
+// Background colors
+@mixin setup-bg-colors {
+  @each $key, $values in util-props(colors) {
+    @each $property, $value in $values {
+      @include brpt-auto-gen(#{util-keys(background-color)}-#{$property}) {
+        background-color: var(#{$var-prefix}#{$property});
+      }
+
+      @include brpt-auto-gen(hover-#{util-keys(background-color)}-#{$property}) {
+        &:hover {
+          background-color: var(#{$var-prefix}#{$property});
+        }
+      }
+
+      @include brpt-auto-gen(focus-#{util-keys(background-color)}-#{$property}) {
+        &:focus {
+          background-color: var(#{$var-prefix}#{$property});
+        }
+      }
+
+      // Dark mode
+      @include mode('.dm-#{util-keys(background-color)}-#{$property}') {
+        background-color: var(#{$var-prefix}#{$property});
+        background-image: none;
+      }
+
+      @include mode('.dm-hover-#{util-keys(background-color)}-#{$property}') {
+        &:hover {
+          background-color: var(#{$var-prefix}#{$property});
+          background-image: none;
+        }
+      }
+
+      @include mode('.dm-focus-#{util-keys(background-color)}-#{$property}') {
+        &:focus {
+          background-color: var(#{$var-prefix}#{$property});
+          background-image: none;
+        }
+      }
+    }
+  }
+
+  @include brpt-auto-gen(#{util-keys(background-color)}-none) {
+    background-color: transparent;
+  }
+
+  @include brpt-auto-gen(hover-#{util-keys(background-color)}-none) {
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  @include brpt-auto-gen(focus-#{util-keys(background-color)}-none) {
+    &:focus {
+      background-color: transparent;
+    }
+  }
+
+  // Dark mode
+  @include mode('.dm-#{util-keys(background-color)}-none') {
+    background-color: none;
+  }
+
+  @include mode('.dm-hover-#{util-keys(background-color)}-none') {
+    &:hover {
+      background-color: none;
+    }
+  }
+
+  @include mode('.dm-focus-#{util-keys(background-color)}-none') {
+    &:focus {
+      background-color: none;
+    }
+  }
+
+  @include brpt-auto-gen(#{util-keys(background-color)}-none-all) {
+    background-color: transparent;
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    &:focus {
+      background-color: transparent;
+    }
+  }
+
+  @include mode('.dm-#{util-keys(background-color)}-none-all') {
+    background-color: transparent;
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    &:focus {
+      background-color: transparent;
+    }
+  }
+}
+
+// Background gradients
+@mixin setup-bg-gradients {
+  @each $key, $values in util-props(gradients) {
+    @include brpt-auto-gen(#{util-keys(background-gradient)}-#{$key}) {
+      background-color: gradient($key, fallback);
+      background-image: gradient($key, linear);
+    }
+
+    @include brpt-auto-gen(hover-#{util-keys(background-gradient)}-#{$key}) {
+      &:hover {
+        background-color: gradient($key, fallback);
+        background-image: gradient($key, linear);
+      }
+    }
+
+    @include brpt-auto-gen(focus-#{util-keys(background-gradient)}-#{$key}) {
+      &:focus {
+        background-color: gradient($key, fallback);
+        background-image: gradient($key, linear);
+      }
+    }
+
+    @include mode('.dm-#{util-keys(background-gradient)}-#{$key}') {
+      background-color: gradient($key, fallback);
+      background-image: gradient($key, linear);
+    }
+
+    @include mode('.dm-hover-#{util-keys(background-gradient)}-#{$key}') {
+      &:hover {
+        background-color: gradient($key, fallback);
+        background-image: gradient($key, linear);
+      }
+    }
+
+    @include mode('.dm-focus-#{util-keys(background-gradient)}-#{$key}') {
+      &:focus {
+        background-color: gradient($key, fallback);
+        background-image: gradient($key, linear);
+      }
+    }
+  }
+}
+
+// Text gradients
+@mixin setup-text-gradients {
+  @each $key, $values in util-props(gradients) {
+    @include brpt-auto-gen(#{util-keys(color-gradient)}-#{$key}) {
+      background-clip: text;
+      background-color: gradient($key, fallback);
+      background-image: gradient($key, linear);
+      display: inline-block; // to make sure the gradient fit perfectly in the text
+      -moz-text-fill-color: transparent;
+      -webkit-text-fill-color: transparent;
+    }
+
+    @include mode('.dm-#{util-keys(color-gradient)}-#{$key}') {
+      background-clip: text;
+      background-color: gradient($key, fallback);
+      background-image: gradient($key, linear);
+      display: inline-block; // to make sure the gradient fit perfectly in the text
+      -moz-text-fill-color: transparent;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+// Placeholder
+@mixin setup-text-placeholder-colors {
+  @each $key, $values in util-props(colors) {
+    @each $property, $value in $values {
+      @include mode('.dm-#{util-keys(placeholder)}-#{$property}') {
+        &::placeholder {
+          color: var(#{$var-prefix}#{$property});
+          opacity: 1; // Firefox
+        }
+      }
+
+      .#{util-keys(placeholder)}-#{'' + $property} {
+        &::placeholder {
+          color: var(#{$var-prefix}#{$property});
+          opacity: 1; // Firefox
+        }
+      }
+    }
+  }
+}
+
+// Transition
+@mixin setup-transition-duration {
+  @each $key, $value in util-props(transition-duration) {
+    @include brpt-auto-gen(#{util-keys(transition-duration)}-#{$key}) {
+      transition-duration: $value;
+    }    
+  }
+}
+
+@mixin setup-transition-timing-function {
+  @each $key, $value in util-props(timing-function) {
+    @include brpt-auto-gen(#{util-keys(transition-timing-function)}-#{$key}) {
+      transition-timing-function: $value;
+    } 
+  }
+}
+
+
+@mixin setup-transition {
+  @each $key, $value in util-props(transition) {
+    @if $key == base {
+      @include brpt-auto-gen(#{util-keys(transition)}) {
+        transition: $value;
+      } 
+      @include brpt-auto-gen(#{util-keys(transition)}-#{$key}) {
+        transition: $value;
+      } 
+    } @else {
+      @include brpt-auto-gen(#{util-keys(transition)}-#{$key}) {
+        transition: $value;
+      } 
+    } 
+  }
+
+  // Duration
+  @include setup-transition-duration();
+
+  // Timing function
+  @include setup-transition-timing-function();
+}
+
+// Filter
+@mixin setup-filter {
+  @each $key, $value in util-props(filter) {
+    @include brpt-auto-gen(#{util-keys(filter)}-#{$key}) {
+      filter: $value;
+    } 
+  }
+}
+
+// Svg 
+@mixin setup-svg-fill {
+  @each $key, $value in util-props(fill) {
+    @include brpt-auto-gen(#{util-keys(fill)}-#{$key}) {
+      fill: $value;
+    } 
+  }
+}
+
+@mixin setup-svg-stroke {
+  @each $key, $value in util-props(stroke) {
+    @include brpt-auto-gen(#{util-keys(stroke)}-#{$key}) {
+      stroke: $value;
+    } 
+  }
+}
+
+
+@mixin setup-svg-stroke-width {
+  @each $key, $value in util-props(stroke) {
+    @include brpt-auto-gen(#{util-keys(stroke-width)}-#{$key}) {
+      stroke-width: $value;
+    } 
+  }
+}
+
+@mixin setup-svg {
+  // Fill
+  @include setup-svg-fill();
+
+  // Stroke
+  @include setup-svg-stroke();
+
+  // Stroke width
+  @include setup-svg-stroke-width();
+}
+
+// Opacity
+@mixin setup-opacity {
+  @each $key, $value in util-props(opacity) {
+    @include brpt-auto-gen(#{util-keys(opacity)}-#{$key}) {
+      opacity: $value;
+    } 
+  }
+}
+
+// Visibility
+@mixin setup-visibility {
+  @each $key, $value in util-props(visibility) {
+    @include brpt-auto-gen(#{util-keys(visibility)}-#{$key}) {
+      visibility: $value;
+    } 
+  }
+}
+
+// Pointer Events
+@mixin setup-pointer-events {
+  @each $key, $value in util-props(pointer-events) {
+    @include brpt-auto-gen(#{util-keys(pointer-events)}-#{$key}) {
+      pointer-events: $value;
+    } 
+  }
+}
+
+// Cursor
+@mixin setup-cursor {
+  @each $key, $value in util-props(cursor) {
+    @include brpt-auto-gen(#{util-keys(cursor)}-#{$key}) {
+      cursor: $value;
+    } 
+  }
+}
+
+// User select
+@mixin setup-user-select {
+  @each $key, $value in util-props(user-select) {
+    @include brpt-auto-gen(#{util-keys(user-select)}-#{$key}) {
+      user-select: $value;
+    } 
+  }
+}
+
+// Appearance
+@mixin setup-appearance {
+  @each $key, $value in util-props(appearance) {
+    @include brpt-auto-gen(#{util-keys(appearance)}-#{$key}) {
+      appearance: $value;
+    } 
+  }
+}
+
+// Outline
+@mixin setup-outline {
+  @each $key, $value in util-props(outline) {
+    @include brpt-auto-gen(#{util-keys(outline)}-#{$key}) {
+      outline: $value;
+    } 
+  }
+}
+
+// Background attachment
+@mixin setup-bg-attachment {
+  @each $key, $value in util-props(background-attachment) {
+    @include brpt-auto-gen(#{util-keys(background-attachment)}-#{$key}) {
+      background-attachment: $value;
+    } 
+  }
+}
+
+// Background position
+@mixin setup-bg-position {
+  @each $key, $value in util-props(background-position) {
+    @include brpt-auto-gen(#{util-keys(background-position)}-#{$key}) {
+      background-position: $value;
+    } 
+  }
+}
+
+// Background repeat
+@mixin setup-bg-repeat {
+  @each $key, $value in util-props(background-repeat) {
+    @include brpt-auto-gen(#{util-keys(background-repeat)}-#{$key}) {
+      background-repeat: $value;
+    } 
+  }
+}
+
+// Background size
+@mixin setup-bg-size {
+  @each $key, $value in util-props(background-size) {
+    @include brpt-auto-gen(#{util-keys(background-size)}-#{$key}) {
+      background-size: $value;
+    } 
+  }
+}
+
+
+// Radius
+@mixin setup-border-radius {
+  @each $key, $value in util-props(border-radius) {
+    @if $key == base {
+      @include brpt-auto-gen(#{util-keys(border-radius)}) {
+        border-radius: $value;
+      }
+
+      @include brpt-auto-gen(#{util-keys(border-raduis-horizontal)}) {
+        border-top-left-radius: $value;
+        border-top-right-radius: $value;
+      }
+
+      @include brpt-auto-gen(#{util-keys(border-raduis-vertical)}) {
+        border-bottom-left-radius: $value;
+        border-bottom-right-radius: $value;
+      }
+    } @else {
+      @include brpt-auto-gen(#{util-keys(border-radius)}-#{$key}) {
+        border-radius: $value;
+      }
+
+      @include brpt-auto-gen(#{util-keys(border-raduis-horizontal)}-#{$key}) {
+        border-top-left-radius: $value;
+        border-top-right-radius: $value;
+      }
+
+      @include brpt-auto-gen(#{util-keys(border-raduis-vertical)}-#{$key}) {
+        border-bottom-left-radius: $value;
+        border-bottom-right-radius: $value;
+      }
+    }
+  }
+}
+
+// ----- Box shadow
+@mixin setup-box-shadows {
+  @each $key, $values in util-props(box-shadows) {
+    @if $key == light {
+      @each $property, $value in $values {
+        @include brpt-auto-gen(#{util-keys(box-shadow)}-#{$property}) {
+          box-shadow: unquote($value);
+        }
+      }
+    } @else if $key == dark {
+      @each $property, $value in $values {
+        @include mode('.#{util-keys(box-shadow)}-#{$property}') {
+          box-shadow: unquote($value);
+        }
+      }
+    }
+  }
+}
+
+// ----- Transform
+@mixin setup-transform {
+  // Scale
+  @each $property, $value in util-props(scale) {
+    @include brpt-auto-gen($property) {
+      transform: $value;
+    }
+
+    @include brpt-auto-gen(hover-#{$property}) {
+      &:hover {
+        transform: $value;
+      }
+    }
+  }
+
+  // Rotate
+  @each $property, $value in util-props(rotate) {
+    @include brpt-auto-gen($property) {
+      transform: $value;
+    }
+
+    @include brpt-auto-gen(hover-#{$property}) {
+      &:hover {
+        transform: $value;
+      }
+    }
+  }
+
+  // Skew
+  @each $property, $value in util-props(skew) {
+    @include brpt-auto-gen($property) {
+      transform: $value;
+    }
+
+    @include brpt-auto-gen(hover-#{$property}) {
+      &:hover {
+        transform: $value;
+      }
+    }
+  }
+
+  // Origin
+  @each $property, $value in util-props(transform-origin) {
+    @include brpt-auto-gen(#{util-keys(transform-origin)}-#{$property}) {
+      transform-origin: $value;
+    } 
+  }
+}
+
+// ----- Z-index
+@mixin setup-z-indexes {
+  @each $property, $value in util-props(z-indexes) {
+    .#{util-keys(z-index)}-#{$property} {
+      z-index: $value;
+    }
+  }
+}
+
+// ----- Top, Right, Bottom, Left
+@mixin setup-trbl {
+  @each $property, $value in util-props(trbl) {
+    .#{util-keys(top)}-#{$property} {
+      top: $value;
+    }
+
+    .#{util-keys(left)}-#{$property} {
+      left: $value;
+    }
+
+    .#{util-keys(bottom)}-#{$property} {
+      bottom: $value;
+    }
+
+    .#{util-keys(right)}-#{$property} {
+      right: $value;
+    }
+  }
+}
+
+// ----- Screen reader
+@mixin setup-screen-reader {
+  @include brpt-auto-gen(#{util-keys(screen-reader)}) {
+    border-width: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  };
+}
+

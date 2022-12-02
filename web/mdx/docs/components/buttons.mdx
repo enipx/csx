@@ -1,0 +1,162 @@
+---
+title: Buttons
+description: Used to perform an action such as submission, cancellation, deletion or any other desired action.
+---
+
+## Usage
+
+```html
+<template preview>
+  <button type="button" class="btn btn-primary">
+    Button
+  </button>
+</template>
+
+<div>
+  <button type="button" class="btn btn-primary">
+      Button
+  </button>
+</div>
+```
+
+## Color Scheme
+Set button scheme/status using the `.btn-[status]` utility class. Options available are `primary`, `secondary`, `success`, `danger`, `outline`, `ghost`. Usage example is `btn-success`.
+
+```html
+<template preview>
+  <div class="d-flex">
+    <button type="button" class="m-2 btn btn-primary">
+      Button
+    </button>
+
+    <button type="button" class="m-2 btn btn-secondary">
+      Button
+    </button>
+
+    <button type="button" class="m-2 btn btn-success">
+      Button
+    </button>
+
+    <button type="button" class="m-2 btn btn-danger">
+      Button
+    </button>
+
+    <button type="button" class="m-2 btn btn-outline">
+      Button
+    </button>
+
+    <button type="button" class="m-2 btn btn-ghost">
+      Button
+    </button>
+  </div>
+</template>
+
+<div>
+  <button type="button" class="btn btn-success">
+      Button
+  </button>
+  . . .
+</div>
+```
+
+## Sizings
+Set button size using the `.btn-[size]` utility class or `data-size="[size]"` attribute. Options available are `xs`, `sm`, `md`, `lg`, `xl`. Usage example is `btn-lg` or `data-size="lg"`.
+
+```html
+<template preview>
+  <div class="d-flex">
+    <button type="button" class="m-2 btn btn-primary" data-size="xs">
+      Button xs
+    </button>
+
+    <button type="button" class="m-2 btn btn-primary" data-size="sm">
+      Button sm
+    </button>
+
+    <button type="button" class="m-2 btn btn-primary" data-size="md">
+      Button md
+    </button>
+
+    <button type="button" class="m-2 btn btn-primary" data-size="lg">
+      Button lg
+    </button>
+
+    <button type="button" class="m-2 btn btn-primary" data-size="xl">
+      Button xl
+    </button>
+  </div>
+</template>
+
+<div>
+  <button type="button" class="btn btn-primary" data-size="xs">
+      Button
+  </button>
+  . . .
+</div>
+```
+
+## Icon
+Used to add icon to button, you can set the position of the icon to `left` or `right` using the `.btn-icon-[size]` utility class or `data-icon=[position]` attribute.
+
+```html
+<template preview>
+  <div class="d-flex">
+    <button type="button" class="m-2 btn btn-primary" data-icon="left">
+      <span class="btn_icon">
+        <svg viewBox="0 0 24 24" focusable="false" class="w-8 h-8" aria-hidden="true">
+          <path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z">
+          </path>
+        </svg>
+      </span>
+      Button
+    </button>
+
+    <button type="button" class="m-2 btn btn-primary" data-icon="right">
+      <span class="btn_icon">
+        <svg viewBox="0 0 24 24" focusable="false" class="w-8 h-8" aria-hidden="true">
+          <path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z">
+          </path>
+        </svg>
+      </span>
+      Button
+    </button>
+  </div>
+</template>
+
+<div>
+  <button type="button" class="btn btn-primary" data-icon="left">
+      <span class="btn_icon">
+        <svg viewBox="0 0 24 24" focusable="false" class="w-8 h-8" aria-hidden="true">
+          <path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z">
+          </path>
+        </svg>
+      </span>
+      Button
+  </button>
+  . . .
+</div>
+```
+
+## Props
+
+<PropsTable 
+  data={[
+    {
+      head: 'color scheme',
+      types: ['primary', 'secondary', 'success', 'danger', 'ghost', 'outline'],
+      default: "outline",
+      usage: ['btn-primary'],
+    },
+    {
+      head: 'size',
+      types: ['xs', 'sm', 'md', 'lg', 'xl'],
+      default: "md",
+      usage: ['btn-sm', 'data-size="sm"']
+    },
+    {
+      head: 'icon',
+      types: ['left', 'right'],
+      usage: ['btn-icon-right', 'data-icon="right"']
+    },
+  ]}
+/>

@@ -1,0 +1,96 @@
+---
+title: Optimization
+description: Removing unused CSS from your production builds for maximum performance.
+---
+
+<table className="table">
+  <thead>
+    <tr>
+      <th>Uncompressed</th>
+      <th>Minified</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2.4mb</td>
+      <td>125kb</td>
+    </tr>
+  </tbody>
+</table>
+
+This might sound enormous but **the development build is large by design**.
+
+To make the development experience as productive as possible, Tailwind generates thousands of utility classes for you, most of which you probably won't actually use.
+
+> Pre-requisites: Knowledge of basic Dart and Flutter. Read about [Flutter](https://flutter.dev/docs) and [Dart](https://dart.dev/guides).
+
+With basic concepts like Widgets and Material design we can create simple apps very fast and easily in Flutter as in Flutter we can use tons of pre-designed widgets to create almost every popular design using in the modern design world.
+
+In this tutorial, we discuss creating a simple note-taking app. The note-taking app we are going to create provides options like create, save, update and delete notes. 
+
+Our note-taking app contains two screens 
+- Home screen to display all saved notes
+- Notes edit screen to create new notes or edit saved notes
+
+Think of Tailwind like a giant box of LEGO — you dump it all out on the floor and build what you want to build, then when you're done you put all the pieces you didn't use back into the box.
+
+## Explanation
+
+For example, Tailwind generates margin utilities for every size in your spacing scale, for every side of an element you might want to apply margin to, at every breakpoint you are using in your project. This leads to hundreds of different combinations that are all important to have available, but not all likely to be needed.
+
+**When building for production, you should always use Tailwind's `purge` option to tree-shake unused styles and optimize your final build size.** When removing unused styles with Tailwind, it's very hard to end up with more than 10kb of compressed CSS.
+
+## Writing purgeable HTML
+
+Before getting started with the `purge` feature, it's important to understand how it works and build the correct mental model to make sure you never accidentally remove important styles when building for production.
+
+[PurgeCSS](https://purgecss.com/) _(the library we use under the hood)_ is intentionally very naive in the way it looks for classes in your HTML. It doesn't try to parse your HTML and look for class attributes or dynamically execute your JavaScript — it simply looks for any strings in the entire file that match this regular expression:
+
+```js
+window.addEventListener((e) => {
+  e.preventDefault();
+  ...
+})
+```
+
+It doesn't try to parse your HTML and look for class attributes or dynamically execute your JavaScript — it simply looks for any strings in the entire file that match this regular expression:
+
+```css
+html {
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+  touch-action: manipulation;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 0.1em;
+}
+```
+
+## Show Preview HTML
+
+
+It doesn't try to parse your HTML and look for class attributes or dynamically execute your JavaScript — it simply looks for any strings in the entire file that match this regular expression:
+
+```html rose
+<template preview>
+  <div>
+    <span class="d-block bdrs-md c-white fw-bold ta-center bg-brand p-2 mb-3">1</span>
+    <span class="d-block bdrs-md c-white fw-bold ta-center bg-brand p-2 mb-3">2</span>
+    <span class="d-block bdrs-md c-white fw-bold ta-center bg-brand p-2">3</span>
+  </div>
+</template>
+
+<div class="p-4 bdrs-md ...">
+  <span class="d-block ...">1</span>
+  <span class="d-block ...">2</span>
+  <span class="d-block ...">3</span>
+</div>
+```
+
+These are mostly small wins compared to limiting your color palette or using fewer breakpoints, but they can still add up.

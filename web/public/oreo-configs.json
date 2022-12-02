@@ -1,0 +1,4319 @@
+{
+  "variables": [
+    {
+      "name": "$var-prefix",
+      "value": "--csx-",
+      "compiledValue": "--csx-"
+    },
+    {
+      "name": "$gradients-def-deg",
+      "value": "270deg",
+      "compiledValue": "270deg"
+    },
+    {
+      "name": "$gradients-color-stop-1",
+      "value": "7.5%",
+      "compiledValue": "7.5%"
+    },
+    {
+      "name": "$gradients-color-stop-2",
+      "value": "88%",
+      "compiledValue": "88%"
+    }
+  ],
+  "breakpoints": [
+    {
+      "name": "$breakpoints",
+      "value": "( xs: rem(23.5), sm: rem(36), md: rem(48), lg: rem(62), xl: rem(80), xxl: rem(90), )",
+      "mapValue": [
+        {
+          "name": "xs",
+          "value": "rem(23.5)",
+          "compiledValue": "rem(23.5)"
+        },
+        {
+          "name": "sm",
+          "value": "rem(36)",
+          "compiledValue": "rem(36)"
+        },
+        {
+          "name": "md",
+          "value": "rem(48)",
+          "compiledValue": "rem(48)"
+        },
+        {
+          "name": "lg",
+          "value": "rem(62)",
+          "compiledValue": "rem(62)"
+        },
+        {
+          "name": "xl",
+          "value": "rem(80)",
+          "compiledValue": "rem(80)"
+        },
+        {
+          "name": "xxl",
+          "value": "rem(90)",
+          "compiledValue": "rem(90)"
+        }
+      ],
+      "compiledValue": "(xs: rem(23.5), sm: rem(36), md: rem(48), lg: rem(62), xl: rem(80), xxl: rem(90))"
+    }
+  ],
+  "sizings": [
+    {
+      "name": "$sizings",
+      "value": "( 0: 0, px: 1px, 1: rem(0.25), 2: rem(0.5), 3: rem(0.75), 4: rem(1), 5: rem(1.25), 6: rem(1.5), 7: rem(1.75), 8: rem(2), 9: rem(2.25), 10: rem(2.5), 12: rem(3), 14: rem(3.5), 16: rem(4), 18: rem(4.5), 20: rem(5), 24: rem(6), 28: rem(7), 32: rem(8), 36: rem(9), 40: rem(10), 44: rem(11), 48: rem(12), 52: rem(13), 56: rem(14), 60: rem(15), 64: rem(16), 72: rem(18), 80: rem(20), 96: rem(24), )",
+      "mapValue": [
+        {
+          "name": "px",
+          "value": "1px",
+          "compiledValue": "1px"
+        }
+      ],
+      "compiledValue": "(0: 0, px: 1px, 1: rem(0.25), 2: rem(0.5), 3: rem(0.75), 4: rem(1), 5: rem(1.25), 6: rem(1.5), 7: rem(1.75), 8: rem(2), 9: rem(2.25), 10: rem(2.5), 12: rem(3), 14: rem(3.5), 16: rem(4), 18: rem(4.5), 20: rem(5), 24: rem(6), 28: rem(7), 32: rem(8), 36: rem(9), 40: rem(10), 44: rem(11), 48: rem(12), 52: rem(13), 56: rem(14), 60: rem(15), 64: rem(16), 72: rem(18), 80: rem(20), 96: rem(24))"
+    }
+  ],
+  "box-sizing": [
+    {
+      "name": "$box-sizing",
+      "value": "( border: border-box, content: content-box, )",
+      "mapValue": [
+        {
+          "name": "border",
+          "value": "border-box",
+          "compiledValue": "border-box"
+        },
+        {
+          "name": "content",
+          "value": "content-box",
+          "compiledValue": "content-box"
+        }
+      ],
+      "compiledValue": "(border: border-box, content: content-box)"
+    }
+  ],
+  "color": [
+    {
+      "name": "$colors",
+      "value": "( black: ( black-50: hsl(0deg, 0%, 95%), black-100: hsl(0deg, 0%, 90%), black-200: hsl(0deg, 0%, 80%), black-300: hsl(0deg, 0%, 70%), black-400: hsl(0deg, 0%, 60%), black-500: hsl(0deg, 0%, 50%), black-600: hsl(0deg, 0%, 40%), black-700: hsl(0deg, 0%, 30%), black-800: hsl(0deg, 0%, 20%), black-900: hsl(0deg, 0%, 10%), ), white: ( white-50: hsl(0deg, 0%, 5%), white-100: hsl(0deg, 0%, 10%), white-200: hsl(0deg, 0%, 20%), white-300: hsl(0deg, 0%, 30%), white-400: hsl(0deg, 0%, 40%), white-500: hsl(0deg, 0%, 50%), white-600: hsl(0deg, 0%, 60%), white-700: hsl(0deg, 0%, 70%), white-800: hsl(0deg, 0%, 80%), white-900: hsl(0deg, 0%, 90%), ), primary: ( primary-50: hsl(216deg, 100%, 95%), primary-100: hsl(216deg, 100%, 90%), primary-200: hsl(216deg, 100%, 80%), primary-300: hsl(216deg, 100%, 70%), primary-400: hsl(216deg, 100%, 60%), primary-500: hsl(216deg, 100%, 50%), primary-600: hsl(216deg, 100%, 40%), primary-700: hsl(216deg, 100%, 30%), primary-800: hsl(216deg, 100%, 20%), primary-900: hsl(216deg, 100%, 10%), ), secondary: ( secondary-50: hsl(207deg, 14%, 95%), secondary-100: hsl(207deg, 14%, 90%), secondary-200: hsl(207deg, 14%, 80%), secondary-300: hsl(207deg, 14%, 70%), secondary-400: hsl(207deg, 14%, 60%), secondary-500: hsl(207deg, 14%, 50%), secondary-600: hsl(207deg, 14%, 40%), secondary-700: hsl(207deg, 14%, 30%), secondary-800: hsl(207deg, 14%, 20%), secondary-900: hsl(207deg, 14%, 10%), ), success: ( success-50: hsl(155deg, 80%, 95%), success-100: hsl(155deg, 80%, 90%), success-200: hsl(155deg, 80%, 80%), success-300: hsl(155deg, 80%, 70%), success-400: hsl(155deg, 80%, 60%), success-500: hsl(155deg, 80%, 50%), success-600: hsl(155deg, 80%, 40%), success-700: hsl(155deg, 80%, 30%), success-800: hsl(155deg, 80%, 20%), success-900: hsl(155deg, 80%, 10%), ), danger: ( danger-50: hsl(350deg, 80%, 95%), danger-100: hsl(350deg, 80%, 90%), danger-200: hsl(350deg, 80%, 80%), danger-300: hsl(350deg, 80%, 70%), danger-400: hsl(350deg, 80%, 60%), danger-500: hsl(350deg, 80%, 50%), danger-600: hsl(350deg, 80%, 40%), danger-700: hsl(350deg, 80%, 30%), danger-800: hsl(350deg, 80%, 20%), danger-900: hsl(350deg, 80%, 10%), ), warning: ( warning-50: hsl(45deg, 100%, 95%), warning-100: hsl(45deg, 100%, 90%), warning-200: hsl(45deg, 100%, 80%), warning-300: hsl(45deg, 100%, 70%), warning-400: hsl(45deg, 100%, 60%), warning-500: hsl(45deg, 100%, 50%), warning-600: hsl(45deg, 100%, 40%), warning-700: hsl(45deg, 100%, 30%), warning-800: hsl(45deg, 100%, 20%), warning-900: hsl(45deg, 100%, 10%), ), info: ( info-50: hsl(200deg, 100%, 95%), info-100: hsl(200deg, 100%, 90%), info-200: hsl(200deg, 100%, 80%), info-300: hsl(200deg, 100%, 70%), info-400: hsl(200deg, 100%, 60%), info-500: hsl(200deg, 100%, 50%), info-600: hsl(200deg, 100%, 40%), info-700: hsl(200deg, 100%, 30%), info-800: hsl(200deg, 100%, 20%), info-900: hsl(200deg, 100%, 10%), ), cyan: ( cyan-50: hsl(180deg, 80%, 95%), cyan-100: hsl(180deg, 80%, 90%), cyan-200: hsl(180deg, 80%, 80%), cyan-300: hsl(180deg, 80%, 70%), cyan-400: hsl(180deg, 80%, 60%), cyan-500: hsl(180deg, 80%, 50%), cyan-600: hsl(180deg, 80%, 40%), cyan-700: hsl(180deg, 80%, 30%), cyan-800: hsl(180deg, 80%, 20%), cyan-900: hsl(180deg, 80%, 10%), ), magenta: ( magenta-50: hsl(290deg, 100%, 95%), magenta-100: hsl(290deg, 100%, 90%), magenta-200: hsl(290deg, 100%, 80%), magenta-300: hsl(290deg, 100%, 70%), magenta-400: hsl(290deg, 100%, 60%), magenta-500: hsl(290deg, 100%, 50%), magenta-600: hsl(290deg, 100%, 40%), magenta-700: hsl(290deg, 100%, 30%), magenta-800: hsl(290deg, 100%, 20%), magenta-900: hsl(290deg, 100%, 10%), ), orange: ( orange-50: hsl(28deg, 98%, 95%), orange-100: hsl(28deg, 98%, 90%), orange-200: hsl(28deg, 98%, 80%), orange-300: hsl(28deg, 98%, 70%), orange-400: hsl(28deg, 98%, 60%), orange-500: hsl(28deg, 98%, 50%), orange-600: hsl(28deg, 98%, 40%), orange-700: hsl(28deg, 98%, 30%), orange-800: hsl(28deg, 98%, 20%), orange-900: hsl(28deg, 98%, 10%), ), purple: ( purple-50: hsl(275deg, 86%, 95%), purple-100: hsl(275deg, 86%, 90%), purple-200: hsl(275deg, 86%, 80%), purple-300: hsl(275deg, 86%, 70%), purple-400: hsl(275deg, 86%, 60%), purple-500: hsl(275deg, 86%, 50%), purple-600: hsl(275deg, 86%, 40%), purple-700: hsl(275deg, 86%, 30%), purple-800: hsl(275deg, 86%, 20%), purple-900: hsl(275deg, 86%, 10%), ), pink: ( pink-50: hsl(330deg, 100%, 95%), pink-100: hsl(330deg, 100%, 90%), pink-200: hsl(330deg, 100%, 80%), pink-300: hsl(330deg, 100%, 70%), pink-400: hsl(330deg, 100%, 60%), pink-500: hsl(330deg, 100%, 50%), pink-600: hsl(330deg, 100%, 40%), pink-700: hsl(330deg, 100%, 30%), pink-800: hsl(330deg, 100%, 20%), pink-900: hsl(330deg, 100%, 10%), ), brands: ( facebook: #3c5a96, twitter: #2aa3ef, instagram: #e1306c, linkedin: #1178b3, pinterest: #bb0f23, youtube: #fc0d1b, dribbble: #e84f89, behance: #1769ff, github: #24292e, reddit: #fc471e, paypal: #053385, dropbox: #1581e2, slack: #de1d64, mailchimp: #2c9ab7, saleforce: #2399bf, ), system: ( brand: #ff706b, black: hsl(0deg, 0%, 0%), white: hsl(0deg, 0%, 100%), light: #f9fafa, dark: #1a1f23, primary: hsl(216deg, 100%, 50%), secondary: hsl(207deg, 14%, 50%), success: hsl(155deg, 80%, 40%), danger: hsl(350deg, 80%, 50%), warning: hsl(45deg, 100%, 50%), info: hsl(200deg, 100%, 50%), cyan: hsl(180deg, 80%, 50%), magenta: hsl(290deg, 100%, 50%), orange: hsl(28deg, 98%, 50%), purple: hsl(275deg, 86%, 50%), pink: hsl(330deg, 100%, 50%), transparent: transparent, current: currentColor, inherit: inherit, ) )",
+      "mapValue": [
+        {
+          "name": "black",
+          "value": "( black-50: hsl(0deg, 0%, 95%)",
+          "mapValue": [
+            {
+              "name": "black-50",
+              "value": "hsl(0deg, 0%, 95%)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "black-100",
+          "value": "hsl(0deg, 0%, 90%)",
+          "compiledValue": "#e6e6e6"
+        },
+        {
+          "name": "black-200",
+          "value": "hsl(0deg, 0%, 80%)",
+          "compiledValue": "#cccccc"
+        },
+        {
+          "name": "black-300",
+          "value": "hsl(0deg, 0%, 70%)",
+          "compiledValue": "#b3b3b3"
+        },
+        {
+          "name": "black-400",
+          "value": "hsl(0deg, 0%, 60%)",
+          "compiledValue": "#999999"
+        },
+        {
+          "name": "black-500",
+          "value": "hsl(0deg, 0%, 50%)",
+          "compiledValue": "gray"
+        },
+        {
+          "name": "black-600",
+          "value": "hsl(0deg, 0%, 40%)",
+          "compiledValue": "#666666"
+        },
+        {
+          "name": "black-700",
+          "value": "hsl(0deg, 0%, 30%)",
+          "compiledValue": "#4d4d4d"
+        },
+        {
+          "name": "black-800",
+          "value": "hsl(0deg, 0%, 20%)",
+          "compiledValue": "#333333"
+        },
+        {
+          "name": "black-900",
+          "value": "hsl(0deg, 0%, 10%)",
+          "compiledValue": "#1a1a1a"
+        },
+        {
+          "name": "white",
+          "value": "( white-50: hsl(0deg, 0%, 5%)",
+          "mapValue": [
+            {
+              "name": "white-50",
+              "value": "hsl(0deg, 0%, 5%)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "white-100",
+          "value": "hsl(0deg, 0%, 10%)",
+          "compiledValue": "#1a1a1a"
+        },
+        {
+          "name": "white-200",
+          "value": "hsl(0deg, 0%, 20%)",
+          "compiledValue": "#333333"
+        },
+        {
+          "name": "white-300",
+          "value": "hsl(0deg, 0%, 30%)",
+          "compiledValue": "#4d4d4d"
+        },
+        {
+          "name": "white-400",
+          "value": "hsl(0deg, 0%, 40%)",
+          "compiledValue": "#666666"
+        },
+        {
+          "name": "white-500",
+          "value": "hsl(0deg, 0%, 50%)",
+          "compiledValue": "gray"
+        },
+        {
+          "name": "white-600",
+          "value": "hsl(0deg, 0%, 60%)",
+          "compiledValue": "#999999"
+        },
+        {
+          "name": "white-700",
+          "value": "hsl(0deg, 0%, 70%)",
+          "compiledValue": "#b3b3b3"
+        },
+        {
+          "name": "white-800",
+          "value": "hsl(0deg, 0%, 80%)",
+          "compiledValue": "#cccccc"
+        },
+        {
+          "name": "white-900",
+          "value": "hsl(0deg, 0%, 90%)",
+          "compiledValue": "#e6e6e6"
+        },
+        {
+          "name": "primary",
+          "value": "( primary-50: hsl(216deg, 100%, 95%)",
+          "mapValue": [
+            {
+              "name": "primary-50",
+              "value": "hsl(216deg, 100%, 95%)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "primary-100",
+          "value": "hsl(216deg, 100%, 90%)",
+          "compiledValue": "#cce0ff"
+        },
+        {
+          "name": "primary-200",
+          "value": "hsl(216deg, 100%, 80%)",
+          "compiledValue": "#99c2ff"
+        },
+        {
+          "name": "primary-300",
+          "value": "hsl(216deg, 100%, 70%)",
+          "compiledValue": "#66a3ff"
+        },
+        {
+          "name": "primary-400",
+          "value": "hsl(216deg, 100%, 60%)",
+          "compiledValue": "#3385ff"
+        },
+        {
+          "name": "primary-500",
+          "value": "hsl(216deg, 100%, 50%)",
+          "compiledValue": "#0066ff"
+        },
+        {
+          "name": "primary-600",
+          "value": "hsl(216deg, 100%, 40%)",
+          "compiledValue": "#0052cc"
+        },
+        {
+          "name": "primary-700",
+          "value": "hsl(216deg, 100%, 30%)",
+          "compiledValue": "#003d99"
+        },
+        {
+          "name": "primary-800",
+          "value": "hsl(216deg, 100%, 20%)",
+          "compiledValue": "#002966"
+        },
+        {
+          "name": "primary-900",
+          "value": "hsl(216deg, 100%, 10%)",
+          "compiledValue": "#001433"
+        },
+        {
+          "name": "secondary",
+          "value": "( secondary-50: hsl(207deg, 14%, 95%)",
+          "mapValue": [
+            {
+              "name": "secondary-50",
+              "value": "hsl(207deg, 14%, 95%)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "secondary-100",
+          "value": "hsl(207deg, 14%, 90%)",
+          "compiledValue": "#e2e6e9"
+        },
+        {
+          "name": "secondary-200",
+          "value": "hsl(207deg, 14%, 80%)",
+          "compiledValue": "#c5cdd3"
+        },
+        {
+          "name": "secondary-300",
+          "value": "hsl(207deg, 14%, 70%)",
+          "compiledValue": "#a8b4bd"
+        },
+        {
+          "name": "secondary-400",
+          "value": "hsl(207deg, 14%, 60%)",
+          "compiledValue": "#8b9aa7"
+        },
+        {
+          "name": "secondary-500",
+          "value": "hsl(207deg, 14%, 50%)",
+          "compiledValue": "#6e8191"
+        },
+        {
+          "name": "secondary-600",
+          "value": "hsl(207deg, 14%, 40%)",
+          "compiledValue": "#586774"
+        },
+        {
+          "name": "secondary-700",
+          "value": "hsl(207deg, 14%, 30%)",
+          "compiledValue": "#424e57"
+        },
+        {
+          "name": "secondary-800",
+          "value": "hsl(207deg, 14%, 20%)",
+          "compiledValue": "#2c343a"
+        },
+        {
+          "name": "secondary-900",
+          "value": "hsl(207deg, 14%, 10%)",
+          "compiledValue": "#161a1d"
+        },
+        {
+          "name": "success",
+          "value": "( success-50: hsl(155deg, 80%, 95%)",
+          "mapValue": [
+            {
+              "name": "success-50",
+              "value": "hsl(155deg, 80%, 95%)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "success-100",
+          "value": "hsl(155deg, 80%, 90%)",
+          "compiledValue": "#d1fae9"
+        },
+        {
+          "name": "success-200",
+          "value": "hsl(155deg, 80%, 80%)",
+          "compiledValue": "#a3f5d3"
+        },
+        {
+          "name": "success-300",
+          "value": "hsl(155deg, 80%, 70%)",
+          "compiledValue": "#75f0bd"
+        },
+        {
+          "name": "success-400",
+          "value": "hsl(155deg, 80%, 60%)",
+          "compiledValue": "#47eba7"
+        },
+        {
+          "name": "success-500",
+          "value": "hsl(155deg, 80%, 50%)",
+          "compiledValue": "#1ae691"
+        },
+        {
+          "name": "success-600",
+          "value": "hsl(155deg, 80%, 40%)",
+          "compiledValue": "#14b874"
+        },
+        {
+          "name": "success-700",
+          "value": "hsl(155deg, 80%, 30%)",
+          "compiledValue": "#0f8a57"
+        },
+        {
+          "name": "success-800",
+          "value": "hsl(155deg, 80%, 20%)",
+          "compiledValue": "#0a5c3a"
+        },
+        {
+          "name": "success-900",
+          "value": "hsl(155deg, 80%, 10%)",
+          "compiledValue": "#052e1d"
+        },
+        {
+          "name": "danger",
+          "value": "( danger-50: hsl(350deg, 80%, 95%)",
+          "mapValue": [
+            {
+              "name": "danger-50",
+              "value": "hsl(350deg, 80%, 95%)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "danger-100",
+          "value": "hsl(350deg, 80%, 90%)",
+          "compiledValue": "#fad1d8"
+        },
+        {
+          "name": "danger-200",
+          "value": "hsl(350deg, 80%, 80%)",
+          "compiledValue": "#f5a3b1"
+        },
+        {
+          "name": "danger-300",
+          "value": "hsl(350deg, 80%, 70%)",
+          "compiledValue": "#f0758a"
+        },
+        {
+          "name": "danger-400",
+          "value": "hsl(350deg, 80%, 60%)",
+          "compiledValue": "#eb4763"
+        },
+        {
+          "name": "danger-500",
+          "value": "hsl(350deg, 80%, 50%)",
+          "compiledValue": "#e61a3c"
+        },
+        {
+          "name": "danger-600",
+          "value": "hsl(350deg, 80%, 40%)",
+          "compiledValue": "#b81430"
+        },
+        {
+          "name": "danger-700",
+          "value": "hsl(350deg, 80%, 30%)",
+          "compiledValue": "#8a0f24"
+        },
+        {
+          "name": "danger-800",
+          "value": "hsl(350deg, 80%, 20%)",
+          "compiledValue": "#5c0a18"
+        },
+        {
+          "name": "danger-900",
+          "value": "hsl(350deg, 80%, 10%)",
+          "compiledValue": "#2e050c"
+        },
+        {
+          "name": "warning",
+          "value": "( warning-50: hsl(45deg, 100%, 95%)",
+          "mapValue": [
+            {
+              "name": "warning-50",
+              "value": "hsl(45deg, 100%, 95%)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "warning-100",
+          "value": "hsl(45deg, 100%, 90%)",
+          "compiledValue": "#fff2cc"
+        },
+        {
+          "name": "warning-200",
+          "value": "hsl(45deg, 100%, 80%)",
+          "compiledValue": "#ffe699"
+        },
+        {
+          "name": "warning-300",
+          "value": "hsl(45deg, 100%, 70%)",
+          "compiledValue": "#ffd966"
+        },
+        {
+          "name": "warning-400",
+          "value": "hsl(45deg, 100%, 60%)",
+          "compiledValue": "#ffcc33"
+        },
+        {
+          "name": "warning-500",
+          "value": "hsl(45deg, 100%, 50%)",
+          "compiledValue": "#ffbf00"
+        },
+        {
+          "name": "warning-600",
+          "value": "hsl(45deg, 100%, 40%)",
+          "compiledValue": "#cc9900"
+        },
+        {
+          "name": "warning-700",
+          "value": "hsl(45deg, 100%, 30%)",
+          "compiledValue": "#997300"
+        },
+        {
+          "name": "warning-800",
+          "value": "hsl(45deg, 100%, 20%)",
+          "compiledValue": "#664d00"
+        },
+        {
+          "name": "warning-900",
+          "value": "hsl(45deg, 100%, 10%)",
+          "compiledValue": "#332600"
+        },
+        {
+          "name": "info",
+          "value": "( info-50: hsl(200deg, 100%, 95%)",
+          "mapValue": [
+            {
+              "name": "info-50",
+              "value": "hsl(200deg, 100%, 95%)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "info-100",
+          "value": "hsl(200deg, 100%, 90%)",
+          "compiledValue": "#cceeff"
+        },
+        {
+          "name": "info-200",
+          "value": "hsl(200deg, 100%, 80%)",
+          "compiledValue": "#99ddff"
+        },
+        {
+          "name": "info-300",
+          "value": "hsl(200deg, 100%, 70%)",
+          "compiledValue": "#66ccff"
+        },
+        {
+          "name": "info-400",
+          "value": "hsl(200deg, 100%, 60%)",
+          "compiledValue": "#33bbff"
+        },
+        {
+          "name": "info-500",
+          "value": "hsl(200deg, 100%, 50%)",
+          "compiledValue": "#00aaff"
+        },
+        {
+          "name": "info-600",
+          "value": "hsl(200deg, 100%, 40%)",
+          "compiledValue": "#0088cc"
+        },
+        {
+          "name": "info-700",
+          "value": "hsl(200deg, 100%, 30%)",
+          "compiledValue": "#006699"
+        },
+        {
+          "name": "info-800",
+          "value": "hsl(200deg, 100%, 20%)",
+          "compiledValue": "#004466"
+        },
+        {
+          "name": "info-900",
+          "value": "hsl(200deg, 100%, 10%)",
+          "compiledValue": "#002233"
+        },
+        {
+          "name": "cyan",
+          "value": "( cyan-50: hsl(180deg, 80%, 95%)",
+          "mapValue": [
+            {
+              "name": "cyan-50",
+              "value": "hsl(180deg, 80%, 95%)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "cyan-100",
+          "value": "hsl(180deg, 80%, 90%)",
+          "compiledValue": "#d1fafa"
+        },
+        {
+          "name": "cyan-200",
+          "value": "hsl(180deg, 80%, 80%)",
+          "compiledValue": "#a3f5f5"
+        },
+        {
+          "name": "cyan-300",
+          "value": "hsl(180deg, 80%, 70%)",
+          "compiledValue": "#75f0f0"
+        },
+        {
+          "name": "cyan-400",
+          "value": "hsl(180deg, 80%, 60%)",
+          "compiledValue": "#47ebeb"
+        },
+        {
+          "name": "cyan-500",
+          "value": "hsl(180deg, 80%, 50%)",
+          "compiledValue": "#1ae6e6"
+        },
+        {
+          "name": "cyan-600",
+          "value": "hsl(180deg, 80%, 40%)",
+          "compiledValue": "#14b8b8"
+        },
+        {
+          "name": "cyan-700",
+          "value": "hsl(180deg, 80%, 30%)",
+          "compiledValue": "#0f8a8a"
+        },
+        {
+          "name": "cyan-800",
+          "value": "hsl(180deg, 80%, 20%)",
+          "compiledValue": "#0a5c5c"
+        },
+        {
+          "name": "cyan-900",
+          "value": "hsl(180deg, 80%, 10%)",
+          "compiledValue": "#052e2e"
+        },
+        {
+          "name": "magenta",
+          "value": "( magenta-50: hsl(290deg, 100%, 95%)",
+          "mapValue": [
+            {
+              "name": "magenta-50",
+              "value": "hsl(290deg, 100%, 95%)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "magenta-100",
+          "value": "hsl(290deg, 100%, 90%)",
+          "compiledValue": "#f7ccff"
+        },
+        {
+          "name": "magenta-200",
+          "value": "hsl(290deg, 100%, 80%)",
+          "compiledValue": "#ee99ff"
+        },
+        {
+          "name": "magenta-300",
+          "value": "hsl(290deg, 100%, 70%)",
+          "compiledValue": "#e666ff"
+        },
+        {
+          "name": "magenta-400",
+          "value": "hsl(290deg, 100%, 60%)",
+          "compiledValue": "#dd33ff"
+        },
+        {
+          "name": "magenta-500",
+          "value": "hsl(290deg, 100%, 50%)",
+          "compiledValue": "#d500ff"
+        },
+        {
+          "name": "magenta-600",
+          "value": "hsl(290deg, 100%, 40%)",
+          "compiledValue": "#aa00cc"
+        },
+        {
+          "name": "magenta-700",
+          "value": "hsl(290deg, 100%, 30%)",
+          "compiledValue": "#800099"
+        },
+        {
+          "name": "magenta-800",
+          "value": "hsl(290deg, 100%, 20%)",
+          "compiledValue": "#550066"
+        },
+        {
+          "name": "magenta-900",
+          "value": "hsl(290deg, 100%, 10%)",
+          "compiledValue": "#2b0033"
+        },
+        {
+          "name": "orange",
+          "value": "( orange-50: hsl(28deg, 98%, 95%)",
+          "mapValue": [
+            {
+              "name": "orange-50",
+              "value": "hsl(28deg, 98%, 95%)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "orange-100",
+          "value": "hsl(28deg, 98%, 90%)",
+          "compiledValue": "#fee4cd"
+        },
+        {
+          "name": "orange-200",
+          "value": "hsl(28deg, 98%, 80%)",
+          "compiledValue": "#fec99a"
+        },
+        {
+          "name": "orange-300",
+          "value": "hsl(28deg, 98%, 70%)",
+          "compiledValue": "#fdae68"
+        },
+        {
+          "name": "orange-400",
+          "value": "hsl(28deg, 98%, 60%)",
+          "compiledValue": "#fd9235"
+        },
+        {
+          "name": "orange-500",
+          "value": "hsl(28deg, 98%, 50%)",
+          "compiledValue": "#fc7703"
+        },
+        {
+          "name": "orange-600",
+          "value": "hsl(28deg, 98%, 40%)",
+          "compiledValue": "#ca5f02"
+        },
+        {
+          "name": "orange-700",
+          "value": "hsl(28deg, 98%, 30%)",
+          "compiledValue": "#974802"
+        },
+        {
+          "name": "orange-800",
+          "value": "hsl(28deg, 98%, 20%)",
+          "compiledValue": "#653001"
+        },
+        {
+          "name": "orange-900",
+          "value": "hsl(28deg, 98%, 10%)",
+          "compiledValue": "#321801"
+        },
+        {
+          "name": "purple",
+          "value": "( purple-50: hsl(275deg, 86%, 95%)",
+          "mapValue": [
+            {
+              "name": "purple-50",
+              "value": "hsl(275deg, 86%, 95%)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "purple-100",
+          "value": "hsl(275deg, 86%, 90%)",
+          "compiledValue": "#e9d0fb"
+        },
+        {
+          "name": "purple-200",
+          "value": "hsl(275deg, 86%, 80%)",
+          "compiledValue": "#d3a0f8"
+        },
+        {
+          "name": "purple-300",
+          "value": "hsl(275deg, 86%, 70%)",
+          "compiledValue": "#bd71f4"
+        },
+        {
+          "name": "purple-400",
+          "value": "hsl(275deg, 86%, 60%)",
+          "compiledValue": "#a841f1"
+        },
+        {
+          "name": "purple-500",
+          "value": "hsl(275deg, 86%, 50%)",
+          "compiledValue": "#9212ed"
+        },
+        {
+          "name": "purple-600",
+          "value": "hsl(275deg, 86%, 40%)",
+          "compiledValue": "#750ebe"
+        },
+        {
+          "name": "purple-700",
+          "value": "hsl(275deg, 86%, 30%)",
+          "compiledValue": "#570b8e"
+        },
+        {
+          "name": "purple-800",
+          "value": "hsl(275deg, 86%, 20%)",
+          "compiledValue": "#3a075f"
+        },
+        {
+          "name": "purple-900",
+          "value": "hsl(275deg, 86%, 10%)",
+          "compiledValue": "#1d042f"
+        },
+        {
+          "name": "pink",
+          "value": "( pink-50: hsl(330deg, 100%, 95%)",
+          "mapValue": [
+            {
+              "name": "pink-50",
+              "value": "hsl(330deg, 100%, 95%)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "pink-100",
+          "value": "hsl(330deg, 100%, 90%)",
+          "compiledValue": "#ffcce6"
+        },
+        {
+          "name": "pink-200",
+          "value": "hsl(330deg, 100%, 80%)",
+          "compiledValue": "#ff99cc"
+        },
+        {
+          "name": "pink-300",
+          "value": "hsl(330deg, 100%, 70%)",
+          "compiledValue": "#ff66b3"
+        },
+        {
+          "name": "pink-400",
+          "value": "hsl(330deg, 100%, 60%)",
+          "compiledValue": "#ff3399"
+        },
+        {
+          "name": "pink-500",
+          "value": "hsl(330deg, 100%, 50%)",
+          "compiledValue": "#ff0080"
+        },
+        {
+          "name": "pink-600",
+          "value": "hsl(330deg, 100%, 40%)",
+          "compiledValue": "#cc0066"
+        },
+        {
+          "name": "pink-700",
+          "value": "hsl(330deg, 100%, 30%)",
+          "compiledValue": "#99004d"
+        },
+        {
+          "name": "pink-800",
+          "value": "hsl(330deg, 100%, 20%)",
+          "compiledValue": "#660033"
+        },
+        {
+          "name": "pink-900",
+          "value": "hsl(330deg, 100%, 10%)",
+          "compiledValue": "#33001a"
+        },
+        {
+          "name": "brands",
+          "value": "( facebook: #3c5a96, twitter: #2aa3ef, instagram: #e1306c, linkedin: #1178b3, pinterest: #bb0f23, youtube: #fc0d1b, dribbble: #e84f89, behance: #1769ff, github: #24292e, reddit: #fc471e, paypal: #053385, dropbox: #1581e2, slack: #de1d64, mailchimp: #2c9ab7, saleforce: #2399bf, )",
+          "mapValue": [
+            {
+              "name": "facebook",
+              "value": "#3c5a96"
+            },
+            {
+              "name": "twitter",
+              "value": "#2aa3ef"
+            },
+            {
+              "name": "instagram",
+              "value": "#e1306c"
+            },
+            {
+              "name": "linkedin",
+              "value": "#1178b3"
+            },
+            {
+              "name": "pinterest",
+              "value": "#bb0f23"
+            },
+            {
+              "name": "youtube",
+              "value": "#fc0d1b"
+            },
+            {
+              "name": "dribbble",
+              "value": "#e84f89"
+            },
+            {
+              "name": "behance",
+              "value": "#1769ff"
+            },
+            {
+              "name": "github",
+              "value": "#24292e"
+            },
+            {
+              "name": "reddit",
+              "value": "#fc471e"
+            },
+            {
+              "name": "paypal",
+              "value": "#053385"
+            },
+            {
+              "name": "dropbox",
+              "value": "#1581e2"
+            },
+            {
+              "name": "slack",
+              "value": "#de1d64"
+            },
+            {
+              "name": "mailchimp",
+              "value": "#2c9ab7"
+            },
+            {
+              "name": "saleforce",
+              "value": "#2399bf"
+            }
+          ],
+          "compiledValue": "(facebook: #3c5a96, twitter: #2aa3ef, instagram: #e1306c, linkedin: #1178b3, pinterest: #bb0f23, youtube: #fc0d1b, dribbble: #e84f89, behance: #1769ff, github: #24292e, reddit: #fc471e, paypal: #053385, dropbox: #1581e2, slack: #de1d64, mailchimp: #2c9ab7, saleforce: #2399bf)"
+        },
+        {
+          "name": "system",
+          "value": "( brand: #ff706b, black: hsl(0deg, 0%, 0%)",
+          "mapValue": [
+            {
+              "name": "brand",
+              "value": "#ff706b"
+            },
+            {
+              "name": "black",
+              "value": "hsl(0deg, 0%, 0%)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "white",
+          "value": "hsl(0deg, 0%, 100%)",
+          "compiledValue": "white"
+        },
+        {
+          "name": "light",
+          "value": "#f9fafa",
+          "compiledValue": "#f9fafa"
+        },
+        {
+          "name": "dark",
+          "value": "#1a1f23",
+          "compiledValue": "#1a1f23"
+        },
+        {
+          "name": "primary",
+          "value": "hsl(216deg, 100%, 50%)",
+          "compiledValue": "#0066ff"
+        },
+        {
+          "name": "secondary",
+          "value": "hsl(207deg, 14%, 50%)",
+          "compiledValue": "#6e8191"
+        },
+        {
+          "name": "success",
+          "value": "hsl(155deg, 80%, 40%)",
+          "compiledValue": "#14b874"
+        },
+        {
+          "name": "danger",
+          "value": "hsl(350deg, 80%, 50%)",
+          "compiledValue": "#e61a3c"
+        },
+        {
+          "name": "warning",
+          "value": "hsl(45deg, 100%, 50%)",
+          "compiledValue": "#ffbf00"
+        },
+        {
+          "name": "info",
+          "value": "hsl(200deg, 100%, 50%)",
+          "compiledValue": "#00aaff"
+        },
+        {
+          "name": "cyan",
+          "value": "hsl(180deg, 80%, 50%)",
+          "compiledValue": "#1ae6e6"
+        },
+        {
+          "name": "magenta",
+          "value": "hsl(290deg, 100%, 50%)",
+          "compiledValue": "#d500ff"
+        },
+        {
+          "name": "orange",
+          "value": "hsl(28deg, 98%, 50%)",
+          "compiledValue": "#fc7703"
+        },
+        {
+          "name": "purple",
+          "value": "hsl(275deg, 86%, 50%)",
+          "compiledValue": "#9212ed"
+        },
+        {
+          "name": "pink",
+          "value": "hsl(330deg, 100%, 50%)",
+          "compiledValue": "#ff0080"
+        },
+        {
+          "name": "transparent",
+          "value": "transparent",
+          "compiledValue": "transparent"
+        },
+        {
+          "name": "current",
+          "value": "currentColor",
+          "compiledValue": "currentColor"
+        },
+        {
+          "name": "inherit",
+          "value": "inherit",
+          "compiledValue": "inherit"
+        }
+      ],
+      "compiledValue": "(black: (black-50: #f2f2f2, black-100: #e6e6e6, black-200: #cccccc, black-300: #b3b3b3, black-400: #999999, black-500: gray, black-600: #666666, black-700: #4d4d4d, black-800: #333333, black-900: #1a1a1a), white: (white-50: #0d0d0d, white-100: #1a1a1a, white-200: #333333, white-300: #4d4d4d, white-400: #666666, white-500: gray, white-600: #999999, white-700: #b3b3b3, white-800: #cccccc, white-900: #e6e6e6), primary: (primary-50: #e6f0ff, primary-100: #cce0ff, primary-200: #99c2ff, primary-300: #66a3ff, primary-400: #3385ff, primary-500: #0066ff, primary-600: #0052cc, primary-700: #003d99, primary-800: #002966, primary-900: #001433), secondary: (secondary-50: #f0f2f4, secondary-100: #e2e6e9, secondary-200: #c5cdd3, secondary-300: #a8b4bd, secondary-400: #8b9aa7, secondary-500: #6e8191, secondary-600: #586774, secondary-700: #424e57, secondary-800: #2c343a, secondary-900: #161a1d), success: (success-50: #e8fcf4, success-100: #d1fae9, success-200: #a3f5d3, success-300: #75f0bd, success-400: #47eba7, success-500: #1ae691, success-600: #14b874, success-700: #0f8a57, success-800: #0a5c3a, success-900: #052e1d), danger: (danger-50: #fce8eb, danger-100: #fad1d8, danger-200: #f5a3b1, danger-300: #f0758a, danger-400: #eb4763, danger-500: #e61a3c, danger-600: #b81430, danger-700: #8a0f24, danger-800: #5c0a18, danger-900: #2e050c), warning: (warning-50: #fff9e6, warning-100: #fff2cc, warning-200: #ffe699, warning-300: #ffd966, warning-400: #ffcc33, warning-500: #ffbf00, warning-600: #cc9900, warning-700: #997300, warning-800: #664d00, warning-900: #332600), info: (info-50: #e6f7ff, info-100: #cceeff, info-200: #99ddff, info-300: #66ccff, info-400: #33bbff, info-500: #00aaff, info-600: #0088cc, info-700: #006699, info-800: #004466, info-900: #002233), cyan: (cyan-50: #e8fcfc, cyan-100: #d1fafa, cyan-200: #a3f5f5, cyan-300: #75f0f0, cyan-400: #47ebeb, cyan-500: #1ae6e6, cyan-600: #14b8b8, cyan-700: #0f8a8a, cyan-800: #0a5c5c, cyan-900: #052e2e), magenta: (magenta-50: #fbe6ff, magenta-100: #f7ccff, magenta-200: #ee99ff, magenta-300: #e666ff, magenta-400: #dd33ff, magenta-500: #d500ff, magenta-600: #aa00cc, magenta-700: #800099, magenta-800: #550066, magenta-900: #2b0033), orange: (orange-50: #fff1e6, orange-100: #fee4cd, orange-200: #fec99a, orange-300: #fdae68, orange-400: #fd9235, orange-500: #fc7703, orange-600: #ca5f02, orange-700: #974802, orange-800: #653001, orange-900: #321801), purple: (purple-50: #f4e7fd, purple-100: #e9d0fb, purple-200: #d3a0f8, purple-300: #bd71f4, purple-400: #a841f1, purple-500: #9212ed, purple-600: #750ebe, purple-700: #570b8e, purple-800: #3a075f, purple-900: #1d042f), pink: (pink-50: #ffe6f2, pink-100: #ffcce6, pink-200: #ff99cc, pink-300: #ff66b3, pink-400: #ff3399, pink-500: #ff0080, pink-600: #cc0066, pink-700: #99004d, pink-800: #660033, pink-900: #33001a), brands: (facebook: #3c5a96, twitter: #2aa3ef, instagram: #e1306c, linkedin: #1178b3, pinterest: #bb0f23, youtube: #fc0d1b, dribbble: #e84f89, behance: #1769ff, github: #24292e, reddit: #fc471e, paypal: #053385, dropbox: #1581e2, slack: #de1d64, mailchimp: #2c9ab7, saleforce: #2399bf), system: (brand: #ff706b, black: black, white: white, light: #f9fafa, dark: #1a1f23, primary: #0066ff, secondary: #6e8191, success: #14b874, danger: #e61a3c, warning: #ffbf00, info: #00aaff, cyan: #1ae6e6, magenta: #d500ff, orange: #fc7703, purple: #9212ed, pink: #ff0080, transparent: transparent, current: currentColor, inherit: inherit))"
+    }
+  ],
+  "gradients": [
+    {
+      "name": "$gradients",
+      "value": "( sky: ( start: #7ed8ff, stop: #805ff3, fallback: #805ff3, linear: linear-gradient($gradients-def-deg, #7ed8ff $gradients-color-stop-1, #805ff3 $gradients-color-stop-2) ), orange: ( start: #ffae45, stop: #ff706b, fallback: #ff706b, linear: linear-gradient($gradients-def-deg, #ffae45 $gradients-color-stop-1, #ff706b $gradients-color-stop-2) ), pal: ( start: #c5ea77, stop: #16adc2, fallback: #16adc2, linear: linear-gradient($gradients-def-deg, #c5ea77 $gradients-color-stop-1, #16adc2 $gradients-color-stop-2) ), vivid: ( start: #ff0076, stop: #590fb7, fallback: #590fb7, linear: linear-gradient($gradients-def-deg, #ff0076 $gradients-color-stop-1, #590fb7 $gradients-color-stop-2) ), flare: ( start: #f90, stop: #fa0026, fallback: #fa0026, linear: linear-gradient($gradients-def-deg, #f90 $gradients-color-stop-1, #fa0026 $gradients-color-stop-2) ), witchcraft: ( start: #475569, stop: #0f172a, fallback: #0f172a, linear: linear-gradient($gradients-def-deg, #475569 $gradients-color-stop-1, #0f172a $gradients-color-stop-2) ), cool: ( start: #fac5c5, stop: #df98fa, fallback: #df98fa, linear: linear-gradient($gradients-def-deg, #fac5c5 $gradients-color-stop-1, #df98fa $gradients-color-stop-2) ), sublime: ( start: #ffcac9, stop: #737dfe, fallback: #737dfe, linear: linear-gradient($gradients-def-deg, #ffcac9 $gradients-color-stop-1, #737dfe $gradients-color-stop-2) ), summer: ( start: #66ffb5, stop: #2f80ed, fallback: #2f80ed, linear: linear-gradient($gradients-def-deg, #66ffb5 $gradients-color-stop-1, #2f80ed $gradients-color-stop-2) ), lady: ( start: #ff3398, stop: #f14658, fallback: #f14658, linear: linear-gradient($gradients-def-deg, #ff3398 $gradients-color-stop-1, #f14658 $gradients-color-stop-2) ), teal: ( start: #4fd1c5, stop: #40a1a5, fallback: #4fd1c5, linear: linear-gradient($gradients-def-deg, #4fd1c5 $gradients-color-stop-1, #40a1a5 $gradients-color-stop-2) ), forenoon: ( start: #fafafa, stop: #e6e6e6, fallback: #e6e6e6, linear: linear-gradient($gradients-def-deg, #fafafa $gradients-color-stop-1, #e6e6e6 $gradients-color-stop-2) ), sun: ( start: #f99d1f, stop: #ef592f, fallback: #f99d1f, linear: linear-gradient($gradients-def-deg, #f99d1f $gradients-color-stop-1, #ef592f $gradients-color-stop-2) ), grin: ( start: #0ef789, stop: #41ac92, fallback: #41ac92, linear: linear-gradient($gradients-def-deg, #0ef789 $gradients-color-stop-1, #41ac92 $gradients-color-stop-2) ), fun: ( start: #23d5e0, stop: #d437f3, fallback: #d437f3, linear: linear-gradient($gradients-def-deg, #23d5e0 $gradients-color-stop-1, #d437f3 $gradients-color-stop-2) ), )",
+      "mapValue": [
+        {
+          "name": "sky",
+          "value": "( start: #7ed8ff, stop: #805ff3, fallback: #805ff3, linear: linear-gradient($gradients-def-deg, #7ed8ff $gradients-color-stop-1, #805ff3 $gradients-color-stop-2)",
+          "mapValue": [
+            {
+              "name": "start",
+              "value": "#7ed8ff"
+            },
+            {
+              "name": "stop",
+              "value": "#805ff3"
+            },
+            {
+              "name": "fallback",
+              "value": "#805ff3"
+            },
+            {
+              "name": "linear",
+              "value": "linear-gradient($gradients-def-deg, #7ed8ff $gradients-color-stop-1, #805ff3 $gradients-color-stop-2)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "orange",
+          "value": "( start: #ffae45, stop: #ff706b, fallback: #ff706b, linear: linear-gradient($gradients-def-deg, #ffae45 $gradients-color-stop-1, #ff706b $gradients-color-stop-2)",
+          "mapValue": [
+            {
+              "name": "start",
+              "value": "#ffae45"
+            },
+            {
+              "name": "stop",
+              "value": "#ff706b"
+            },
+            {
+              "name": "fallback",
+              "value": "#ff706b"
+            },
+            {
+              "name": "linear",
+              "value": "linear-gradient($gradients-def-deg, #ffae45 $gradients-color-stop-1, #ff706b $gradients-color-stop-2)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "pal",
+          "value": "( start: #c5ea77, stop: #16adc2, fallback: #16adc2, linear: linear-gradient($gradients-def-deg, #c5ea77 $gradients-color-stop-1, #16adc2 $gradients-color-stop-2)",
+          "mapValue": [
+            {
+              "name": "start",
+              "value": "#c5ea77"
+            },
+            {
+              "name": "stop",
+              "value": "#16adc2"
+            },
+            {
+              "name": "fallback",
+              "value": "#16adc2"
+            },
+            {
+              "name": "linear",
+              "value": "linear-gradient($gradients-def-deg, #c5ea77 $gradients-color-stop-1, #16adc2 $gradients-color-stop-2)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "vivid",
+          "value": "( start: #ff0076, stop: #590fb7, fallback: #590fb7, linear: linear-gradient($gradients-def-deg, #ff0076 $gradients-color-stop-1, #590fb7 $gradients-color-stop-2)",
+          "mapValue": [
+            {
+              "name": "start",
+              "value": "#ff0076"
+            },
+            {
+              "name": "stop",
+              "value": "#590fb7"
+            },
+            {
+              "name": "fallback",
+              "value": "#590fb7"
+            },
+            {
+              "name": "linear",
+              "value": "linear-gradient($gradients-def-deg, #ff0076 $gradients-color-stop-1, #590fb7 $gradients-color-stop-2)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "flare",
+          "value": "( start: #f90, stop: #fa0026, fallback: #fa0026, linear: linear-gradient($gradients-def-deg, #f90 $gradients-color-stop-1, #fa0026 $gradients-color-stop-2)",
+          "mapValue": [
+            {
+              "name": "start",
+              "value": "#f90"
+            },
+            {
+              "name": "stop",
+              "value": "#fa0026"
+            },
+            {
+              "name": "fallback",
+              "value": "#fa0026"
+            },
+            {
+              "name": "linear",
+              "value": "linear-gradient($gradients-def-deg, #f90 $gradients-color-stop-1, #fa0026 $gradients-color-stop-2)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "witchcraft",
+          "value": "( start: #475569, stop: #0f172a, fallback: #0f172a, linear: linear-gradient($gradients-def-deg, #475569 $gradients-color-stop-1, #0f172a $gradients-color-stop-2)",
+          "mapValue": [
+            {
+              "name": "start",
+              "value": "#475569"
+            },
+            {
+              "name": "stop",
+              "value": "#0f172a"
+            },
+            {
+              "name": "fallback",
+              "value": "#0f172a"
+            },
+            {
+              "name": "linear",
+              "value": "linear-gradient($gradients-def-deg, #475569 $gradients-color-stop-1, #0f172a $gradients-color-stop-2)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "cool",
+          "value": "( start: #fac5c5, stop: #df98fa, fallback: #df98fa, linear: linear-gradient($gradients-def-deg, #fac5c5 $gradients-color-stop-1, #df98fa $gradients-color-stop-2)",
+          "mapValue": [
+            {
+              "name": "start",
+              "value": "#fac5c5"
+            },
+            {
+              "name": "stop",
+              "value": "#df98fa"
+            },
+            {
+              "name": "fallback",
+              "value": "#df98fa"
+            },
+            {
+              "name": "linear",
+              "value": "linear-gradient($gradients-def-deg, #fac5c5 $gradients-color-stop-1, #df98fa $gradients-color-stop-2)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "sublime",
+          "value": "( start: #ffcac9, stop: #737dfe, fallback: #737dfe, linear: linear-gradient($gradients-def-deg, #ffcac9 $gradients-color-stop-1, #737dfe $gradients-color-stop-2)",
+          "mapValue": [
+            {
+              "name": "start",
+              "value": "#ffcac9"
+            },
+            {
+              "name": "stop",
+              "value": "#737dfe"
+            },
+            {
+              "name": "fallback",
+              "value": "#737dfe"
+            },
+            {
+              "name": "linear",
+              "value": "linear-gradient($gradients-def-deg, #ffcac9 $gradients-color-stop-1, #737dfe $gradients-color-stop-2)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "summer",
+          "value": "( start: #66ffb5, stop: #2f80ed, fallback: #2f80ed, linear: linear-gradient($gradients-def-deg, #66ffb5 $gradients-color-stop-1, #2f80ed $gradients-color-stop-2)",
+          "mapValue": [
+            {
+              "name": "start",
+              "value": "#66ffb5"
+            },
+            {
+              "name": "stop",
+              "value": "#2f80ed"
+            },
+            {
+              "name": "fallback",
+              "value": "#2f80ed"
+            },
+            {
+              "name": "linear",
+              "value": "linear-gradient($gradients-def-deg, #66ffb5 $gradients-color-stop-1, #2f80ed $gradients-color-stop-2)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "lady",
+          "value": "( start: #ff3398, stop: #f14658, fallback: #f14658, linear: linear-gradient($gradients-def-deg, #ff3398 $gradients-color-stop-1, #f14658 $gradients-color-stop-2)",
+          "mapValue": [
+            {
+              "name": "start",
+              "value": "#ff3398"
+            },
+            {
+              "name": "stop",
+              "value": "#f14658"
+            },
+            {
+              "name": "fallback",
+              "value": "#f14658"
+            },
+            {
+              "name": "linear",
+              "value": "linear-gradient($gradients-def-deg, #ff3398 $gradients-color-stop-1, #f14658 $gradients-color-stop-2)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "teal",
+          "value": "( start: #4fd1c5, stop: #40a1a5, fallback: #4fd1c5, linear: linear-gradient($gradients-def-deg, #4fd1c5 $gradients-color-stop-1, #40a1a5 $gradients-color-stop-2)",
+          "mapValue": [
+            {
+              "name": "start",
+              "value": "#4fd1c5"
+            },
+            {
+              "name": "stop",
+              "value": "#40a1a5"
+            },
+            {
+              "name": "fallback",
+              "value": "#4fd1c5"
+            },
+            {
+              "name": "linear",
+              "value": "linear-gradient($gradients-def-deg, #4fd1c5 $gradients-color-stop-1, #40a1a5 $gradients-color-stop-2)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "forenoon",
+          "value": "( start: #fafafa, stop: #e6e6e6, fallback: #e6e6e6, linear: linear-gradient($gradients-def-deg, #fafafa $gradients-color-stop-1, #e6e6e6 $gradients-color-stop-2)",
+          "mapValue": [
+            {
+              "name": "start",
+              "value": "#fafafa"
+            },
+            {
+              "name": "stop",
+              "value": "#e6e6e6"
+            },
+            {
+              "name": "fallback",
+              "value": "#e6e6e6"
+            },
+            {
+              "name": "linear",
+              "value": "linear-gradient($gradients-def-deg, #fafafa $gradients-color-stop-1, #e6e6e6 $gradients-color-stop-2)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "sun",
+          "value": "( start: #f99d1f, stop: #ef592f, fallback: #f99d1f, linear: linear-gradient($gradients-def-deg, #f99d1f $gradients-color-stop-1, #ef592f $gradients-color-stop-2)",
+          "mapValue": [
+            {
+              "name": "start",
+              "value": "#f99d1f"
+            },
+            {
+              "name": "stop",
+              "value": "#ef592f"
+            },
+            {
+              "name": "fallback",
+              "value": "#f99d1f"
+            },
+            {
+              "name": "linear",
+              "value": "linear-gradient($gradients-def-deg, #f99d1f $gradients-color-stop-1, #ef592f $gradients-color-stop-2)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "grin",
+          "value": "( start: #0ef789, stop: #41ac92, fallback: #41ac92, linear: linear-gradient($gradients-def-deg, #0ef789 $gradients-color-stop-1, #41ac92 $gradients-color-stop-2)",
+          "mapValue": [
+            {
+              "name": "start",
+              "value": "#0ef789"
+            },
+            {
+              "name": "stop",
+              "value": "#41ac92"
+            },
+            {
+              "name": "fallback",
+              "value": "#41ac92"
+            },
+            {
+              "name": "linear",
+              "value": "linear-gradient($gradients-def-deg, #0ef789 $gradients-color-stop-1, #41ac92 $gradients-color-stop-2)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "fun",
+          "value": "( start: #23d5e0, stop: #d437f3, fallback: #d437f3, linear: linear-gradient($gradients-def-deg, #23d5e0 $gradients-color-stop-1, #d437f3 $gradients-color-stop-2)",
+          "mapValue": [
+            {
+              "name": "start",
+              "value": "#23d5e0"
+            },
+            {
+              "name": "stop",
+              "value": "#d437f3"
+            },
+            {
+              "name": "fallback",
+              "value": "#d437f3"
+            },
+            {
+              "name": "linear",
+              "value": "linear-gradient($gradients-def-deg, #23d5e0 $gradients-color-stop-1, #d437f3 $gradients-color-stop-2)"
+            }
+          ],
+          "compiledValue": ""
+        }
+      ],
+      "compiledValue": "(sky: (start: #7ed8ff, stop: #805ff3, fallback: #805ff3, linear: linear-gradient(270deg, #7ed8ff 7.5%, #805ff3 88%)), orange: (start: #ffae45, stop: #ff706b, fallback: #ff706b, linear: linear-gradient(270deg, #ffae45 7.5%, #ff706b 88%)), pal: (start: #c5ea77, stop: #16adc2, fallback: #16adc2, linear: linear-gradient(270deg, #c5ea77 7.5%, #16adc2 88%)), vivid: (start: #ff0076, stop: #590fb7, fallback: #590fb7, linear: linear-gradient(270deg, #ff0076 7.5%, #590fb7 88%)), flare: (start: #f90, stop: #fa0026, fallback: #fa0026, linear: linear-gradient(270deg, #f90 7.5%, #fa0026 88%)), witchcraft: (start: #475569, stop: #0f172a, fallback: #0f172a, linear: linear-gradient(270deg, #475569 7.5%, #0f172a 88%)), cool: (start: #fac5c5, stop: #df98fa, fallback: #df98fa, linear: linear-gradient(270deg, #fac5c5 7.5%, #df98fa 88%)), sublime: (start: #ffcac9, stop: #737dfe, fallback: #737dfe, linear: linear-gradient(270deg, #ffcac9 7.5%, #737dfe 88%)), summer: (start: #66ffb5, stop: #2f80ed, fallback: #2f80ed, linear: linear-gradient(270deg, #66ffb5 7.5%, #2f80ed 88%)), lady: (start: #ff3398, stop: #f14658, fallback: #f14658, linear: linear-gradient(270deg, #ff3398 7.5%, #f14658 88%)), teal: (start: #4fd1c5, stop: #40a1a5, fallback: #4fd1c5, linear: linear-gradient(270deg, #4fd1c5 7.5%, #40a1a5 88%)), forenoon: (start: #fafafa, stop: #e6e6e6, fallback: #e6e6e6, linear: linear-gradient(270deg, #fafafa 7.5%, #e6e6e6 88%)), sun: (start: #f99d1f, stop: #ef592f, fallback: #f99d1f, linear: linear-gradient(270deg, #f99d1f 7.5%, #ef592f 88%)), grin: (start: #0ef789, stop: #41ac92, fallback: #41ac92, linear: linear-gradient(270deg, #0ef789 7.5%, #41ac92 88%)), fun: (start: #23d5e0, stop: #d437f3, fallback: #d437f3, linear: linear-gradient(270deg, #23d5e0 7.5%, #d437f3 88%)))"
+    }
+  ],
+  "heading": [
+    {
+      "name": "$heading",
+      "value": "( 1: ( size: rem(2.5), lh: 1.3 ), 2: ( size: rem(2), lh: 1.3 ), 3: ( size: rem(1.75), lh: 1.3 ), 4: ( size: rem(1.5), lh: 1.3 ), 5: ( size: rem(1.25), lh: 1.3 ), 6: ( size: rem(1), lh: 1.3 ), )",
+      "mapValue": [
+        {
+          "name": "size",
+          "value": "rem(2.5)",
+          "compiledValue": "rem(2.5)"
+        },
+        {
+          "name": "lh",
+          "value": "1.3",
+          "compiledValue": "1.3"
+        },
+        {
+          "name": "size",
+          "value": "rem(2)",
+          "compiledValue": "rem(2)"
+        },
+        {
+          "name": "lh",
+          "value": "1.3",
+          "compiledValue": "1.3"
+        },
+        {
+          "name": "size",
+          "value": "rem(1.75)",
+          "compiledValue": "rem(1.75)"
+        },
+        {
+          "name": "lh",
+          "value": "1.3",
+          "compiledValue": "1.3"
+        },
+        {
+          "name": "size",
+          "value": "rem(1.5)",
+          "compiledValue": "rem(1.5)"
+        },
+        {
+          "name": "lh",
+          "value": "1.3",
+          "compiledValue": "1.3"
+        },
+        {
+          "name": "size",
+          "value": "rem(1.25)",
+          "compiledValue": "rem(1.25)"
+        },
+        {
+          "name": "lh",
+          "value": "1.3",
+          "compiledValue": "1.3"
+        },
+        {
+          "name": "size",
+          "value": "rem(1)",
+          "compiledValue": "rem(1)"
+        },
+        {
+          "name": "lh",
+          "value": "1.3",
+          "compiledValue": "1.3"
+        }
+      ],
+      "compiledValue": "(1: (size: rem(2.5), lh: 1.3), 2: (size: rem(2), lh: 1.3), 3: (size: rem(1.75), lh: 1.3), 4: (size: rem(1.5), lh: 1.3), 5: (size: rem(1.25), lh: 1.3), 6: (size: rem(1), lh: 1.3))"
+    }
+  ],
+  "text-display": [
+    {
+      "name": "$text-display",
+      "value": "( 1: ( size: rem(4.5), lh: 1.2 ), 2: ( size: rem(4), lh: 1.2 ), 3: ( size: rem(3.5), lh: 1.2 ), 4: ( size: rem(3), lh: 1.2 ), 5: ( size: rem(2.5), lh: 1.2 ), 6: ( size: rem(2), lh: 1.2 ), )",
+      "mapValue": [
+        {
+          "name": "size",
+          "value": "rem(4.5)",
+          "compiledValue": "rem(4.5)"
+        },
+        {
+          "name": "lh",
+          "value": "1.2",
+          "compiledValue": "1.2"
+        },
+        {
+          "name": "size",
+          "value": "rem(4)",
+          "compiledValue": "rem(4)"
+        },
+        {
+          "name": "lh",
+          "value": "1.2",
+          "compiledValue": "1.2"
+        },
+        {
+          "name": "size",
+          "value": "rem(3.5)",
+          "compiledValue": "rem(3.5)"
+        },
+        {
+          "name": "lh",
+          "value": "1.2",
+          "compiledValue": "1.2"
+        },
+        {
+          "name": "size",
+          "value": "rem(3)",
+          "compiledValue": "rem(3)"
+        },
+        {
+          "name": "lh",
+          "value": "1.2",
+          "compiledValue": "1.2"
+        },
+        {
+          "name": "size",
+          "value": "rem(2.5)",
+          "compiledValue": "rem(2.5)"
+        },
+        {
+          "name": "lh",
+          "value": "1.2",
+          "compiledValue": "1.2"
+        },
+        {
+          "name": "size",
+          "value": "rem(2)",
+          "compiledValue": "rem(2)"
+        },
+        {
+          "name": "lh",
+          "value": "1.2",
+          "compiledValue": "1.2"
+        }
+      ],
+      "compiledValue": "(1: (size: rem(4.5), lh: 1.2), 2: (size: rem(4), lh: 1.2), 3: (size: rem(3.5), lh: 1.2), 4: (size: rem(3), lh: 1.2), 5: (size: rem(2.5), lh: 1.2), 6: (size: rem(2), lh: 1.2))"
+    }
+  ],
+  "font-size": [
+    {
+      "name": "$font-size",
+      "value": "( xxs: ( size: rem(0.675), lh: 1.5 ), xs: ( size: rem(0.75), lh: 1.5 ), sm: ( size: rem(0.875), lh: 1.5 ), base: ( size: rem(1), lh: 1.5 ), lg: ( size: rem(1.125), lh: 1.5 ), xl: ( size: rem(1.25), lh: 1.5 ), xxl: ( size: rem(1.5), lh: 1.5 ), )",
+      "mapValue": [
+        {
+          "name": "xxs",
+          "value": "( size: rem(0.675)",
+          "mapValue": [
+            {
+              "name": "size",
+              "value": "rem(0.675)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "lh",
+          "value": "1.5",
+          "compiledValue": "1.5"
+        },
+        {
+          "name": "xs",
+          "value": "( size: rem(0.75)",
+          "mapValue": [
+            {
+              "name": "size",
+              "value": "rem(0.75)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "lh",
+          "value": "1.5",
+          "compiledValue": "1.5"
+        },
+        {
+          "name": "sm",
+          "value": "( size: rem(0.875)",
+          "mapValue": [
+            {
+              "name": "size",
+              "value": "rem(0.875)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "lh",
+          "value": "1.5",
+          "compiledValue": "1.5"
+        },
+        {
+          "name": "base",
+          "value": "( size: rem(1)",
+          "mapValue": [
+            {
+              "name": "size",
+              "value": "rem(1)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "lh",
+          "value": "1.5",
+          "compiledValue": "1.5"
+        },
+        {
+          "name": "lg",
+          "value": "( size: rem(1.125)",
+          "mapValue": [
+            {
+              "name": "size",
+              "value": "rem(1.125)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "lh",
+          "value": "1.5",
+          "compiledValue": "1.5"
+        },
+        {
+          "name": "xl",
+          "value": "( size: rem(1.25)",
+          "mapValue": [
+            {
+              "name": "size",
+              "value": "rem(1.25)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "lh",
+          "value": "1.5",
+          "compiledValue": "1.5"
+        },
+        {
+          "name": "xxl",
+          "value": "( size: rem(1.5)",
+          "mapValue": [
+            {
+              "name": "size",
+              "value": "rem(1.5)"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "lh",
+          "value": "1.5",
+          "compiledValue": "1.5"
+        }
+      ],
+      "compiledValue": "(xxs: (size: rem(0.675), lh: 1.5), xs: (size: rem(0.75), lh: 1.5), sm: (size: rem(0.875), lh: 1.5), base: (size: rem(1), lh: 1.5), lg: (size: rem(1.125), lh: 1.5), xl: (size: rem(1.25), lh: 1.5), xxl: (size: rem(1.5), lh: 1.5))"
+    }
+  ],
+  "font-weight": [
+    {
+      "name": "$font-weight",
+      "value": "( 100: 100, 200: 200, 300: 300, 400: 400, 500: 500, 600: 600, 700: 700, 800: 800, 900: 900 )",
+      "compiledValue": ""
+    }
+  ],
+  "font-family": [
+    {
+      "name": "$font-family",
+      "value": "( sans: 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemff, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji', serif: 'ui-serif, Georgia, Cambria, Times New Roman, Times, serif', mono: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace', brand: 'Inter, sans-serif', )",
+      "mapValue": [
+        {
+          "name": "sans",
+          "value": "'ui-sans-serif",
+          "compiledValue": ""
+        },
+        {
+          "name": "serif",
+          "value": "'ui-serif",
+          "compiledValue": ""
+        },
+        {
+          "name": "mono",
+          "value": "'ui-monospace",
+          "compiledValue": ""
+        },
+        {
+          "name": "brand",
+          "value": "'Inter",
+          "compiledValue": ""
+        }
+      ],
+      "compiledValue": "(sans: \"ui-sans-serif, system-ui, -apple-system, BlinkMacSystemff, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji\", serif: \"ui-serif, Georgia, Cambria, Times New Roman, Times, serif\", mono: \"ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace\", brand: \"Inter, sans-serif\")"
+    }
+  ],
+  "font-style": [
+    {
+      "name": "$font-style",
+      "value": "( italic: italic, oblique: oblique, normal: normal, )",
+      "mapValue": [
+        {
+          "name": "italic",
+          "value": "italic",
+          "compiledValue": "italic"
+        },
+        {
+          "name": "oblique",
+          "value": "oblique",
+          "compiledValue": "oblique"
+        },
+        {
+          "name": "normal",
+          "value": "normal",
+          "compiledValue": "normal"
+        }
+      ],
+      "compiledValue": "(italic: italic, oblique: oblique, normal: normal)"
+    }
+  ],
+  "letter-spacing": [
+    {
+      "name": "$letter-spacing",
+      "value": "( normal: em(0), 0: em(0), sm: em(0.025), md: em(0.05), lg: em(0.075), xl: em(0.1), stiff: em(-0.025), stiffer: em(-0.05), )",
+      "mapValue": [
+        {
+          "name": "normal",
+          "value": "em(0)",
+          "compiledValue": "em(0)"
+        },
+        {
+          "name": "sm",
+          "value": "em(0.025)",
+          "compiledValue": "em(0.025)"
+        },
+        {
+          "name": "md",
+          "value": "em(0.05)",
+          "compiledValue": "em(0.05)"
+        },
+        {
+          "name": "lg",
+          "value": "em(0.075)",
+          "compiledValue": "em(0.075)"
+        },
+        {
+          "name": "xl",
+          "value": "em(0.1)",
+          "compiledValue": "em(0.1)"
+        },
+        {
+          "name": "stiff",
+          "value": "em(-0.025)",
+          "compiledValue": "em(-0.025)"
+        },
+        {
+          "name": "stiffer",
+          "value": "em(-0.05)",
+          "compiledValue": "em(-0.05)"
+        }
+      ],
+      "compiledValue": "(normal: em(0), 0: em(0), sm: em(0.025), md: em(0.05), lg: em(0.075), xl: em(0.1), stiff: em(-0.025), stiffer: em(-0.05))"
+    }
+  ],
+  "line-height": [
+    {
+      "name": "$line-height",
+      "value": "( 0: 0, xs: 0.75, none: 1, sm: 1.25, md: 1.5, lg: 1.75, xl: 2 )",
+      "mapValue": [
+        {
+          "name": "xs",
+          "value": "0.75",
+          "compiledValue": "0.75"
+        },
+        {
+          "name": "none",
+          "value": "1",
+          "compiledValue": "1"
+        },
+        {
+          "name": "sm",
+          "value": "1.25",
+          "compiledValue": "1.25"
+        },
+        {
+          "name": "md",
+          "value": "1.5",
+          "compiledValue": "1.5"
+        },
+        {
+          "name": "lg",
+          "value": "1.75",
+          "compiledValue": "1.75"
+        },
+        {
+          "name": "xl",
+          "value": "2",
+          "compiledValue": "2"
+        }
+      ],
+      "compiledValue": "(0: 0, xs: 0.75, none: 1, sm: 1.25, md: 1.5, lg: 1.75, xl: 2)"
+    }
+  ],
+  "text-decoration": [
+    {
+      "name": "$text-decoration",
+      "value": "( none: none, underline: underline, line-through: line-through, )",
+      "mapValue": [
+        {
+          "name": "none",
+          "value": "none",
+          "compiledValue": "none"
+        },
+        {
+          "name": "underline",
+          "value": "underline",
+          "compiledValue": "underline"
+        },
+        {
+          "name": "line-through",
+          "value": "line-through",
+          "compiledValue": "line-through"
+        }
+      ],
+      "compiledValue": "(none: none, underline: underline, line-through: line-through)"
+    }
+  ],
+  "text-transform": [
+    {
+      "name": "$text-transform",
+      "value": "( none: none, uppercase: uppercase, lowercase: lowercase, capitalize: capitalize, )",
+      "mapValue": [
+        {
+          "name": "none",
+          "value": "none",
+          "compiledValue": "none"
+        },
+        {
+          "name": "uppercase",
+          "value": "uppercase",
+          "compiledValue": "uppercase"
+        },
+        {
+          "name": "lowercase",
+          "value": "lowercase",
+          "compiledValue": "lowercase"
+        },
+        {
+          "name": "capitalize",
+          "value": "capitalize",
+          "compiledValue": "capitalize"
+        }
+      ],
+      "compiledValue": "(none: none, uppercase: uppercase, lowercase: lowercase, capitalize: capitalize)"
+    }
+  ],
+  "text-overflow": [
+    {
+      "name": "$text-overflow",
+      "value": "( ellipsis: ellipsis, clip: clip, truncate: '', )",
+      "mapValue": [
+        {
+          "name": "ellipsis",
+          "value": "ellipsis",
+          "compiledValue": "ellipsis"
+        },
+        {
+          "name": "clip",
+          "value": "clip",
+          "compiledValue": "clip"
+        },
+        {
+          "name": "truncate",
+          "value": "",
+          "compiledValue": ""
+        }
+      ],
+      "compiledValue": "(ellipsis: ellipsis, clip: clip, truncate: \"\")"
+    }
+  ],
+  "text-align": [
+    {
+      "name": "$text-align",
+      "value": "( left: left, right: right, center: center, )",
+      "mapValue": [
+        {
+          "name": "left",
+          "value": "left",
+          "compiledValue": "left"
+        },
+        {
+          "name": "right",
+          "value": "right",
+          "compiledValue": "right"
+        },
+        {
+          "name": "center",
+          "value": "center",
+          "compiledValue": "center"
+        }
+      ],
+      "compiledValue": "(left: left, right: right, center: center)"
+    }
+  ],
+  "vertical-align": [
+    {
+      "name": "$vertical-align",
+      "value": "( baseline: baseline, sub: sub, sup: super, top: top, bottom: bottom, middle: middle, text-top: text-top, text-bottom: text-bottom, )",
+      "mapValue": [
+        {
+          "name": "baseline",
+          "value": "baseline",
+          "compiledValue": "baseline"
+        },
+        {
+          "name": "sub",
+          "value": "sub",
+          "compiledValue": "sub"
+        },
+        {
+          "name": "sup",
+          "value": "super",
+          "compiledValue": "super"
+        },
+        {
+          "name": "top",
+          "value": "top",
+          "compiledValue": "top"
+        },
+        {
+          "name": "bottom",
+          "value": "bottom",
+          "compiledValue": "bottom"
+        },
+        {
+          "name": "middle",
+          "value": "middle",
+          "compiledValue": "middle"
+        },
+        {
+          "name": "text-top",
+          "value": "text-top",
+          "compiledValue": "text-top"
+        },
+        {
+          "name": "text-bottom",
+          "value": "text-bottom",
+          "compiledValue": "text-bottom"
+        }
+      ],
+      "compiledValue": "(baseline: baseline, sub: sub, sup: super, top: top, bottom: bottom, middle: middle, text-top: text-top, text-bottom: text-bottom)"
+    }
+  ],
+  "display": [
+    {
+      "name": "$display",
+      "value": "( none: none, block: block, inline-block: inline-block, inline: inline, flex: flex, grid: grid, inline-flex: inline-flex, inline-grid: inline-grid, table: table, table-row: table-row, table-column: table-column, table-cell: table-cell, )",
+      "mapValue": [
+        {
+          "name": "none",
+          "value": "none",
+          "compiledValue": "none"
+        },
+        {
+          "name": "block",
+          "value": "block",
+          "compiledValue": "block"
+        },
+        {
+          "name": "inline-block",
+          "value": "inline-block",
+          "compiledValue": "inline-block"
+        },
+        {
+          "name": "inline",
+          "value": "inline",
+          "compiledValue": "inline"
+        },
+        {
+          "name": "flex",
+          "value": "flex",
+          "compiledValue": "flex"
+        },
+        {
+          "name": "grid",
+          "value": "grid",
+          "compiledValue": "grid"
+        },
+        {
+          "name": "inline-flex",
+          "value": "inline-flex",
+          "compiledValue": "inline-flex"
+        },
+        {
+          "name": "inline-grid",
+          "value": "inline-grid",
+          "compiledValue": "inline-grid"
+        },
+        {
+          "name": "table",
+          "value": "table",
+          "compiledValue": "table"
+        },
+        {
+          "name": "table-row",
+          "value": "table-row",
+          "compiledValue": "table-row"
+        },
+        {
+          "name": "table-column",
+          "value": "table-column",
+          "compiledValue": "table-column"
+        },
+        {
+          "name": "table-cell",
+          "value": "table-cell",
+          "compiledValue": "table-cell"
+        }
+      ],
+      "compiledValue": "(none: none, block: block, inline-block: inline-block, inline: inline, flex: flex, grid: grid, inline-flex: inline-flex, inline-grid: inline-grid, table: table, table-row: table-row, table-column: table-column, table-cell: table-cell)"
+    }
+  ],
+  "float": [
+    {
+      "name": "$float",
+      "value": "( left: left, right: right, none: none, )",
+      "mapValue": [
+        {
+          "name": "left",
+          "value": "left",
+          "compiledValue": "left"
+        },
+        {
+          "name": "right",
+          "value": "right",
+          "compiledValue": "right"
+        },
+        {
+          "name": "none",
+          "value": "none",
+          "compiledValue": "none"
+        }
+      ],
+      "compiledValue": "(left: left, right: right, none: none)"
+    }
+  ],
+  "clear": [
+    {
+      "name": "$clear",
+      "value": "( left: left, right: right, both: both, none: none, fix: custom, )",
+      "mapValue": [
+        {
+          "name": "left",
+          "value": "left",
+          "compiledValue": "left"
+        },
+        {
+          "name": "right",
+          "value": "right",
+          "compiledValue": "right"
+        },
+        {
+          "name": "both",
+          "value": "both",
+          "compiledValue": "both"
+        },
+        {
+          "name": "none",
+          "value": "none",
+          "compiledValue": "none"
+        },
+        {
+          "name": "fix",
+          "value": "custom",
+          "compiledValue": "custom"
+        }
+      ],
+      "compiledValue": "(left: left, right: right, both: both, none: none, fix: custom)"
+    }
+  ],
+  "flex": [
+    {
+      "name": "$flex",
+      "value": "( 1: 1 1 0%, auto: auto, initial: initial, none: none, )",
+      "mapValue": [
+        {
+          "name": "auto",
+          "value": "auto",
+          "compiledValue": "auto"
+        },
+        {
+          "name": "initial",
+          "value": "initial",
+          "compiledValue": "initial"
+        },
+        {
+          "name": "none",
+          "value": "none",
+          "compiledValue": "none"
+        }
+      ],
+      "compiledValue": "(1: 1 1 0%, auto: auto, initial: initial, none: none)"
+    }
+  ],
+  "flex-direction": [
+    {
+      "name": "$flex-direction",
+      "value": "( row: row, row-reverse: row-reverse, col: column, col-reverse: column-reverse, )",
+      "mapValue": [
+        {
+          "name": "row",
+          "value": "row",
+          "compiledValue": "row"
+        },
+        {
+          "name": "row-reverse",
+          "value": "row-reverse",
+          "compiledValue": "row-reverse"
+        },
+        {
+          "name": "col",
+          "value": "column",
+          "compiledValue": "column"
+        },
+        {
+          "name": "col-reverse",
+          "value": "column-reverse",
+          "compiledValue": "column-reverse"
+        }
+      ],
+      "compiledValue": "(row: row, row-reverse: row-reverse, col: column, col-reverse: column-reverse)"
+    }
+  ],
+  "flex-wrap": [
+    {
+      "name": "$flex-wrap",
+      "value": "( wrap: wrap, nowrap: nowrap, wrap-reverse: wrap-reverse, )",
+      "mapValue": [
+        {
+          "name": "wrap",
+          "value": "wrap",
+          "compiledValue": "wrap"
+        },
+        {
+          "name": "nowrap",
+          "value": "nowrap",
+          "compiledValue": "nowrap"
+        },
+        {
+          "name": "wrap-reverse",
+          "value": "wrap-reverse",
+          "compiledValue": "wrap-reverse"
+        }
+      ],
+      "compiledValue": "(wrap: wrap, nowrap: nowrap, wrap-reverse: wrap-reverse)"
+    }
+  ],
+  "flex-grow": [
+    {
+      "name": "$flex-grow",
+      "value": "( 0: 0, 1: 1, )",
+      "compiledValue": ""
+    }
+  ],
+  "flex-shrink": [
+    {
+      "name": "$flex-shrink",
+      "value": "( 0: 0, 1: 1, )",
+      "compiledValue": ""
+    }
+  ],
+  "order": [
+    {
+      "name": "$order",
+      "value": "( initial: 0, first: -1, last: 13, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 11: 11, 12: 12, )",
+      "mapValue": [
+        {
+          "name": "initial",
+          "value": "0",
+          "compiledValue": "0"
+        },
+        {
+          "name": "first",
+          "value": "-1",
+          "compiledValue": "-1"
+        },
+        {
+          "name": "last",
+          "value": "13",
+          "compiledValue": "13"
+        }
+      ],
+      "compiledValue": "(initial: 0, first: -1, last: 13, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 11: 11, 12: 12)"
+    }
+  ],
+  "align-items": [
+    {
+      "name": "$align-items",
+      "value": "( center: center, start: start, end: end, stretch: stretch, baseline: baseline, )",
+      "mapValue": [
+        {
+          "name": "center",
+          "value": "center",
+          "compiledValue": "center"
+        },
+        {
+          "name": "start",
+          "value": "start",
+          "compiledValue": "start"
+        },
+        {
+          "name": "end",
+          "value": "end",
+          "compiledValue": "end"
+        },
+        {
+          "name": "stretch",
+          "value": "stretch",
+          "compiledValue": "stretch"
+        },
+        {
+          "name": "baseline",
+          "value": "baseline",
+          "compiledValue": "baseline"
+        }
+      ],
+      "compiledValue": "(center: center, start: start, end: end, stretch: stretch, baseline: baseline)"
+    }
+  ],
+  "align-content": [
+    {
+      "name": "$align-content",
+      "value": "( center: center, start: start, end: end, space-between: space-between, space-around: space-around, )",
+      "mapValue": [
+        {
+          "name": "center",
+          "value": "center",
+          "compiledValue": "center"
+        },
+        {
+          "name": "start",
+          "value": "start",
+          "compiledValue": "start"
+        },
+        {
+          "name": "end",
+          "value": "end",
+          "compiledValue": "end"
+        },
+        {
+          "name": "space-between",
+          "value": "space-between",
+          "compiledValue": "space-between"
+        },
+        {
+          "name": "space-around",
+          "value": "space-around",
+          "compiledValue": "space-around"
+        }
+      ],
+      "compiledValue": "(center: center, start: start, end: end, space-between: space-between, space-around: space-around)"
+    }
+  ],
+  "align-self": [
+    {
+      "name": "$align-self",
+      "value": "( auto: auto, start: start, center: center, end: end, stretch: stretch, )",
+      "mapValue": [
+        {
+          "name": "auto",
+          "value": "auto",
+          "compiledValue": "auto"
+        },
+        {
+          "name": "start",
+          "value": "start",
+          "compiledValue": "start"
+        },
+        {
+          "name": "center",
+          "value": "center",
+          "compiledValue": "center"
+        },
+        {
+          "name": "end",
+          "value": "end",
+          "compiledValue": "end"
+        },
+        {
+          "name": "stretch",
+          "value": "stretch",
+          "compiledValue": "stretch"
+        }
+      ],
+      "compiledValue": "(auto: auto, start: start, center: center, end: end, stretch: stretch)"
+    }
+  ],
+  "justify-items": [
+    {
+      "name": "$justify-items",
+      "value": "( start: start, center: center, end: end, stretch: stretch, )",
+      "mapValue": [
+        {
+          "name": "start",
+          "value": "start",
+          "compiledValue": "start"
+        },
+        {
+          "name": "center",
+          "value": "center",
+          "compiledValue": "center"
+        },
+        {
+          "name": "end",
+          "value": "end",
+          "compiledValue": "end"
+        },
+        {
+          "name": "stretch",
+          "value": "stretch",
+          "compiledValue": "stretch"
+        }
+      ],
+      "compiledValue": "(start: start, center: center, end: end, stretch: stretch)"
+    }
+  ],
+  "justify-content": [
+    {
+      "name": "$justify-content",
+      "value": "( start: start, center: center, end: end, space-between: space-between, space-around: space-around, )",
+      "mapValue": [
+        {
+          "name": "start",
+          "value": "start",
+          "compiledValue": "start"
+        },
+        {
+          "name": "center",
+          "value": "center",
+          "compiledValue": "center"
+        },
+        {
+          "name": "end",
+          "value": "end",
+          "compiledValue": "end"
+        },
+        {
+          "name": "space-between",
+          "value": "space-between",
+          "compiledValue": "space-between"
+        },
+        {
+          "name": "space-around",
+          "value": "space-around",
+          "compiledValue": "space-around"
+        }
+      ],
+      "compiledValue": "(start: start, center: center, end: end, space-between: space-between, space-around: space-around)"
+    }
+  ],
+  "justify-self": [
+    {
+      "name": "$justify-self",
+      "value": "( auto: auto, start: start, end: end, center: center, stretch: stretch, )",
+      "mapValue": [
+        {
+          "name": "auto",
+          "value": "auto",
+          "compiledValue": "auto"
+        },
+        {
+          "name": "start",
+          "value": "start",
+          "compiledValue": "start"
+        },
+        {
+          "name": "end",
+          "value": "end",
+          "compiledValue": "end"
+        },
+        {
+          "name": "center",
+          "value": "center",
+          "compiledValue": "center"
+        },
+        {
+          "name": "stretch",
+          "value": "stretch",
+          "compiledValue": "stretch"
+        }
+      ],
+      "compiledValue": "(auto: auto, start: start, end: end, center: center, stretch: stretch)"
+    }
+  ],
+  "position": [
+    {
+      "name": "$position",
+      "value": "( relative: relative, absolute: absolute, fixed: fixed, sticky: sticky, static: static, skip: ( 'top-left': 'custom', top: 'custom', 'top-right': 'custom', 'bottom-left': 'custom', bottom: 'custom', 'bottom-right': 'custom', 'middle-left': 'custom', middle: 'custom', 'middle-right': 'custom', ), )",
+      "mapValue": [
+        {
+          "name": "relative",
+          "value": "relative",
+          "compiledValue": "relative"
+        },
+        {
+          "name": "absolute",
+          "value": "absolute",
+          "compiledValue": "absolute"
+        },
+        {
+          "name": "fixed",
+          "value": "fixed",
+          "compiledValue": "fixed"
+        },
+        {
+          "name": "sticky",
+          "value": "sticky",
+          "compiledValue": "sticky"
+        },
+        {
+          "name": "static",
+          "value": "static",
+          "compiledValue": "static"
+        },
+        {
+          "name": "skip",
+          "value": "( 'top-left': 'custom', top: 'custom', 'top-right': 'custom', 'bottom-left': 'custom', bottom: 'custom', 'bottom-right': 'custom', 'middle-left': 'custom', middle: 'custom', 'middle-right': 'custom', )",
+          "mapValue": [
+            {
+              "name": "top-left",
+              "value": "custom"
+            },
+            {
+              "name": "top",
+              "value": "custom"
+            },
+            {
+              "name": "top-right",
+              "value": "custom"
+            },
+            {
+              "name": "bottom-left",
+              "value": "custom"
+            },
+            {
+              "name": "bottom",
+              "value": "custom"
+            },
+            {
+              "name": "bottom-right",
+              "value": "custom"
+            },
+            {
+              "name": "middle-left",
+              "value": "custom"
+            },
+            {
+              "name": "middle",
+              "value": "custom"
+            },
+            {
+              "name": "middle-right",
+              "value": "custom"
+            }
+          ],
+          "compiledValue": "(\"top-left\": \"custom\", top: \"custom\", \"top-right\": \"custom\", \"bottom-left\": \"custom\", bottom: \"custom\", \"bottom-right\": \"custom\", \"middle-left\": \"custom\", middle: \"custom\", \"middle-right\": \"custom\")"
+        }
+      ],
+      "compiledValue": "(relative: relative, absolute: absolute, fixed: fixed, sticky: sticky, static: static, skip: (\"top-left\": \"custom\", top: \"custom\", \"top-right\": \"custom\", \"bottom-left\": \"custom\", bottom: \"custom\", \"bottom-right\": \"custom\", \"middle-left\": \"custom\", middle: \"custom\", \"middle-right\": \"custom\"))"
+    }
+  ],
+  "opacity": [
+    {
+      "name": "$opacity",
+      "value": "( 0: 0, 5: 0.05, 10: 0.1, 20: 0.2, 30: 0.3, 40: 0.4, 50: 0.5, 60: 0.6, 70: 0.7, 80: 0.8, 90: 0.9, 95: 0.95, 100: 1, )",
+      "compiledValue": ""
+    }
+  ],
+  "list-style": [
+    {
+      "name": "$list-style",
+      "value": "( none: none, decimal: decimal, disc: disc, )",
+      "mapValue": [
+        {
+          "name": "none",
+          "value": "none",
+          "compiledValue": "none"
+        },
+        {
+          "name": "decimal",
+          "value": "decimal",
+          "compiledValue": "decimal"
+        },
+        {
+          "name": "disc",
+          "value": "disc",
+          "compiledValue": "disc"
+        }
+      ],
+      "compiledValue": "(none: none, decimal: decimal, disc: disc)"
+    }
+  ],
+  "white-space": [
+    {
+      "name": "$white-space",
+      "value": "( normal: normal, nowrap: nowrap )",
+      "mapValue": [
+        {
+          "name": "normal",
+          "value": "normal",
+          "compiledValue": "normal"
+        },
+        {
+          "name": "nowrap",
+          "value": "nowrap",
+          "compiledValue": "nowrap"
+        }
+      ],
+      "compiledValue": "(normal: normal, nowrap: nowrap)"
+    }
+  ],
+  "word-break": [
+    {
+      "name": "$word-break",
+      "value": "( normal: normal, break-word: break-word, break-all: break-all )",
+      "mapValue": [
+        {
+          "name": "normal",
+          "value": "normal",
+          "compiledValue": "normal"
+        },
+        {
+          "name": "break-word",
+          "value": "break-word",
+          "compiledValue": "break-word"
+        },
+        {
+          "name": "break-all",
+          "value": "break-all",
+          "compiledValue": "break-all"
+        }
+      ],
+      "compiledValue": "(normal: normal, break-word: break-word, break-all: break-all)"
+    }
+  ],
+  "object-fit": [
+    {
+      "name": "$object-fit",
+      "value": "( contain: contain, cover: cover, fill: fill, none: none, scale-down: scale down, )",
+      "mapValue": [
+        {
+          "name": "contain",
+          "value": "contain",
+          "compiledValue": "contain"
+        },
+        {
+          "name": "cover",
+          "value": "cover",
+          "compiledValue": "cover"
+        },
+        {
+          "name": "fill",
+          "value": "fill",
+          "compiledValue": "fill"
+        },
+        {
+          "name": "none",
+          "value": "none",
+          "compiledValue": "none"
+        },
+        {
+          "name": "scale-down",
+          "value": "scale down",
+          "compiledValue": "scale down"
+        }
+      ],
+      "compiledValue": "(contain: contain, cover: cover, fill: fill, none: none, scale-down: scale down)"
+    }
+  ],
+  "object-position": [
+    {
+      "name": "$object-position",
+      "value": "( top: top, right: right, bottom: bottom, left: left, center: center, right-bottom: right bottom, right-top: right top, left-bottom: left bottom, left-top: left top, )",
+      "mapValue": [
+        {
+          "name": "top",
+          "value": "top",
+          "compiledValue": "top"
+        },
+        {
+          "name": "right",
+          "value": "right",
+          "compiledValue": "right"
+        },
+        {
+          "name": "bottom",
+          "value": "bottom",
+          "compiledValue": "bottom"
+        },
+        {
+          "name": "left",
+          "value": "left",
+          "compiledValue": "left"
+        },
+        {
+          "name": "center",
+          "value": "center",
+          "compiledValue": "center"
+        },
+        {
+          "name": "right-bottom",
+          "value": "right bottom",
+          "compiledValue": "right bottom"
+        },
+        {
+          "name": "right-top",
+          "value": "right top",
+          "compiledValue": "right top"
+        },
+        {
+          "name": "left-bottom",
+          "value": "left bottom",
+          "compiledValue": "left bottom"
+        },
+        {
+          "name": "left-top",
+          "value": "left top",
+          "compiledValue": "left top"
+        }
+      ],
+      "compiledValue": "(top: top, right: right, bottom: bottom, left: left, center: center, right-bottom: right bottom, right-top: right top, left-bottom: left bottom, left-top: left top)"
+    }
+  ],
+  "overflow": [
+    {
+      "name": "$overflow",
+      "value": "( auto: auto, hidden: hidden, visible: visible, scroll: scroll, clip: clip, )",
+      "mapValue": [
+        {
+          "name": "auto",
+          "value": "auto",
+          "compiledValue": "auto"
+        },
+        {
+          "name": "hidden",
+          "value": "hidden",
+          "compiledValue": "hidden"
+        },
+        {
+          "name": "visible",
+          "value": "visible",
+          "compiledValue": "visible"
+        },
+        {
+          "name": "scroll",
+          "value": "scroll",
+          "compiledValue": "scroll"
+        },
+        {
+          "name": "clip",
+          "value": "clip",
+          "compiledValue": "clip"
+        }
+      ],
+      "compiledValue": "(auto: auto, hidden: hidden, visible: visible, scroll: scroll, clip: clip)"
+    }
+  ],
+  "aspect-ratios": [
+    {
+      "name": "$aspect-ratios",
+      "value": "( '1x1': 100%, '4x3': calc(3 / 4 * 100%), '16x9': calc(9 / 16 * 100%), '21x9': calc(9 / 21 * 100%), )",
+      "mapValue": [
+        {
+          "name": "x1",
+          "value": "100%",
+          "compiledValue": "100%"
+        },
+        {
+          "name": "x3",
+          "value": "calc(3 / 4 * 100%)",
+          "compiledValue": "calc(3 / 4 * 100%)"
+        },
+        {
+          "name": "x9",
+          "value": "calc(9 / 16 * 100%)",
+          "compiledValue": "calc(9 / 16 * 100%)"
+        },
+        {
+          "name": "x9",
+          "value": "calc(9 / 21 * 100%)",
+          "compiledValue": "calc(9 / 21 * 100%)"
+        }
+      ],
+      "compiledValue": "(\"1x1\": 100%, \"4x3\": calc(3 / 4 * 100%), \"16x9\": calc(9 / 16 * 100%), \"21x9\": calc(9 / 21 * 100%))"
+    }
+  ],
+  "z-index": [
+    {
+      "name": "$z-index",
+      "value": "( 0: 0, 10: 10, 20: 20, 30: 30, 40: 40, 50: 50, auto: auto, )",
+      "mapValue": [
+        {
+          "name": "auto",
+          "value": "auto",
+          "compiledValue": "auto"
+        }
+      ],
+      "compiledValue": "(0: 0, 10: 10, 20: 20, 30: 30, 40: 40, 50: 50, auto: auto)"
+    }
+  ],
+  "width": [
+    {
+      "name": "$width",
+      "value": "( auto: auto, full: 100%, 100vw: 100vw, 75vw: 75vw, 50vw: 50vw, 25vw: 25vw, )",
+      "mapValue": [
+        {
+          "name": "auto",
+          "value": "auto",
+          "compiledValue": "auto"
+        },
+        {
+          "name": "full",
+          "value": "100%",
+          "compiledValue": "100%"
+        },
+        {
+          "name": "vw",
+          "value": "100vw",
+          "compiledValue": "100vw"
+        },
+        {
+          "name": "vw",
+          "value": "75vw",
+          "compiledValue": "75vw"
+        },
+        {
+          "name": "vw",
+          "value": "50vw",
+          "compiledValue": "50vw"
+        },
+        {
+          "name": "vw",
+          "value": "25vw",
+          "compiledValue": "25vw"
+        }
+      ],
+      "compiledValue": "(auto: auto, full: 100%, 100vw: 100vw, 75vw: 75vw, 50vw: 50vw, 25vw: 25vw)"
+    }
+  ],
+  "height": [
+    {
+      "name": "$height",
+      "value": "( auto: auto, full: 100%, 100vh: 100vh, 75vh: 75vh, 50vh: 50vh, 25vh: 25vh, )",
+      "mapValue": [
+        {
+          "name": "auto",
+          "value": "auto",
+          "compiledValue": "auto"
+        },
+        {
+          "name": "full",
+          "value": "100%",
+          "compiledValue": "100%"
+        },
+        {
+          "name": "vh",
+          "value": "100vh",
+          "compiledValue": "100vh"
+        },
+        {
+          "name": "vh",
+          "value": "75vh",
+          "compiledValue": "75vh"
+        },
+        {
+          "name": "vh",
+          "value": "50vh",
+          "compiledValue": "50vh"
+        },
+        {
+          "name": "vh",
+          "value": "25vh",
+          "compiledValue": "25vh"
+        }
+      ],
+      "compiledValue": "(auto: auto, full: 100%, 100vh: 100vh, 75vh: 75vh, 50vh: 50vh, 25vh: 25vh)"
+    }
+  ],
+  "border-radius": [
+    {
+      "name": "$border-radius",
+      "value": "( none: rem(0), sm: rem(0.125), base: rem(0.25), md: rem(0.375), lg: rem(0.5), xl: rem(0.75), xxl: rem(1), full: 50%, )",
+      "mapValue": [
+        {
+          "name": "none",
+          "value": "rem(0)",
+          "compiledValue": "rem(0)"
+        },
+        {
+          "name": "sm",
+          "value": "rem(0.125)",
+          "compiledValue": "rem(0.125)"
+        },
+        {
+          "name": "base",
+          "value": "rem(0.25)",
+          "compiledValue": "rem(0.25)"
+        },
+        {
+          "name": "md",
+          "value": "rem(0.375)",
+          "compiledValue": "rem(0.375)"
+        },
+        {
+          "name": "lg",
+          "value": "rem(0.5)",
+          "compiledValue": "rem(0.5)"
+        },
+        {
+          "name": "xl",
+          "value": "rem(0.75)",
+          "compiledValue": "rem(0.75)"
+        },
+        {
+          "name": "xxl",
+          "value": "rem(1)",
+          "compiledValue": "rem(1)"
+        },
+        {
+          "name": "full",
+          "value": "50%",
+          "compiledValue": "50%"
+        }
+      ],
+      "compiledValue": "(none: rem(0), sm: rem(0.125), base: rem(0.25), md: rem(0.375), lg: rem(0.5), xl: rem(0.75), xxl: rem(1), full: 50%)"
+    }
+  ],
+  "border-style": [
+    {
+      "name": "$border-style",
+      "value": "( none: none, solid: solid, dashed: dashed, dotted: dotted, double: double, )",
+      "mapValue": [
+        {
+          "name": "none",
+          "value": "none",
+          "compiledValue": "none"
+        },
+        {
+          "name": "solid",
+          "value": "solid",
+          "compiledValue": "solid"
+        },
+        {
+          "name": "dashed",
+          "value": "dashed",
+          "compiledValue": "dashed"
+        },
+        {
+          "name": "dotted",
+          "value": "dotted",
+          "compiledValue": "dotted"
+        },
+        {
+          "name": "double",
+          "value": "double",
+          "compiledValue": "double"
+        }
+      ],
+      "compiledValue": "(none: none, solid: solid, dashed: dashed, dotted: dotted, double: double)"
+    }
+  ],
+  "border-width": [
+    {
+      "name": "$border-width",
+      "value": "( 0: 0, 1: 1px, 2: 2px, 3: 3px, 4: 4px, 5: 5px, 6: 6px, 7: 7px, 8: 8px, )",
+      "compiledValue": ""
+    }
+  ],
+  "visibility": [
+    {
+      "name": "$visibility",
+      "value": "( visible: visible, hidden: hidden, )",
+      "mapValue": [
+        {
+          "name": "visible",
+          "value": "visible",
+          "compiledValue": "visible"
+        },
+        {
+          "name": "hidden",
+          "value": "hidden",
+          "compiledValue": "hidden"
+        }
+      ],
+      "compiledValue": "(visible: visible, hidden: hidden)"
+    }
+  ],
+  "pointer-events": [
+    {
+      "name": "$pointer-events",
+      "value": "( auto: auto, none: none, )",
+      "mapValue": [
+        {
+          "name": "auto",
+          "value": "auto",
+          "compiledValue": "auto"
+        },
+        {
+          "name": "none",
+          "value": "none",
+          "compiledValue": "none"
+        }
+      ],
+      "compiledValue": "(auto: auto, none: none)"
+    }
+  ],
+  "cursor": [
+    {
+      "name": "$cursor",
+      "value": "( auto: auto, pointer: pointer, wait: wait, text: text, move: move, grap: grap, not-allowed: not-allowed, zoom-in: zoom-in, zoom-out: zoom-out, row-resize: row-resize, )",
+      "mapValue": [
+        {
+          "name": "auto",
+          "value": "auto",
+          "compiledValue": "auto"
+        },
+        {
+          "name": "pointer",
+          "value": "pointer",
+          "compiledValue": "pointer"
+        },
+        {
+          "name": "wait",
+          "value": "wait",
+          "compiledValue": "wait"
+        },
+        {
+          "name": "text",
+          "value": "text",
+          "compiledValue": "text"
+        },
+        {
+          "name": "move",
+          "value": "move",
+          "compiledValue": "move"
+        },
+        {
+          "name": "grap",
+          "value": "grap",
+          "compiledValue": "grap"
+        },
+        {
+          "name": "not-allowed",
+          "value": "not-allowed",
+          "compiledValue": "not-allowed"
+        },
+        {
+          "name": "zoom-in",
+          "value": "zoom-in",
+          "compiledValue": "zoom-in"
+        },
+        {
+          "name": "zoom-out",
+          "value": "zoom-out",
+          "compiledValue": "zoom-out"
+        },
+        {
+          "name": "row-resize",
+          "value": "row-resize",
+          "compiledValue": "row-resize"
+        }
+      ],
+      "compiledValue": "(auto: auto, pointer: pointer, wait: wait, text: text, move: move, grap: grap, not-allowed: not-allowed, zoom-in: zoom-in, zoom-out: zoom-out, row-resize: row-resize)"
+    }
+  ],
+  "user-select": [
+    {
+      "name": "$user-select",
+      "value": "( none: none, text: text, all: all, )",
+      "mapValue": [
+        {
+          "name": "none",
+          "value": "none",
+          "compiledValue": "none"
+        },
+        {
+          "name": "text",
+          "value": "text",
+          "compiledValue": "text"
+        },
+        {
+          "name": "all",
+          "value": "all",
+          "compiledValue": "all"
+        }
+      ],
+      "compiledValue": "(none: none, text: text, all: all)"
+    }
+  ],
+  "appearance": [
+    {
+      "name": "$appearance",
+      "value": "( none: none, )",
+      "mapValue": [
+        {
+          "name": "none",
+          "value": "none",
+          "compiledValue": "none"
+        }
+      ],
+      "compiledValue": "(none: none)"
+    }
+  ],
+  "outline": [
+    {
+      "name": "$outline",
+      "value": "( 0: 0, )",
+      "compiledValue": ""
+    }
+  ],
+  "background-attachment": [
+    {
+      "name": "$background-attachment",
+      "value": "( fixed: fixed, local: local, scroll: scroll, )",
+      "mapValue": [
+        {
+          "name": "fixed",
+          "value": "fixed",
+          "compiledValue": "fixed"
+        },
+        {
+          "name": "local",
+          "value": "local",
+          "compiledValue": "local"
+        },
+        {
+          "name": "scroll",
+          "value": "scroll",
+          "compiledValue": "scroll"
+        }
+      ],
+      "compiledValue": "(fixed: fixed, local: local, scroll: scroll)"
+    }
+  ],
+  "background-position": [
+    {
+      "name": "$background-position",
+      "value": "( top: top, right: right, bottom: bottom, left: left, center: center, top-right: top right, top-left: top left, bottom-right: bottom right, bottom-left: bottom left, )",
+      "mapValue": [
+        {
+          "name": "top",
+          "value": "top",
+          "compiledValue": "top"
+        },
+        {
+          "name": "right",
+          "value": "right",
+          "compiledValue": "right"
+        },
+        {
+          "name": "bottom",
+          "value": "bottom",
+          "compiledValue": "bottom"
+        },
+        {
+          "name": "left",
+          "value": "left",
+          "compiledValue": "left"
+        },
+        {
+          "name": "center",
+          "value": "center",
+          "compiledValue": "center"
+        },
+        {
+          "name": "top-right",
+          "value": "top right",
+          "compiledValue": "top right"
+        },
+        {
+          "name": "top-left",
+          "value": "top left",
+          "compiledValue": "top left"
+        },
+        {
+          "name": "bottom-right",
+          "value": "bottom right",
+          "compiledValue": "bottom right"
+        },
+        {
+          "name": "bottom-left",
+          "value": "bottom left",
+          "compiledValue": "bottom left"
+        }
+      ],
+      "compiledValue": "(top: top, right: right, bottom: bottom, left: left, center: center, top-right: top right, top-left: top left, bottom-right: bottom right, bottom-left: bottom left)"
+    }
+  ],
+  "background-repeat": [
+    {
+      "name": "$background-repeat",
+      "value": "( repeat: repeat, repeat-x: repeat-x, repeat-y: repeat-y, no-repeat: no-repeat, )",
+      "mapValue": [
+        {
+          "name": "repeat",
+          "value": "repeat",
+          "compiledValue": "repeat"
+        },
+        {
+          "name": "repeat-x",
+          "value": "repeat-x",
+          "compiledValue": "repeat-x"
+        },
+        {
+          "name": "repeat-y",
+          "value": "repeat-y",
+          "compiledValue": "repeat-y"
+        },
+        {
+          "name": "no-repeat",
+          "value": "no-repeat",
+          "compiledValue": "no-repeat"
+        }
+      ],
+      "compiledValue": "(repeat: repeat, repeat-x: repeat-x, repeat-y: repeat-y, no-repeat: no-repeat)"
+    }
+  ],
+  "background-size": [
+    {
+      "name": "$background-size",
+      "value": "( auto: auto, cover: cover, contain: contain, )",
+      "mapValue": [
+        {
+          "name": "auto",
+          "value": "auto",
+          "compiledValue": "auto"
+        },
+        {
+          "name": "cover",
+          "value": "cover",
+          "compiledValue": "cover"
+        },
+        {
+          "name": "contain",
+          "value": "contain",
+          "compiledValue": "contain"
+        }
+      ],
+      "compiledValue": "(auto: auto, cover: cover, contain: contain)"
+    }
+  ],
+  "scale": [
+    {
+      "name": "$scale",
+      "value": "( zoom-in: scale(1.1), zoom-in-md: scale(1.25), zoom-in-lg: scale(1.5), zoom-out: scale(0.9), zoom-out-md: scale(0.75), zoom-out-lg: scale(0.5), )",
+      "mapValue": [
+        {
+          "name": "zoom-in",
+          "value": "scale(1.1)",
+          "compiledValue": "scale(1.1)"
+        },
+        {
+          "name": "zoom-in-md",
+          "value": "scale(1.25)",
+          "compiledValue": "scale(1.25)"
+        },
+        {
+          "name": "zoom-in-lg",
+          "value": "scale(1.5)",
+          "compiledValue": "scale(1.5)"
+        },
+        {
+          "name": "zoom-out",
+          "value": "scale(0.9)",
+          "compiledValue": "scale(0.9)"
+        },
+        {
+          "name": "zoom-out-md",
+          "value": "scale(0.75)",
+          "compiledValue": "scale(0.75)"
+        },
+        {
+          "name": "zoom-out-lg",
+          "value": "scale(0.5)",
+          "compiledValue": "scale(0.5)"
+        }
+      ],
+      "compiledValue": "(zoom-in: scale(1.1), zoom-in-md: scale(1.25), zoom-in-lg: scale(1.5), zoom-out: scale(0.9), zoom-out-md: scale(0.75), zoom-out-lg: scale(0.5))"
+    }
+  ],
+  "rotate": [
+    {
+      "name": "$rotate",
+      "value": "( rotate-0: rotate(0deg), rotate-45: rotate(45deg), rotate-90: rotate(90deg), rotate-180: rotate(180deg), rotate-270: rotate(270deg), rotate-45-inv: rotate(-45deg), rotate-90-inv: rotate(-90deg), rotate-180-inv: rotate(-180deg), rotate-270-inv: rotate(-270deg), )",
+      "mapValue": [
+        {
+          "name": "rotate-0",
+          "value": "rotate(0deg)",
+          "compiledValue": "rotate(0deg)"
+        },
+        {
+          "name": "rotate-45",
+          "value": "rotate(45deg)",
+          "compiledValue": "rotate(45deg)"
+        },
+        {
+          "name": "rotate-90",
+          "value": "rotate(90deg)",
+          "compiledValue": "rotate(90deg)"
+        },
+        {
+          "name": "rotate-180",
+          "value": "rotate(180deg)",
+          "compiledValue": "rotate(180deg)"
+        },
+        {
+          "name": "rotate-270",
+          "value": "rotate(270deg)",
+          "compiledValue": "rotate(270deg)"
+        },
+        {
+          "name": "rotate-45-inv",
+          "value": "rotate(-45deg)",
+          "compiledValue": "rotate(-45deg)"
+        },
+        {
+          "name": "rotate-90-inv",
+          "value": "rotate(-90deg)",
+          "compiledValue": "rotate(-90deg)"
+        },
+        {
+          "name": "rotate-180-inv",
+          "value": "rotate(-180deg)",
+          "compiledValue": "rotate(-180deg)"
+        },
+        {
+          "name": "rotate-270-inv",
+          "value": "rotate(-270deg)",
+          "compiledValue": "rotate(-270deg)"
+        }
+      ],
+      "compiledValue": "(rotate-0: rotate(0deg), rotate-45: rotate(45deg), rotate-90: rotate(90deg), rotate-180: rotate(180deg), rotate-270: rotate(270deg), rotate-45-inv: rotate(-45deg), rotate-90-inv: rotate(-90deg), rotate-180-inv: rotate(-180deg), rotate-270-inv: rotate(-270deg))"
+    }
+  ],
+  "skew": [
+    {
+      "name": "$skew",
+      "value": "( skewX-0: skewX(0), skewX-3: skewX(3deg), skewX-6: skewX(6deg), skewX-9: skewX(9deg), skewX-12: skewX(12deg), skewX-3-inv: skewX(-3deg), skewX-6-inv: skewX(-6deg), skewX-9-inv: skewX(-9deg), skewX-12-inv: skewX(-12deg), skewY-0: skewY(0), skewY-3: skewY(3deg), skewY-6: skewY(6deg), skewY-9: skewY(9deg), skewY-12: skewY(12deg), skewY-3-inv: skewY(-3deg), skewY-6-inv: skewY(-6deg), skewY-9-inv: skewY(-9deg), skewY-12-inv: skewY(-12deg), )",
+      "mapValue": [
+        {
+          "name": "skewX-0",
+          "value": "skewX",
+          "compiledValue": "skewX"
+        },
+        {
+          "name": "skewX-3",
+          "value": "skewX",
+          "compiledValue": "skewX"
+        },
+        {
+          "name": "skewX-6",
+          "value": "skewX",
+          "compiledValue": "skewX"
+        },
+        {
+          "name": "skewX-9",
+          "value": "skewX",
+          "compiledValue": "skewX"
+        },
+        {
+          "name": "skewX-12",
+          "value": "skewX",
+          "compiledValue": "skewX"
+        },
+        {
+          "name": "skewX-3-inv",
+          "value": "skewX",
+          "compiledValue": "skewX"
+        },
+        {
+          "name": "skewX-6-inv",
+          "value": "skewX",
+          "compiledValue": "skewX"
+        },
+        {
+          "name": "skewX-9-inv",
+          "value": "skewX",
+          "compiledValue": "skewX"
+        },
+        {
+          "name": "skewX-12-inv",
+          "value": "skewX",
+          "compiledValue": "skewX"
+        },
+        {
+          "name": "skewY-0",
+          "value": "skewY",
+          "compiledValue": "skewY"
+        },
+        {
+          "name": "skewY-3",
+          "value": "skewY",
+          "compiledValue": "skewY"
+        },
+        {
+          "name": "skewY-6",
+          "value": "skewY",
+          "compiledValue": "skewY"
+        },
+        {
+          "name": "skewY-9",
+          "value": "skewY",
+          "compiledValue": "skewY"
+        },
+        {
+          "name": "skewY-12",
+          "value": "skewY",
+          "compiledValue": "skewY"
+        },
+        {
+          "name": "skewY-3-inv",
+          "value": "skewY",
+          "compiledValue": "skewY"
+        },
+        {
+          "name": "skewY-6-inv",
+          "value": "skewY",
+          "compiledValue": "skewY"
+        },
+        {
+          "name": "skewY-9-inv",
+          "value": "skewY",
+          "compiledValue": "skewY"
+        },
+        {
+          "name": "skewY-12-inv",
+          "value": "skewY",
+          "compiledValue": "skewY"
+        }
+      ],
+      "compiledValue": "(skewX-0: skewX(0), skewX-3: skewX(3deg), skewX-6: skewX(6deg), skewX-9: skewX(9deg), skewX-12: skewX(12deg), skewX-3-inv: skewX(-3deg), skewX-6-inv: skewX(-6deg), skewX-9-inv: skewX(-9deg), skewX-12-inv: skewX(-12deg), skewY-0: skewY(0), skewY-3: skewY(3deg), skewY-6: skewY(6deg), skewY-9: skewY(9deg), skewY-12: skewY(12deg), skewY-3-inv: skewY(-3deg), skewY-6-inv: skewY(-6deg), skewY-9-inv: skewY(-9deg), skewY-12-inv: skewY(-12deg))"
+    }
+  ],
+  "transform-origin": [
+    {
+      "name": "$transform-origin",
+      "value": "( top: top, right: right, bottom: bottom, left: left, center: center, top-right: top right, top-left: top left, bottom-right: bottom right, bottom-left: bottom left, )",
+      "mapValue": [
+        {
+          "name": "top",
+          "value": "top",
+          "compiledValue": "top"
+        },
+        {
+          "name": "right",
+          "value": "right",
+          "compiledValue": "right"
+        },
+        {
+          "name": "bottom",
+          "value": "bottom",
+          "compiledValue": "bottom"
+        },
+        {
+          "name": "left",
+          "value": "left",
+          "compiledValue": "left"
+        },
+        {
+          "name": "center",
+          "value": "center",
+          "compiledValue": "center"
+        },
+        {
+          "name": "top-right",
+          "value": "top right",
+          "compiledValue": "top right"
+        },
+        {
+          "name": "top-left",
+          "value": "top left",
+          "compiledValue": "top left"
+        },
+        {
+          "name": "bottom-right",
+          "value": "bottom right",
+          "compiledValue": "bottom right"
+        },
+        {
+          "name": "bottom-left",
+          "value": "bottom left",
+          "compiledValue": "bottom left"
+        }
+      ],
+      "compiledValue": "(top: top, right: right, bottom: bottom, left: left, center: center, top-right: top right, top-left: top left, bottom-right: bottom right, bottom-left: bottom left)"
+    }
+  ],
+  "transition": [
+    {
+      "name": "$transition",
+      "value": "( base: all 200ms, none: none, )",
+      "mapValue": [
+        {
+          "name": "base",
+          "value": "all 200ms",
+          "compiledValue": "all 200ms"
+        },
+        {
+          "name": "none",
+          "value": "none",
+          "compiledValue": "none"
+        }
+      ],
+      "compiledValue": "(base: all 200ms, none: none)"
+    }
+  ],
+  "transition-duration": [
+    {
+      "name": "$transition-duration",
+      "value": "( 100: 100ms, 200: 200ms, 300: 300ms, 400: 400ms, 500: 500ms, 600: 600ms, 700: 700ms, 800: 800ms, 900: 900ms, 1000: 1000ms, )",
+      "compiledValue": ""
+    }
+  ],
+  "timing-function": [
+    {
+      "name": "$timing-function",
+      "value": "( ease: ease, ease-in: ease-in, ease-out: ease-out, linear: linear, )",
+      "mapValue": [
+        {
+          "name": "ease",
+          "value": "ease",
+          "compiledValue": "ease"
+        },
+        {
+          "name": "ease-in",
+          "value": "ease-in",
+          "compiledValue": "ease-in"
+        },
+        {
+          "name": "ease-out",
+          "value": "ease-out",
+          "compiledValue": "ease-out"
+        },
+        {
+          "name": "linear",
+          "value": "linear",
+          "compiledValue": "linear"
+        }
+      ],
+      "compiledValue": "(ease: ease, ease-in: ease-in, ease-out: ease-out, linear: linear)"
+    }
+  ],
+  "filter": [
+    {
+      "name": "$filter",
+      "value": "( grayscale: grayscale(100%), )",
+      "mapValue": [
+        {
+          "name": "grayscale",
+          "value": "grayscale(100%)",
+          "compiledValue": "grayscale(100%)"
+        }
+      ],
+      "compiledValue": "(grayscale: grayscale(100%))"
+    }
+  ],
+  "fill": [
+    {
+      "name": "$fill",
+      "value": "( current: currentColor, )",
+      "mapValue": [
+        {
+          "name": "current",
+          "value": "currentColor",
+          "compiledValue": "currentColor"
+        }
+      ],
+      "compiledValue": "(current: currentColor)"
+    }
+  ],
+  "stroke": [
+    {
+      "name": "$stroke",
+      "value": "( current: currentColor, )",
+      "mapValue": [
+        {
+          "name": "current",
+          "value": "currentColor",
+          "compiledValue": "currentColor"
+        }
+      ],
+      "compiledValue": "(current: currentColor)"
+    }
+  ],
+  "stroke-width": [
+    {
+      "name": "$stroke-width",
+      "value": "( base: 1.5, 0: 0, 1: 1, 2: 2, 3: 3, )",
+      "mapValue": [
+        {
+          "name": "base",
+          "value": "1.5",
+          "compiledValue": "1.5"
+        }
+      ],
+      "compiledValue": "(base: 1.5, 0: 0, 1: 1, 2: 2, 3: 3)"
+    }
+  ],
+  "box-shadows": [
+    {
+      "name": "$box-shadows",
+      "value": "( light: ( sm: '0 1px 2px rgba(0, 0, 0, 0.06)', base: '0 1px 2px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.1)', md: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)', lg: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.06)', xl: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.06)', xxl: '0 25px 50px -10px rgba(0, 0, 0, 0.25)', inner: '0 2px 4px rgba(0, 0, 0, 0.06)', kbd: '0 -2px 0 rgba(0, 0, 0, 0.06)', ), dark: ( sm: '0 1px 2px rgba(0, 0, 0, 0.25)', base: '0 1px 2px rgba(0, 0, 0, 0.25), 0 1px 3px rgba(0, 0, 0, 0.35)', md: '0 4px 6px -1px rgba(0, 0, 0, 0.35), 0 2px 4px -1px rgba(0, 0, 0, 0.25)', lg: '0 10px 15px -3px rgba(0, 0, 0, 0.35), 0 4px 6px -2px rgba(0, 0, 0, 0.25)', xl: '0 20px 25px -5px rgba(0, 0, 0, 0.35), 0 10px 10px -5px rgba(0, 0, 0, 0.25)', xxl: '0 25px 50px -10px rgba(0, 0, 0, 0.5)', inner: '0 2px 4px rgba(0, 0, 0, 0.25)', kbd: '0 -2px 0 rgba(0, 0, 0, 0.25)', ) )",
+      "mapValue": [
+        {
+          "name": "light",
+          "value": "( sm: '0 1px 2px rgba(0, 0, 0, 0.06)",
+          "mapValue": [
+            {
+              "name": "sm",
+              "value": "'0 1px 2px rgba"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "base",
+          "value": "'0 1px 2px rgba",
+          "compiledValue": ""
+        },
+        {
+          "name": "md",
+          "value": "'0 4px 6px -1px rgba",
+          "compiledValue": ""
+        },
+        {
+          "name": "lg",
+          "value": "'0 10px 15px -3px rgba",
+          "compiledValue": ""
+        },
+        {
+          "name": "xl",
+          "value": "'0 20px 25px -5px rgba",
+          "compiledValue": ""
+        },
+        {
+          "name": "xxl",
+          "value": "'0 25px 50px -10px rgba",
+          "compiledValue": ""
+        },
+        {
+          "name": "inner",
+          "value": "'0 2px 4px rgba",
+          "compiledValue": ""
+        },
+        {
+          "name": "kbd",
+          "value": "'0 -2px 0 rgba",
+          "compiledValue": ""
+        },
+        {
+          "name": "dark",
+          "value": "( sm: '0 1px 2px rgba(0, 0, 0, 0.25)",
+          "mapValue": [
+            {
+              "name": "sm",
+              "value": "'0 1px 2px rgba"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "base",
+          "value": "'0 1px 2px rgba",
+          "compiledValue": ""
+        },
+        {
+          "name": "md",
+          "value": "'0 4px 6px -1px rgba",
+          "compiledValue": ""
+        },
+        {
+          "name": "lg",
+          "value": "'0 10px 15px -3px rgba",
+          "compiledValue": ""
+        },
+        {
+          "name": "xl",
+          "value": "'0 20px 25px -5px rgba",
+          "compiledValue": ""
+        },
+        {
+          "name": "xxl",
+          "value": "'0 25px 50px -10px rgba",
+          "compiledValue": ""
+        },
+        {
+          "name": "inner",
+          "value": "'0 2px 4px rgba",
+          "compiledValue": ""
+        },
+        {
+          "name": "kbd",
+          "value": "'0 -2px 0 rgba",
+          "compiledValue": ""
+        }
+      ],
+      "compiledValue": "(light: (sm: \"0 1px 2px rgba(0, 0, 0, 0.06)\", base: \"0 1px 2px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.1)\", md: \"0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)\", lg: \"0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.06)\", xl: \"0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.06)\", xxl: \"0 25px 50px -10px rgba(0, 0, 0, 0.25)\", inner: \"0 2px 4px rgba(0, 0, 0, 0.06)\", kbd: \"0 -2px 0 rgba(0, 0, 0, 0.06)\"), dark: (sm: \"0 1px 2px rgba(0, 0, 0, 0.25)\", base: \"0 1px 2px rgba(0, 0, 0, 0.25), 0 1px 3px rgba(0, 0, 0, 0.35)\", md: \"0 4px 6px -1px rgba(0, 0, 0, 0.35), 0 2px 4px -1px rgba(0, 0, 0, 0.25)\", lg: \"0 10px 15px -3px rgba(0, 0, 0, 0.35), 0 4px 6px -2px rgba(0, 0, 0, 0.25)\", xl: \"0 20px 25px -5px rgba(0, 0, 0, 0.35), 0 10px 10px -5px rgba(0, 0, 0, 0.25)\", xxl: \"0 25px 50px -10px rgba(0, 0, 0, 0.5)\", inner: \"0 2px 4px rgba(0, 0, 0, 0.25)\", kbd: \"0 -2px 0 rgba(0, 0, 0, 0.25)\"))"
+    }
+  ],
+  "grid-columns": [
+    {
+      "name": "$grid-columns",
+      "value": "( none: none, 1: repeat(1, minmax(0, 1fr)), 2: repeat(2, minmax(0, 1fr)), 3: repeat(3, minmax(0, 1fr)), 4: repeat(4, minmax(0, 1fr)), 5: repeat(5, minmax(0, 1fr)), 6: repeat(6, minmax(0, 1fr)), 7: repeat(7, minmax(0, 1fr)), 8: repeat(8, minmax(0, 1fr)), 9: repeat(9, minmax(0, 1fr)), 10: repeat(10, minmax(0, 1fr)), 11: repeat(11, minmax(0, 1fr)), 12: repeat(12, minmax(0, 1fr)), )",
+      "mapValue": [
+        {
+          "name": "none",
+          "value": "none",
+          "compiledValue": "none"
+        }
+      ],
+      "compiledValue": "(none: none, 1: repeat(1, minmax(0, 1fr)), 2: repeat(2, minmax(0, 1fr)), 3: repeat(3, minmax(0, 1fr)), 4: repeat(4, minmax(0, 1fr)), 5: repeat(5, minmax(0, 1fr)), 6: repeat(6, minmax(0, 1fr)), 7: repeat(7, minmax(0, 1fr)), 8: repeat(8, minmax(0, 1fr)), 9: repeat(9, minmax(0, 1fr)), 10: repeat(10, minmax(0, 1fr)), 11: repeat(11, minmax(0, 1fr)), 12: repeat(12, minmax(0, 1fr)))"
+    }
+  ],
+  "grid-span": [
+    {
+      "name": "$grid-span",
+      "value": "( auto: auto, span: '1 / -1', 1: 'span 1 / span 1', 2: 'span 2 / span 2', 3: 'span 3 / span 3', 4: 'span 4 / span 4', 5: 'span 5 / span 5', 6: 'span 6 / span 6', 7: 'span 7 / span 7', 8: 'span 8 / span 8', 9: 'span 9 / span 9', 10: 'span 10 / span 10', 11: 'span 11 / span 11', 12: 'span 12 / span 12', )",
+      "mapValue": [
+        {
+          "name": "auto",
+          "value": "auto",
+          "compiledValue": "auto"
+        },
+        {
+          "name": "span",
+          "value": "'1",
+          "compiledValue": ""
+        }
+      ],
+      "compiledValue": "(auto: auto, span: \"1 / -1\", 1: \"span 1 / span 1\", 2: \"span 2 / span 2\", 3: \"span 3 / span 3\", 4: \"span 4 / span 4\", 5: \"span 5 / span 5\", 6: \"span 6 / span 6\", 7: \"span 7 / span 7\", 8: \"span 8 / span 8\", 9: \"span 9 / span 9\", 10: \"span 10 / span 10\", 11: \"span 11 / span 11\", 12: \"span 12 / span 12\")"
+    }
+  ],
+  "grid-auto-flow": [
+    {
+      "name": "$grid-auto-flow",
+      "value": "( row: row, col: column, row-dense: row dense, col-dense: column dense, )",
+      "mapValue": [
+        {
+          "name": "row",
+          "value": "row",
+          "compiledValue": "row"
+        },
+        {
+          "name": "col",
+          "value": "column",
+          "compiledValue": "column"
+        },
+        {
+          "name": "row-dense",
+          "value": "row dense",
+          "compiledValue": "row dense"
+        },
+        {
+          "name": "col-dense",
+          "value": "column dense",
+          "compiledValue": "column dense"
+        }
+      ],
+      "compiledValue": "(row: row, col: column, row-dense: row dense, col-dense: column dense)"
+    }
+  ],
+  "grid-gap": [
+    {
+      "name": "$grid-gap",
+      "value": "( 0: 0, px: 1px, 1: 0.25rem, 2: 0.5rem, 3: 0.75rem, 4: 1rem, 5: 1.25rem, 6: 1.5rem, 7: 1.75rem, 8: 2rem, 9: 2.5rem, 10: 3rem, 11: 3.5rem, 12: 4rem, )",
+      "mapValue": [
+        {
+          "name": "px",
+          "value": "1px",
+          "compiledValue": "1px"
+        }
+      ],
+      "compiledValue": "(0: 0, px: 1px, 1: 0.25rem, 2: 0.5rem, 3: 0.75rem, 4: 1rem, 5: 1.25rem, 6: 1.5rem, 7: 1.75rem, 8: 2rem, 9: 2.5rem, 10: 3rem, 11: 3.5rem, 12: 4rem)"
+    }
+  ],
+  "trbl": [
+    {
+      "name": "$trbl",
+      "value": "( 0: 0, )",
+      "compiledValue": ""
+    }
+  ],
+  "align": [
+    {
+      "name": "$align",
+      "value": "( none: none, auto: auto, left: left, right: right, top: top, bottom: bottom, center: center, both: both, // use case: when using clear contain: contain, cover: cover, fill: fill, scale-down: scale-down, hidden: hidden, visible: visible, scroll: scroll, )",
+      "mapValue": [
+        {
+          "name": "none",
+          "value": "none",
+          "compiledValue": "none"
+        },
+        {
+          "name": "auto",
+          "value": "auto",
+          "compiledValue": "auto"
+        },
+        {
+          "name": "left",
+          "value": "left",
+          "compiledValue": "left"
+        },
+        {
+          "name": "right",
+          "value": "right",
+          "compiledValue": "right"
+        },
+        {
+          "name": "top",
+          "value": "top",
+          "compiledValue": "top"
+        },
+        {
+          "name": "bottom",
+          "value": "bottom",
+          "compiledValue": "bottom"
+        },
+        {
+          "name": "center",
+          "value": "center",
+          "compiledValue": "center"
+        },
+        {
+          "name": "both",
+          "value": "both",
+          "compiledValue": "both"
+        },
+        {
+          "name": "case",
+          "value": "when using clear contain: contain",
+          "mapValue": [
+            {
+              "name": "contain",
+              "value": "contain"
+            }
+          ],
+          "compiledValue": ""
+        },
+        {
+          "name": "cover",
+          "value": "cover",
+          "compiledValue": "cover"
+        },
+        {
+          "name": "fill",
+          "value": "fill",
+          "compiledValue": "fill"
+        },
+        {
+          "name": "scale-down",
+          "value": "scale-down",
+          "compiledValue": "scale-down"
+        },
+        {
+          "name": "hidden",
+          "value": "hidden",
+          "compiledValue": "hidden"
+        },
+        {
+          "name": "visible",
+          "value": "visible",
+          "compiledValue": "visible"
+        },
+        {
+          "name": "scroll",
+          "value": "scroll",
+          "compiledValue": "scroll"
+        }
+      ],
+      "compiledValue": ""
+    }
+  ],
+  "keys": [
+    {
+      "name": "$keys",
+      "value": "( container: container, fluid: fluid, row: row, column: col, grid-template-columns: gtc, grid-template-rows: gtr, grid-auto-flow: gaf, grid-column: gc, grid-row: gr, grid-gap: gg, column-gap: cg, row-gap: rg, order: ord, width: w, max-width: maw, min-width: miw, height: h, max-height: mah, min-height: mih, box-sizing: bxz, display: d, float: fl, clear: cl, flex: fx, flex-direction: fxd, flex-wrap: fxw, flex-grow: fxg, flex-shrink: fxs, align-items: ai, align-content: ac, align-self: as, justify-items: ji, justify-content: jc, justify-self: js, object-fit: obf, object-position: obp, overflow: ov, overflow-x: ovx, overflow-y: ovy, position: pos, heading: h, text-display: display, font-family: ff, font-size: fz, font-style: fs, font-weight: fw, letter-spacing: lts, line-height: lh, list-style: lis, text-decoration: td, text-transform: tt, text-overflow: tov, text-align: ta, vertical-align: va, white-space: whs, word-break: wob, truncate: truncate, margin: m, margin-top: mt, margin-bottom: mb, margin-right: mr, margin-left: ml, margin-vertical: my, margin-horizontal: mx, padding: p, padding-top: pt, padding-bottom: pb, padding-right: pr, padding-left: pl, padding-vertical: py, padding-horizontal: px, border: bd, border-top: bdt, border-bottom: bdb, border-right: bdr, border-left: bdl, border-vertical: bdy, border-horizontal: bdx, border-width: bdw, border-style: bds, border-color: bdc, color: c, color-gradient: c-grad, background-color: bg, background-gradient: bg-grad, background-attachment: bga, background-position: bgp, background-repeat: bgr, background-size: bgs, placeholder: placeholder, transition: trs, transition-duration: trsdu, transition-timing-function: trstf, transform-origin: trfo, filter: img, fill: fill, stroke: st, stroke-width: stw, opacity: op, visibility: vis, pointer-events: ptev, cursor: cur, user-select: us, appearance: ap, outline: ol, border-radius: bdrs, border-raduis-horizontal: bdrsx, border-raduis-vertical: bdrsy, box-shadow: bxsh, z-index: z, top: t, left: l, bottom: b, right: r, screen-reader: sr-only, )",
+      "mapValue": [
+        {
+          "name": "container",
+          "value": "container",
+          "compiledValue": "container"
+        },
+        {
+          "name": "fluid",
+          "value": "fluid",
+          "compiledValue": "fluid"
+        },
+        {
+          "name": "row",
+          "value": "row",
+          "compiledValue": "row"
+        },
+        {
+          "name": "column",
+          "value": "col",
+          "compiledValue": "col"
+        },
+        {
+          "name": "grid-template-columns",
+          "value": "gtc",
+          "compiledValue": "gtc"
+        },
+        {
+          "name": "grid-template-rows",
+          "value": "gtr",
+          "compiledValue": "gtr"
+        },
+        {
+          "name": "grid-auto-flow",
+          "value": "gaf",
+          "compiledValue": "gaf"
+        },
+        {
+          "name": "grid-column",
+          "value": "gc",
+          "compiledValue": "gc"
+        },
+        {
+          "name": "grid-row",
+          "value": "gr",
+          "compiledValue": "gr"
+        },
+        {
+          "name": "grid-gap",
+          "value": "gg",
+          "compiledValue": "gg"
+        },
+        {
+          "name": "column-gap",
+          "value": "cg",
+          "compiledValue": "cg"
+        },
+        {
+          "name": "row-gap",
+          "value": "rg",
+          "compiledValue": "rg"
+        },
+        {
+          "name": "order",
+          "value": "ord",
+          "compiledValue": "ord"
+        },
+        {
+          "name": "width",
+          "value": "w",
+          "compiledValue": "w"
+        },
+        {
+          "name": "max-width",
+          "value": "maw",
+          "compiledValue": "maw"
+        },
+        {
+          "name": "min-width",
+          "value": "miw",
+          "compiledValue": "miw"
+        },
+        {
+          "name": "height",
+          "value": "h",
+          "compiledValue": "h"
+        },
+        {
+          "name": "max-height",
+          "value": "mah",
+          "compiledValue": "mah"
+        },
+        {
+          "name": "min-height",
+          "value": "mih",
+          "compiledValue": "mih"
+        },
+        {
+          "name": "box-sizing",
+          "value": "bxz",
+          "compiledValue": "bxz"
+        },
+        {
+          "name": "display",
+          "value": "d",
+          "compiledValue": "d"
+        },
+        {
+          "name": "float",
+          "value": "fl",
+          "compiledValue": "fl"
+        },
+        {
+          "name": "clear",
+          "value": "cl",
+          "compiledValue": "cl"
+        },
+        {
+          "name": "flex",
+          "value": "fx",
+          "compiledValue": "fx"
+        },
+        {
+          "name": "flex-direction",
+          "value": "fxd",
+          "compiledValue": "fxd"
+        },
+        {
+          "name": "flex-wrap",
+          "value": "fxw",
+          "compiledValue": "fxw"
+        },
+        {
+          "name": "flex-grow",
+          "value": "fxg",
+          "compiledValue": "fxg"
+        },
+        {
+          "name": "flex-shrink",
+          "value": "fxs",
+          "compiledValue": "fxs"
+        },
+        {
+          "name": "align-items",
+          "value": "ai",
+          "compiledValue": "ai"
+        },
+        {
+          "name": "align-content",
+          "value": "ac",
+          "compiledValue": "ac"
+        },
+        {
+          "name": "align-self",
+          "value": "as",
+          "compiledValue": "as"
+        },
+        {
+          "name": "justify-items",
+          "value": "ji",
+          "compiledValue": "ji"
+        },
+        {
+          "name": "justify-content",
+          "value": "jc",
+          "compiledValue": "jc"
+        },
+        {
+          "name": "justify-self",
+          "value": "js",
+          "compiledValue": "js"
+        },
+        {
+          "name": "object-fit",
+          "value": "obf",
+          "compiledValue": "obf"
+        },
+        {
+          "name": "object-position",
+          "value": "obp",
+          "compiledValue": "obp"
+        },
+        {
+          "name": "overflow",
+          "value": "ov",
+          "compiledValue": "ov"
+        },
+        {
+          "name": "overflow-x",
+          "value": "ovx",
+          "compiledValue": "ovx"
+        },
+        {
+          "name": "overflow-y",
+          "value": "ovy",
+          "compiledValue": "ovy"
+        },
+        {
+          "name": "position",
+          "value": "pos",
+          "compiledValue": "pos"
+        },
+        {
+          "name": "heading",
+          "value": "h",
+          "compiledValue": "h"
+        },
+        {
+          "name": "text-display",
+          "value": "display",
+          "compiledValue": "display"
+        },
+        {
+          "name": "font-family",
+          "value": "ff",
+          "compiledValue": "ff"
+        },
+        {
+          "name": "font-size",
+          "value": "fz",
+          "compiledValue": "fz"
+        },
+        {
+          "name": "font-style",
+          "value": "fs",
+          "compiledValue": "fs"
+        },
+        {
+          "name": "font-weight",
+          "value": "fw",
+          "compiledValue": "fw"
+        },
+        {
+          "name": "letter-spacing",
+          "value": "lts",
+          "compiledValue": "lts"
+        },
+        {
+          "name": "line-height",
+          "value": "lh",
+          "compiledValue": "lh"
+        },
+        {
+          "name": "list-style",
+          "value": "lis",
+          "compiledValue": "lis"
+        },
+        {
+          "name": "text-decoration",
+          "value": "td",
+          "compiledValue": "td"
+        },
+        {
+          "name": "text-transform",
+          "value": "tt",
+          "compiledValue": "tt"
+        },
+        {
+          "name": "text-overflow",
+          "value": "tov",
+          "compiledValue": "tov"
+        },
+        {
+          "name": "text-align",
+          "value": "ta",
+          "compiledValue": "ta"
+        },
+        {
+          "name": "vertical-align",
+          "value": "va",
+          "compiledValue": "va"
+        },
+        {
+          "name": "white-space",
+          "value": "whs",
+          "compiledValue": "whs"
+        },
+        {
+          "name": "word-break",
+          "value": "wob",
+          "compiledValue": "wob"
+        },
+        {
+          "name": "truncate",
+          "value": "truncate",
+          "compiledValue": "truncate"
+        },
+        {
+          "name": "margin",
+          "value": "m",
+          "compiledValue": "m"
+        },
+        {
+          "name": "margin-top",
+          "value": "mt",
+          "compiledValue": "mt"
+        },
+        {
+          "name": "margin-bottom",
+          "value": "mb",
+          "compiledValue": "mb"
+        },
+        {
+          "name": "margin-right",
+          "value": "mr",
+          "compiledValue": "mr"
+        },
+        {
+          "name": "margin-left",
+          "value": "ml",
+          "compiledValue": "ml"
+        },
+        {
+          "name": "margin-vertical",
+          "value": "my",
+          "compiledValue": "my"
+        },
+        {
+          "name": "margin-horizontal",
+          "value": "mx",
+          "compiledValue": "mx"
+        },
+        {
+          "name": "padding",
+          "value": "p",
+          "compiledValue": "p"
+        },
+        {
+          "name": "padding-top",
+          "value": "pt",
+          "compiledValue": "pt"
+        },
+        {
+          "name": "padding-bottom",
+          "value": "pb",
+          "compiledValue": "pb"
+        },
+        {
+          "name": "padding-right",
+          "value": "pr",
+          "compiledValue": "pr"
+        },
+        {
+          "name": "padding-left",
+          "value": "pl",
+          "compiledValue": "pl"
+        },
+        {
+          "name": "padding-vertical",
+          "value": "py",
+          "compiledValue": "py"
+        },
+        {
+          "name": "padding-horizontal",
+          "value": "px",
+          "compiledValue": "px"
+        },
+        {
+          "name": "border",
+          "value": "bd",
+          "compiledValue": "bd"
+        },
+        {
+          "name": "border-top",
+          "value": "bdt",
+          "compiledValue": "bdt"
+        },
+        {
+          "name": "border-bottom",
+          "value": "bdb",
+          "compiledValue": "bdb"
+        },
+        {
+          "name": "border-right",
+          "value": "bdr",
+          "compiledValue": "bdr"
+        },
+        {
+          "name": "border-left",
+          "value": "bdl",
+          "compiledValue": "bdl"
+        },
+        {
+          "name": "border-vertical",
+          "value": "bdy",
+          "compiledValue": "bdy"
+        },
+        {
+          "name": "border-horizontal",
+          "value": "bdx",
+          "compiledValue": "bdx"
+        },
+        {
+          "name": "border-width",
+          "value": "bdw",
+          "compiledValue": "bdw"
+        },
+        {
+          "name": "border-style",
+          "value": "bds",
+          "compiledValue": "bds"
+        },
+        {
+          "name": "border-color",
+          "value": "bdc",
+          "compiledValue": "bdc"
+        },
+        {
+          "name": "color",
+          "value": "c",
+          "compiledValue": "c"
+        },
+        {
+          "name": "color-gradient",
+          "value": "c-grad",
+          "compiledValue": "c-grad"
+        },
+        {
+          "name": "background-color",
+          "value": "bg",
+          "compiledValue": "bg"
+        },
+        {
+          "name": "background-gradient",
+          "value": "bg-grad",
+          "compiledValue": "bg-grad"
+        },
+        {
+          "name": "background-attachment",
+          "value": "bga",
+          "compiledValue": "bga"
+        },
+        {
+          "name": "background-position",
+          "value": "bgp",
+          "compiledValue": "bgp"
+        },
+        {
+          "name": "background-repeat",
+          "value": "bgr",
+          "compiledValue": "bgr"
+        },
+        {
+          "name": "background-size",
+          "value": "bgs",
+          "compiledValue": "bgs"
+        },
+        {
+          "name": "placeholder",
+          "value": "placeholder",
+          "compiledValue": "placeholder"
+        },
+        {
+          "name": "transition",
+          "value": "trs",
+          "compiledValue": "trs"
+        },
+        {
+          "name": "transition-duration",
+          "value": "trsdu",
+          "compiledValue": "trsdu"
+        },
+        {
+          "name": "transition-timing-function",
+          "value": "trstf",
+          "compiledValue": "trstf"
+        },
+        {
+          "name": "transform-origin",
+          "value": "trfo",
+          "compiledValue": "trfo"
+        },
+        {
+          "name": "filter",
+          "value": "img",
+          "compiledValue": "img"
+        },
+        {
+          "name": "fill",
+          "value": "fill",
+          "compiledValue": "fill"
+        },
+        {
+          "name": "stroke",
+          "value": "st",
+          "compiledValue": "st"
+        },
+        {
+          "name": "stroke-width",
+          "value": "stw",
+          "compiledValue": "stw"
+        },
+        {
+          "name": "opacity",
+          "value": "op",
+          "compiledValue": "op"
+        },
+        {
+          "name": "visibility",
+          "value": "vis",
+          "compiledValue": "vis"
+        },
+        {
+          "name": "pointer-events",
+          "value": "ptev",
+          "compiledValue": "ptev"
+        },
+        {
+          "name": "cursor",
+          "value": "cur",
+          "compiledValue": "cur"
+        },
+        {
+          "name": "user-select",
+          "value": "us",
+          "compiledValue": "us"
+        },
+        {
+          "name": "appearance",
+          "value": "ap",
+          "compiledValue": "ap"
+        },
+        {
+          "name": "outline",
+          "value": "ol",
+          "compiledValue": "ol"
+        },
+        {
+          "name": "border-radius",
+          "value": "bdrs",
+          "compiledValue": "bdrs"
+        },
+        {
+          "name": "border-raduis-horizontal",
+          "value": "bdrsx",
+          "compiledValue": "bdrsx"
+        },
+        {
+          "name": "border-raduis-vertical",
+          "value": "bdrsy",
+          "compiledValue": "bdrsy"
+        },
+        {
+          "name": "box-shadow",
+          "value": "bxsh",
+          "compiledValue": "bxsh"
+        },
+        {
+          "name": "z-index",
+          "value": "z",
+          "compiledValue": "z"
+        },
+        {
+          "name": "top",
+          "value": "t",
+          "compiledValue": "t"
+        },
+        {
+          "name": "left",
+          "value": "l",
+          "compiledValue": "l"
+        },
+        {
+          "name": "bottom",
+          "value": "b",
+          "compiledValue": "b"
+        },
+        {
+          "name": "right",
+          "value": "r",
+          "compiledValue": "r"
+        },
+        {
+          "name": "screen-reader",
+          "value": "sr-only",
+          "compiledValue": "sr-only"
+        }
+      ],
+      "compiledValue": "(container: container, fluid: fluid, row: row, column: col, grid-template-columns: gtc, grid-template-rows: gtr, grid-auto-flow: gaf, grid-column: gc, grid-row: gr, grid-gap: gg, column-gap: cg, row-gap: rg, order: ord, width: w, max-width: maw, min-width: miw, height: h, max-height: mah, min-height: mih, box-sizing: bxz, display: d, float: fl, clear: cl, flex: fx, flex-direction: fxd, flex-wrap: fxw, flex-grow: fxg, flex-shrink: fxs, align-items: ai, align-content: ac, align-self: as, justify-items: ji, justify-content: jc, justify-self: js, object-fit: obf, object-position: obp, overflow: ov, overflow-x: ovx, overflow-y: ovy, position: pos, heading: h, text-display: display, font-family: ff, font-size: fz, font-style: fs, font-weight: fw, letter-spacing: lts, line-height: lh, list-style: lis, text-decoration: td, text-transform: tt, text-overflow: tov, text-align: ta, vertical-align: va, white-space: whs, word-break: wob, truncate: truncate, margin: m, margin-top: mt, margin-bottom: mb, margin-right: mr, margin-left: ml, margin-vertical: my, margin-horizontal: mx, padding: p, padding-top: pt, padding-bottom: pb, padding-right: pr, padding-left: pl, padding-vertical: py, padding-horizontal: px, border: bd, border-top: bdt, border-bottom: bdb, border-right: bdr, border-left: bdl, border-vertical: bdy, border-horizontal: bdx, border-width: bdw, border-style: bds, border-color: bdc, color: c, color-gradient: c-grad, background-color: bg, background-gradient: bg-grad, background-attachment: bga, background-position: bgp, background-repeat: bgr, background-size: bgs, placeholder: placeholder, transition: trs, transition-duration: trsdu, transition-timing-function: trstf, transform-origin: trfo, filter: img, fill: fill, stroke: st, stroke-width: stw, opacity: op, visibility: vis, pointer-events: ptev, cursor: cur, user-select: us, appearance: ap, outline: ol, border-radius: bdrs, border-raduis-horizontal: bdrsx, border-raduis-vertical: bdrsy, box-shadow: bxsh, z-index: z, top: t, left: l, bottom: b, right: r, screen-reader: sr-only)"
+    }
+  ]
+}

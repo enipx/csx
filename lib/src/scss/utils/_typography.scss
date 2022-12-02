@@ -1,0 +1,58 @@
+// ----- Font family
+@include setup-font-family;
+
+// ----- Font sizes
+@include setup-font-size;
+
+// ----- Font style
+@include setup-font-style;
+
+// ----- Headings
+@include setup-heading;
+
+// ----- Font weight
+@include setup-font-weight;
+
+// ----- Letter spacing
+@include setup-letter-spacing;
+
+// ----- Line height
+@include setup-line-height;
+
+// ----- List style
+@include setup-list-style;
+
+// ----- Text align
+@include setup-text-align;
+
+// ----- Text Display
+@include setup-text-displays;
+
+// ----- Text color
+@include setup-text-colors;
+
+@include setup-bg-colors;
+
+@include setup-text-gradients;
+
+@include setup-bg-gradients;
+
+@include setup-text-placeholder-colors;
+
+// ----- Text decoration
+@include setup-text-decoration;
+
+// ----- Text transform
+@include setup-text-transform;
+
+// ----- Vertical aligin
+@include setup-vertical-align;
+
+// ----- whitespace
+@include setup-whitespace;
+
+// ----- Wordbreak
+@include setup-word-break;
+
+@include setup-text-overflow;
+

@@ -1,0 +1,129 @@
+---
+title: Flex Wrap
+description: Used to set a flex item wrap in it flex container.
+---
+
+<DocsTable
+  name="flex-wrap"
+  description="set how flex items are wraps in its flex container."
+  head={[
+    'Name',
+    'Properties',
+    'Description',
+  ]}
+  content={{
+    wrap: "Used to enable the flex items to wrap to next line when there isn't enough space in the flex container.",
+    nowrap: "Used to disable the flex items from wrapping to next line even when there isn't enough space.",
+    'wrap-reverse': 'Used to enable the flex items to wrap reversely.',
+  }}
+/>
+
+## Usage
+
+```html rose
+<template preview>
+  <div class="ta-center fz-sm mb-4">
+    <p class="fw-600 op-70 c-pink-700">
+      .fxw-wrap
+    </p>
+    <p class="c-secondary-500 fw-500 px-5">
+      Used to enable the flex items to wrap to next line when there isn't enough space in the flex container.
+    </p>
+  </div>
+
+  <div class="d-flex fxw-wrap bd-brand bdw-3 p-2 c-secondary-700">
+    <div class="m-2 ta-center fw-600 w-20 h-12 fxw-center bg-purple-100 bd-purple-200" style="width: 40%">
+      1
+    </div>
+
+    <div class="m-2 ta-center fw-600 w-20 h-12 fxw-center bg-purple-100 bd-purple-200" style="width: 40%">
+      2
+    </div>
+
+    <div class="m-2 ta-center fw-600 w-20 h-12 fxw-center bg-purple-100 bd-purple-200" style="width: 40%">
+      3
+    </div>
+  </div>
+</template>
+
+<div class="d-flex fxw-wrap ...">
+  <div class="...">1</div>
+  <div class="...">2</div>
+  <div class="...">3</div>
+</div>
+```
+
+```html rose
+<template preview>
+  <div class="ta-center fz-sm mb-4">
+    <p class="fw-600 op-70 c-pink-700">
+      .fxw-nowrap
+    </p>
+    <p class="c-secondary-500 fw-500 px-5">
+      Used to disable the flex items from wrapping to next line even when there isn't enough space.
+    </p>
+  </div>
+
+  <div class="d-flex fxw-nowrap bd-brand bdw-3 p-2 c-secondary-700">
+    <div class="m-2 ta-center fw-600 w-20 h-12 fxw-center bg-purple-100 bd-purple-200" style="width: 40%">
+      1
+    </div>
+
+    <div class="m-2 ta-center fw-600 w-20 h-12 fxw-center bg-purple-100 bd-purple-200" style="width: 40%">
+      2
+    </div>
+
+    <div class="m-2 ta-center fw-600 w-20 h-12 fxw-center bg-purple-100 bd-purple-200" style="width: 40%">
+      3
+    </div>
+  </div>
+</template>
+
+<div class="d-flex fxw-nowrap ...">
+  <div class="...">1</div>
+  <div class="...">2</div>
+  <div class="...">3</div>
+</div>
+```
+
+```html rose
+<template preview>
+  <div class="ta-center fz-sm mb-4">
+    <p class="fw-600 op-70 c-pink-700">
+      .fxw-wrap-reverse
+    </p>
+    <p class="c-secondary-500 fw-500 px-5">
+      Used to enable the flex items to wrap reversely.
+    </p>
+  </div>
+
+  <div class="d-flex fxw-wrap-reverse bd-brand bdw-3 p-2 c-secondary-700">
+    <div class="m-2 ta-center fw-600 w-20 h-12 fxw-center bg-purple-100 bd-purple-200" style="width: 40%">
+      1
+    </div>
+
+    <div class="m-2 ta-center fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200" style="width: 40%">
+      2
+    </div>
+
+    <div class="m-2 ta-center fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200" style="width: 40%">
+      3
+    </div>
+  </div>
+</template>
+
+<div class="d-flex fx-wrap-reverse ...">
+  <div class="...">1</div>
+  <div class="...">2</div>
+  <div class="...">3</div>
+</div>
+```
+
+## Props
+
+<DocsTable
+  name="flex-wrap"
+  type="props"
+/>
+
+

@@ -1,0 +1,45 @@
+---
+title: Text Overflow
+description: Used to set how text overflow in a element is treated.
+---
+
+## Types
+
+<DocsTable
+  name="text-overflow"
+/>
+
+## Usage
+
+```html rose
+<template preview>
+  <div class="c-secondary-700">
+    <p class="mx-auto maw-56 bg-purple-100 whs-nowrap ov-hidden my-3 tov-ellipsis">
+      Micheal Dwight Jim Pam Stanley Erin Creed 
+    </p>
+
+    <p class="mx-auto maw-56 bg-purple-100 whs-nowrap ov-hidden my-3 tov-truncate">
+      Micheal Dwight Jim Pam Stanley Erin Creed 
+    </p>
+
+    <p class="mx-auto maw-56 bg-purple-100 whs-nowrap ov-hidden my-3 tov-clip">
+      Micheal Dwight Jim Pam Stanley Erin Creed 
+    </p>
+  </div>
+</template>
+
+<div>
+  <p class="tov-ellipsis">. . .</p>
+  <p class="tov-truncate">. . .</p>
+  <p class="tov-clip">. . .</p>
+</div>
+```
+
+## Props
+
+<DocsTable 
+  type="props"
+  name="text-overflow"
+/>
+
+

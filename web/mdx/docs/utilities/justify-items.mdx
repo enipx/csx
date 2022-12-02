@@ -1,0 +1,165 @@
+---
+title: Justify Items
+description: Used to set how flex or grid items are aligned on their axis.
+---
+
+<DocsTable
+  name="justify-items"
+  description="set how items are aligned on their axis. its like adding the <code>justify-self</code> property for all flex or grid items."
+  head={[
+    'Name',
+    'Properties',
+    'Description'
+  ]}
+  content={{
+    start: 'Used to pushed toward the beginning of their axis.',
+    center: 'Used to pushed toward the center of their axis.',
+    end: 'Used to pushed toward the end of their axis.',
+    stretch: 'Used to stretch flex or gird items along their axis.',
+  }}
+  hideDataClass
+/>
+
+## Usage
+
+```html rose
+<template preview>
+  <div class="ta-center fz-sm mb-4">
+    <p class="fw-600 op-70 c-pink-700">
+      .ji-start
+    </p>
+    <p class="c-secondary-500 fw-500 px-5">
+      Used to pushed toward the beginning of their axis.
+    </p>
+  </div>
+
+  <div class="d-grid ji-start gtc-3 bd-brand bdw-3 p-2 c-secondary-700">
+    <div class="m-2 fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200">
+      1
+    </div>
+
+    <div class="fxs-1 m-2 fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200">
+      2
+    </div>
+
+    <div class="m-2 fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200">
+      3
+    </div>
+  </div>
+</template>
+
+<div class="d-grid ji-start ...">
+  <div class="...">1</div>
+  <div class="...">2</div>
+  <div class="...">3</div>
+</div>
+```
+
+```html rose
+<template preview>
+  <div class="ta-center fz-sm mb-4">
+    <p class="fw-600 op-70 c-pink-700">
+      .ji-center
+    </p>
+    <p class="c-secondary-500 fw-500 px-5">
+      Used to pushed toward the center of their axis.
+    </p>
+  </div>
+
+  <div class="d-grid ji-center gtc-3 bd-brand bdw-3 p-2 c-secondary-700">
+    <div class="m-2 fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200">
+      1
+    </div>
+
+    <div class="fxs-1 m-2 fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200">
+      2
+    </div>
+
+    <div class="m-2 fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200">
+      3
+    </div>
+  </div>
+</template>
+
+<div class="d-grid ji-center ...">
+  <div class="...">1</div>
+  <div class="...">2</div>
+  <div class="...">3</div>
+</div>
+```
+
+```html rose
+<template preview>
+  <div class="ta-center fz-sm mb-4">
+    <p class="fw-600 op-70 c-pink-700">
+      .ji-end
+    </p>
+    <p class="c-secondary-500 fw-500 px-5">
+      Used to pushed toward the end of their axis.
+    </p>
+  </div>
+
+  <div class="d-grid ji-end gtc-3 bd-brand bdw-3 p-2 c-secondary-700">
+    <div class="m-2 fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200">
+      1
+    </div>
+
+    <div class="fxs-1 m-2 fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200">
+      2
+    </div>
+
+    <div class="m-2 fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200">
+      3
+    </div>
+  </div>
+</template>
+
+<div class="d-grid ji-end ...">
+  <div class="...">1</div>
+  <div class="...">2</div>
+  <div class="...">3</div>
+</div>
+```
+
+```html rose
+<template preview>
+  <div class="ta-center fz-sm mb-4">
+    <p class="fw-600 op-70 c-pink-700">
+      .jc-stretch
+    </p>
+    <p class="c-secondary-500 fw-500 px-5">
+      Used to stretch flex or gird items along their axis.
+    </p>
+  </div>
+
+  <div class="d-grid ji-stretch gtc-3 bd-brand bdw-3 p-2 c-secondary-700">
+    <div class="m-2 fw-600 w-auto h-12 fx-center bg-purple-100 bd-purple-200">
+      1
+    </div>
+
+    <div class="fxs-1 m-2 fw-600 w-auto h-12 fx-center bg-purple-100 bd-purple-200">
+      2
+    </div>
+
+    <div class="m-2 fw-600 w-auto h-12 fx-center bg-purple-100 bd-purple-200">
+      3
+    </div>
+  </div>
+</template>
+
+<div class="d-grid ji-stretch ...">
+  <div class="...">1</div>
+  <div class="...">2</div>
+  <div class="...">3</div>
+</div>
+```
+
+
+## Props
+
+<DocsTable
+  name="justify-items"
+  type="props"
+/>
+
+

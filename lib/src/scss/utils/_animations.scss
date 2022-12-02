@@ -1,0 +1,125 @@
+// Fade
+@include keyframes(fade) {
+  from { opacity: 0; }
+
+  to { opacity: 1; }
+}
+
+@include keyframes(fadeOut) {
+  from { opacity: 1; }
+
+  to { opacity: 0; }
+}
+
+// Fade Top
+@include keyframes(fadeTop) {
+  from {
+    opacity: 0;
+    transform: translateY(rem(-3));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@include keyframes(fadeTopOut) {
+  from {
+    opacity: 1;
+    transform: translateY(rem(0));
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(rem(-3));
+  }
+}
+
+// Fade left
+@include keyframes(fadeLeft) {
+  from {
+    opacity: 0;
+    transform: translateX(rem(-3));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@include keyframes(fadeLeftOut) {
+  from {
+    opacity: 1;
+    transform: translateX(rem(0));
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(rem(-3));
+  }
+}
+
+// Fade right
+@include keyframes(fadeRight) {
+  from {
+    opacity: 0;
+    transform: translateX(rem(3));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@include keyframes(fadeRightOut) {
+  from {
+    opacity: 1;
+    transform: translateX(rem(0));
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(rem(3));
+  }
+}
+
+// Fade bottom
+@include keyframes(fadeBottom) {
+  from {
+    opacity: 0;
+    transform: translateY(rem(3));
+  }
+  
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@include keyframes(fadeBottomOut) {
+  from {
+    opacity: 1;
+    transform: translateY(rem(0));
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(rem(3));
+  }
+};
+
+// Slide Out
+@include keyframes(slide) {
+  from { transform: translateX(100%); }
+
+  to { transform: translateX(0); }
+}
+
+@include keyframes(slideOut) {
+  from { transform: translateX(0); }
+
+  to { transform: translateX(-100%); }
+}

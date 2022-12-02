@@ -1,0 +1,69 @@
+/* ----- Access single nestd map value
+* $param {Key} $variant - variant to get value from
+* $param {Key} $opt - option to get from variant
+*/
+@function get-map($variant, $opt: base) {
+  @return map-get($variant, $opt);
+}; 
+
+/* ----- Access double nested map value
+* $param {Variable} $type - variable to get value from
+* $param {Key} $variant - variant to get value from
+* $param {Key} $opt - option to get from variant
+*/
+@function get-map-val($type, $variant, $opt: base) {
+  @return map-get(map-get($type, $variant), $opt);
+};
+
+/* ---- Split string
+* @param {String} $string - string to split
+* @param {String} $separator - where to seperate $string
+*/
+@function str-split ($string, $separator) {
+  // empty array/list
+  $split-arr: ();
+  // first index of separator in string
+  $index: str-index($string, $separator);
+  // loop through string
+  @while $index != null {
+    // get the substring from the first character to the separator
+    $item: str-slice($string, 1, $index - 1);
+    // push item to array
+    $split-arr: append($split-arr, $item);
+    // remove item and separator from string
+    $string: str-slice($string, $index + 1);
+    // find new index of separator
+    $index: str-index($string, $separator);
+  }
+  // add the remaining string to list (the last item)
+  $split-arr: append($split-arr, $string);
+
+  @return $split-arr;
+}
+
+/* ----- Access utility properties
+* $param {Variable} $type - utility property to get
+*/
+@function util-props($type, $value: null, $variant: null) {
+  @if ($value != null and $variant == null) {
+    @return get-map-val($util-properties, $type, $value);
+
+  } @else if ($value != null and $variant != null) {
+    @return get-map-val(
+      get-map($util-properties, $type),
+      $value,
+      $variant
+    );
+
+  } @else {
+    @return get-map($util-properties, $type);
+
+  }
+};
+
+/* ----- Access utility key
+* $param {Variable} $type - utility value to get
+*/
+@function util-keys($type) {
+  @return get-map($util-keys, $type);
+};

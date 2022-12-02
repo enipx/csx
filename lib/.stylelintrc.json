@@ -1,0 +1,33 @@
+{
+  "extends": "stylelint-config-sass-guidelines",
+  "rules": {
+    "declaration-property-value-disallowed-list": {
+      "border": "none",
+      "outline": "none"
+    },  
+    "function-disallowed-list": [
+      "lighten",
+      "darken"
+    ],
+    "scss/dollar-variable-default": [
+      true,
+      {
+        "ignore": "local"
+      }
+    ],
+    "color-named": [
+      "never", {
+        "ignore": ["inside-function"]
+      }
+    ],
+    "max-nesting-depth": 10,
+    "selector-no-qualifying-type": [
+      true, {
+        "ignore": ["attribute", "class", "id"]
+      }
+    ] ,
+    "selector-class-pattern": null,
+    "selector-max-compound-selectors": 10
+  }
+ }
+ 

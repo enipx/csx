@@ -1,0 +1,40 @@
+// ----- Font weight
+$fw-100: util-props(font-weight, 100) !default;
+$fw-200: util-props(font-weight, 200) !default;
+$fw-300: util-props(font-weight, 300) !default;
+$fw-400: util-props(font-weight, 400) !default;
+$fw-500: util-props(font-weight, 500) !default;
+$fw-600: util-props(font-weight, 600) !default;
+$fw-700: util-props(font-weight, 700) !default;
+$fw-800: util-props(font-weight, 800) !default;
+$fw-900: util-props(font-weight, 900) !default;
+
+// ------ Font size
+$fz-xxs: util-props(font-size, xxs, size) !default;
+$fz-xxs-lh: util-props(font-size, xxs, lh) !default;
+
+$fz-xs: util-props(font-size, xs, size) !default;
+$fz-xs-lh: util-props(font-size, xs, lh) !default;
+
+$fz-sm: util-props(font-size, sm, size) !default;
+$fz-sm-lh: util-props(font-size, sm, lh) !default;
+
+$fz-base: util-props(font-size, base, size) !default;
+$fz-base-lh: util-props(font-size, base, lh) !default;
+
+$fz-lg: util-props(font-size, lg, size) !default;
+$fz-lg-lh: util-props(font-size, lg, lh) !default;
+
+$fz-xl: util-props(font-size, xl, size) !default;
+$fz-xl-lh: util-props(font-size, xl, lh) !default;
+
+$fz-xxl: util-props(font-size, xxl, size) !default;
+$fz-xxl-lh: util-props(font-size, xxl, lh) !default;
+
+// ----- Font family
+$ff-sans: unquote(util-props(font-family, sans)) !default;
+$ff-serif: unquote(util-props(font-family, serif)) !default;
+$ff-mono: unquote(util-props(font-family, mono)) !default;
+$ff-brand: unquote(util-props(font-family, brand)) !default;
+
+

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible"__content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSX </title>
+  <link rel="stylesheet" href="../../dist/css/csx.css">
+</head>
+<body>
+  
+  <div class="fliud">
+    <!-- --------- Modal ----------- -->
+    <button class="btn btn-primary mb-4" data-toggle="modal" data-target="#modal">Launch modal</button>
+    <button class="btn btn-primary mb-4" data-toggle="modal" data-target="#modal1">Launch modal1</button>
+    <button class="btn btn-primary" data-toggle="modal" data-target="#drawer">Launch drawer</button>
+
+    <!-- --------- Modal  ----------- -->
+    <div class="modal" id="modal" role="dialog" data-esc-dismiss='' data-backdrop-dismiss=''>
+      <div class="modal_container" data-pos="" data-overflow="" data-animation="">
+        <div class="modal_content">
+          <div class="modal_header">
+            <p>Discard changes</p>
+            <button class="btn btn-ghost modal_close"  data-dismiss="#modal">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M.439,21.44a1.5,1.5,0,0,0,2.122,2.121L11.823,14.3a.25.25,0,0,1,.354,0l9.262,9.263a1.5,1.5,0,1,0,2.122-2.121L14.3,12.177a.25.25,0,0,1,0-.354l9.263-9.262A1.5,1.5,0,0,0,21.439.44L12.177,9.7a.25.25,0,0,1-.354,0L2.561.44A1.5,1.5,0,0,0,.439,2.561L9.7,11.823a.25.25,0,0,1,0,.354Z"></path></svg>
+            </button>
+          </div>
+  
+          <div class="modal_body">
+            <p>Are you sure you want to continue? You’ll lose all your saved items, we can’t recover once this changes is made.</p>
+          </div>
+  
+          <div class="modal_footer" data-alt="false">
+            <button class="btn btn-ghost" data-dismiss="#modal">Cancel</button>
+            <button class="btn btn-secondary">Yes, Discard it</button>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- --------- Modal 1 ----------- -->
+    <div class="modal" id="modal1" role="dialog" data-esc-dismiss='' data-backdrop-dismiss='false'>
+      <div class="modal_container" data-pos="" data-overflow="" data-animation="">
+        <div class="modal_content">
+          <div class="modal_header">
+            <p>Modal 1 changes</p>
+            <button class="btn btn-ghost modal_close"  data-dismiss="#modal1">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M.439,21.44a1.5,1.5,0,0,0,2.122,2.121L11.823,14.3a.25.25,0,0,1,.354,0l9.262,9.263a1.5,1.5,0,1,0,2.122-2.121L14.3,12.177a.25.25,0,0,1,0-.354l9.263-9.262A1.5,1.5,0,0,0,21.439.44L12.177,9.7a.25.25,0,0,1-.354,0L2.561.44A1.5,1.5,0,0,0,.439,2.561L9.7,11.823a.25.25,0,0,1,0,.354Z"></path></svg>
+            </button>
+          </div>
+  
+          <div class="modal_body">
+            <p>Are you sure you want to continue? You’ll lose all your saved items, we can’t recover once this changes is made.</p>
+          </div>
+  
+          <div class="modal_footer" data-alt="">
+            <button class="btn btn-ghost" data-dismiss="#modal1">Cancel</button>
+            <button class="btn btn-secondary">Yes, Discard it</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------- Drawer ----------- -->
+    <div class="modal transparent" id="drawer" role="dialog" data-type="drawer" data-esc-dismiss='' data-backdrop-dismiss='true'>
+      <div class="modal_container" data-pos="left" data-size="base">
+        <div class="modal_content">
+          <div class="modal_header">
+            <p>Modal 1 changes</p>
+            <button class="btn btn-ghost modal_close"  data-dismiss="#drawer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M.439,21.44a1.5,1.5,0,0,0,2.122,2.121L11.823,14.3a.25.25,0,0,1,.354,0l9.262,9.263a1.5,1.5,0,1,0,2.122-2.121L14.3,12.177a.25.25,0,0,1,0-.354l9.263-9.262A1.5,1.5,0,0,0,21.439.44L12.177,9.7a.25.25,0,0,1-.354,0L2.561.44A1.5,1.5,0,0,0,.439,2.561L9.7,11.823a.25.25,0,0,1,0,.354Z"></path></svg>
+            </button>
+          </div>
+  
+          <div class="modal_body">
+            <p>Are you sure you want to continue? You’ll lose all your saved items, we can’t recover once this changes is made.</p>
+          </div>
+  
+          <div class="modal_footer" data-alt="false">
+            <button class="btn btn-ghost" data-dismiss="#drawer">Cancel</button>
+            <button class="btn btn-secondary">Yes, Discard it</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------- Dropdown ----------- -->
+    <div class="dropdown mt-4">
+      <button class="btn" data-toggle="dropdown" id="dropdown-toggle-btn">
+        Dropdown left
+      </button>
+      <div class="dropdown_menu" data-arow data-align="left" data-hover-reveal>
+        <a class="dropdown_menu_header">Snacks</a>
+        <a class="dropdown_menu_item">Cheese</a>
+        <a class="dropdown_menu_item">Hamburger</a>
+        <a class="dropdown_menu_item">Pizza</a>
+        <div class="dropdown_divider"></div>
+        <div class="dropdown_menu_content">
+          <button class="btn btn-secondary w-full">See more..</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="dropdown mt-4">
+      <button class="btn" data-toggle="dropdown" id="dropdown-toggle-btn1">
+        Dropdown Center
+      </button>
+      <div class="dropdown_menu" data-arow data-align="center">
+        <a class="dropdown_menu_header">Snacks</a>
+        <a class="dropdown_menu_item">Sharwama</a>
+        <a class="dropdown_menu_item">Hamburger</a>
+        <a class="dropdown_menu_item">Pizza</a>
+        <div class="dropdown_divider"></div>
+        <div class="dropdown_menu_content">
+          <button class="btn btn-primary w-full">See more..</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="dropdown mt-4">
+      <button class="btn" data-toggle="dropdown" id="dropdown-toggle-btn2">
+        Dropdown Right
+      </button>
+      <div class="dropdown_menu" data-arow data-align="right">
+        <a class="dropdown_menu_header">Snacks</a>
+        <a class="dropdown_menu_item">Sharwama</a>
+        <a class="dropdown_menu_item">Hamburger</a>
+        <a class="dropdown_menu_item">Pizza</a>
+        <div class="dropdown_divider"></div>
+        <div class="dropdown_menu_content">
+          <button class="btn btn-danger w-full">See more..</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-block mb-6"></div>
+
+    <!-- --------- Popover ----------- -->
+    <div class="dropdown mt-4">
+      <button class="btn" data-toggle="dropdown" id="popover-toggle">
+        Popover
+      </button>
+      <div class="dropdown_menu" data-type="popover" data-arrow data-dir="">
+        <div class="dropdown_container">
+          <p class="dropdown_menu_header">Popover</p>
+          <div class="dropdown_menu_content">
+            <p class="fz-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque iure doloribus</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="dropdown mt-4">
+      <button class="btn" data-toggle="dropdown" id="popover-toggle1">
+        Popover left
+      </button>
+      <div class="dropdown_menu" data-type="popover" data-arrow data-dir="left">
+        <div class="dropdown_container">
+          <p class="dropdown_menu_header">Popover</p>
+          <div class="dropdown_menu_content">
+            <p class="fz-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque iure doloribus</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="dropdown mt-4">
+      <button class="btn" data-toggle="dropdown" id="popover-toggle2">
+        Popover right
+      </button>
+      <div class="dropdown_menu" data-type="popover" data-arrow data-dir="right">
+        <div class="dropdown_container">
+          <p class="dropdown_menu_header">Popover</p>
+          <div class="dropdown_menu_content">
+            <p class="fz-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque iure doloribus</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="dropdown mt-4">
+      <button class="btn" data-toggle="dropdown" id="popover-toggle3">
+        Popover top
+      </button>
+      <div class="dropdown_menu" data-type="popover" data-arrow data-dir="top">
+        <div class="dropdown_container">
+          <p class="dropdown_menu_header">Popover</p>
+          <div class="dropdown_menu_content">
+            <p class="fz-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque iure doloribus</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="d-block mb-6"></div>
+
+    <!-- --------- Tooltip ----------- -->
+    <div class="dropdown mt-4">
+      <button class="btn" data-toggle="dropdown" id="tooltip-toggle">
+        Tooltip
+      </button>
+      <div class="dropdown_menu" data-type="tooltip" data-dir="">
+        <p class="content">Lorem ipsum dolor sit</p>
+      </div>
+    </div>
+
+    <div class="dropdown mt-4">
+      <button class="btn" data-toggle="dropdown" id="tooltip-toggle1">
+        Tooltip Top
+      </button>
+      <div class="dropdown_menu" data-type="tooltip" data-arrow data-dir="top">
+        <p class="content">Lorem ipsum dolor sit</p>
+      </div>
+    </div>
+
+    <div class="dropdown mt-4">
+      <button class="btn" data-toggle="dropdown" id="tooltip-toggle2">
+        Tooltip Right
+      </button>
+      <div class="dropdown_menu" data-type="tooltip" data-arrow data-dir="right">
+        <p class="content">Lorem ipsum dolor sit</p>
+      </div>
+    </div>
+
+    <div class="dropdown mt-4">
+      <button class="btn" data-toggle="dropdown" id="tooltip-toggle3">
+        Tooltip Left
+      </button>
+      <div class="dropdown_menu" data-type="tooltip" data-arrow data-dir="left">
+        <p class="content">Lorem ipsum dolor sit</p>
+      </div>
+    </div>
+
+  </div>
+
+
+  <script src="../../dist/js/csx.min.js"></script>
+  <script>
+    csx.init();
+  </script>
+</body>
+</html>

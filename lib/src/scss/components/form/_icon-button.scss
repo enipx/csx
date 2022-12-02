@@ -1,0 +1,111 @@
+.icon-btn {
+  @include fx-align-content-center;
+  @include base-transition;
+  @include border-radius(md);
+  appearance: none;
+  background-color: var(#{$var-prefix}secondary-50);
+  border: 1px solid var(#{$var-prefix}secondary-50);
+  color: var(#{$var-prefix}base-color);
+  cursor: pointer;
+  font-size: $fz-sm;
+  height: rem(2.5);
+  outline: 0;
+  white-space: nowrap;
+  width: rem(2.5);
+
+  &_icon {
+    @include fx-align-content-center;
+    height: 100%;
+    line-height: 0;
+    margin-right: rem(0);
+    width: rem(1);
+  }
+
+  &:focus {
+    background-color: var(#{$var-prefix}secondary-50);
+    box-shadow: 0 0 0 rem(0.125) var(#{$var-prefix}secondary-100);
+  }
+
+  &:hover {
+    background-color: var(#{$var-prefix}secondary-100);
+    border-color: var(#{$var-prefix}secondary-100);
+  }
+
+  &:active {
+    background-color: var(#{$var-prefix}secondary-50);
+    border-color: var(#{$var-prefix}secondary-100);
+  }
+  
+  &[data-size='xs'],
+  .icon-btn-xs {
+    border-radius: get-map-val($util-properties, border-radius, sm);
+    font-size: $fz-xs;
+    height: rem(1.5);
+    width: rem(1.5);
+
+    .icon-btn_icon {
+      width: rem(0.875);
+    }
+  }
+
+  &[data-size='sm'],
+  .icon-btn-sm {
+    border-radius: get-map-val($util-properties, border-radius, sm);
+    font-size: $fz-xs;
+    height: rem(2);
+    width: rem(2);
+
+    .icon-btn_icon {
+      width: rem(0.875);
+    }
+  }
+
+  &[data-size='md'],
+  .icon-btn-md {
+    height: rem(2.5);
+    width: rem(2.5);
+  }
+
+  &[data-size='lg'],
+  .icon-btn-lg {
+    font-size: $fz-base;
+    height: rem(3);
+    width: rem(3);
+
+    .icon-btn_icon {
+      width: rem(1.125);
+    }
+  }
+
+  &[data-size='xl'],
+  .icon-btn-xl {
+    font-size: $fz-base;
+    height: rem(3.5);
+    width: rem(3.5);
+
+    .icon-btn_icon {
+      width: rem(1.25);
+    }
+  }
+  
+}
+
+// Dark mode
+@include mode('.icon-btn') {
+  #{$var-prefix}secondary-50: var(#{$var-prefix}light);
+
+  &:focus {
+    #{$var-prefix}secondary-50: var(#{$var-prefix}light);
+    #{$var-prefix}secondary-100: var(#{$var-prefix}secondary-800);
+  }
+
+  &:hover {
+    #{$var-prefix}secondary-100: var(#{$var-prefix}secondary-800);
+  }
+
+  &:active {
+    #{$var-prefix}secondary-50: var(#{$var-prefix}light);
+    #{$var-prefix}secondary-100: var(#{$var-prefix}secondary-800);
+  }
+}
+

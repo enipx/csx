@@ -1,0 +1,1456 @@
+$var-prefix: --csx- !default;
+
+$gradients-def-deg: 270deg !default;
+$gradients-color-stop-1: 7.5% !default;
+$gradients-color-stop-2: 88% !default;
+
+/**
+ * @sass-export-section="breakpoints"
+*/
+$breakpoints: (
+  xs: rem(23.5),
+  sm: rem(36),
+  md: rem(48),
+  lg: rem(62),
+  xl: rem(80),
+  xxl: rem(90),
+) !default;
+
+/**
+ * @sass-export-section="sizings"
+*/
+$sizings: (
+  0: 0,
+  px: 1px,
+  1: rem(0.25),
+  2: rem(0.5),
+  3: rem(0.75),
+  4: rem(1),
+  5: rem(1.25),
+  6: rem(1.5),
+  7: rem(1.75),
+  8: rem(2),
+  9: rem(2.25),
+  10: rem(2.5),
+  12: rem(3),
+  14: rem(3.5),
+  16: rem(4),
+  18: rem(4.5),
+  20: rem(5),
+  24: rem(6),
+  28: rem(7),
+  32: rem(8),
+  36: rem(9),
+  40: rem(10),
+  44: rem(11),
+  48: rem(12),
+  52: rem(13),
+  56: rem(14),
+  60: rem(15),
+  64: rem(16),
+  72: rem(18),
+  80: rem(20),
+  96: rem(24),
+) !default;
+
+/**
+ * @sass-export-section="box-sizing"
+*/
+$box-sizing: (
+  border: border-box,
+  content: content-box,
+) !default;
+
+/**
+ * @sass-export-section="color"
+*/
+$colors: (
+  black: (
+    black-50: hsl(0deg, 0%, 95%),
+    black-100: hsl(0deg, 0%, 90%),
+    black-200: hsl(0deg, 0%, 80%),
+    black-300: hsl(0deg, 0%, 70%),
+    black-400: hsl(0deg, 0%, 60%),
+    black-500: hsl(0deg, 0%, 50%),
+    black-600: hsl(0deg, 0%, 40%),
+    black-700: hsl(0deg, 0%, 30%),
+    black-800: hsl(0deg, 0%, 20%),
+    black-900: hsl(0deg, 0%, 10%),
+  ),
+  white: (
+    white-50: hsl(0deg, 0%, 5%),
+    white-100: hsl(0deg, 0%, 10%),
+    white-200: hsl(0deg, 0%, 20%),
+    white-300: hsl(0deg, 0%, 30%),
+    white-400: hsl(0deg, 0%, 40%),
+    white-500: hsl(0deg, 0%, 50%),
+    white-600: hsl(0deg, 0%, 60%),
+    white-700: hsl(0deg, 0%, 70%),
+    white-800: hsl(0deg, 0%, 80%),
+    white-900: hsl(0deg, 0%, 90%),
+  ),
+  primary: (
+    primary-50: hsl(216deg, 100%, 95%),
+    primary-100: hsl(216deg, 100%, 90%),
+    primary-200: hsl(216deg, 100%, 80%),
+    primary-300: hsl(216deg, 100%, 70%),
+    primary-400: hsl(216deg, 100%, 60%),
+    primary-500: hsl(216deg, 100%, 50%),
+    primary-600: hsl(216deg, 100%, 40%),
+    primary-700: hsl(216deg, 100%, 30%),
+    primary-800: hsl(216deg, 100%, 20%),
+    primary-900: hsl(216deg, 100%, 10%),
+  ),
+  secondary: (
+    secondary-50: hsl(207deg, 14%, 95%),
+    secondary-100: hsl(207deg, 14%, 90%),
+    secondary-200: hsl(207deg, 14%, 80%),
+    secondary-300: hsl(207deg, 14%, 70%),
+    secondary-400: hsl(207deg, 14%, 60%),
+    secondary-500: hsl(207deg, 14%, 50%),
+    secondary-600: hsl(207deg, 14%, 40%),
+    secondary-700: hsl(207deg, 14%, 30%),
+    secondary-800: hsl(207deg, 14%, 20%),
+    secondary-900: hsl(207deg, 14%, 10%),
+  ),
+  success: (
+    success-50: hsl(155deg, 80%, 95%),
+    success-100: hsl(155deg, 80%, 90%),
+    success-200: hsl(155deg, 80%, 80%),
+    success-300: hsl(155deg, 80%, 70%),
+    success-400: hsl(155deg, 80%, 60%),
+    success-500: hsl(155deg, 80%, 50%),
+    success-600: hsl(155deg, 80%, 40%),
+    success-700: hsl(155deg, 80%, 30%),
+    success-800: hsl(155deg, 80%, 20%),
+    success-900: hsl(155deg, 80%, 10%),
+  ),
+  danger: (
+    danger-50: hsl(350deg, 80%, 95%),
+    danger-100: hsl(350deg, 80%, 90%),
+    danger-200: hsl(350deg, 80%, 80%),
+    danger-300: hsl(350deg, 80%, 70%),
+    danger-400: hsl(350deg, 80%, 60%),
+    danger-500: hsl(350deg, 80%, 50%),
+    danger-600: hsl(350deg, 80%, 40%),
+    danger-700: hsl(350deg, 80%, 30%),
+    danger-800: hsl(350deg, 80%, 20%),
+    danger-900: hsl(350deg, 80%, 10%),
+  ),
+  warning: (
+    warning-50: hsl(45deg, 100%, 95%),
+    warning-100: hsl(45deg, 100%, 90%),
+    warning-200: hsl(45deg, 100%, 80%),
+    warning-300: hsl(45deg, 100%, 70%),
+    warning-400: hsl(45deg, 100%, 60%),
+    warning-500: hsl(45deg, 100%, 50%),
+    warning-600: hsl(45deg, 100%, 40%),
+    warning-700: hsl(45deg, 100%, 30%),
+    warning-800: hsl(45deg, 100%, 20%),
+    warning-900: hsl(45deg, 100%, 10%),
+  ),
+  info: (
+    info-50: hsl(200deg, 100%, 95%),
+    info-100: hsl(200deg, 100%, 90%),
+    info-200: hsl(200deg, 100%, 80%),
+    info-300: hsl(200deg, 100%, 70%),
+    info-400: hsl(200deg, 100%, 60%),
+    info-500: hsl(200deg, 100%, 50%),
+    info-600: hsl(200deg, 100%, 40%),
+    info-700: hsl(200deg, 100%, 30%),
+    info-800: hsl(200deg, 100%, 20%),
+    info-900: hsl(200deg, 100%, 10%),
+  ),
+  cyan: (
+    cyan-50: hsl(180deg, 80%, 95%),
+    cyan-100: hsl(180deg, 80%, 90%),
+    cyan-200: hsl(180deg, 80%, 80%),
+    cyan-300: hsl(180deg, 80%, 70%),
+    cyan-400: hsl(180deg, 80%, 60%),
+    cyan-500: hsl(180deg, 80%, 50%),
+    cyan-600: hsl(180deg, 80%, 40%),
+    cyan-700: hsl(180deg, 80%, 30%),
+    cyan-800: hsl(180deg, 80%, 20%),
+    cyan-900: hsl(180deg, 80%, 10%),
+  ),
+  magenta: (
+    magenta-50: hsl(290deg, 100%, 95%),
+    magenta-100: hsl(290deg, 100%, 90%),
+    magenta-200: hsl(290deg, 100%, 80%),
+    magenta-300: hsl(290deg, 100%, 70%),
+    magenta-400: hsl(290deg, 100%, 60%),
+    magenta-500: hsl(290deg, 100%, 50%),
+    magenta-600: hsl(290deg, 100%, 40%),
+    magenta-700: hsl(290deg, 100%, 30%),
+    magenta-800: hsl(290deg, 100%, 20%),
+    magenta-900: hsl(290deg, 100%, 10%),
+  ),
+  orange: (
+    orange-50: hsl(28deg, 98%, 95%),
+    orange-100: hsl(28deg, 98%, 90%),
+    orange-200: hsl(28deg, 98%, 80%),
+    orange-300: hsl(28deg, 98%, 70%),
+    orange-400: hsl(28deg, 98%, 60%),
+    orange-500: hsl(28deg, 98%, 50%),
+    orange-600: hsl(28deg, 98%, 40%),
+    orange-700: hsl(28deg, 98%, 30%),
+    orange-800: hsl(28deg, 98%, 20%),
+    orange-900: hsl(28deg, 98%, 10%),
+  ),
+  purple: (
+    purple-50: hsl(275deg, 86%, 95%),
+    purple-100: hsl(275deg, 86%, 90%),
+    purple-200: hsl(275deg, 86%, 80%),
+    purple-300: hsl(275deg, 86%, 70%),
+    purple-400: hsl(275deg, 86%, 60%),
+    purple-500: hsl(275deg, 86%, 50%),
+    purple-600: hsl(275deg, 86%, 40%),
+    purple-700: hsl(275deg, 86%, 30%),
+    purple-800: hsl(275deg, 86%, 20%),
+    purple-900: hsl(275deg, 86%, 10%),
+  ),
+  pink: (
+    pink-50: hsl(330deg, 100%, 95%),
+    pink-100: hsl(330deg, 100%, 90%),
+    pink-200: hsl(330deg, 100%, 80%),
+    pink-300: hsl(330deg, 100%, 70%),
+    pink-400: hsl(330deg, 100%, 60%),
+    pink-500: hsl(330deg, 100%, 50%),
+    pink-600: hsl(330deg, 100%, 40%),
+    pink-700: hsl(330deg, 100%, 30%),
+    pink-800: hsl(330deg, 100%, 20%),
+    pink-900: hsl(330deg, 100%, 10%),
+  ),
+  brands: (
+    facebook: #3c5a96,
+    twitter: #2aa3ef,
+    instagram: #e1306c,
+    linkedin: #1178b3,
+    pinterest: #bb0f23,
+    youtube: #fc0d1b,
+    dribbble: #e84f89,
+    behance: #1769ff,
+    github: #24292e,
+    reddit: #fc471e,
+    paypal: #053385,
+    dropbox: #1581e2,
+    slack: #de1d64,
+    mailchimp: #2c9ab7,
+    saleforce: #2399bf,
+  ),
+  system: (
+    brand: #ff706b,
+    black: hsl(0deg, 0%, 0%),
+    white: hsl(0deg, 0%, 100%),
+    light: #f9fafa,
+    dark: #1a1f23,
+    primary: hsl(216deg, 100%, 50%),
+    secondary: hsl(207deg, 14%, 50%),
+    success: hsl(155deg, 80%, 40%),
+    danger: hsl(350deg, 80%, 50%),
+    warning: hsl(45deg, 100%, 50%),
+    info: hsl(200deg, 100%, 50%),
+    cyan: hsl(180deg, 80%, 50%),
+    magenta: hsl(290deg, 100%, 50%),
+    orange: hsl(28deg, 98%, 50%),
+    purple: hsl(275deg, 86%, 50%),
+    pink: hsl(330deg, 100%, 50%),
+    transparent: transparent,
+    current: currentColor,
+    inherit: inherit,
+  )
+) !default;
+
+
+/**
+ * @sass-export-section="gradients"
+*/
+// Gradients
+$gradients: (
+  sky: (
+    start: #7ed8ff,
+    stop: #805ff3,
+    fallback: #805ff3,
+    linear: linear-gradient($gradients-def-deg, #7ed8ff $gradients-color-stop-1, #805ff3 $gradients-color-stop-2)
+  ),
+  
+  orange: (
+    start: #ffae45,
+    stop: #ff706b,
+    fallback: #ff706b,
+    linear: linear-gradient($gradients-def-deg, #ffae45 $gradients-color-stop-1, #ff706b $gradients-color-stop-2)
+  ),
+  
+  pal: (
+    start: #c5ea77,
+    stop: #16adc2,
+    fallback: #16adc2,
+    linear: linear-gradient($gradients-def-deg, #c5ea77 $gradients-color-stop-1, #16adc2 $gradients-color-stop-2)
+  ),
+  
+  vivid: (
+    start: #ff0076,
+    stop: #590fb7,
+    fallback: #590fb7,
+    linear: linear-gradient($gradients-def-deg, #ff0076 $gradients-color-stop-1, #590fb7 $gradients-color-stop-2)
+  ),
+  
+  flare: (
+    start: #f90,
+    stop: #fa0026,
+    fallback: #fa0026,
+    linear: linear-gradient($gradients-def-deg, #f90 $gradients-color-stop-1, #fa0026 $gradients-color-stop-2)
+  ),
+  
+  witchcraft: (
+    start: #475569,
+    stop: #0f172a,
+    fallback: #0f172a,
+    linear: linear-gradient($gradients-def-deg, #475569 $gradients-color-stop-1, #0f172a $gradients-color-stop-2)
+  ),
+  
+  cool: (
+    start: #fac5c5,
+    stop: #df98fa,
+    fallback: #df98fa,
+    linear: linear-gradient($gradients-def-deg, #fac5c5 $gradients-color-stop-1, #df98fa $gradients-color-stop-2)
+  ),
+  
+  sublime: (
+    start: #ffcac9,
+    stop: #737dfe,
+    fallback: #737dfe,
+    linear: linear-gradient($gradients-def-deg, #ffcac9 $gradients-color-stop-1, #737dfe $gradients-color-stop-2)
+  ),
+  
+  summer: (
+    start: #66ffb5,
+    stop: #2f80ed,
+    fallback: #2f80ed,
+    linear: linear-gradient($gradients-def-deg, #66ffb5 $gradients-color-stop-1, #2f80ed $gradients-color-stop-2)
+  ),
+  
+  lady: (
+    start: #ff3398,
+    stop: #f14658,
+    fallback: #f14658,
+    linear: linear-gradient($gradients-def-deg, #ff3398 $gradients-color-stop-1, #f14658 $gradients-color-stop-2)
+  ),
+  
+  teal: (
+    start: #4fd1c5,
+    stop: #40a1a5,
+    fallback: #4fd1c5,
+    linear: linear-gradient($gradients-def-deg, #4fd1c5 $gradients-color-stop-1, #40a1a5 $gradients-color-stop-2)
+  ),
+  
+  forenoon: (
+    start: #fafafa,
+    stop: #e6e6e6,
+    fallback: #e6e6e6,
+    linear: linear-gradient($gradients-def-deg, #fafafa $gradients-color-stop-1, #e6e6e6 $gradients-color-stop-2)
+  ),
+  
+  sun: (
+    start: #f99d1f,
+    stop: #ef592f,
+    fallback: #f99d1f,
+    linear: linear-gradient($gradients-def-deg, #f99d1f $gradients-color-stop-1, #ef592f $gradients-color-stop-2)
+  ),
+  
+  grin: (
+    start: #0ef789,
+    stop: #41ac92,
+    fallback: #41ac92,
+    linear: linear-gradient($gradients-def-deg, #0ef789 $gradients-color-stop-1, #41ac92 $gradients-color-stop-2)
+  ),
+  
+  fun: (
+    start: #23d5e0,
+    stop: #d437f3,
+    fallback: #d437f3,
+    linear: linear-gradient($gradients-def-deg, #23d5e0 $gradients-color-stop-1, #d437f3 $gradients-color-stop-2)
+  ),
+) !default;
+
+/**
+ * @sass-export-section="heading"
+*/
+$heading: (
+  1: (
+    size: rem(2.5),
+    lh: 1.3
+  ),
+  2: (
+    size: rem(2),
+    lh: 1.3 
+  ),
+  3: (
+    size: rem(1.75),
+    lh: 1.3
+  ),
+  4: (
+    size: rem(1.5),
+    lh: 1.3
+  ),
+  5: (
+    size: rem(1.25),
+    lh: 1.3
+  ),
+  6: (
+    size: rem(1),
+    lh: 1.3
+  ),
+) !default;
+
+/**
+ * @sass-export-section="text-display"
+ */
+$text-display: (
+  1: (
+    size: rem(4.5),
+    lh: 1.2
+  ),
+  2: (
+    size: rem(4),
+    lh: 1.2 
+  ),
+  3: (
+    size: rem(3.5),
+    lh: 1.2
+  ),
+  4: (
+    size: rem(3),
+    lh: 1.2
+  ),
+  5: (
+    size: rem(2.5),
+    lh: 1.2
+  ),
+  6: (
+    size: rem(2),
+    lh: 1.2
+  ),
+) !default;
+
+/**
+ * @sass-export-section="font-size"
+ */
+$font-size: (
+  xxs: (
+    size: rem(0.675),
+    lh: 1.5
+  ),
+  xs: (
+    size: rem(0.75),
+    lh: 1.5
+  ),
+  sm: (
+    size: rem(0.875),
+    lh: 1.5
+  ),
+  base: (
+    size: rem(1),
+    lh: 1.5
+  ),
+  lg: (
+    size: rem(1.125),
+    lh: 1.5
+  ),
+  xl: (
+    size: rem(1.25),
+    lh: 1.5
+  ),
+  xxl: (
+    size: rem(1.5),
+    lh: 1.5
+  ),
+) !default;
+
+/**
+ * @sass-export-section="font-weight"
+*/
+$font-weight: (
+  100: 100,
+  200: 200,
+  300: 300,
+  400: 400,
+  500: 500,
+  600: 600,
+  700: 700,
+  800: 800,
+  900: 900
+) !default;
+
+/**
+ * @sass-export-section="font-family"
+*/
+$font-family: (
+  sans: 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemff, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji',
+  serif: 'ui-serif, Georgia, Cambria, Times New Roman, Times, serif',
+  mono: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace',
+  brand: 'Inter, sans-serif',
+) !default;
+
+/**
+ * @sass-export-section="font-style"
+*/
+$font-style: (
+  italic: italic,
+  oblique: oblique,
+  normal: normal,
+) !default;
+
+/**
+ * @sass-export-section="letter-spacing"
+*/
+$letter-spacing: (
+  normal: em(0),
+  0: em(0),
+  sm: em(0.025),
+  md: em(0.05),
+  lg: em(0.075),
+  xl: em(0.1),
+  stiff: em(-0.025),
+  stiffer: em(-0.05),
+) !default;
+
+/**
+ * @sass-export-section="line-height"
+*/
+$line-height: (
+  0: 0,
+  xs: 0.75,
+  none: 1,
+  sm: 1.25,
+  md: 1.5,
+  lg: 1.75,
+  xl: 2
+) !default;
+
+/**
+ * @sass-export-section="text-decoration"
+*/
+$text-decoration: (
+  none: none,
+  underline: underline,
+  line-through: line-through,
+) !default;
+
+/**
+ * @sass-export-section="text-transform"
+*/
+$text-transform: (
+  none: none,
+  uppercase: uppercase,
+  lowercase: lowercase,
+  capitalize: capitalize,
+) !default;
+
+/**
+ * @sass-export-section="text-overflow"
+*/
+$text-overflow: (
+  ellipsis: ellipsis,
+  clip: clip,
+  truncate: '', 
+) !default;
+
+
+/**
+ * @sass-export-section="text-align"
+*/
+$text-align: (
+  left: left,
+  right: right,
+  center: center,
+) !default;
+
+/**
+ * @sass-export-section="vertical-align"
+*/
+$vertical-align: (
+  baseline: baseline,
+  sub: sub,
+  sup: super,
+  top: top,
+  bottom: bottom,
+  middle: middle,
+  text-top: text-top,
+  text-bottom: text-bottom,
+) !default;
+
+/**
+ * @sass-export-section="display"
+*/
+$display: (
+  none: none,
+  block: block,
+  inline-block: inline-block,
+  inline: inline,
+  flex: flex,
+  grid: grid,
+  inline-flex: inline-flex,
+  inline-grid: inline-grid,
+  table: table,
+  table-row: table-row,
+  table-column: table-column,
+  table-cell: table-cell,
+) !default;
+
+/**
+ * @sass-export-section="float"
+*/
+$float: (
+  left: left,
+  right: right,
+  none: none,
+) !default;
+
+/**
+ * @sass-export-section="clear"
+*/
+$clear: (
+  left: left,
+  right: right,
+  both: both,
+  none: none,
+  fix: custom,
+) !default;
+
+/**
+ * @sass-export-section="flex"
+*/
+$flex: (
+  1: 1 1 0%,
+  auto: auto,
+  initial: initial,
+  none: none,
+) !default;
+
+/**
+ * @sass-export-section="flex-direction"
+*/
+$flex-direction: (
+  row: row,
+  row-reverse: row-reverse,
+  col: column,
+  col-reverse: column-reverse,
+) !default;
+
+/**
+ * @sass-export-section="flex-wrap"
+*/
+$flex-wrap: (
+  wrap: wrap,
+  nowrap: nowrap,
+  wrap-reverse: wrap-reverse,
+) !default;
+
+/**
+ * @sass-export-section="flex-grow"
+*/
+$flex-grow: (
+  0: 0,
+  1: 1,
+) !default;
+
+/**
+ * @sass-export-section="flex-shrink"
+*/
+$flex-shrink: (
+  0: 0,
+  1: 1,
+) !default;
+
+/**
+ * @sass-export-section="order"
+*/
+$order: (
+  initial: 0,
+  first: -1,
+  last: 13,
+  1: 1,
+  2: 2,
+  3: 3,
+  4: 4,
+  5: 5,
+  6: 6,
+  7: 7,
+  8: 8,
+  9: 9,
+  10: 10,
+  11: 11,
+  12: 12,
+) !default;
+
+/**
+ * @sass-export-section="align-items"
+*/
+$align-items: (
+  center: center,
+  start: start,
+  end: end,
+  stretch: stretch,
+  baseline: baseline,
+) !default;
+
+/**
+ * @sass-export-section="align-content"
+*/
+$align-content: (
+  center: center,
+  start: start,
+  end: end,
+  space-between: space-between,
+  space-around: space-around,
+) !default;
+
+/**
+ * @sass-export-section="align-self"
+*/
+$align-self: (
+  auto: auto,
+  start: start,
+  center: center,
+  end: end,
+  stretch: stretch,
+) !default;
+
+/**
+ * @sass-export-section="justify-items"
+*/
+$justify-items: (
+  start: start,
+  center: center,
+  end: end,
+  stretch: stretch,
+) !default;
+
+/**
+ * @sass-export-section="justify-content"
+*/
+$justify-content: (
+  start: start,
+  center: center,
+  end: end,
+  space-between: space-between,
+  space-around: space-around,
+) !default;
+
+/**
+ * @sass-export-section="justify-self"
+*/
+$justify-self: (
+  auto: auto,
+  start: start,
+  end: end,
+  center: center,
+  stretch: stretch,
+) !default;
+
+/**
+ * @sass-export-section="position"
+*/
+$position: (
+  relative: relative,
+  absolute: absolute,
+  fixed: fixed,
+  sticky: sticky,
+  static: static,
+  skip: (
+    'top-left': 'custom',
+    top: 'custom',
+    'top-right': 'custom',
+    'bottom-left': 'custom',
+    bottom: 'custom',
+    'bottom-right': 'custom',
+    'middle-left': 'custom',
+    middle: 'custom',
+    'middle-right': 'custom',
+  ),
+) !default;
+
+/**
+ * @sass-export-section="opacity"
+*/
+$opacity: (
+  0: 0,
+  5: 0.05,
+  10: 0.1,
+  20: 0.2,
+  30: 0.3,
+  40: 0.4,
+  50: 0.5,
+  60: 0.6,
+  70: 0.7,
+  80: 0.8,
+  90: 0.9,
+  95: 0.95,
+  100: 1,
+) !default;
+
+/**
+ * @sass-export-section="list-style"
+*/
+$list-style: (
+  none: none,
+  decimal: decimal,
+  disc: disc,
+) !default;
+
+/**
+ * @sass-export-section="white-space"
+*/
+$white-space: (
+  normal: normal,
+  nowrap: nowrap
+) !default;
+
+/**
+ * @sass-export-section="word-break"
+*/
+$word-break: (
+  normal: normal,
+  break-word: break-word,
+  break-all: break-all
+) !default;
+
+/**
+ * @sass-export-section="object-fit"
+*/
+$object-fit: (
+  contain: contain,
+  cover: cover,
+  fill: fill,
+  none: none,
+  scale-down: scale down,
+) !default;
+
+/**
+ * @sass-export-section="object-position"
+*/
+$object-position: (
+  top: top,
+  right: right,
+  bottom: bottom,
+  left: left,
+  center: center,
+  right-bottom: right bottom,
+  right-top: right top,
+  left-bottom: left bottom,
+  left-top: left top,
+) !default;
+
+/**
+ * @sass-export-section="overflow"
+*/
+$overflow: (
+  auto: auto,
+  hidden: hidden,
+  visible: visible,
+  scroll: scroll,
+  clip: clip,
+) !default;
+
+/**
+ * @sass-export-section="aspect-ratios"
+*/
+$aspect-ratios: (
+  '1x1': 100%,
+  '4x3': calc(3 / 4 * 100%),
+  '16x9': calc(9 / 16 * 100%),
+  '21x9': calc(9 / 21 * 100%),
+) !default;
+
+/**
+ * @sass-export-section="z-index"
+*/
+$z-index: (
+  0: 0,
+  10: 10,
+  20: 20,
+  30: 30,
+  40: 40,
+  50: 50,
+  auto: auto,
+) !default;
+
+/**
+ * @sass-export-section="width"
+*/
+$width: (
+  auto: auto,
+  full: 100%,
+  100vw: 100vw,
+  75vw: 75vw,
+  50vw: 50vw,
+  25vw: 25vw,
+) !default;
+
+/**
+ * @sass-export-section="height"
+*/
+$height: (
+  auto: auto,
+  full: 100%,
+  100vh: 100vh,
+  75vh: 75vh,
+  50vh: 50vh,
+  25vh: 25vh,
+) !default;
+
+/**
+ * @sass-export-section="border-radius"
+*/
+$border-radius: (
+  none: rem(0),
+  sm: rem(0.125),
+  base: rem(0.25),
+  md: rem(0.375),
+  lg: rem(0.5),
+  xl: rem(0.75),
+  xxl: rem(1),
+  full: 50%,
+) !default;
+
+/**
+ * @sass-export-section="border-style"
+*/
+$border-style: (
+  none: none,
+  solid: solid,
+  dashed: dashed,
+  dotted: dotted,
+  double: double,
+) !default;
+
+/**
+ * @sass-export-section="border-width"
+*/
+$border-width: (
+  0: 0,
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px,
+  6: 6px,
+  7: 7px,
+  8: 8px,
+) !default;
+
+/**
+ * @sass-export-section="visibility"
+*/
+$visibility: (
+  visible: visible,
+  hidden: hidden,
+) !default;
+
+/**
+ * @sass-export-section="pointer-events"
+*/
+$pointer-events: (
+  auto: auto,
+  none: none,
+) !default;
+
+/**
+ * @sass-export-section="cursor"
+*/
+$cursor: (
+  auto: auto,
+  pointer: pointer,
+  wait: wait,
+  text: text,
+  move: move,
+  grap: grap,
+  not-allowed: not-allowed,
+  zoom-in: zoom-in,
+  zoom-out: zoom-out,
+  row-resize: row-resize,
+) !default;
+
+/**
+ * @sass-export-section="user-select"
+*/
+$user-select: (
+  none: none,
+  text: text,
+  all: all,
+) !default;
+
+/**
+ * @sass-export-section="appearance"
+*/
+$appearance: (
+  none: none,
+) !default;
+
+/**
+ * @sass-export-section="outline"
+*/
+$outline: (
+  0: 0,
+) !default;
+
+/**
+ * @sass-export-section="background-attachment"
+*/
+$background-attachment: (
+  fixed: fixed,
+  local: local,
+  scroll: scroll,
+) !default;
+
+/**
+ * @sass-export-section="background-position"
+*/
+$background-position: (
+  top: top,
+  right: right,
+  bottom: bottom,
+  left: left,
+  center: center,
+  top-right: top right,
+  top-left: top left,
+  bottom-right: bottom right,
+  bottom-left: bottom left,
+) !default;
+
+/**
+ * @sass-export-section="background-repeat"
+*/
+$background-repeat: (
+  repeat: repeat,
+  repeat-x: repeat-x,
+  repeat-y: repeat-y,
+  no-repeat: no-repeat,
+) !default;
+
+/**
+ * @sass-export-section="background-size"
+*/
+$background-size: (
+  auto: auto,
+  cover: cover,
+  contain: contain,
+) !default;
+
+/**
+ * @sass-export-section="scale"
+*/
+$scale: (
+  zoom-in: scale(1.1),
+  zoom-in-md: scale(1.25),
+  zoom-in-lg: scale(1.5),
+  zoom-out: scale(0.9),
+  zoom-out-md: scale(0.75),
+  zoom-out-lg: scale(0.5),
+) !default;
+
+/**
+ * @sass-export-section="rotate"
+*/
+$rotate: (
+  rotate-0: rotate(0deg),
+  rotate-45: rotate(45deg),
+  rotate-90: rotate(90deg),
+  rotate-180: rotate(180deg),
+  rotate-270: rotate(270deg),
+
+  rotate-45-inv: rotate(-45deg),
+  rotate-90-inv: rotate(-90deg),
+  rotate-180-inv: rotate(-180deg),
+  rotate-270-inv: rotate(-270deg),
+) !default;
+
+/**
+ * @sass-export-section="skew"
+*/
+$skew: (
+  skewX-0: skewX(0),
+  skewX-3: skewX(3deg),
+  skewX-6: skewX(6deg),
+  skewX-9: skewX(9deg),
+  skewX-12: skewX(12deg),
+
+  skewX-3-inv: skewX(-3deg),
+  skewX-6-inv: skewX(-6deg),
+  skewX-9-inv: skewX(-9deg),
+  skewX-12-inv: skewX(-12deg),
+
+  skewY-0: skewY(0),
+  skewY-3: skewY(3deg),
+  skewY-6: skewY(6deg),
+  skewY-9: skewY(9deg),
+  skewY-12: skewY(12deg),
+  
+  skewY-3-inv: skewY(-3deg),
+  skewY-6-inv: skewY(-6deg),
+  skewY-9-inv: skewY(-9deg),
+  skewY-12-inv: skewY(-12deg),
+) !default;
+
+/**
+ * @sass-export-section="transform-origin"
+*/
+$transform-origin: (
+  top: top,
+  right: right,
+  bottom: bottom,
+  left: left,
+  center: center,
+  top-right: top right,
+  top-left: top left,
+  bottom-right: bottom right,
+  bottom-left: bottom left,
+) !default;
+
+/**
+ * @sass-export-section="transition"
+*/
+$transition: (
+  base: all 200ms,
+  none: none,
+) !default;
+
+/**
+ * @sass-export-section="transition-duration"
+*/
+$transition-duration: (
+  100: 100ms,
+  200: 200ms,
+  300: 300ms,
+  400: 400ms,
+  500: 500ms,
+  600: 600ms,
+  700: 700ms,
+  800: 800ms,
+  900: 900ms,
+  1000: 1000ms,
+) !default;
+
+/**
+ * @sass-export-section="timing-function"
+*/
+$timing-function: (
+  ease: ease,
+  ease-in: ease-in,
+  ease-out: ease-out,
+  linear: linear,
+) !default;
+
+/**
+ * @sass-export-section="filter"
+*/
+$filter: (
+  grayscale: grayscale(100%),
+) !default;
+
+/**
+ * @sass-export-section="fill"
+*/
+$fill: (
+  current: currentColor,
+) !default;
+
+/**
+ * @sass-export-section="stroke"
+*/
+$stroke: (
+  current: currentColor,
+) !default;
+
+/**
+ * @sass-export-section="stroke-width"
+*/
+$stroke-width: (
+  base: 1.5,
+  0: 0,
+  1: 1,
+  2: 2,
+  3: 3,
+) !default;
+
+/**
+ * @sass-export-section="box-shadows"
+*/
+$box-shadows: (
+  light: (
+    sm: '0 1px 2px rgba(0, 0, 0, 0.06)',
+    base: '0 1px 2px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.1)',
+    md: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+    lg: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.06)',
+    xl: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.06)',
+    xxl: '0 25px 50px -10px rgba(0, 0, 0, 0.25)',
+    inner: '0 2px 4px rgba(0, 0, 0, 0.06)',
+    kbd: '0 -2px 0 rgba(0, 0, 0, 0.06)',
+  ),
+  dark: (
+    sm: '0 1px 2px rgba(0, 0, 0, 0.25)',
+    base: '0 1px 2px rgba(0, 0, 0, 0.25), 0 1px 3px rgba(0, 0, 0, 0.35)',
+    md: '0 4px 6px -1px rgba(0, 0, 0, 0.35), 0 2px 4px -1px rgba(0, 0, 0, 0.25)',
+    lg: '0 10px 15px -3px rgba(0, 0, 0, 0.35), 0 4px 6px -2px rgba(0, 0, 0, 0.25)',
+    xl: '0 20px 25px -5px rgba(0, 0, 0, 0.35), 0 10px 10px -5px rgba(0, 0, 0, 0.25)',
+    xxl: '0 25px 50px -10px rgba(0, 0, 0, 0.5)',
+    inner: '0 2px 4px rgba(0, 0, 0, 0.25)',
+    kbd: '0 -2px 0 rgba(0, 0, 0, 0.25)',
+  )
+) !default;
+
+/**
+ * @sass-export-section="grid-columns"
+*/
+$grid-columns: (
+  none: none,
+  1: repeat(1, minmax(0, 1fr)),
+  2: repeat(2, minmax(0, 1fr)),
+  3: repeat(3, minmax(0, 1fr)),
+  4: repeat(4, minmax(0, 1fr)),
+  5: repeat(5, minmax(0, 1fr)),
+  6: repeat(6, minmax(0, 1fr)),
+  7: repeat(7, minmax(0, 1fr)),
+  8: repeat(8, minmax(0, 1fr)),
+  9: repeat(9, minmax(0, 1fr)),
+  10: repeat(10, minmax(0, 1fr)),
+  11: repeat(11, minmax(0, 1fr)),
+  12: repeat(12, minmax(0, 1fr)),
+) !default;
+
+/**
+ * @sass-export-section="grid-span"
+*/
+$grid-span: (
+  auto: auto,
+  span: '1 / -1',
+  1: 'span 1 / span 1',
+  2: 'span 2 / span 2',
+  3: 'span 3 / span 3',
+  4: 'span 4 / span 4',
+  5: 'span 5 / span 5',
+  6: 'span 6 / span 6',
+  7: 'span 7 / span 7',
+  8: 'span 8 / span 8',
+  9: 'span 9 / span 9',
+  10: 'span 10 / span 10',
+  11: 'span 11 / span 11',
+  12: 'span 12 / span 12',
+) !default;
+
+/**
+ * @sass-export-section="grid-auto-flow"
+*/
+$grid-auto-flow: (
+  row: row,
+  col: column,
+  row-dense: row dense,
+  col-dense: column dense,
+) !default;
+
+/**
+ * @sass-export-section="grid-gap"
+*/
+$grid-gap: (
+  0: 0,
+  px: 1px,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 0.75rem,
+  4: 1rem,
+  5: 1.25rem,
+  6: 1.5rem,
+  7: 1.75rem,
+  8: 2rem,
+  9: 2.5rem,
+  10: 3rem,
+  11: 3.5rem,
+  12: 4rem,
+) !default;
+
+/**
+ * @sass-export-section="trbl"
+*/
+$trbl: (
+  0: 0,
+) !default;
+
+/**
+ * @sass-export-section="align"
+*/
+$align: (
+  none: none,
+  auto: auto,
+  left: left,
+  right: right,
+  top: top,
+  bottom: bottom,
+  center: center,
+  both: both, // use case: when using clear
+  contain: contain,
+  cover: cover,
+  fill: fill,
+  scale-down: scale-down,
+  hidden: hidden,
+  visible: visible,
+  scroll: scroll,
+) !default;
+
+/**
+ * @sass-export-section="keys"
+*/
+$keys: (
+  container: container,
+  fluid: fluid,
+
+  row: row,
+  column: col,
+  grid-template-columns: gtc,
+  grid-template-rows: gtr,
+  grid-auto-flow: gaf,
+  grid-column: gc,
+  grid-row: gr,
+  grid-gap: gg,
+  column-gap: cg,
+  row-gap: rg,
+  order: ord,
+
+  width: w,
+  max-width: maw,
+  min-width: miw,
+
+  height: h,
+  max-height: mah,
+  min-height: mih,
+
+  box-sizing: bxz,
+
+  display: d,
+  float: fl,
+  clear: cl,
+
+  flex: fx,
+  flex-direction: fxd,
+  flex-wrap: fxw,
+  flex-grow: fxg,
+  flex-shrink: fxs,
+  
+  align-items: ai,
+  align-content: ac,
+  align-self: as,
+  justify-items: ji,
+  justify-content: jc,
+  justify-self: js,
+
+  object-fit: obf,
+  object-position: obp,
+
+  overflow: ov,
+  overflow-x: ovx,
+  overflow-y: ovy,
+
+  position: pos,
+
+  heading: h,
+  text-display: display,
+
+  font-family: ff,
+  font-size: fz,
+  font-style: fs,
+  font-weight: fw,
+
+  letter-spacing: lts,
+  line-height: lh,
+  list-style: lis,
+
+  text-decoration: td,
+  text-transform: tt,
+  text-overflow: tov,
+  text-align: ta,
+
+  vertical-align: va,
+
+  white-space: whs,
+  word-break: wob,
+
+  truncate: truncate,
+
+  margin: m,
+  margin-top: mt,
+  margin-bottom: mb,
+  margin-right: mr,
+  margin-left: ml,
+  margin-vertical: my,
+  margin-horizontal: mx,
+
+  padding: p,
+  padding-top: pt,
+  padding-bottom: pb,
+  padding-right: pr,
+  padding-left: pl,
+  padding-vertical: py,
+  padding-horizontal: px,
+
+  border: bd,
+  border-top: bdt,
+  border-bottom: bdb,
+  border-right: bdr,
+  border-left: bdl,
+  border-vertical: bdy,
+  border-horizontal: bdx,
+
+  border-width: bdw,
+  border-style: bds,
+  border-color: bdc,
+
+  color: c,
+  color-gradient: c-grad,
+
+  background-color: bg, 
+  background-gradient: bg-grad, 
+
+  background-attachment: bga,
+  background-position: bgp,
+  background-repeat: bgr,
+  background-size: bgs,
+
+  placeholder: placeholder,
+
+  transition: trs,
+  transition-duration: trsdu,
+  transition-timing-function: trstf,
+
+  transform-origin: trfo,
+
+  filter: img,
+
+  fill: fill,
+
+  stroke: st,
+  stroke-width: stw,
+
+  opacity: op,
+  visibility: vis,
+  pointer-events: ptev,
+
+  cursor: cur,
+  user-select: us,
+  appearance: ap,
+  outline: ol,
+
+  border-radius: bdrs,
+  border-raduis-horizontal: bdrsx,
+  border-raduis-vertical: bdrsy,
+
+  box-shadow: bxsh,
+  z-index: z,
+
+  top: t,
+  left: l,
+  bottom: b,
+  right: r,
+
+  screen-reader: sr-only,
+
+) !default;

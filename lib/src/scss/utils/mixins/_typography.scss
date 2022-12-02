@@ -1,0 +1,189 @@
+// ----- Heading
+@mixin setup-heading {
+  @each $key, $values in util-props(heading) {
+    @include brpt-auto-gen(#{util-keys(heading)}#{$key}) {
+      font-size: util-props(heading, $key, size);
+      font-weight: $fw-700;
+      line-height: util-props(heading, $key, lh);
+    }
+
+    #{util-keys(heading)}#{$key} {
+      font-size: util-props(heading, $key, size);
+      font-weight: $fw-700;
+      line-height: util-props(heading, $key, lh);
+    }
+  }
+}
+
+// ----- Display Text
+@mixin setup-text-displays {
+  @each $key, $values in util-props(text-display) {
+    @include brpt-auto-gen(#{util-keys(text-display)}-#{$key}) {
+      font-size: util-props(text-display, $key, size);
+      line-height: util-props(text-display, $key, lh);
+    }
+  }
+}
+
+// ----- Font Family
+@mixin setup-font-family {
+  @each $key, $value in util-props(font-family) {
+    @include brpt-auto-gen(#{util-keys(font-family)}-#{$key}) {
+      font-family: unquote($value);
+    }
+  }
+}
+
+// ----- Font Size
+@mixin setup-font-size {
+  @each $key, $values in util-props(font-size) {
+    @include brpt-auto-gen(#{util-keys(font-size)}-#{$key}) {
+      font-size: util-props(font-size, $key, size);
+      line-height: util-props(font-size, $key, lh);
+    }
+  }
+}
+
+// ----- Font Style
+@mixin setup-font-style {
+  @each $key, $value in util-props(font-style) {
+    @include brpt-auto-gen(#{util-keys(font-style)}-#{$key}) {
+      font-style: $value;
+    }
+  }
+}
+
+// ----- Font Weight
+@mixin setup-font-weight {
+  @each $property, $value in util-props(font-weight) {
+    @include brpt-auto-gen(#{util-keys(font-weight)}-#{$property}) {
+      font-weight: $value;
+    }
+
+    @include brpt-auto-gen(hover-#{util-keys(font-weight)}-#{$property}) {
+      &:hover {
+        font-weight: $value;
+      }
+    }
+
+    @if $value == 400 {
+      @include brpt-auto-gen(#{util-keys(font-weight)}-normal) {
+        font-weight: $value;
+      }
+
+      @include brpt-auto-gen(hover-#{util-keys(font-weight)}-normal) {
+        &:hover {
+          font-weight: $value;
+        }
+      }
+    } @else if $value == 700 {
+      @include brpt-auto-gen(#{util-keys(font-weight)}-bold) {
+        font-weight: $value;
+      }
+
+      @include brpt-auto-gen(hover-#{util-keys(font-weight)}-bold) {
+        &:hover {
+          font-weight: $value;
+        }
+      }
+    }
+  }
+}
+
+// ----- Letter Spacing
+@mixin setup-letter-spacing {
+  @each $property, $value in util-props(letter-spacing) {
+    @include brpt-auto-gen(#{util-keys(letter-spacing)}-#{$property}) {
+      letter-spacing: $value;
+    }
+  }
+}
+
+// ----- Line Height
+@mixin setup-line-height {
+  @each $property, $value in util-props(line-height) {
+    @include brpt-auto-gen(#{util-keys(line-height)}-#{$property}) {
+      line-height: $value;
+    }
+  }
+}
+
+// ----- List style
+@mixin setup-list-style {
+  @each $key, $value in util-props(list-style) {
+    @include brpt-auto-gen(#{util-keys(list-style)}-#{$key}) {
+      list-style: $value;
+    } 
+  }
+}
+
+// ----- Text Decoration
+@mixin setup-text-decoration {
+  @each $property, $value in util-props(text-decoration) {
+    @include brpt-auto-gen(#{util-keys(text-decoration)}-#{$property}) {
+      text-decoration: $value;
+    }
+  }
+}
+
+// ----- Text Transform
+@mixin setup-text-transform {
+  @each $property, $value in util-props(text-transform) {
+    @include brpt-auto-gen(#{util-keys(text-transform)}-#{$property}) {
+      text-transform: $value;
+    }
+  }
+}
+
+// ----- Text Align
+@mixin setup-text-align {
+  @each $property, $value in util-props(text-align) {
+    @include brpt-auto-gen(#{util-keys(text-align)}-#{$property}) {
+      text-align: $value;
+    }
+  }
+}
+
+// ----- Vertical Align
+@mixin setup-vertical-align {
+  @each $property, $value in util-props(vertical-align) {
+    @include brpt-auto-gen(#{util-keys(vertical-align)}-#{$property}) {
+      vertical-align: $value;
+    }
+  }
+}
+
+// ----- Whitespace
+@mixin setup-whitespace {
+  @each $property, $value in util-props(white-space) {
+    @include brpt-auto-gen(#{util-keys(white-space)}-#{$property}) {
+      white-space: $value;
+    }
+  }
+}
+
+// ----- Word break
+@mixin setup-word-break {
+  @each $property, $value in util-props(word-break) {
+    @include brpt-auto-gen(#{util-keys(word-break)}-#{$property}) {
+      word-break: $value;
+    }
+  }
+}
+
+// ----- Truncate
+@mixin setup-text-overflow {
+  @each $property, $value in util-props(text-overflow) {
+    @if ($property == 'truncate') {
+      @include brpt-auto-gen(#{util-keys(text-overflow)}-#{$property}) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    } @else {
+      @include brpt-auto-gen(#{util-keys(text-overflow)}-#{$property}) {
+        text-overflow: $value;
+      }
+    } 
+  }
+}

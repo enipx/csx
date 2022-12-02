@@ -1,0 +1,82 @@
+---
+title: "Breadcrumb"
+description: "Used to disclose user's location on a page"
+---
+
+## Usage
+
+```html transparent
+<template preview>
+  <nav class="my-3">
+    <ul class="breadcrumb">
+      <li class="breadcrumb_item"><a href="#">Home</a></li>
+      <li class="breadcrumb_item"><a href="#">Documentation</a></li>
+      <li class="breadcrumb_item active" aria-current="page"><a href="#">Breadcrumb</a></li>
+    </ul>
+  </nav>
+</template>
+
+<div>
+  <nav>
+    <ul class="breadcrumb">
+      <li class="breadcrumb_item"><a href="#">Home</a></li>
+      <li class="breadcrumb_item"><a href="#">Documentation</a></li>
+      <li class="breadcrumb_item active" aria-current="page"><a href="#">Breadcrumb</a></li>
+    </ul>
+  </nav>
+</div>
+```
+
+## Sizings
+Set breadcrumb size using the `.breadcrumb-[size]` utility class or `data-size="[size]"` attribute. Options available are `sm`, `md`, `lg`. Usage example is `breadcrumb-lg` or `data-size="lg"`.
+
+```html transparent
+<template preview>
+  <nav class="my-3">
+    <ul class="breadcrumb" data-size="sm">
+      <li class="breadcrumb_item"><a href="#">Home</a></li>
+      <li class="breadcrumb_item"><a href="#">Documentation</a></li>
+      <li class="breadcrumb_item active" aria-current="page"><a href="#">Breadcrumb</a></li>
+    </ul>
+  </nav>
+
+  <nav class="my-3">
+    <ul class="breadcrumb" data-size="md">
+      <li class="breadcrumb_item"><a href="#">Home</a></li>
+      <li class="breadcrumb_item"><a href="#">Documentation</a></li>
+      <li class="breadcrumb_item active" aria-current="page"><a href="#">Breadcrumb</a></li>
+    </ul>
+  </nav>
+
+  <nav class="my-3">
+    <ul class="breadcrumb" data-size="lg">
+      <li class="breadcrumb_item"><a href="#">Home</a></li>
+      <li class="breadcrumb_item"><a href="#">Documentation</a></li>
+      <li class="breadcrumb_item active" aria-current="page"><a href="#">Breadcrumb</a></li>
+    </ul>
+  </nav>
+</template>
+
+<div>
+  <nav>
+    <ul class="breadcrumb" data-size="sm">
+      <li class="breadcrumb_item"><a href="#">Home</a></li>
+      . . .
+    </ul>
+  </nav>
+
+  <nav>
+    <ul class="breadcrumb" data-size="md">
+      <li class="breadcrumb_item"><a href="#">Home</a></li>
+      . . .
+    </ul>
+  </nav>
+
+  <nav>
+    <ul class="breadcrumb" data-size="lg">
+      <li class="breadcrumb_item"><a href="#">Home</a></li>
+      . . .
+    </ul>
+  </nav>
+</div>
+```

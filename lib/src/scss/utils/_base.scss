@@ -1,0 +1,82 @@
+// ----- Object Fit
+@include setup-object-fits;
+
+// ----- Object Position
+@include setup-object-position;
+
+// ----- Overflow
+@include setup-overflows;
+
+// ----- Position
+@include setup-positions;
+
+// ----- Opacity
+@include setup-opacity;
+
+// ----- Visibility
+@include setup-visibility;
+
+// ----- Pointer events
+@include setup-pointer-events;
+
+// ----- Outline
+@include setup-outline;
+
+// ----- Appearance
+@include setup-appearance;
+
+// ----- Cursor
+@include setup-cursor;
+
+// ----- User select
+@include setup-user-select;
+
+// ----- Background
+// Attachment
+@include setup-bg-attachment;
+
+// Position
+@include setup-bg-position;
+
+// Repeat
+@include setup-bg-repeat;
+
+// Size
+@include setup-bg-size;
+
+// ----- Border
+@include setup-borders;
+
+// Width
+@include setup-border-widths;
+
+// Radius
+@include setup-border-radius;
+
+// Style
+@include setup-border-styles;
+
+// ----- Box shadow
+@include setup-box-shadows;
+
+// ----- Z index
+@include setup-z-indexes;
+
+// ----- Top Right Bottom Left
+@include setup-trbl;
+
+// ----- Transform
+@include setup-transform;
+
+// ----- Transition
+@include setup-transition;
+
+// ----- Filter
+@include setup-filter;
+
+// ----- Svg
+@include setup-svg;
+
+// ----- Screen reader
+@include setup-screen-reader;
+

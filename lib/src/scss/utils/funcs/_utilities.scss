@@ -1,0 +1,52 @@
+/* ----- Lighten color 
+* @param {Color} $color - color to tint
+* @param {Number} $percentage - percentage of `$color` in returned color
+*/
+@function tint-color($color, $percentage) {
+  @return mix( $white, $color, $percentage );
+};
+
+/* ----- Darken color 
+* @param {Color} $color - color to tint
+* @param {Number} $percentage - percentage of `$color` in returned color
+*/
+@function shade-color($color, $percentage) {
+  @return mix( $black, $color, $percentage );
+};
+
+/* ----- Access map color
+* $param {Variable} $color - color to get value from
+* $param {Key} $variant - variants to get from $color
+*/
+@function color($color, $variant) {
+  @return get-map(get-map-val($util-properties, colors, $color), $variant);
+};
+
+/* ----- Access map gradients
+* $param {Variable} $type - gradients to get value from
+* $param {Key} $variant - variants to get from $type
+*/
+@function gradient($type, $variant: linear) {
+  @return get-map(get-map-val($util-properties, gradients, $type), $variant);
+};
+
+/* ----- Access all default sizing
+* $param {Number} $size - size to get
+*/
+@function sizing($size: none) {
+  @return get-map-val($util-properties, sizings, $size);
+}
+
+/* ----- Use rem function
+* $param {Number} $value - root em value
+*/
+@function rem($value) {
+  @return $value + rem;
+};
+
+/* ----- Use em function
+* $param {Number} $value - em value
+*/
+@function em($value) {
+  @return $value + em;
+};

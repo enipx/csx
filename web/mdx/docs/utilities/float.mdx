@@ -1,0 +1,97 @@
+---
+title: Float
+description: Used to set how an element should be positioned in its container, allowing inline elements to wrap around it.
+---
+
+<DocsTable
+  name="float"
+  head={[
+    'Name',
+    'Properties',
+    'Description'
+  ]}
+  description="set how an element should be positioned in its container, allowing inline elements to wrap around it."
+  content={{
+    left: 'Used to float an element to the left in its container',
+    right: 'Used to float an element to the right in its container',
+    none: 'Used to float an element to the right in its container',
+  }}
+  hideDataClass
+/>
+
+## Usage
+
+```html rose
+<template preview>
+  <div>
+    <p class="fz-sm ta-center fw-600 op-70 c-pink-700 tt-uppercase">Float: Right</p>
+    <div class="p-6">
+      <img class="bd-brand bdw-3 mx-4 fl-right" src="https://placeimg.com/100/100/any" width="100" height="100" />
+      <span class="fz-sm c-secondary-700">
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+        at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+        at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+      </span>
+    </div>
+  </div>
+</template>
+
+<div>
+  <img class="fl-right ..." src="https://placeimg.com/100/100/any" />
+  <span>
+    . . .
+  </span>
+</div>
+```
+
+```html rose
+<template preview>
+  <div>
+    <p class="fz-sm ta-center fw-600 op-70 c-pink-700 tt-uppercase">Float: left</p>
+    <div class="p-6">
+      <img class="bd-brand bdw-3 mx-4 fl-left" src="https://placeimg.com/100/100/any" width="100" height="100" />
+      <span class="fz-sm c-secondary-700">
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+        at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+      </span>
+    </div>
+  </div>
+</template>
+
+<div>
+  <img class="fl-left ..." src="https://placeimg.com/100/100/any" />
+  <span>
+    . . .
+  </span>
+</div>
+```
+
+```html rose
+<template preview>
+  <div>
+    <p class="fz-sm ta-center fw-600 op-70 c-pink-700 tt-uppercase">Float: none</p>
+    <div class="p-6">
+      <img class="bd-brand bdw-3 mx-4 fl-none" src="https://placeimg.com/100/100/any" width="100" height="100" />
+      <span class="fz-sm c-secondary-700">
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+        at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+      </span>
+    </div>
+  </div>
+</template>
+
+<div>
+  <img class="fl-none ..." src="https://placeimg.com/100/100/any" />
+  <span>
+    . . .
+  </span>
+</div>
+```
+
+## Props
+
+<DocsTable
+  name="float"
+  type="props"
+/>
+

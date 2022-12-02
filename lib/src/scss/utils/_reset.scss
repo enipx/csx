@@ -1,0 +1,205 @@
+
+// http://meyerweb.com/eric/tools/css/reset/ 
+// License: none (public domain)
+
+// ----- (*) Select all elements
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: $ff-brand, $ff-sans;
+  margin: $base-margin;
+  padding: $base-padding;
+}
+
+// ----- Elements
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+// ----- HTML5 reset for older browser
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// ----- Reset
+html {
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+  touch-action: manipulation;
+}
+
+// Body
+body {
+  background-color: var(#{$var-prefix}base-bg);
+  color: var(#{$var-prefix}base-color);
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+// Anchor
+a {
+  color: var(#{$var-prefix}base-link-color);
+
+  &:hover {
+    color: var(#{$var-prefix}base-link-hover-color);
+  }
+}
+
+// Code
+pre,
+code,
+kbd,
+samp {
+  //font-family: $ff-mono;
+  font-family: $ff-brand;
+}
+
+code,
+kbd,
+.code,
+.kbd {
+  @include border-radius;
+  background-color: var(#{$var-prefix}secondary-50);
+  border: 1px solid var(#{$var-prefix}secondary-100);
+  color: var(#{$var-prefix}base-color);
+  display: inline-block;
+  font-size: $fz-sm;
+  font-weight: $fw-500;
+  padding: 0 sizing(1);
+}
+
+@include mode('code, .code') {
+  background-color: var(#{$var-prefix}secondary-800);
+  border-color: var(#{$var-prefix}secondary-700);
+}
+
+kbd,
+.kbd {
+  @include border-radius(md);
+  background-color: transparent;
+  border-width: 1px 1px 3px;
+  padding: 0 sizing(2);
+  white-space: nowrap;
+}
+
+@include mode('kbd, .kbd') {
+  border-color: var(#{$var-prefix}secondary-800);
+}

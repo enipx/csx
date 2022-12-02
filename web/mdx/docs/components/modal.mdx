@@ -1,0 +1,423 @@
+---
+title: "Modal"
+description: "Used as a dialog that focuses the user's attention exclusively on an information via a window that is overlaid on primary content."
+---
+
+## Usage
+
+
+```html
+<template preview>
+  <button class="btn btn-primary mb-4" data-toggle="modal" data-target="#modal">Launch modal</button>
+
+  <!-- --------- Modal  ----------- -->
+  <div class="modal" id="modal" role="dialog" data-esc-dismiss='' data-backdrop-dismiss=''>
+    <div class="modal_container" data-pos="" data-overflow="" data-animation="">
+      <div class="modal_content">
+        <div class="modal_header">
+          <p>Discard changes</p>
+          <button class="btn btn-ghost modal_close"  data-dismiss="#modal">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M.439,21.44a1.5,1.5,0,0,0,2.122,2.121L11.823,14.3a.25.25,0,0,1,.354,0l9.262,9.263a1.5,1.5,0,1,0,2.122-2.121L14.3,12.177a.25.25,0,0,1,0-.354l9.263-9.262A1.5,1.5,0,0,0,21.439.44L12.177,9.7a.25.25,0,0,1-.354,0L2.561.44A1.5,1.5,0,0,0,.439,2.561L9.7,11.823a.25.25,0,0,1,0,.354Z"></path></svg>
+          </button>
+        </div>
+  
+        <div class="modal_body">
+          <p>Are you sure you want to continue? You’ll lose all your saved items, we can’t recover once this changes is made.</p>
+        </div>
+  
+        <div class="modal_footer" data-alt="false">
+          <button class="btn btn-ghost" data-dismiss="#modal">Cancel</button>
+          <button class="btn btn-secondary">Yes, Discard it</button>
+        </div>
+      </div>
+    </div>
+      
+  </div>
+</template>
+
+<div>
+  <button class="btn btn-primary mb-4" data-toggle="modal" data-target="#modal">
+    Launch modal
+  </button>
+
+  <!-- --------- Modal  ----------- -->
+  <div class="modal" id="modal" role="dialog" data-esc-dismiss='' data-backdrop-dismiss=''>
+    <div class="modal_container" data-pos="" data-overflow="" data-animation="">
+      <div class="modal_content">
+        <div class="modal_header">
+          <p>Discard changes</p>
+          <button class="btn btn-ghost modal_close"  data-dismiss="#modal">
+            . . .
+          </button>
+        </div>
+  
+        <div class="modal_body">
+          <p>
+            Are you sure you want to continue? You’ll lose all your saved items, we can’t recover once this changes is made.
+          </p>
+        </div>
+  
+        <div class="modal_footer" data-alt="false">
+          <button class="btn btn-ghost" data-dismiss="#modal">Cancel</button>
+          <button class="btn btn-secondary">Yes, Discard it</button>
+        </div>
+      </div>
+    </div>
+      
+  </div>
+</div>
+```
+
+## Position
+Set modal position using the `data-pos="[size]"` attribute. Options available are `top-left`, `top-right`, `bottom-left`, `bottom-right`, `center`. Usage example is `data-pos="top-left"`.
+
+
+```html
+<template preview>
+  <button class="btn btn-primary mb-4" data-toggle="modal" data-target="#modal-top-left">Launch top left modal</button>
+  <button class="btn btn-primary mb-4" data-toggle="modal" data-target="#modal-top-right">Launch top right modal</button>
+  <button class="btn btn-primary mb-4" data-toggle="modal" data-target="#modal-bottom-left">Launch bottom left modal</button>
+  <button class="btn btn-primary mb-4" data-toggle="modal" data-target="#modal-bottom-right">Launch bottom end modal</button>
+  <button class="btn btn-primary mb-4" data-toggle="modal" data-target="#modal-center">Launch center modal</button>
+
+  <!-- --------- Modal  ----------- -->
+  <div class="modal" id="modal-top-left" role="dialog" data-esc-dismiss='' data-backdrop-dismiss=''>
+    <div class="modal_container" data-pos="top-left" data-overflow="" data-animation="">
+      <div class="modal_content">
+        <div class="modal_header">
+          <p>Discard changes</p>
+          <button class="btn btn-ghost modal_close"  data-dismiss="#modal-top-left">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M.439,21.44a1.5,1.5,0,0,0,2.122,2.121L11.823,14.3a.25.25,0,0,1,.354,0l9.262,9.263a1.5,1.5,0,1,0,2.122-2.121L14.3,12.177a.25.25,0,0,1,0-.354l9.263-9.262A1.5,1.5,0,0,0,21.439.44L12.177,9.7a.25.25,0,0,1-.354,0L2.561.44A1.5,1.5,0,0,0,.439,2.561L9.7,11.823a.25.25,0,0,1,0,.354Z"></path></svg>
+          </button>
+        </div>
+  
+        <div class="modal_body">
+          <p>Are you sure you want to continue? You’ll lose all your saved items, we can’t recover once this changes is made.</p>
+        </div>
+  
+        <div class="modal_footer" data-alt="false">
+          <button class="btn btn-ghost" data-dismiss="#modal-top-left">Cancel</button>
+          <button class="btn btn-secondary">Yes, Discard it</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- --------- Modal  ----------- -->
+  <div class="modal" id="modal-top-right" role="dialog" data-esc-dismiss='' data-backdrop-dismiss=''>
+    <div class="modal_container" data-pos="top-right" data-overflow="" data-animation="">
+      <div class="modal_content">
+        <div class="modal_header">
+          <p>Discard changes</p>
+          <button class="btn btn-ghost modal_close"  data-dismiss="#modal-top-right">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M.439,21.44a1.5,1.5,0,0,0,2.122,2.121L11.823,14.3a.25.25,0,0,1,.354,0l9.262,9.263a1.5,1.5,0,1,0,2.122-2.121L14.3,12.177a.25.25,0,0,1,0-.354l9.263-9.262A1.5,1.5,0,0,0,21.439.44L12.177,9.7a.25.25,0,0,1-.354,0L2.561.44A1.5,1.5,0,0,0,.439,2.561L9.7,11.823a.25.25,0,0,1,0,.354Z"></path></svg>
+          </button>
+        </div>
+  
+        <div class="modal_body">
+          <p>Are you sure you want to continue? You’ll lose all your saved items, we can’t recover once this changes is made.</p>
+        </div>
+  
+        <div class="modal_footer" data-alt="false">
+          <button class="btn btn-ghost" data-dismiss="#modal-top-right">Cancel</button>
+          <button class="btn btn-secondary">Yes, Discard it</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- --------- Modal  ----------- -->
+  <div class="modal" id="modal-bottom-left" role="dialog" data-esc-dismiss='' data-backdrop-dismiss=''>
+    <div class="modal_container" data-pos="bottom-left" data-overflow="" data-animation="">
+      <div class="modal_content">
+        <div class="modal_header">
+          <p>Discard changes</p>
+          <button class="btn btn-ghost modal_close"  data-dismiss="#modal-bottom-left">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M.439,21.44a1.5,1.5,0,0,0,2.122,2.121L11.823,14.3a.25.25,0,0,1,.354,0l9.262,9.263a1.5,1.5,0,1,0,2.122-2.121L14.3,12.177a.25.25,0,0,1,0-.354l9.263-9.262A1.5,1.5,0,0,0,21.439.44L12.177,9.7a.25.25,0,0,1-.354,0L2.561.44A1.5,1.5,0,0,0,.439,2.561L9.7,11.823a.25.25,0,0,1,0,.354Z"></path></svg>
+          </button>
+        </div>
+  
+        <div class="modal_body">
+          <p>Are you sure you want to continue? You’ll lose all your saved items, we can’t recover once this changes is made.</p>
+        </div>
+  
+        <div class="modal_footer" data-alt="false">
+          <button class="btn btn-ghost" data-dismiss="#modal-bottom-left">Cancel</button>
+          <button class="btn btn-secondary">Yes, Discard it</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- --------- Modal  ----------- -->
+  <div class="modal" id="modal-bottom-right" role="dialog" data-esc-dismiss='' data-backdrop-dismiss=''>
+    <div class="modal_container" data-pos="bottom-right" data-overflow="" data-animation="">
+      <div class="modal_content">
+        <div class="modal_header">
+          <p>Discard changes</p>
+          <button class="btn btn-ghost modal_close"  data-dismiss="#modal-bottom-right">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M.439,21.44a1.5,1.5,0,0,0,2.122,2.121L11.823,14.3a.25.25,0,0,1,.354,0l9.262,9.263a1.5,1.5,0,1,0,2.122-2.121L14.3,12.177a.25.25,0,0,1,0-.354l9.263-9.262A1.5,1.5,0,0,0,21.439.44L12.177,9.7a.25.25,0,0,1-.354,0L2.561.44A1.5,1.5,0,0,0,.439,2.561L9.7,11.823a.25.25,0,0,1,0,.354Z"></path></svg>
+          </button>
+        </div>
+  
+        <div class="modal_body">
+          <p>Are you sure you want to continue? You’ll lose all your saved items, we can’t recover once this changes is made.</p>
+        </div>
+  
+        <div class="modal_footer" data-alt="false">
+          <button class="btn btn-ghost" data-dismiss="#modal-bottom-right">Cancel</button>
+          <button class="btn btn-secondary">Yes, Discard it</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- --------- Modal  ----------- -->
+  <div class="modal" id="modal-center" role="dialog" data-esc-dismiss='' data-backdrop-dismiss=''>
+    <div class="modal_container" data-pos="center" data-overflow="" data-animation="">
+      <div class="modal_content">
+        <div class="modal_header">
+          <p>Discard changes</p>
+          <button class="btn btn-ghost modal_close"  data-dismiss="#modal-center">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M.439,21.44a1.5,1.5,0,0,0,2.122,2.121L11.823,14.3a.25.25,0,0,1,.354,0l9.262,9.263a1.5,1.5,0,1,0,2.122-2.121L14.3,12.177a.25.25,0,0,1,0-.354l9.263-9.262A1.5,1.5,0,0,0,21.439.44L12.177,9.7a.25.25,0,0,1-.354,0L2.561.44A1.5,1.5,0,0,0,.439,2.561L9.7,11.823a.25.25,0,0,1,0,.354Z"></path></svg>
+          </button>
+        </div>
+  
+        <div class="modal_body">
+          <p>Are you sure you want to continue? You’ll lose all your saved items, we can’t recover once this changes is made.</p>
+        </div>
+  
+        <div class="modal_footer" data-alt="false">
+          <button class="btn btn-ghost" data-dismiss="#modal-center">Cancel</button>
+          <button class="btn btn-secondary">Yes, Discard it</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+
+<div>
+  <button class="btn btn-primary" data-toggle="modal" data-target="#modal-center">
+    Launch center modal
+  </button>
+
+  <!-- --------- Modal  ----------- -->
+  <div class="modal" id="modal-center" role="dialog" data-esc-dismiss='' data-backdrop-dismiss=''>
+    <div class="modal_container" data-pos="center" data-overflow="" data-animation="">
+      <div class="modal_content">
+        <div class="modal_header">
+          <p>Discard changes</p>
+          <button class="btn btn-ghost modal_close"  data-dismiss="#modal-center">
+            . . .
+          </button>
+        </div>
+  
+        <div class="modal_body">
+          <p>
+            Are you sure you want to continue? You’ll lose all your saved items, 
+            we can’t recover once this changes is made.
+          </p>
+        </div>
+  
+        <div class="modal_footer" data-alt="false">
+          <button class="btn btn-ghost" data-dismiss="#modal-center">Cancel</button>
+          <button class="btn btn-secondary">Yes, Discard it</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+
+## Drawer
+
+You can also use the modal as a drawer, See usage below.
+
+
+```html
+<template preview>
+  <button class="btn btn-primary mb-4" data-toggle="modal" data-target="#modal-drawer">
+    Launch drawer
+  </button>
+
+  <!-- --------- Modal  ----------- -->
+  <div class="modal" id="modal-drawer" role="dialog" data-type="drawer" data-esc-dismiss='' data-backdrop-dismiss=''>
+    <div class="modal_container" data-pos="center" data-overflow="" data-animation="">
+      <div class="modal_content">
+        <div class="modal_header">
+          <p>Discard changes</p>
+          <button class="btn btn-ghost modal_close"  data-dismiss="#modal-drawer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M.439,21.44a1.5,1.5,0,0,0,2.122,2.121L11.823,14.3a.25.25,0,0,1,.354,0l9.262,9.263a1.5,1.5,0,1,0,2.122-2.121L14.3,12.177a.25.25,0,0,1,0-.354l9.263-9.262A1.5,1.5,0,0,0,21.439.44L12.177,9.7a.25.25,0,0,1-.354,0L2.561.44A1.5,1.5,0,0,0,.439,2.561L9.7,11.823a.25.25,0,0,1,0,.354Z"></path></svg>
+          </button>
+        </div>
+  
+        <div class="modal_body">
+          <p>
+            Are you sure you want to continue? You’ll lose all your saved items, 
+            we can’t recover once this changes is made.
+          </p>
+        </div>
+  
+        <div class="modal_footer" data-alt="false">
+          <button class="btn btn-ghost" data-dismiss="#modal-drawer">Cancel</button>
+          <button class="btn btn-secondary">Yes, Discard it</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</template>
+
+<div>
+  <button class="btn btn-primary mb-4" data-toggle="modal" data-target="#drawer">
+    Launch drawer
+  </button>
+
+  <!-- --------- Modal  ----------- -->
+  <div class="modal transparent" id="drawer" role="dialog" data-type="drawer" data-esc-dismiss='' data-backdrop-dismiss='true'>
+    <div class="modal_container" data-pos="left" data-size="base">
+      <div class="modal_content">
+        <div class="modal_header">
+          <p>Modal 1 changes</p>
+          <button class="btn btn-ghost modal_close"  data-dismiss="#drawer">
+            . . .
+          </button>
+        </div>
+  
+        <div class="modal_body">
+          <p>
+            Are you sure you want to continue? You’ll lose all your saved items, we can’t recover once this changes is made.
+          </p>
+        </div>
+  
+        <div class="modal_footer" data-alt="false">
+          <button class="btn btn-ghost" data-dismiss="#drawer">Cancel</button>
+          <button class="btn btn-secondary">Yes, Discard it</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+
+
+## Drawer Position
+Set drawer position using the `data-pos="[size]"` attribute exactly how we use it with modal above. Options available are `left`, `right`, `bottom`, `top`. Usage example is `data-pos="bottom"`.
+
+```html
+<template preview>
+  <button class="btn btn-primary mb-4" data-toggle="modal" data-target="#modal-drawer-top">Launch top modal</button>
+  <button class="btn btn-primary mb-4" data-toggle="modal" data-target="#modal-drawer-right">Launch right modal</button>
+  <button class="btn btn-primary mb-4" data-toggle="modal" data-target="#modal-drawer-bottom">Launch bottom modal</button>
+  <button class="btn btn-primary mb-4" data-toggle="modal" data-target="#modal-drawer-left">Launch left modal</button>
+
+  <!-- --------- Modal  ----------- -->
+  <div class="modal" id="modal-drawer-top" role="dialog" data-type="drawer" data-esc-dismiss='' data-backdrop-dismiss=''>
+    <div class="modal_container" data-pos="top" data-overflow="" data-animation="">
+      <div class="modal_content">
+        <div class="modal_header">
+          <p>Discard changes</p>
+          <button class="btn btn-ghost modal_close"  data-dismiss="#modal-drawer-top">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M.439,21.44a1.5,1.5,0,0,0,2.122,2.121L11.823,14.3a.25.25,0,0,1,.354,0l9.262,9.263a1.5,1.5,0,1,0,2.122-2.121L14.3,12.177a.25.25,0,0,1,0-.354l9.263-9.262A1.5,1.5,0,0,0,21.439.44L12.177,9.7a.25.25,0,0,1-.354,0L2.561.44A1.5,1.5,0,0,0,.439,2.561L9.7,11.823a.25.25,0,0,1,0,.354Z"></path></svg>
+          </button>
+        </div>
+  
+        <div class="modal_body">
+          <p>
+            Are you sure you want to continue? You’ll lose all your saved items, 
+            we can’t recover once this changes is made.
+          </p>
+        </div>
+  
+        <div class="modal_footer" data-alt="false">
+          <button class="btn btn-ghost" data-dismiss="#modal-drawer-top">Cancel</button>
+          <button class="btn btn-secondary">Yes, Discard it</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- --------- Modal  ----------- -->
+  <div class="modal" id="modal-drawer-right" role="dialog" data-type="drawer" data-esc-dismiss='' data-backdrop-dismiss=''>
+    <div class="modal_container" data-pos="right" data-overflow="" data-animation="">
+      <div class="modal_content">
+        <div class="modal_header">
+          <p>Discard changes</p>
+          <button class="btn btn-ghost modal_close"  data-dismiss="#modal-drawer-right">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M.439,21.44a1.5,1.5,0,0,0,2.122,2.121L11.823,14.3a.25.25,0,0,1,.354,0l9.262,9.263a1.5,1.5,0,1,0,2.122-2.121L14.3,12.177a.25.25,0,0,1,0-.354l9.263-9.262A1.5,1.5,0,0,0,21.439.44L12.177,9.7a.25.25,0,0,1-.354,0L2.561.44A1.5,1.5,0,0,0,.439,2.561L9.7,11.823a.25.25,0,0,1,0,.354Z"></path></svg>
+          </button>
+        </div>
+  
+        <div class="modal_body">
+          <p>
+            Are you sure you want to continue? You’ll lose all your saved items, 
+            we can’t recover once this changes is made.
+          </p>
+        </div>
+  
+        <div class="modal_footer" data-alt="false">
+          <button class="btn btn-ghost" data-dismiss="#modal-drawer-right">Cancel</button>
+          <button class="btn btn-secondary">Yes, Discard it</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- --------- Modal  ----------- -->
+  <div class="modal" id="modal-drawer-bottom" role="dialog" data-type="drawer" data-esc-dismiss='' data-backdrop-dismiss=''>
+    <div class="modal_container" data-pos="bottom" data-overflow="" data-animation="">
+      <div class="modal_content">
+        <div class="modal_header">
+          <p>Discard changes</p>
+          <button class="btn btn-ghost modal_close"  data-dismiss="#modal-drawer-bottom">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M.439,21.44a1.5,1.5,0,0,0,2.122,2.121L11.823,14.3a.25.25,0,0,1,.354,0l9.262,9.263a1.5,1.5,0,1,0,2.122-2.121L14.3,12.177a.25.25,0,0,1,0-.354l9.263-9.262A1.5,1.5,0,0,0,21.439.44L12.177,9.7a.25.25,0,0,1-.354,0L2.561.44A1.5,1.5,0,0,0,.439,2.561L9.7,11.823a.25.25,0,0,1,0,.354Z"></path></svg>
+          </button>
+        </div>
+  
+        <div class="modal_body">
+          <p>
+            Are you sure you want to continue? You’ll lose all your saved items, 
+            we can’t recover once this changes is made.
+          </p>
+        </div>
+  
+        <div class="modal_footer" data-alt="false">
+          <button class="btn btn-ghost" data-dismiss="#modal-drawer-bottom">Cancel</button>
+          <button class="btn btn-secondary">Yes, Discard it</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- --------- Modal  ----------- -->
+  <div class="modal" id="modal-drawer-right" role="dialog" data-type="drawer" data-esc-dismiss='' data-backdrop-dismiss=''>
+    <div class="modal_container" data-pos="right" data-overflow="" data-animation="">
+      <div class="modal_content">
+        <div class="modal_header">
+          <p>Discard changes</p>
+          <button class="btn btn-ghost modal_close"  data-dismiss="#modal-drawer-right">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M.439,21.44a1.5,1.5,0,0,0,2.122,2.121L11.823,14.3a.25.25,0,0,1,.354,0l9.262,9.263a1.5,1.5,0,1,0,2.122-2.121L14.3,12.177a.25.25,0,0,1,0-.354l9.263-9.262A1.5,1.5,0,0,0,21.439.44L12.177,9.7a.25.25,0,0,1-.354,0L2.561.44A1.5,1.5,0,0,0,.439,2.561L9.7,11.823a.25.25,0,0,1,0,.354Z"></path></svg>
+          </button>
+        </div>
+  
+        <div class="modal_body">
+          <p>
+            Are you sure you want to continue? You’ll lose all your saved items, 
+            we can’t recover once this changes is made.
+          </p>
+        </div>
+  
+        <div class="modal_footer" data-alt="false">
+          <button class="btn btn-ghost" data-dismiss="#modal-drawer-right">Cancel</button>
+          <button class="btn btn-secondary">Yes, Discard it</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</template>
+
+```

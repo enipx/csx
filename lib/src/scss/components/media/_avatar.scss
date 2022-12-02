@@ -1,0 +1,82 @@
+.custom-avatar {
+  @include border-radius(full);
+  background-color: var(#{$var-prefix}primary-100);
+  color: var(#{$var-prefix}primary-700);
+  cursor: pointer;
+  font-size: $fz-base;
+  height: var(#{$var-prefix}avatar-size);
+  position: relative;
+  width: var(#{$var-prefix}avatar-size);
+
+  img {
+    @include border-radius(full);
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .custom-avatar_notification {
+    @include border-radius(full);
+    background-color: var(#{$var-prefix}success);
+    border: 3px solid var(#{$var-prefix}base-bg);
+    bottom: 0;
+    height: var(#{$var-prefix}avatar-notification-size);
+    position: absolute;
+    right: rem(-0.125);
+    width: var(#{$var-prefix}avatar-notification-size);
+
+    &[data-pos='top'] {
+      bottom: 65%;
+    }
+  }
+
+  .custom-avatar_name {
+    @include pos-center;
+    font-size: $fz-base;
+    font-weight: $fw-600;
+    text-transform: uppercase;
+  }
+
+  &[data-size='sm'] {
+    #{$var-prefix}avatar-size: var(#{$var-prefix}avatar-size-sm);
+    #{$var-prefix}avatar-notification-size: var(#{$var-prefix}avatar-notification-size-sm);
+
+    .custom-avatar_notification {
+      border-width: 2px;
+    }
+
+    .custom-avatar_name {
+      font-size: $fz-xs;
+    }
+  }
+
+  &[data-size='lg'] {
+    #{$var-prefix}avatar-size: var(#{$var-prefix}avatar-size-lg);
+    #{$var-prefix}avatar-notification-size: var(#{$var-prefix}avatar-notification-size-lg);
+
+    .custom-avatar_notification {
+      border-width: 3px;
+    }
+
+    .custom-avatar_name {
+      font-size: $fz-lg;
+    }
+  }
+
+  &[data-squared] {
+    @include border-radius(md);
+
+    img {
+      @include border-radius(md);
+    }
+
+    .custom-avatar_notification {
+      bottom: rem(-0.325);
+      right: rem(-0.325);
+      
+      &[data-pos='top'] {
+        bottom: 75%;
+      }
+    }
+  }
+}

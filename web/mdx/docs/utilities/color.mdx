@@ -1,0 +1,100 @@
+---
+title: Color
+description: Used to set an element foreground color.
+---
+
+## Types
+
+<DocsTable
+  name="color"
+  keyname="color"
+  description="to set the foreground color of an element tex"
+  head={[
+    'Name',
+    'Properties',
+    'Preview'
+  ]}
+  content={{
+    text: 'Aa',
+    style: 'fz-lg fw-500',
+  }}
+/>
+
+## Usage
+
+```html rose
+<template preview>
+  <div class="c-secondary-700">
+    <p class="my-3 c-primary">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    </p>
+
+    <p class="my-3 c-danger">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    </p>
+
+    <p class="my-3 c-success">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    </p>
+
+    <p class="my-3 c-danger">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    </p>
+  </div>
+</template>
+
+<div>
+  <p class="c-primary">.  .  .</p>
+  <p class="c-danger">.  .  .</p>
+  <p class="c-success">.  .  .</p>
+  <p class="c-brand">.  .  .</p>
+</div>
+```
+
+### Hover, Focus, Placeholder and Dark mode
+```html rose
+<template preview>
+  <div class="">
+    <p class="my-3 c-secondary-800 hover-c-danger">
+      Hover to change text color to red
+    </p>
+
+    <input 
+      type="text" 
+      class="input focus-c-danger" 
+      placeholder="input value color is red"
+    />
+
+    <input 
+      type="text" 
+      class="my-3 input placeholder-danger-400" 
+      placeholder="placeholder color is red"
+    />
+
+    <p class="my-3 dm-c-danger">
+      Change mode to dark and text color will be in red
+    </p>
+  </div>
+</template>
+
+<div>
+  <p class="hover-c-danger">.  .  .</p>
+  <input class="focus-c-danger input ..." />
+  <input 
+    class="placeholder-danger-400 input ..."
+    placeholder="placeholder color is red"
+  />
+  <p class="dm-c-danger">.  .  .</p>
+</div>
+```
+
+
+## Props
+
+<DocsTable 
+  type="props"
+  name="color"
+  keyname="color"
+/>
+
+

@@ -1,0 +1,89 @@
+.breadcrumb {
+  @include border-radius(none);
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+
+  &_item {
+    @include base-transition;
+    color: var(#{$var-prefix}secondary);
+    display: inline-block;
+    list-style: none;
+    margin-bottom: 0;
+    position: relative;
+    
+    a {
+      @include base-transition;
+      color: var(#{$var-prefix}secondary);
+      text-decoration: none;
+    }
+
+    &:hover,
+    &.active {
+      color: var(#{$var-prefix}base-link-color);
+      
+      a {
+        color: var(#{$var-prefix}base-link-color);
+      }
+    }
+
+    &::after {
+      color: var(#{$var-prefix}secondary);
+      content: var(#{$var-prefix}breadcrumb-separator);
+      margin: 0 var(#{$var-prefix}breadcrumb-spacer);
+
+      &:hover {
+        color: var(#{$var-prefix}secondary);
+      }
+    }
+
+    &:last-of-type {
+      &::after {
+        content: '';
+        margin: 0;
+      }
+    }
+
+  }
+
+  // Properties
+  &[data-fade] {
+    .breadcrumb_item {
+      opacity: $op-70;
+
+      &:hover,
+      &.active {
+        opacity: $op-100;
+      }
+    }
+  }
+
+  &[data-size='sm'],
+  &-sm {
+    .breadcrumb_item {
+      font-size: $fz-sm;
+
+      a {
+        font-size: $fz-sm;
+      }
+    }
+  }
+
+  &[data-size='lg'],
+  &-lg {
+    .breadcrumb_item {
+      font-size: $fz-lg;
+
+      a {
+        font-size: $fz-lg;
+      }
+    }
+  }
+}
+
+// Dark mode
+@include mode('.breadcrumb') {
+  .breadcrumb_item {
+    #{$var-prefix}secondary: var(#{$var-prefix}secondary-200);
+  }
+}

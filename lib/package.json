@@ -1,0 +1,45 @@
+{
+  "scripts": {
+    "watch:ts": "webpack --config webpack.dev.js --watch",
+    "build:ts": "npm-run-all compile:ts compile:ts-min",
+    "compile:ts": "webpack --config webpack.dev.js",
+    "compile:ts-min": "webpack --config webpack.prod.js",
+    "watch:css": "sass --watch src/scss:dist/css --no-source-map",
+    "compile:css": "sass src/scss:dist/css --no-source-map",
+    "compile:json": "sass-export src/scss/utils/variables/_critical.scss -o csx-configs.json",
+    "build:unmin-css": "postcss ./dist/css -d ./dist/css --env development --no-map -u autoprefixer postcss-sort-media-queries",
+    "build:min-css": "postcss ./dist/css/csx.css -o ./dist/css/csx.min.css --no-map -u cssnano",
+    "build:umin-css": "postcss ./dist/css/csx-utilities.css -o ./dist/css/csx-utilities.min.css --no-map -u cssnano",
+    "build:cmin-css": "postcss ./dist/css/csx-components.css -o ./dist/css/csx-components.min.css --no-map -u cssnano",
+    "build:css": "npm-run-all compile:css build:unmin-css build:min-css build:umin-css build:cmin-css compile:json",
+    "build": "npm-run-all build:css build:ts"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.26.1",
+    "@typescript-eslint/parser": "^4.26.1",
+    "autoprefixer": "^10.3.0",
+    "cssnano": "^5.0.6",
+    "eslint": "^7.28.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-prettier": "^3.4.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.5",
+    "postcss-cli": "^8.3.1",
+    "postcss-sort-media-queries": "^3.11.12",
+    "prettier": "2.3.1",
+    "sass": "^1.34.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-sass-guidelines": "^8.0.0",
+    "ts-loader": "^9.2.3",
+    "typescript": "^4.3.2",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "sass-export": "^2.1.0"
+  }
+}

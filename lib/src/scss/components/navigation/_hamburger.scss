@@ -1,0 +1,102 @@
+.hamburger {
+  cursor: pointer;
+  padding: sizing();
+  position: relative;
+  width: var(#{$var-prefix}hamburger-width);
+
+  &_item {
+    @include transition(all, 200ms);
+    background-color: var(#{$var-prefix}hamburger-bg);
+    display: block;
+    height: rem(0.125);
+    margin-bottom: var(#{$var-prefix}hamburger-spacer);
+    pointer-events: none;
+    transform-origin: center;
+    width: 100%;
+  }
+
+  // Properties
+  &[data-item='1'] {
+    .hamburger_item {
+      &:not(:nth-child(2)) {
+        opacity: $op-0;
+      }
+    }
+  }
+
+
+  &[data-item='2'] {
+    .hamburger_item {
+      &:first-of-type {
+        margin-top: var(#{$var-prefix}hamburger-spacer);
+      }
+
+      &:last-of-type {
+        display: none;
+      }
+    }
+  }
+
+  &[data-length='xs'] {
+    #{$var-prefix}hamburger-width: sizing(6);
+  }
+
+  &[data-length='sm'] {
+    #{$var-prefix}hamburger-width: sizing(7);
+  }
+
+  &[data-length='lg'] {
+    #{$var-prefix}hamburger-width: sizing(10);
+
+    .hamburger_item {
+      margin-bottom: rem(0.3125);
+    }
+  }
+
+  &[data-length='xl'] {
+    #{$var-prefix}hamburger-width: sizing(12);
+
+    .hamburger_item {
+      margin-bottom: rem(0.3125);
+    }
+  }
+
+  &[data-round] {
+    .hamburger_item {
+      @include border-radius;
+    }
+  }
+
+  &.active {
+    &[data-item='2'] {
+      .hamburger_item {
+        &:first-of-type {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .hamburger_item {
+      &:first-of-type {
+        opacity: $op-100;
+        transform: translate(0) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: $op-100;
+        transform: translate(0, rem(-0.375)) rotate(-45deg);
+      }
+
+      &:nth-child(3) {
+        opacity: $op-0;
+      }
+    }
+  }
+}
+
+// Dark mode
+@include mode('.hamburger') {
+  .hamburger_item {
+    #{$var-prefix}hamburger-bg: var(#{$var-prefix}hamburger-dm-bg);
+  }
+}

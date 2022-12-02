@@ -1,0 +1,175 @@
+---
+title: Clear
+description: Used to set the behaviour of element next to a floating element.
+---
+
+<DocsTable
+  name="clear"
+  head={[
+    'Name',
+    'Properties',
+    'Description'
+  ]}
+  description="set the position of an element next to a floating elements."
+  content={{
+    left: 'Used to set if an element is position below next left floated element.',
+    right: 'Used to set if an element is position below next right floated element.',
+    both: 'Used to set if an element is position below all floated element.',
+    none: 'Used to disable clear on an element.',
+    fix: 'Used when an element contains only floated elements, its height collapses to nothing. If you want it to always be able to resize, so that it contains floating elements inside it, you need to self-clear its children.',
+  }}
+  hideDataClass
+/>
+
+## Usage
+
+```html rose
+<template preview>
+  <div>
+    <p class="fz-sm ta-center fw-600 op-70 c-pink-700 tt-uppercase">Clear: Right</p>
+    <div class="p-6">
+      <div class="fl-right">
+        <img class="bd-brand bdw-3 ml-4" src="https://placeimg.com/80/80/any" width="80" height="80" />
+      </div>
+      <div class="fl-left">
+        <img class="bd-brand bdw-3 mr-4" src="https://placeimg.com/150/150/any" width="150" height="150" />
+      </div>
+      <p class="c-secondary-700 cl-right fz-sm">
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+        at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+      </p>
+    </div>
+  </div>
+</template>
+
+<div>
+  <div class="fl-right">
+    <img src="https://placeimg.com/80/80/any" />
+  </div>
+  <div class="fl-left">
+    <img src="https://placeimg.com/150/150/any" />
+  </div>
+  <p class="c-secondary-700 cl-right">
+    . . .
+  </p>
+</div>
+```
+
+```html rose
+<template preview>
+  <div>
+    <p class="fz-sm ta-center fw-600 op-70 c-pink-700 tt-uppercase">Clear: Left</p>
+    <div class="p-6">
+      <div class="fl-left">
+        <img class="bd-brand bdw-3 mr-4" src="https://placeimg.com/80/80/any" width="80" height="80" />
+      </div>
+      <div class="fl-right">
+        <img class="bd-brand bdw-3 ml-4" src="https://placeimg.com/150/150/any" width="150" height="150" />
+      </div>
+      <p class="c-secondary-700 cl-left fz-sm">
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+        at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+      </p>
+    </div>
+  </div>
+</template>
+
+<div>
+  <div class="fl-left">
+    <img src="https://placeimg.com/80/80/any" />
+  </div>
+  <div class="fl-right">
+    <img src="https://placeimg.com/150/150/any" />
+  </div>
+  <p class="c-secondary-700 cl-left">
+    . . .
+  </p>
+</div>
+```
+
+```html rose
+<template preview>
+  <div>
+    <p class="fz-sm ta-center fw-600 op-70 c-pink-700 tt-uppercase">Clear: Both</p>
+    <div class="p-6">
+      <div class="fl-left">
+        <img class="bd-brand bdw-3 mr-4" src="https://placeimg.com/80/80/any" width="80" height="80" />
+      </div>
+      <div class="fl-right">
+        <img class="bd-brand bdw-3 ml-4" src="https://placeimg.com/150/150/any" width="150" height="150" />
+      </div>
+      <p class="c-secondary-700 cl-both fz-sm">
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+        at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+        at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+      </p>
+    </div>
+  </div>
+</template>
+
+<div>
+  <div class="fl-left">
+    <img src="https://placeimg.com/80/80/any" />
+  </div>
+  <div class="fl-right">
+    <img src="https://placeimg.com/150/150/any" />
+  </div>
+  <span class="cl-both">
+    . . .
+  </span>
+</div>
+```
+
+```html rose
+<template preview>
+  <div>
+    <p class="fz-sm ta-center fw-600 op-70 c-pink-700 tt-uppercase">Clear: None</p>
+    <div class="p-6">
+      <div class="fl-left">
+        <img class="bd-brand bdw-3 mr-4" src="https://placeimg.com/80/80/any" width="80" height="80" />
+      </div>
+      <div class="fl-right">
+        <img class="bd-brand bdw-3 ml-4" src="https://placeimg.com/150/150/any" width="150" height="150" />
+      </div>
+      <p class="c-secondary-700 cl-none fz-sm">
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+        at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+        at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+      </p>
+    </div>
+  </div>
+</template>
+
+<div>
+  <div class="fl-left">
+    <img src="https://placeimg.com/80/80/any" />
+  </div>
+  <div class="fl-right">
+    <img src="https://placeimg.com/150/150/any" />
+  </div>
+  <span class="cl-none">
+    . . .
+  </span>
+</div>
+```
+
+The `cl-fix` utility is used when an element contains only floated elements, its height collapses to nothing. If you want it to always be able to resize, so that it contains floating elements inside it, you need to self-clear its children.
+
+```css
+element {
+  &::after {
+    clear: $align-both;
+    content: '';
+    display: table;
+  }
+}
+```
+
+## Props
+
+<DocsTable
+  name="clear"
+  type="props"
+/>
+
+

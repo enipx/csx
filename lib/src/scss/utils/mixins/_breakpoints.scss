@@ -1,0 +1,129 @@
+// @params - $breakpoint specify the breakpoint
+@mixin media($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+// breakpoint for xs device
+@mixin media-xs {
+  @media screen and (min-width: $breakpoint-xs) {
+    @content;
+  }
+}
+
+// breakpoint for sm device
+@mixin media-sm {
+  @media screen and (min-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+// breakpoint for md device
+@mixin media-md {
+  @media screen and (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+// breakpoint for lg device
+@mixin media-lg {
+  @media screen and (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+// breakpoint for xl device
+@mixin media-xl {
+  @media screen and (min-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+// breakpoint for xxl device
+@mixin media-xxl {
+  @media screen and (min-width: $breakpoint-xxl) {
+    @content;
+  }
+}
+
+// breakpoint auto-generator
+@mixin brpt-auto-gen($selector, $option: none) {
+  
+  @include media-xs {
+    .xs-#{$selector} {
+      @content;
+    }
+
+    @if $option == dm {
+      @include mode('.xs-#{$selector}') {
+        @content;
+      }
+    }
+  }
+
+  @include media-sm {
+    .sm-#{$selector} {
+      @content;
+    }
+
+    @if $option == dm {
+      @include mode('.sm-#{$selector}') {
+        @content;
+      }
+    }
+  }
+
+  @include media-md {
+    .md-#{$selector} {
+      @content;
+    }
+
+    @if $option == dm {
+      @include mode('.md-#{$selector}') {
+        @content;
+      }
+    }
+  }
+
+  @include media-lg {
+    .lg-#{$selector} {
+      @content;
+    }
+
+    @if $option == dm {
+      @include mode('.lg-#{$selector}') {
+        @content;
+      }
+    }
+  }
+
+  @include media-xl {
+    .xl-#{$selector} {
+      @content;
+    }
+
+    @if $option == dm {
+      @include mode('.xl-#{$selector}') {
+        @content;
+      }
+    }
+  }
+
+  @include media-xxl {
+    .xxl-#{$selector} {
+      @content;
+    }
+
+    @if $option == dm {
+      @include mode('.xxl-#{$selector}') {
+        @content;
+      }
+    }
+  }
+
+  .#{$selector} {
+    @content;
+  }
+
+}

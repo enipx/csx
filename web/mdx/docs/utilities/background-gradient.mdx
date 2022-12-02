@@ -1,0 +1,74 @@
+---
+title: Background Gradient
+description: Used to set background color to gradient.
+---
+
+## Types
+
+<DocsTable
+  name="gradients"
+  keyname="background-gradient"
+  head={[
+    'Name',
+    'Properties',
+    'Preview'
+  ]}
+  content={{
+    text: '',
+    style: 'w-8 h-8 d-block fw-500',
+  }}
+  contentIndex={3}
+  hidePropertyName
+/>
+
+## Usage
+
+```html rose
+<template preview>
+  <div class="my-3 bg-grad-sky c-white p-4 bdrs-md">
+    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+  </div>
+
+  <div class="my-3 bg-grad-orange c-white p-4 bdrs-md">
+    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+  </div>
+
+  <div class="my-3 bg-grad-vivid c-white p-4 bdrs-md">
+    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+  </div>
+</template>
+
+<div>
+  <div class="bg-grad-sky">.  .  .</div>
+  <div class="bg-grad-orange">.  .  .</div>
+  <div class="bg-grad-vivid">.  .  .</div>
+</div>
+```
+
+### Hover, Focus, Placeholder and Dark mode
+```html rose
+<template preview>
+  <div class="">
+    <p class="my-3 my-3 bg-grad-sky hover-bg-grad-orange c-white p-4 bdrs-md">
+      Hover to change background color 
+    </p>
+  </div>
+</template>
+
+<div>
+  <p class="bg-grad-sky hover-bg-grad-orange">
+      .  .  .
+  </p>
+</div>
+```
+
+
+## Props
+
+<DocsTable 
+  type="props"
+  name="gradients"
+  keyname="background-gradient"
+/>
+
+

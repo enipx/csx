@@ -1,0 +1,129 @@
+---
+title: "Hamburger"
+description: "Used as a navigation drawer or side menu reveal icon"
+---
+
+## Usage
+
+```html
+<template preview>
+  <div id="hamburger" class="hamburger my-2 mr-12" data-toggle="hamburger">
+    <span class="hamburger_item"></span>
+    <span class="hamburger_item"></span>
+    <span class="hamburger_item"></span>
+  </div>
+</template>
+
+<div>
+  <div id="hamburger" class="hamburger" data-toggle="hamburger">
+    <span class="hamburger_item"></span>
+    <span class="hamburger_item"></span>
+    <span class="hamburger_item"></span>
+  </div>
+</div>
+```
+
+## Sizings
+Set hamburger size using the `.hamburger-[size]` utility class or `data-length="[size]"` attribute. Options available are `xs`, `sm`, `md`, `lg`, `xl`. Usage example is `hamburger-lg` or `data-length="lg"`.
+
+```html
+<template preview>
+  <div class="d-flex mt-3">
+
+    <div id="hamburger-xs" class="hamburger my-2 mr-12" data-toggle="hamburger" data-length="xs">
+      <span class="hamburger_item"></span>
+      <span class="hamburger_item"></span>
+      <span class="hamburger_item"></span>
+    </div>
+
+    <div id="hamburger-sm" class="hamburger my-2 mr-12" data-toggle="hamburger" data-length="sm">
+      <span class="hamburger_item"></span>
+      <span class="hamburger_item"></span>
+      <span class="hamburger_item"></span>
+    </div>
+
+    <div id="hamburger-md" class="hamburger my-2 mr-12" data-toggle="hamburger" data-length="md">
+      <span class="hamburger_item"></span>
+      <span class="hamburger_item"></span>
+      <span class="hamburger_item"></span>
+    </div>
+
+    <div id="hamburger-lg" class="hamburger my-2 mr-12" data-toggle="hamburger" data-length="lg">
+      <span class="hamburger_item"></span>
+      <span class="hamburger_item"></span>
+      <span class="hamburger_item"></span>
+    </div>
+
+    <div id="hamburger-xl" class="hamburger my-2 mr-12" data-toggle="hamburger" data-length="xl">
+      <span class="hamburger_item"></span>
+      <span class="hamburger_item"></span>
+      <span class="hamburger_item"></span>
+    </div>
+
+  </div>
+</template>
+
+```
+
+## Hamburger item counts
+Set hamburger size using the `data-item="[count]"` attribute. Usage example is `data-length="2"`.
+
+```html
+<template preview>
+  <div class="d-flex mt-3">
+
+    <div id="hamburger-xs-1" class="hamburger my-2 mr-12" data-toggle="hamburger" data-length="xs" data-item="1">
+      <span class="hamburger_item"></span>
+      <span class="hamburger_item"></span>
+      <span class="hamburger_item"></span>
+    </div>
+
+    <div id="hamburger-xs-1" class="hamburger my-2 mr-12" data-toggle="hamburger" data-length="xs" data-item="2">
+      <span class="hamburger_item"></span>
+      <span class="hamburger_item"></span>
+      <span class="hamburger_item"></span>
+    </div>
+
+  </div>
+</template>
+
+<div>
+  <div ... data-item="3">
+    <span class="hamburger_item"></span>
+    <span class="hamburger_item"></span>
+    <span class="hamburger_item"></span>
+  </div>
+</div>
+
+```
+
+## Toggle icon
+
+```html
+<template preview>
+  <div class="d-flex mt-3">
+
+    <button class="btn btn-primary mr-4" data-toggle="hamburger" data-target="#hamburger-toggle">Click to toggle Hamburger</button>
+
+    <div id="hamburger-toggle" class="hamburger my-2 mr-12" data-toggle="hamburger" data-length="xs" data-item="3">
+      <span class="hamburger_item"></span>
+      <span class="hamburger_item"></span>
+      <span class="hamburger_item"></span>
+    </div>
+
+  </div>
+</template>
+
+<div>
+  <button class="btn" data-toggle="hamburger" data-target="#hamburger-toggle">
+    Click to toggle Hamburger
+  </button>
+
+  <div id="hamburger-toggle" class="hamburger my-2 mr-12" data-toggle="hamburger" data-length="xs" data-item="3">
+    <span class="hamburger_item"></span>
+    <span class="hamburger_item"></span>
+    <span class="hamburger_item"></span>
+  </div>
+</div>
+
+```

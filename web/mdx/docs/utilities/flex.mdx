@@ -1,0 +1,164 @@
+---
+title: Flex
+description: Used to set how a flex item grows or shrinks.
+---
+
+<DocsTable
+  name="flex"
+  description="set how a flex item element needs to grows or shrinks in its flex container."
+  head={[
+    'Name',
+    'Properties',
+    'Description',
+  ]}
+  content={{
+    1: 'Used to make a flex item grows to fill an free space in the flex container ignoring its initial size and shrinks as needed too.',
+    auto: 'Used to make a flex item sized according to its width and height properties but grows to fill any free space in the flex container and shrinks as needed too.',
+    initial: "Used to make a flex item sized according to its width and height properties and shrinks to its minimum size to fit the container but doesn't grow.",
+    none: "Used to make a flex item sized according to its width and height. it doesn't shrinks nor does it grows.",
+  }}
+  hideDataClass
+  ignoreMapValue
+/>
+
+## Usage
+
+```html rose
+<template preview>
+  <div class="ta-center fz-sm mb-4">
+    <p class="fw-600 op-70 c-pink-700">
+      .fx-1
+    </p>
+    <p class="c-secondary-500 fw-500 px-5">
+      Used to make a flex item grows to fill an free space in the flex container ignoring its initial size and shrinks as needed too.
+    </p>
+  </div>
+
+  <div class="d-flex bd-brand bdw-3 p-2 c-secondary-700">
+    <div class="mx-2 ta-center fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200">
+      1
+    </div>
+
+    <div class="fx-1 mx-2 ta-center fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200 bdw-3">
+      2
+    </div>
+
+    <div class="mx-2 ta-center fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200">
+      3
+    </div>
+  </div>
+</template>
+
+<div class="d-flex ...">
+  <div class="w-20 h-10 ..."></div>
+  <div class="fx-1 w-20 h-10..."></div>
+  <div class="w-20 h-10..."></div>
+</div>
+```
+
+```html rose
+<template preview>
+  <div class="ta-center fz-sm mb-4">
+    <p class="fw-600 op-70 c-pink-700">
+      .fx-auto
+    </p>
+    <p class="c-secondary-500 fw-500 px-5">
+      Used to make a flex item sized according to its width and height properties but grows to fill any free space in the flex container and shrinks as needed too.
+    </p>
+  </div>
+
+  <div class="d-flex bd-brand bdw-3 p-2 c-secondary-700">
+    <div class="mx-2 ta-center fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200">
+      1
+    </div>
+
+    <div class="fx-auto mx-2 ta-center fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200 bdw-3">
+      2
+    </div>
+
+    <div class="fx-auto mx-2 ta-center fw-600 w-32 h-12 fx-center bg-purple-100 bd-purple-200">
+      3
+    </div>
+  </div>
+</template>
+
+<div class="d-flex ...">
+  <div class="w-20 h-10 ..."></div>
+  <div class="fx-auto w-20 h-10..."></div>
+  <div class="fx-auto w-32 h-10..."></div>
+</div>
+```
+
+```html rose
+<template preview>
+  <div class="ta-center fz-sm mb-4">
+    <p class="fw-600 op-70 c-pink-700">
+      .fx-initial
+    </p>
+    <p class="c-secondary-500 fw-500 px-5">
+      Used to make a flex item sized according to its width and height properties and shrinks to its minimum size to fit the container but doesn't grow.
+    </p>
+  </div>
+
+  <div class="d-flex jc-center bd-brand bdw-3 p-2 c-secondary-700">
+    <div class="mx-2 ta-center fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200">
+      1
+    </div>
+
+    <div class="fx-initial mx-2 ta-center fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200 bdw-3">
+      2
+    </div>
+
+    <div class="mx-2 ta-center fw-600 w-32 h-12 fx-center bg-purple-100 bd-purple-200">
+      3
+    </div>
+  </div>
+</template>
+
+<div class="d-flex ...">
+  <div class="w-20 h-10 ..."></div>
+  <div class="fx-initial w-20 h-10..."></div>
+  <div class="w-32 h-10..."></div>
+</div>
+```
+
+```html rose
+<template preview>
+  <div class="ta-center fz-sm mb-4">
+    <p class="fw-600 op-70 c-pink-700">
+      .fx-none
+    </p>
+    <p class="c-secondary-500 fw-500 px-5">
+      Used to make a flex item sized according to its width and height. it doesn't shrinks nor does it grows.
+    </p>
+  </div>
+
+  <div class="d-flex jc-center bd-brand bdw-3 p-2 c-secondary-700">
+    <div class="mx-2 ta-center fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200">
+      1
+    </div>
+
+    <div class="fx-none mx-2 ta-center fw-600 w-20 h-12 fx-center bg-purple-100 bd-purple-200 bdw-3">
+      2
+    </div>
+
+    <div class="mx-2 ta-center fw-600 w-32 h-12 fx-center bg-purple-100 bd-purple-200">
+      3
+    </div>
+  </div>
+</template>
+
+<div class="d-flex ...">
+  <div class="w-20 h-10 ..."></div>
+  <div class="fx-none w-20 h-10..."></div>
+  <div class="w-32 h-10..."></div>
+</div>
+```
+
+## Props
+
+<DocsTable
+  name="flex"
+  type="props"
+/>
+

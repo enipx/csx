@@ -1,0 +1,65 @@
+// ----- Status Hinter
+@each $key, $value in $badge {
+  $cls: '';
+  @if $key == 'default' {
+    $cls: '';
+  } @else {
+    $cls: -#{$key};
+  }
+
+  @include mode('.status-hinter#{$cls}') {
+    background-color: color($value, #{$value}-300);
+  }
+
+  // --- Using this technique here because of CSS Specificity overiding some util
+  @include mode('.status-hinter-outline, .status-hinter[data-variant=outline]') {
+    background-color: transparent;
+    border: 2px solid color($value, #{$value}-300);
+  }
+
+  @include mode('.status-hinter-notification, .status-hinter[data-variant=notification]') {
+    background-color: color($value, #{$value}-300);
+  }
+
+  .status-hinter#{$cls} {
+    background-color: color($value, #{$value}-600);
+    border-radius: get-map-val($util-properties, border-radius, full);
+    display: inline-block;
+    height: var(#{$var-prefix}status-hinter-size);
+    width: var(#{$var-prefix}status-hinter-size);
+    
+    &-sm,
+    &[data-size='sm'] {
+      height: var(#{$var-prefix}status-hinter-size-sm);
+      width: var(#{$var-prefix}status-hinter-size-sm);
+    }
+
+    &-lg,
+    &[data-size='lg'] {
+      height: var(#{$var-prefix}status-hinter-size-lg);
+      width: var(#{$var-prefix}status-hinter-size-lg);
+    }
+
+    &-outline,
+    &[data-variant='outline'] {
+      background-color: transparent;
+      border: 2px solid color($value, #{$value}-600);
+
+      &.status-hinter-sm,
+      &[data-size='sm'] {
+        border-width: 1px;
+      }
+
+      &.status-hinter-lg,
+      &[data-size='lg'] {
+        border-width: 3px;
+      }
+    }
+
+    &-notification,
+    &[data-variant='notification'] {
+      background-color: color($value, #{$value}-600);
+      border: 1.5px solid var(#{$var-prefix}base-bg);
+    }
+  }
+}
