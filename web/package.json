@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next export"
+    "postbuild": "next-on-netlify"
   },
   "dependencies": {
     "@mdx-js/loader": "^1.6.22",
