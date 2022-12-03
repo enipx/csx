@@ -12,4 +12,5 @@ module.exports = withMDX({
 
     return config
   },
+  target: 'serverless'
 })
