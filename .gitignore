@@ -13,7 +13,8 @@
 /out/
 
 # production
-/build
+/dist
+lib/dist
 
 # misc
 .DS_Store
