@@ -1,4 +1,24 @@
 {
+  "name": "csx",
+  "description": "CSX is a UI design system and CSS framework based on utilities and components that allows you to build your product faster",
+  "version": "1.0.0",
+  "main": "dist/js/csx.min.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enipx/csx.git"
+  },
+  "keywords": [
+    "ui"
+  ],
+  "author": "enipx <progenipx@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/enipx/csx/issues"
+  },
+  "homepage": "https://github.com/enipx/csx#readme",
   "scripts": {
     "watch:ts": "webpack --config webpack.dev.js --watch",
     "build:ts": "npm-run-all compile:ts compile:ts-min",

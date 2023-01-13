@@ -33,3 +33,24 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# others
+._*
+.cache
+.DS_Store
+.next
+.idea
+.netlify
+.project
+.settings
+.tmproj
+.vscode
+.npm
+.eslintcache
+.stylintcache
+*.esproj
+*.sublime-project
+*.sublime-workspace
+nbproject
+Thumbs.db
+
